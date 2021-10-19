@@ -27,3 +27,7 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+This builds on our prior work on the Extreme value machien so if you use it we aks that you cite the following paper:
+
+@article{rudd2018extreme, title={The extreme value machine}, author={Rudd, Ethan M and Jain, Lalit P and Scheirer, Walter J and Boult, Terrance E}, journal={IEEE transactions on pattern analysis and machine intelligence}, volume={40}, number={3}, pages={762--768}, year={2018}, publisher={IEEE} }
