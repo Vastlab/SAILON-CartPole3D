@@ -694,7 +694,7 @@ class CartPoleBulletEnv(gym.Env):
             # Apply linear penalty function
             blockSum -= abs(blockDist * 0.05)
 
-        cost = abs(pole_x) + abs(pole_y)  #+ blockSum + cornerScores
+        cost = abs(pole_x) + abs(pole_y) + blockSum
 
         return cost
 

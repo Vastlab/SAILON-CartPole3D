@@ -1,3 +1,19 @@
+#FROM python:3.7
+#FROM conda/miniconda3
+#RUN mkdir /code
+#WORKDIR /code
+
+# Copy conda env
+#COPY SAILON-CartPole3D.yml .
+#RUN conda env create -f SAILON-CartPole3D.yml
+
+#SHELL ["conda", "run", "-n", "cartpole", "/bin/bash", "-c"]
+
+
+#RUN conda activate cartpole
+
+#ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "cartpole", "python", "TA2.py"]
+
 FROM python:3.7
 
 RUN mkdir /code

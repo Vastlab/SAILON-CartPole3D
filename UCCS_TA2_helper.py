@@ -20,7 +20,7 @@ from functools import partial
 from torch import Tensor
 import torch.multiprocessing as mp
 from my_lib import *
-from vast.opensetAlgos.EVM import EVM_Training, EVM_Inference, EVM_Inference_simple_cpu
+from vast.opensetAlgos import EVM_Training, EVM_Inference, EVM_Inference_cpu_max_knowness_prob
 from vast import activations
 from statistics import mean
 import gc
@@ -73,7 +73,7 @@ class UCCSTA2():
         self.trial = 0
         self.given = False
         self.statelist = []
-        self.debug = False
+        self.debug = True
         self.debugstring = ""
         # Create prediction environment
         env_location = importlib.util.spec_from_file_location('CartPoleBulletEnv', \
@@ -101,7 +101,7 @@ class UCCSTA2():
 
 
             evm_model = pickle.load(open(filename, "rb"))
-            self.evm_inference_obj = EVM_Inference_simple_cpu(args_evm.distance_metric, evm_model)
+            self.evm_inference_obj = EVM_Inference_cpu_max_knowness_prob(args_evm.distance_metric, evm_model)
         return
 
     def reset(self, episode):
@@ -120,7 +120,9 @@ class UCCSTA2():
 
     # env should be a CartPoleBulletEnv
     def takeOneStep(self, state_given, env, pertub=False):
-        observation = env.reset(state_given)
+        observation = state_given
+        if(self.cnt <2):
+            observation = env.reset(state_given)    #TB  its more sensitive to pertubations if we don't reset after first step
         action, next_action, expected_state = env.get_best_action(observation)
         # if doing well pertub it so we can better chance of detecting novelties
         '''ra = int(state_given[0] * 10000) % 4
@@ -186,6 +188,7 @@ class UCCSTA2():
     def process_instance(self, actual_state):
         #        pertub = (self.cnt > 100) and (self.maxprob < .5)
         pertub = False
+#        pdb.set_trace()
         action, expected_state = self.takeOneStep(actual_state, self.env_prediction, pertub)
 
         data_val = self.expected_backone
@@ -202,19 +205,40 @@ class UCCSTA2():
             actual_state = self.format_data(actual_state)
             difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
             current = difference_from_expected
-            print(current)
             # if diff is almost floatingpoint zero no point in computing EVM probbility, which will be 0 (tested to 1e-15)
-            if (max(abs(current)) < 1e-15):
+            valavg = np.array([2.47088169e-05, 2.74201900e-05, 0.00000000e+00, 5.78351166e-06,       8.42652875e-04, 0.00000000e+00, 9.31653723e-06, 1.63258612e-05,       1.44448331e-05, 3.01137170e-06, 4.46659141e-04, 1.21615485e-03,       1.23267419e-04])
+
+            valstd = np.array([3.11909380e-05, 5.47332869e-05, 1.00000000e-10, 1.77351837e-04,        1.33705301e-03,  1.00000000e-10, 2.65225600e-05, 2.46044523e-05,        5.83986090e-05, 3.73722490e-05, 1.43145027e-03, 1.87269744e-03,        3.76467718e-03])
+
+#            pdb.set_trace()
+            if (max(abs(current)) < 1e-6):
                 probability = 0
             elif (self.meanprob > .6):
                 # hack for speed, no point recomputing if we already have a high mean probability as world changed detected with this much probability so cannot go back
                 probability = self.meanprob
             else:
                 # compute EVM proabilties
-                data_tensor = torch.from_numpy(np.asarray(current))
-                probs = self.evm_inference_obj(data_tensor)
-                probability = self.prob_scale * (
-                probs.numpy()[0]) - 1  # probably of novelty so knowns have prob 0,  unknown prob 1.
+                if ( 0 < max((valavg-valstd) - abs(current))):
+                    probability = .0001
+
+                elif ( 0 < max((valavg) - abs(current))):
+                    probability = .01
+                elif ( 0 < max((valavg+valstd) - abs(current))):
+                    probability = .25
+                elif ( 0 < max((valavg+1.5*valstd) - abs(current))):
+                    probability = .5
+                elif ( 0 < max((valavg+2*valstd) - abs(current))):
+                    probability = .68
+                elif ( 0 < max((valavg+3*valstd) - abs(current))):
+                    probability = .95
+                else:
+                          probability = .98
+
+
+                # data_tensor = torch.from_numpy(np.asarray(current))
+                # probs = self.evm_inference_obj(data_tensor)
+                # probability = self.prob_scale * (
+                # probs.numpy()[0]) - 1  # probably of novelty so knowns have prob 0,  unknown prob 1.
                 self.maxprob = max(probability, self.maxprob)
                 if (self.cnt > 6):
                     self.meanprob = np.mean(self.problist)
@@ -223,6 +247,9 @@ class UCCSTA2():
             if (self.debug):
                 self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
                     self.cnt, actual_state, expected_state, current, probability)
+                print("prob", probability, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)
+            print("prob", probability, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)
+
             #          elif(self.given): self.statelist.append([action,actual_state,expected_state,current])
 
             self.problist.append(probability)
