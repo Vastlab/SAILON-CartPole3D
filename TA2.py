@@ -181,7 +181,7 @@ class TA2Agent(TA2Logic):
             Integer representing the predicted novelty level.
             A JSON-valid dict characterizing the novelty.
         """
-        novelty_probability = self.UCCS.world_change_prob()
+        novelty_probability = self.UCCS.world_change_prob(True)
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()
@@ -287,6 +287,8 @@ class TA2Agent(TA2Logic):
                 strictly enforced and the incorrect format will result in an exception being thrown.
         """
 
+        self.UCCS.debugstring=""
+
         if (self.UCCS.cnt < 1):
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
@@ -343,7 +345,7 @@ class TA2Agent(TA2Logic):
             A JSON-valid dict characterizing the novelty.
         """
 
-        novelty_probability = self.UCCS.world_change_prob()
+        novelty_probability = self.UCCS.world_change_prob(False)
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()

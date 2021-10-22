@@ -20,9 +20,11 @@ from functools import partial
 from torch import Tensor
 import torch.multiprocessing as mp
 from my_lib import *
-from vast.opensetAlgos import EVM_Training, EVM_Inference, EVM_Inference_cpu_max_knowness_prob
+from vast.opensetAlgos.EVM import EVM_Training, EVM_Inference, EVM_Inference_cpu_max_knowness_prob
 from vast import activations
 from statistics import mean
+import scipy.stats as st
+
 import gc
 import random
 import csv
@@ -55,8 +57,10 @@ class UCCSTA2():
             self.stdev_train = 0.0
             self.prob_scale = 2  # need to scale since EVM probability on perfect training data is .5  because of small range and tailsize
         else:
-            self.mean_train = .198
+            self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
             self.stdev_train = 0.051058052318592555
+            self.mean_train = .001   #these guessted values for Phase 2 incase we get called without training
+            self.stdev_train = 0.000000001
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
         self.cnt = 0
@@ -165,22 +169,44 @@ class UCCSTA2():
                 #print(state)
         return np.asarray(state)
 
-    def world_change_prob(self):
+    def world_change_prob(self,settrain=False):
         mu = np.mean(self.problist)
         sigma = np.std(self.problist)
-        if (len(self.problist) < 3): return 0;
+        if(settrain):
+           self.mean_train = mu;
+           self.stdev_train = sigma;
+           print("Set  world change train mu and sigma", mu, sigma)
+           self.worldchanged = 0
+           return 0;
+        if( self.mean_train == 0):
+           self.mean_train = 0.07495867168990145   #these guessted values for Phase 2 incase we get called without training
+           self.stdev_train = 0.09200903267659786
+           self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
+           
+
+#        if (len(self.problist) < 3):
+#            print("Very short, world must have changed")
+#            return 1;
+#        if (len(self.problist) < 198):   #for real work
+        if (len(self.problist) < 98):            # for testing model lenght =100
+            if (self.debug):
+                self.debugstring = 'Short  list of len {} world mush have changed'.format(self.problist)
+            return 1;        # we can alway balance in normal world.. if our trial ends early its novel
         if (sigma == 0):
             if (mu == self.mean_train):
                 return 0;
             else:
-                self.worldchanged = 1;
-                return self.worldchanged
+                sigma = self.stdev_train
 
             #        pdb.set_trace()
         self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
         KLscale = (
                               self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start down to  1/2
         prob = min(1.0, KLscale * self.KL_val / (2 * self.KL_threshold))
+        if (self.debug):
+                self.debugstring = 'Wolrd Change Prob ={},mu={}, sigmas {}, mean {} stdev{} val {} thresh {} scale {}'.format(
+                prob, mu, sigma, self.mean_train, self.stdev_train ,self.KL_val, self.KL_threshold, KLscale)
+        
         #        self.worldchanged = max(prob,self.worldchanged)
         self.worldchanged = prob
         return self.worldchanged
@@ -195,45 +221,35 @@ class UCCSTA2():
         self.expected_backone = expected_state
         self.cnt += 1
         if (self.cnt < 3):  # skip prob estiamtes for the first ones as we need history to get prediction
-            if (self.debug):
+            if (False and self.debug):
                 self.debugstring = 'Early Instance: actual_state={}, next={}, dataval={}, '.format(actual_state,
                                                                                                    expected_state,
                                                                                                    data_val)
             return action
         else:
             data_val = self.format_data(data_val)
+            prob_values = []
             actual_state = self.format_data(actual_state)
             difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
             current = difference_from_expected
             # if diff is almost floatingpoint zero no point in computing EVM probbility, which will be 0 (tested to 1e-15)
-            valavg = np.array([2.47088169e-05, 2.74201900e-05, 0.00000000e+00, 5.78351166e-06,       8.42652875e-04, 0.00000000e+00, 9.31653723e-06, 1.63258612e-05,       1.44448331e-05, 3.01137170e-06, 4.46659141e-04, 1.21615485e-03,       1.23267419e-04])
+            valavg = np.array([                2.47088169e-05, 2.74201900e-05, 0.00000000e+00, 5.78351166e-06,       8.42652875e-04, 0.00000000e+00, 9.31653723e-06, 1.63258612e-05,       1.44448331e-05, 3.01137170e-06, 4.46659141e-04, 1.21615485e-03,       1.23267419e-04])
 
-            valstd = np.array([3.11909380e-05, 5.47332869e-05, 1.00000000e-10, 1.77351837e-04,        1.33705301e-03,  1.00000000e-10, 2.65225600e-05, 2.46044523e-05,        5.83986090e-05, 3.73722490e-05, 1.43145027e-03, 1.87269744e-03,        3.76467718e-03])
+            valstd = 10*np.array([3.11909380e-04, 5.47332869e-04, 1.00000000e-6, 1.77351837e-04,        5.33705301e-02,  1.00000000e-06, 2.65225600e-04, 4.46044523e-04,        5.83986090e-04, 3.73722490e-04, 1.43145027e-03, 5.87269744e-02,        3.76467718e-03])
 
 #            pdb.set_trace()
-            if (max(abs(current)) < 1e-6):
+            mval = max(abs(current) )
+            if (mval < 1e-4):
                 probability = 0
-            elif (self.meanprob > .6):
+            elif (self.meanprob > .8):
                 # hack for speed, no point recomputing if we already have a high mean probability as world changed detected with this much probability so cannot go back
                 probability = self.meanprob
             else:
                 # compute EVM proabilties
-                if ( 0 < max((valavg-valstd) - abs(current))):
-                    probability = .0001
 
-                elif ( 0 < max((valavg) - abs(current))):
-                    probability = .01
-                elif ( 0 < max((valavg+valstd) - abs(current))):
-                    probability = .25
-                elif ( 0 < max((valavg+1.5*valstd) - abs(current))):
-                    probability = .5
-                elif ( 0 < max((valavg+2*valstd) - abs(current))):
-                    probability = .68
-                elif ( 0 < max((valavg+3*valstd) - abs(current))):
-                    probability = .95
-                else:
-                          probability = .98
-
+                zscores = abs((valavg - current)/valstd)
+                prob_values = [(2*st.norm.cdf(z)-1) for z in zscores]
+                probability = max(prob_values)
 
                 # data_tensor = torch.from_numpy(np.asarray(current))
                 # probs = self.evm_inference_obj(data_tensor)
@@ -244,12 +260,13 @@ class UCCSTA2():
                     self.meanprob = np.mean(self.problist)
                 #              print(self.meanprob, self.problist)
 
-            if (self.debug):
-                self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
-                    self.cnt, actual_state, expected_state, current, probability)
-                print("prob", probability, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)
-            print("prob", probability, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)
-
+#            if (self.debug):
+#                self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
+#                    self.cnt, actual_state, expected_state, current, probability)
+#                self.debugstring  +=           print("prob/probval", probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)                
+#            if(probability > .001):
+#                print("prob/maxval", probability, mval, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)                
+                
             #          elif(self.given): self.statelist.append([action,actual_state,expected_state,current])
 
             self.problist.append(probability)
