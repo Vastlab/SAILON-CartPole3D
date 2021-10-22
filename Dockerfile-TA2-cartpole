@@ -1,23 +1,17 @@
-#FROM python:3.7
-#FROM conda/miniconda3
-#RUN mkdir /code
-#WORKDIR /code
-
-# Copy conda env
-#COPY SAILON-CartPole3D.yml .
-#RUN conda env create -f SAILON-CartPole3D.yml
-
-#SHELL ["conda", "run", "-n", "cartpole", "/bin/bash", "-c"]
-
-
-#RUN conda activate cartpole
-
-#ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "cartpole", "python", "TA2.py"]
-
 FROM python:3.7
+
+RUN apt-get update && apt-get install -y \
+    build-essential cmake protobuf-compiler
 
 RUN mkdir /code
 WORKDIR /code
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 COPY . .
+
+WORKDIR bullet3
+RUN bash build_cmake_pybullet_double.sh
+RUN cp ./build_cmake/examples/pybullet/pybullet_d.so.3.19 \
+ /usr/local/lib/python3.7/site-packages/pybullet.cpython-37m-x86_64-linux-gnu.so
+
+WORKDIR /code

@@ -18,6 +18,7 @@ services:
     # The volume we mount determines which config files will be available to the services.
     volumes:
       - ./configs/evaluation:/code/config:rw
+      - /home/nwindesh/cartpole_3d/Cart2D-WSUfix:/tmp:rw
     build:
       context: ./
       dockerfile: Dockerfile-TA2-cartpole
