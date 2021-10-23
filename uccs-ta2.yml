@@ -17,7 +17,7 @@ services:
     # image: aiq-sail-on/sota-cartpole
     # The volume we mount determines which config files will be available to the services.
     volumes:
-      - ./configs/evaluation:/code/config:rw
+      - ./configs/evaluation:/code/evaluation.config:rw
     build:
       context: ./
       dockerfile: Dockerfile-TA2-cartpole
