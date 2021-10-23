@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -D_DEBUG  -shared -Wl,-soname,libBullet3Common.so.3.19 -o libBullet3Common.so.3.19 CMakeFiles/Bullet3Common.dir/b3AlignedAllocator.o CMakeFiles/Bullet3Common.dir/b3Vector3.o CMakeFiles/Bullet3Common.dir/b3Logging.o 

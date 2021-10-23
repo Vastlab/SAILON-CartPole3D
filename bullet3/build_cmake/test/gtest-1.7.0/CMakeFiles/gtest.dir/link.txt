@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -D_DEBUG  -shared -Wl,-soname,libgtest.so -o libgtest.so CMakeFiles/gtest.dir/src/gtest-all.o 
