@@ -3,7 +3,7 @@ Repo for the VAST Lab code for the SAIL-ON Project applied to 3D CartPole++ prob
 
 # Usage Instructions
 
-```git clone https://github.com/Vastlab/SAILON-CartPole3D.git```
+```git clone --recursive https://github.com/Vastlab/SAILON-CartPole3D.git```
 
 Once the repo is cloned it is ready to be ran using docker-compose.
 
