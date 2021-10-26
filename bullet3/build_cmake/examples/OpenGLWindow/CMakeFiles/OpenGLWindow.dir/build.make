@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/depend.make
@@ -59,16 +59,16 @@ include examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o: ../examples/OpenGLWindow/X11OpenGLWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o.requires:
 
@@ -83,16 +83,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o.provides.bui
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o: ../examples/ThirdPartyLibs/glad/glx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/glx.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/glx.c
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/glx.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/glx.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/glx.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/glx.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o.requires:
 
@@ -107,16 +107,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o.p
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o: ../examples/ThirdPartyLibs/glad/gl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/gl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/gl.c
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/gl.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/gl.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/gl.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/gl.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o.requires:
 
@@ -131,16 +131,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o.pr
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o: ../examples/OpenGLWindow/EGLOpenGLWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o.requires:
 
@@ -155,16 +155,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o.provides.bui
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o: ../examples/OpenGLWindow/GLFWOpenGLWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp > CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp -o CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o.requires:
 
@@ -179,16 +179,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o.provides.bu
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o: ../examples/OpenGLWindow/GLInstancingRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp > CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp > CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp -o CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp -o CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o.requires:
 
@@ -203,16 +203,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o.provide
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o: ../examples/OpenGLWindow/GLPrimitiveRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp > CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp > CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp -o CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp -o CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o.requires:
 
@@ -227,16 +227,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o.provides
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o: ../examples/OpenGLWindow/GLRenderToTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp > CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp > CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp -o CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp -o CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o.requires:
 
@@ -251,16 +251,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o.provides.b
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o: ../examples/OpenGLWindow/LoadShader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/LoadShader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/LoadShader.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/LoadShader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.cpp > CMakeFiles/OpenGLWindow.dir/LoadShader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.cpp > CMakeFiles/OpenGLWindow.dir/LoadShader.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/LoadShader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.cpp -o CMakeFiles/OpenGLWindow.dir/LoadShader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.cpp -o CMakeFiles/OpenGLWindow.dir/LoadShader.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o.requires:
 
@@ -275,16 +275,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o.provides.build: e
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o: ../examples/OpenGLWindow/OpenSans.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/OpenSans.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenSans.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/OpenSans.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenSans.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/OpenSans.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenSans.cpp > CMakeFiles/OpenGLWindow.dir/OpenSans.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenSans.cpp > CMakeFiles/OpenGLWindow.dir/OpenSans.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/OpenSans.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenSans.cpp -o CMakeFiles/OpenGLWindow.dir/OpenSans.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenSans.cpp -o CMakeFiles/OpenGLWindow.dir/OpenSans.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o.requires:
 
@@ -299,16 +299,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o.provides.build: exa
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o: ../examples/OpenGLWindow/SimpleCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleCamera.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleCamera.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/SimpleCamera.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/OpenGLWindow.dir/SimpleCamera.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/OpenGLWindow.dir/SimpleCamera.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/SimpleCamera.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleCamera.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleCamera.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o.requires:
 
@@ -323,16 +323,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o.provides.build:
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o: ../examples/OpenGLWindow/SimpleOpenGL2App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o.requires:
 
@@ -347,16 +347,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o.provides.bu
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o: ../examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o.requires:
 
@@ -371,16 +371,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o.provid
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o: ../examples/OpenGLWindow/SimpleOpenGL3App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp > CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp -o CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o.requires:
 
@@ -395,16 +395,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o.provides.bu
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o: ../examples/OpenGLWindow/TwFonts.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/TwFonts.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/TwFonts.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/TwFonts.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.cpp > CMakeFiles/OpenGLWindow.dir/TwFonts.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.cpp > CMakeFiles/OpenGLWindow.dir/TwFonts.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/TwFonts.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.cpp -o CMakeFiles/OpenGLWindow.dir/TwFonts.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.cpp -o CMakeFiles/OpenGLWindow.dir/TwFonts.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o.requires:
 
@@ -419,16 +419,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o.provides.build: exam
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o: ../examples/OpenGLWindow/fontstash.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/fontstash.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/fontstash.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/fontstash.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.cpp > CMakeFiles/OpenGLWindow.dir/fontstash.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.cpp > CMakeFiles/OpenGLWindow.dir/fontstash.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/fontstash.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.cpp -o CMakeFiles/OpenGLWindow.dir/fontstash.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.cpp -o CMakeFiles/OpenGLWindow.dir/fontstash.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o.requires:
 
@@ -443,16 +443,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o.provides.build: ex
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o: ../examples/OpenGLWindow/opengl_fontstashcallbacks.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp > CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp > CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp -o CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp -o CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o.requires:
 
@@ -467,16 +467,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o.pr
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o: ../examples/ThirdPartyLibs/glad/egl.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/egl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building C object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/egl.c
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/egl.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/egl.c > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/egl.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/egl.c -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o.requires:
 
@@ -491,16 +491,16 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o.p
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/flags.make
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o: ../examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp > CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp -o CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o.requires:
 
@@ -560,8 +560,8 @@ examples/OpenGLWindow/libOpenGLWindow.so: examples/OpenGLWindow/CMakeFiles/OpenG
 examples/OpenGLWindow/libOpenGLWindow.so: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/build.make
 examples/OpenGLWindow/libOpenGLWindow.so: src/Bullet3Common/libBullet3Common.so.3.19
 examples/OpenGLWindow/libOpenGLWindow.so: examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library libOpenGLWindow.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLWindow.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX shared library libOpenGLWindow.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/OpenGLWindow.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/build: examples/OpenGLWindow/libOpenGLWindow.so
@@ -591,10 +591,10 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/requires: examples/OpenGLWindo
 .PHONY : examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/requires
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow && $(CMAKE_COMMAND) -P CMakeFiles/OpenGLWindow.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow && $(CMAKE_COMMAND) -P CMakeFiles/OpenGLWindow.dir/cmake_clean.cmake
 .PHONY : examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/clean
 
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/examples/OpenGLWindow /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow /home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/depend
 

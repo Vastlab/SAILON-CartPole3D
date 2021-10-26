@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BasicDemo
+# Install script for directory: /home/tboult/WORK/bullet3/examples/BasicDemo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

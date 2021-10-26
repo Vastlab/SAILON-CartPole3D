@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include src/BulletCollision/CMakeFiles/BulletCollision.dir/depend.make
@@ -59,16 +59,16 @@ include src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o: ../src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btAxisSweep3.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSweep3.o.requires:
 
@@ -83,16 +83,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btAxisSwe
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o: ../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadphaseProxy.o.requires:
 
@@ -107,16 +107,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btBroadph
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o: ../src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisionAlgorithm.o.requires:
 
@@ -131,16 +131,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btCollisi
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o: ../src/BulletCollision/BroadphaseCollision/btDbvt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvt.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o.requires:
 
@@ -155,16 +155,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvt.o.
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o: ../src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDbvtBroadphase.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBroadphase.o.requires:
 
@@ -179,16 +179,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDbvtBro
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o: ../src/BulletCollision/BroadphaseCollision/btDispatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btDispatcher.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatcher.o.requires:
 
@@ -203,16 +203,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btDispatc
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o: ../src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btOverlappingPairCache.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlappingPairCache.o.requires:
 
@@ -227,16 +227,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btOverlap
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o: ../src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btQuantizedBvh.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantizedBvh.o.requires:
 
@@ -251,16 +251,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btQuantiz
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o: ../src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o -c /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp > CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/BroadphaseCollision/btSimpleBroadphase.cpp -o CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleBroadphase.o.requires:
 
@@ -275,16 +275,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/BroadphaseCollision/btSimpleB
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btActivatingCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatingCollisionAlgorithm.o.requires:
 
@@ -299,16 +299,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btActivatin
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCollisionAlgorithm.o.requires:
 
@@ -323,16 +323,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxCol
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2dCollisionAlgorithm.o.requires:
 
@@ -347,16 +347,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBox2dBox2
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o: ../src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btBoxBoxDetector.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDetector.o.requires:
 
@@ -371,16 +371,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btBoxBoxDet
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o: ../src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcher.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcher.o.requires:
 
@@ -395,16 +395,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollision
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o: ../src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionDispatcherMt.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionDispatcherMt.o.requires:
 
@@ -419,16 +419,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollision
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o: ../src/BulletCollision/CollisionDispatch/btCollisionObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionObject.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionObject.o.requires:
 
@@ -443,16 +443,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollision
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o: ../src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorld.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorld.o.requires:
 
@@ -467,16 +467,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollision
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o: ../src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCollisionWorldImporter.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollisionWorldImporter.o.requires:
 
@@ -491,16 +491,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCollision
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCollisionAlgorithm.o.requires:
 
@@ -515,16 +515,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundC
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundCompoundCollisionAlgorithm.o.requires:
 
@@ -539,16 +539,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btCompoundC
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConcaveCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConcaveCollisionAlgorithm.o.requires:
 
@@ -563,16 +563,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexCon
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexConvexAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexConvexAlgorithm.o.requires:
 
@@ -587,16 +587,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexCon
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvexPlaneCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPlaneCollisionAlgorithm.o.requires:
 
@@ -611,16 +611,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvexPla
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btConvex2dConvex2dAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dConvex2dAlgorithm.o.requires:
 
@@ -635,16 +635,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btConvex2dC
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o: ../src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btDefaultCollisionConfiguration.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCollisionConfiguration.o.requires:
 
@@ -659,16 +659,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btDefaultCo
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btEmptyCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyCollisionAlgorithm.o.requires:
 
@@ -683,16 +683,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btEmptyColl
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o: ../src/BulletCollision/CollisionDispatch/btGhostObject.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btGhostObject.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObject.o.requires:
 
@@ -707,16 +707,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btGhostObje
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o: ../src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btHashedSimplePairCache.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSimplePairCache.o.requires:
 
@@ -731,16 +731,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btHashedSim
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o: ../src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btInternalEdgeUtility.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalEdgeUtility.o.requires:
 
@@ -755,16 +755,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btInternalE
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o: ../src/BulletCollision/CollisionDispatch/btManifoldResult.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btManifoldResult.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldResult.o.requires:
 
@@ -779,16 +779,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btManifoldR
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o: ../src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSimulationIslandManager.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulationIslandManager.o.requires:
 
@@ -803,16 +803,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSimulatio
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereBoxCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBoxCollisionAlgorithm.o.requires:
 
@@ -827,16 +827,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereBox
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereSphereCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSphereCollisionAlgorithm.o.requires:
 
@@ -851,16 +851,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereSph
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o: ../src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btSphereTriangleCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTriangleCollisionAlgorithm.o.requires:
 
@@ -875,16 +875,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btSphereTri
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o: ../src/BulletCollision/CollisionDispatch/btUnionFind.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/btUnionFind.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind.o.requires:
 
@@ -899,16 +899,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/btUnionFind
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o: ../src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp > CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionDispatch/SphereTriangleDetector.cpp -o CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTriangleDetector.o.requires:
 
@@ -923,16 +923,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionDispatch/SphereTrian
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o: ../src/BulletCollision/CollisionShapes/btBoxShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o.requires:
 
@@ -947,16 +947,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBoxShape.o.
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o: ../src/BulletCollision/CollisionShapes/btBox2dShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBox2dShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.o.requires:
 
@@ -971,16 +971,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBox2dShape.
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o: ../src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBvhTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangleMeshShape.o.requires:
 
@@ -995,16 +995,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btBvhTriangle
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o: ../src/BulletCollision/CollisionShapes/btCapsuleShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShape.o.requires:
 
@@ -1019,16 +1019,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCapsuleShap
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o: ../src/BulletCollision/CollisionShapes/btCollisionShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionShape.o.requires:
 
@@ -1043,16 +1043,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCollisionSh
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o: ../src/BulletCollision/CollisionShapes/btCompoundShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCompoundShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundShape.o.requires:
 
@@ -1067,16 +1067,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCompoundSha
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o: ../src/BulletCollision/CollisionShapes/btConcaveShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShape.o.requires:
 
@@ -1091,16 +1091,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConcaveShap
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o: ../src/BulletCollision/CollisionShapes/btConeShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConeShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o.requires:
 
@@ -1115,16 +1115,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConeShape.o
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o: ../src/BulletCollision/CollisionShapes/btConvexHullShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullShape.o.requires:
 
@@ -1139,16 +1139,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexHullS
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o: ../src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInternalShape.o.requires:
 
@@ -1163,16 +1163,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexInter
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o: ../src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPointCloudShape.o.requires:
 
@@ -1187,16 +1187,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPoint
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o: ../src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyhedron.o.requires:
 
@@ -1211,16 +1211,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexPolyh
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o: ../src/BulletCollision/CollisionShapes/btConvexShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape.o.requires:
 
@@ -1235,16 +1235,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexShape
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o: ../src/BulletCollision/CollisionShapes/btConvex2dShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvex2dShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dShape.o.requires:
 
@@ -1259,16 +1259,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvex2dSha
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o: ../src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTriangleMeshShape.o.requires:
 
@@ -1283,16 +1283,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btConvexTrian
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o: ../src/BulletCollision/CollisionShapes/btCylinderShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderShape.o.requires:
 
@@ -1307,16 +1307,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btCylinderSha
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o: ../src/BulletCollision/CollisionShapes/btEmptyShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btEmptyShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.o.requires:
 
@@ -1331,16 +1331,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btEmptyShape.
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o: ../src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfieldTerrainShape.o.requires:
 
@@ -1355,16 +1355,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btHeightfield
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o: ../src/BulletCollision/CollisionShapes/btMiniSDF.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMiniSDF.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o.requires:
 
@@ -1379,16 +1379,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMiniSDF.o.p
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o: ../src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMinkowskiSumShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSumShape.o.requires:
 
@@ -1403,16 +1403,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMinkowskiSu
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o: ../src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultimaterialTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimaterialTriangleMeshShape.o.requires:
 
@@ -1427,16 +1427,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultimateri
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o: ../src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphereShape.o.requires:
 
@@ -1451,16 +1451,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btMultiSphere
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o: ../src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btOptimizedBvh.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBvh.o.requires:
 
@@ -1475,16 +1475,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btOptimizedBv
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o: ../src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralConvexShape.o.requires:
 
@@ -1499,16 +1499,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btPolyhedralC
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o: ../src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btScaledBvhTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTriangleMeshShape.o.requires:
 
@@ -1523,16 +1523,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btScaledBvhTr
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o: ../src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSdfCollisionShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisionShape.o.requires:
 
@@ -1547,16 +1547,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSdfCollisio
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o: ../src/BulletCollision/CollisionShapes/btShapeHull.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btShapeHull.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o.requires:
 
@@ -1571,16 +1571,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btShapeHull.o
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o: ../src/BulletCollision/CollisionShapes/btSphereShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape.o.requires:
 
@@ -1595,16 +1595,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btSphereShape
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o: ../src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStaticPlaneShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlaneShape.o.requires:
 
@@ -1619,16 +1619,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStaticPlane
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o: ../src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btStridingMeshInterface.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMeshInterface.o.requires:
 
@@ -1643,16 +1643,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btStridingMes
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o: ../src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTetrahedronShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedronShape.o.requires:
 
@@ -1667,16 +1667,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTetrahedron
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o: ../src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleBuffer.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuffer.o.requires:
 
@@ -1691,16 +1691,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleBuf
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o: ../src/BulletCollision/CollisionShapes/btTriangleCallback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCallback.o.requires:
 
@@ -1715,16 +1715,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleCal
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o: ../src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexArray.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexArray.o.requires:
 
@@ -1739,16 +1739,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleInd
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o: ../src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleIndexVertexMaterialArray.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleIndexVertexMaterialArray.o.requires:
 
@@ -1763,16 +1763,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleInd
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o: ../src/BulletCollision/CollisionShapes/btTriangleMesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMesh.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMesh.o.requires:
 
@@ -1787,16 +1787,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMes
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o: ../src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleMeshShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMeshShape.o.requires:
 
@@ -1811,16 +1811,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btTriangleMes
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o: ../src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp > CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btUniformScalingShape.cpp -o CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScalingShape.o.requires:
 
@@ -1835,16 +1835,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/CollisionShapes/btUniformScal
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o: ../src/BulletCollision/Gimpact/btContactProcessing.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btContactProcessing.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o.requires:
 
@@ -1859,16 +1859,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btContactProcessing.o
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o: ../src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGenericPoolAllocator.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocator.o.requires:
 
@@ -1883,16 +1883,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGenericPoolAllocato
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o: ../src/BulletCollision/Gimpact/btGImpactBvh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactBvh.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o.requires:
 
@@ -1907,16 +1907,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactBvh.o.provid
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o: ../src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactCollisionAlgorithm.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlgorithm.o.requires:
 
@@ -1931,16 +1931,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactCollisionAlg
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o: ../src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactQuantizedBvh.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh.o.requires:
 
@@ -1955,16 +1955,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactQuantizedBvh
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o: ../src/BulletCollision/Gimpact/btGImpactShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btGImpactShape.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o.requires:
 
@@ -1979,16 +1979,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btGImpactShape.o.prov
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o: ../src/BulletCollision/Gimpact/btTriangleShapeEx.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp > CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/btTriangleShapeEx.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o.requires:
 
@@ -2003,16 +2003,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/btTriangleShapeEx.o.p
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o: ../src/BulletCollision/Gimpact/gim_box_set.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_box_set.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o.requires:
 
@@ -2027,16 +2027,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_box_set.o.provide
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o: ../src/BulletCollision/Gimpact/gim_contact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_contact.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o.requires:
 
@@ -2051,16 +2051,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_contact.o.provide
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o: ../src/BulletCollision/Gimpact/gim_memory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_memory.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o.requires:
 
@@ -2075,16 +2075,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_memory.o.provides
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o: ../src/BulletCollision/Gimpact/gim_tri_collision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o -c /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp > CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/Gimpact/gim_tri_collision.cpp -o CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o.requires:
 
@@ -2099,16 +2099,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/Gimpact/gim_tri_collision.o.p
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o: ../src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btContinuousConvexCollision.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContinuousConvexCollision.o.requires:
 
@@ -2123,16 +2123,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btContin
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o: ../src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvexCast.o.requires:
 
@@ -2147,16 +2147,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btConvex
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o: ../src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkConvexCast.o.requires:
 
@@ -2171,16 +2171,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkCon
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o: ../src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpa2.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa2.o.requires:
 
@@ -2195,16 +2195,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o: ../src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpaPenetrationDepthSolver.o.requires:
 
@@ -2219,16 +2219,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkEpa
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o: ../src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btGjkPairDetector.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPairDetector.o.requires:
 
@@ -2243,16 +2243,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btGjkPai
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o: ../src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkowskiPenetrationDepthSolver.o.requires:
 
@@ -2267,16 +2267,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btMinkow
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o: ../src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPersistentManifold.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersistentManifold.o.requires:
 
@@ -2291,16 +2291,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPersis
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o: ../src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btRaycastCallback.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycastCallback.o.requires:
 
@@ -2315,16 +2315,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btRaycas
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o: ../src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btSubSimplexConvexCast.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSimplexConvexCast.o.requires:
 
@@ -2339,16 +2339,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btSubSim
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o: ../src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVoronoiSimplexSolver.o.requires:
 
@@ -2363,16 +2363,16 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btVorono
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o: src/BulletCollision/CMakeFiles/BulletCollision.dir/flags.make
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o: ../src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o -c /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp > CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.i
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btPolyhedralContactClipping.cpp -o CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.s
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/NarrowPhaseCollision/btPolyhedralContactClipping.o.requires:
 
@@ -2588,9 +2588,9 @@ src/BulletCollision/libBulletCollision.so.3.19: src/BulletCollision/CMakeFiles/B
 src/BulletCollision/libBulletCollision.so.3.19: src/BulletCollision/CMakeFiles/BulletCollision.dir/build.make
 src/BulletCollision/libBulletCollision.so.3.19: src/LinearMath/libLinearMath.so.3.19
 src/BulletCollision/libBulletCollision.so.3.19: src/BulletCollision/CMakeFiles/BulletCollision.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Linking CXX shared library libBulletCollision.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletCollision.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletCollision.so.3.19 libBulletCollision.so.3.19 libBulletCollision.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Linking CXX shared library libBulletCollision.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletCollision.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletCollision.so.3.19 libBulletCollision.so.3.19 libBulletCollision.so
 
 src/BulletCollision/libBulletCollision.so: src/BulletCollision/libBulletCollision.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate src/BulletCollision/libBulletCollision.so
@@ -2701,10 +2701,10 @@ src/BulletCollision/CMakeFiles/BulletCollision.dir/requires: src/BulletCollision
 .PHONY : src/BulletCollision/CMakeFiles/BulletCollision.dir/requires
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -P CMakeFiles/BulletCollision.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision && $(CMAKE_COMMAND) -P CMakeFiles/BulletCollision.dir/cmake_clean.cmake
 .PHONY : src/BulletCollision/CMakeFiles/BulletCollision.dir/clean
 
 src/BulletCollision/CMakeFiles/BulletCollision.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision/CMakeFiles/BulletCollision.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/src/BulletCollision /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision /home/tboult/WORK/bullet3/build_cmake/src/BulletCollision/CMakeFiles/BulletCollision.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/BulletCollision/CMakeFiles/BulletCollision.dir/depend
 

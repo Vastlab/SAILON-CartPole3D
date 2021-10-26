@@ -6,5 +6,5 @@ CXX_FLAGS = -g -D_DEBUG -fPIC
 
 CXX_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DBulletXmlWorldImporter_EXPORTS -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader -I/home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2 
 

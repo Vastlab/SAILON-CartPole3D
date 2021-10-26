@@ -13,11 +13,11 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/egl.o
  ../examples/ThirdPartyLibs/optionalX11/X11/Xutil.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysym.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysymdef.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/egl.c
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/egl.c
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/gl.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/gl.c
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/gl.c
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
@@ -30,7 +30,7 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/glad/glx.o
  ../examples/ThirdPartyLibs/optionalX11/X11/Xutil.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysym.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysymdef.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/glx.c
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/glx.c
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/EGL/eglplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
@@ -44,19 +44,19 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/EGLOpenGLWindow.o
  ../examples/ThirdPartyLibs/optionalX11/X11/Xutil.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysym.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysymdef.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLFWOpenGLWindow.o
  ../examples/OpenGLWindow/../../src/LinearMath/btScalar.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedAllocator.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedObjectArray.h
@@ -72,57 +72,57 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLInstancingRenderer.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/stb_image/stb_image_write.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceRendererInternalData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/createShadowMapInstancingPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/createShadowMapInstancingVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/instancingPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/instancingVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/linesPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/linesVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/pointSpritePS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/pointSpriteVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/projectiveTextureInstancingPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/projectiveTextureInstancingVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/segmentationMaskInstancingPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/segmentationMaskInstancingVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/useShadowMapInstancingPS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Shaders/useShadowMapInstancingVS.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceRendererInternalData.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/createShadowMapInstancingPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/createShadowMapInstancingVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/instancingPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/instancingVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/linesPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/linesVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/pointSpritePS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/pointSpriteVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/projectiveTextureInstancingPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/projectiveTextureInstancingVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/segmentationMaskInstancingPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/segmentationMaskInstancingVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/useShadowMapInstancingPS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Shaders/useShadowMapInstancingVS.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLPrimitiveRenderer.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Logging.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Scalar.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimInternalData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimInternalData.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/GLRenderToTexture.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Logging.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Scalar.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/LoadShader.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/LoadShader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/LoadShader.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/OpenSans.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenSans.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenSans.cpp
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedAllocator.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Logging.h
@@ -133,9 +133,9 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleCamera.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Scalar.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Transform.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Vector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedAllocator.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedObjectArray.h
@@ -147,26 +147,26 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2App.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Vector3.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/MacOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/ShapeData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Win32OpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Win32Window.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/MacOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/ShapeData.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2App.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Win32OpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Win32Window.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedAllocator.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedObjectArray.h
@@ -181,13 +181,13 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL2Renderer.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3Vector3.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGL2Include.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGL2Include.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL2Renderer.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedAllocator.h
  ../examples/OpenGLWindow/../../src/Bullet3Common/b3AlignedObjectArray.h
@@ -200,31 +200,31 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/SimpleOpenGL3App.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/stb_image/stb_image_write.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/MacOpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/ShapeData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Win32OpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/Win32Window.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/EGLOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLFWOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLRenderToTexture.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/MacOpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/ShapeData.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Win32OpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/Win32Window.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/TwFonts.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/TwFonts.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/TwFonts.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
@@ -237,25 +237,25 @@ examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/X11OpenGLWindow.o
  ../examples/ThirdPartyLibs/optionalX11/X11/Xutil.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysym.h
  ../examples/ThirdPartyLibs/optionalX11/X11/keysymdef.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/X11OpenGLWindow.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/fontstash.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/stb_image/stb_truetype.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.h
 examples/OpenGLWindow/CMakeFiles/OpenGLWindow.dir/opengl_fontstashcallbacks.o
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/KHR/khrplatform.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/glad/glad/gl.h
  ../examples/OpenGLWindow/../ThirdPartyLibs/stb_image/stb_image_write.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimInternalData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/OpenGLInclude.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/fontstash.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimInternalData.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/OpenGLInclude.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/fontstash.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/opengl_fontstashcallbacks.h

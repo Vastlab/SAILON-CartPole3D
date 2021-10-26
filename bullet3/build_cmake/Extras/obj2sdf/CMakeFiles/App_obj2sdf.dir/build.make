@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/depend.make
@@ -59,16 +59,16 @@ include Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/flags.make
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/flags.make
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o: ../Extras/obj2sdf/obj2sdf.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/obj2sdf.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/obj2sdf/obj2sdf.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/obj2sdf.o -c /home/tboult/WORK/bullet3/Extras/obj2sdf/obj2sdf.cpp
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_obj2sdf.dir/obj2sdf.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/obj2sdf/obj2sdf.cpp > CMakeFiles/App_obj2sdf.dir/obj2sdf.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/obj2sdf/obj2sdf.cpp > CMakeFiles/App_obj2sdf.dir/obj2sdf.i
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_obj2sdf.dir/obj2sdf.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/obj2sdf/obj2sdf.cpp -o CMakeFiles/App_obj2sdf.dir/obj2sdf.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/obj2sdf/obj2sdf.cpp -o CMakeFiles/App_obj2sdf.dir/obj2sdf.s
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o.requires:
 
@@ -83,16 +83,16 @@ Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/obj2sdf.o.provides.build: Extras/obj2s
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/flags.make
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o: ../examples/Utils/b3ResourcePath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.i
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.s
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o.requires:
 
@@ -107,16 +107,16 @@ Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/Utils/b3ResourcePath.o.
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/flags.make
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: ../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o.requires:
 
@@ -144,8 +144,8 @@ Extras/obj2sdf/App_obj2sdf: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/__/__/exam
 Extras/obj2sdf/App_obj2sdf: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/build.make
 Extras/obj2sdf/App_obj2sdf: src/Bullet3Common/libBullet3Common.so.3.19
 Extras/obj2sdf/App_obj2sdf: Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable App_obj2sdf"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_obj2sdf.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable App_obj2sdf"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_obj2sdf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/build: Extras/obj2sdf/App_obj2sdf
@@ -159,10 +159,10 @@ Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/requires: Extras/obj2sdf/CMakeFiles/Ap
 .PHONY : Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/requires
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf && $(CMAKE_COMMAND) -P CMakeFiles/App_obj2sdf.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf && $(CMAKE_COMMAND) -P CMakeFiles/App_obj2sdf.dir/cmake_clean.cmake
 .PHONY : Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/clean
 
 Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/obj2sdf /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/Extras/obj2sdf /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf /home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Extras/obj2sdf/CMakeFiles/App_obj2sdf.dir/depend
 

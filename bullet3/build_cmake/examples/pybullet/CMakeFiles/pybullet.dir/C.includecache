@@ -64,105 +64,105 @@ arm_neon.h
 arm_neon.h
 -
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+/home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
 cstring
 -
 string
 -
 LinearMath/btAlignedObjectArray.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/LinearMath/btAlignedObjectArray.h
+/home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/LinearMath/btAlignedObjectArray.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 SharedMemoryPublic.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 PhysicsClientSharedMemory_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
 PhysicsClientSharedMemory2_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
 PhysicsDirectC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
 PhysicsClientUDP_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
 PhysicsClientTCP_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientGRPC_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientGRPC_C_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.h
 PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/dart/DARTPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/dart/DARTPhysicsC_API.h
 ../PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/mujoco/MuJoCoPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/mujoco/MuJoCoPhysicsC_API.h
 ../PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/physx/PhysXC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/physx/PhysXC_API.h
 ../PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/pybullet/pybullet.c
+/home/tboult/WORK/bullet3/examples/pybullet/pybullet.c
 ../SharedMemory/PhysicsClientC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
 ../SharedMemory/PhysicsDirectC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
 ../SharedMemory/SharedMemoryInProcessPhysicsC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.h
 ../SharedMemory/PhysicsClientUDP_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
 ../SharedMemory/dart/DARTPhysicsC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/dart/DARTPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/dart/DARTPhysicsC_API.h
 ../SharedMemory/physx/PhysXC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/physx/PhysXC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/physx/PhysXC_API.h
 ../SharedMemory/mujoco/MuJoCoPhysicsC_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/mujoco/MuJoCoPhysicsC_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/mujoco/MuJoCoPhysicsC_API.h
 ../SharedMemory/PhysicsClientGRPC_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientGRPC_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientGRPC_C_API.h
 ../SharedMemory/PhysicsClientTCP_C_API.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+/home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
 Python/Python.h
 -
 Python.h
 -
 ../Importers/ImportURDFDemo/urdfStringSplit.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+/home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
 numpy/arrayobject.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/Python.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/Python.h
 patchlevel.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/patchlevel.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/patchlevel.h
 pyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 pymacconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymacconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymacconfig.h
 limits.h
 -
 stdio.h
@@ -182,235 +182,235 @@ stddef.h
 assert.h
 -
 pyport.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyport.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyport.h
 pymacro.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymacro.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymacro.h
 pyatomic.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyatomic.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyatomic.h
 pymath.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymath.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymath.h
 pytime.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pytime.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pytime.h
 pymem.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymem.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymem.h
 object.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/object.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/object.h
 objimpl.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/objimpl.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/objimpl.h
 typeslots.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/typeslots.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/typeslots.h
 pyhash.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyhash.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyhash.h
 pydebug.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pydebug.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pydebug.h
 bytearrayobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bytearrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bytearrayobject.h
 bytesobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bytesobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bytesobject.h
 unicodeobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/unicodeobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/unicodeobject.h
 longobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/longobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/longobject.h
 longintrepr.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/longintrepr.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/longintrepr.h
 boolobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/boolobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/boolobject.h
 floatobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/floatobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/floatobject.h
 complexobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/complexobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/complexobject.h
 rangeobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/rangeobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/rangeobject.h
 memoryobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/memoryobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/memoryobject.h
 tupleobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/tupleobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/tupleobject.h
 listobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/listobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/listobject.h
 dictobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dictobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dictobject.h
 odictobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/odictobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/odictobject.h
 enumobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/enumobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/enumobject.h
 setobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/setobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/setobject.h
 methodobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/methodobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/methodobject.h
 moduleobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/moduleobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/moduleobject.h
 funcobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/funcobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/funcobject.h
 classobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/classobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/classobject.h
 fileobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/fileobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/fileobject.h
 pycapsule.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pycapsule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pycapsule.h
 traceback.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/traceback.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/traceback.h
 sliceobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/sliceobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/sliceobject.h
 cellobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/cellobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/cellobject.h
 iterobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/iterobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/iterobject.h
 genobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/genobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/genobject.h
 descrobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/descrobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/descrobject.h
 warnings.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/warnings.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/warnings.h
 weakrefobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/weakrefobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/weakrefobject.h
 structseq.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/structseq.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/structseq.h
 namespaceobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/namespaceobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/namespaceobject.h
 codecs.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/codecs.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/codecs.h
 pyerrors.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyerrors.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyerrors.h
 pystate.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystate.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystate.h
 context.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/context.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/context.h
 pyarena.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyarena.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyarena.h
 modsupport.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/modsupport.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/modsupport.h
 compile.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/compile.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/compile.h
 pythonrun.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pythonrun.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pythonrun.h
 pylifecycle.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pylifecycle.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pylifecycle.h
 ceval.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/ceval.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/ceval.h
 sysmodule.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/sysmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/sysmodule.h
 osmodule.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/osmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/osmodule.h
 intrcheck.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/intrcheck.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/intrcheck.h
 import.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/import.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/import.h
 abstract.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/abstract.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/abstract.h
 bltinmodule.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bltinmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bltinmodule.h
 eval.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/eval.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/eval.h
 pyctype.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyctype.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyctype.h
 pystrtod.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystrtod.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystrtod.h
 pystrcmp.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystrcmp.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystrcmp.h
 dtoa.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dtoa.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dtoa.h
 fileutils.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/fileutils.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/fileutils.h
 pyfpe.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyfpe.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyfpe.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/abstract.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/abstract.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bltinmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bltinmodule.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/boolobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/boolobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bytearrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bytearrayobject.h
 stdarg.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/bytesobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/bytesobject.h
 stdarg.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/cellobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/cellobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/ceval.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/ceval.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/classobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/classobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/code.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/code.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/codecs.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/codecs.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/compile.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/compile.h
 code.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/code.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/code.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/complexobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/complexobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/context.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/context.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/descrobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/descrobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dictobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dictobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dtoa.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dtoa.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dynamic_annotations.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dynamic_annotations.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/enumobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/enumobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/eval.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/eval.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/fileobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/fileobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/fileutils.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/fileutils.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/floatobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/floatobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/funcobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/funcobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/genobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/genobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/import.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/import.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/intrcheck.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/intrcheck.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/iterobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/iterobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/listobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/listobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/longintrepr.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/longintrepr.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/longobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/longobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/memoryobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/memoryobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/methodobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/methodobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/modsupport.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/modsupport.h
 stdarg.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/moduleobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/moduleobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/namespaceobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/namespaceobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/object.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/object.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/objimpl.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/objimpl.h
 pymem.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymem.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymem.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/odictobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/odictobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/osmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/osmodule.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/patchlevel.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/patchlevel.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyarena.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyarena.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyatomic.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyatomic.h
 dynamic_annotations.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/dynamic_annotations.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/dynamic_annotations.h
 pyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 stdatomic.h
 -
 intrin.h
@@ -418,39 +418,39 @@ intrin.h
 immintrin.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pycapsule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pycapsule.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyctype.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyctype.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pydebug.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pydebug.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyerrors.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyerrors.h
 stdarg.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyfpe.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyfpe.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyhash.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyhash.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pylifecycle.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pylifecycle.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymacconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymacconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymacro.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymacro.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymath.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymath.h
 pyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pymem.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pymem.h
 pyport.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyport.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyport.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyport.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyport.h
 pyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 inttypes.h
 -
 stdlib.h
@@ -482,45 +482,45 @@ ctype.h
 wctype.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystate.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystate.h
 pythread.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pythread.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pythread.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystrcmp.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystrcmp.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystrtod.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystrtod.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pythonrun.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pythonrun.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pythread.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pythread.h
 pthread.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pytime.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pytime.h
 pyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pyconfig.h
 object.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/object.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/object.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/rangeobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/rangeobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/setobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/setobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/sliceobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/sliceobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/structseq.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/structseq.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/sysmodule.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/sysmodule.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/traceback.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/traceback.h
 pystate.h
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/pystate.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/pystate.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/tupleobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/tupleobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/typeslots.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/typeslots.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/unicodeobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/unicodeobject.h
 stdarg.h
 -
 ctype.h
@@ -528,61 +528,61 @@ ctype.h
 wchar.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/warnings.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/warnings.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/include/python3.7m/weakrefobject.h
+/home/tboult/miniconda3/envs/aiq-env/include/python3.7m/weakrefobject.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/__multiarray_api.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/__multiarray_api.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/_numpyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/_numpyconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/arrayobject.h
 ndarrayobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
 npy_interrupt.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
 noprefix.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/noprefix.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/noprefix.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
 Python.h
 -
 ndarraytypes.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h
 __multiarray_api.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/__multiarray_api.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/__multiarray_api.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/ndarraytypes.h
 npy_common.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_common.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_common.h
 npy_endian.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_endian.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_endian.h
 npy_cpu.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
 utils.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/utils.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/utils.h
 _neighborhood_iterator_imp.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/_neighborhood_iterator_imp.h
 npy_1_7_deprecated_api.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/noprefix.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/noprefix.h
 ndarrayobject.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/ndarrayobject.h
 npy_interrupt.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h
 old_defines.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/old_defines.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/old_defines.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_common.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_common.h
 Python.h
 -
 numpyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
 npy_config.h
 -
 io.h
@@ -594,29 +594,29 @@ inttypes.h
 limits.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
 numpyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_endian.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_endian.h
 endian.h
 -
 sys/endian.h
 -
 npy_cpu.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_cpu.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/npy_interrupt.h
 setjmp.h
 -
 signal.h
 -
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/numpyconfig.h
 _numpyconfig.h
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/_numpyconfig.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/_numpyconfig.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/old_defines.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/old_defines.h
 
-/home/nwindesh/miniconda3/envs/3dcartpole/lib/python3.7/site-packages/numpy/core/include/numpy/utils.h
+/home/tboult/miniconda3/envs/aiq-env/lib/python3.7/site-packages/numpy/core/include/numpy/utils.h
 

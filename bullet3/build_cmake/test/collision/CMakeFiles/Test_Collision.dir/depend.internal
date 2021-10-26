@@ -15,7 +15,7 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btSerializer.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.cpp
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btConcaveShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/LinearMath/btAlignedAllocator.h
@@ -26,10 +26,10 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btConvexInternalShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/LinearMath/btAabbUtil2.h
@@ -41,11 +41,11 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btConvexPolyhedron.o
  ../test/collision/../../src/LinearMath/btAlignedAllocator.h
  ../test/collision/../../src/LinearMath/btAlignedObjectArray.h
@@ -57,8 +57,8 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btConvexShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/LinearMath/btAabbUtil2.h
@@ -71,20 +71,20 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConeShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btBoxShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCapsuleShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConeShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexHullShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPointCloudShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCylinderShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleShape.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/LinearMath/btAlignedAllocator.h
@@ -97,11 +97,11 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btTransformUtil.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConcaveShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btHeightfieldTerrainShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btMultiSphereShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/BulletCollision/CollisionShapes/btCollisionMargin.h
@@ -117,12 +117,12 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btSerializer.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btMultiSphereShape.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/BulletCollision/CollisionShapes/btCollisionMargin.h
@@ -143,8 +143,8 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexPolyhedron.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btPolyhedralConvexShape.cpp
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btSphereShape.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/BulletCollision/CollisionShapes/btCollisionMargin.h
@@ -157,27 +157,27 @@ test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/Collision
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btTransform.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionMargin.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btCollisionShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexInternalShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btConvexShape.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btSphereShape.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/CollisionShapes/btTriangleCallback.o
  ../test/collision/../../src/LinearMath/btAlignedAllocator.h
  ../test/collision/../../src/LinearMath/btMinMax.h
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/CollisionShapes/btTriangleCallback.h
 test/collision/CMakeFiles/Test_Collision.dir/__/__/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.o
  ../test/collision/../../src/LinearMath/btAlignedAllocator.h
  ../test/collision/../../src/LinearMath/btMinMax.h
  ../test/collision/../../src/LinearMath/btScalar.h
  ../test/collision/../../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btSimplexSolverInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btSimplexSolverInterface.h
+ /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.cpp
+ /home/tboult/WORK/bullet3/src/BulletCollision/NarrowPhaseCollision/btVoronoiSimplexSolver.h
 test/collision/CMakeFiles/Test_Collision.dir/main.o
  ../test/collision/../../src/BulletCollision/BroadphaseCollision/btBroadphaseProxy.h
  ../test/collision/../../src/BulletCollision/CollisionShapes/btCollisionMargin.h
@@ -224,6 +224,6 @@ test/collision/CMakeFiles/Test_Collision.dir/main.o
  ../test/collision/../gtest-1.7.0/include/gtest/internal/gtest-string.h
  ../test/collision/../gtest-1.7.0/include/gtest/internal/gtest-tuple.h
  ../test/collision/../gtest-1.7.0/include/gtest/internal/gtest-type-util.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/test/collision/SphereSphereCollision.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/test/collision/btDistanceInfo.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/test/collision/main.cpp
+ /home/tboult/WORK/bullet3/test/collision/SphereSphereCollision.h
+ /home/tboult/WORK/bullet3/test/collision/btDistanceInfo.h
+ /home/tboult/WORK/bullet3/test/collision/main.cpp

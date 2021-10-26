@@ -6,31 +6,31 @@
 
 #IncludeRegexTransform: 
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp
 ActiveSocket.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
 SimpleSocket.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
 limits.h
 -
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp
 PassiveSocket.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h
 ActiveSocket.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp
 SimpleSocket.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h
 sys/stat.h
 -
 stdlib.h
@@ -78,11 +78,11 @@ winsock2.h
 ws2tcpip.h
 -
 Host.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
 StatTimer.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h
 string.h
 -
 winsock2.h
@@ -94,5 +94,5 @@ stdio.h
 sys/time.h
 -
 Host.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h
 

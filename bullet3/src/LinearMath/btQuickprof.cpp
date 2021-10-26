@@ -93,7 +93,8 @@ btClock::btClock()
 
 btClock::~btClock()
 {
-	delete m_data;
+  if(m_data != 0)  delete m_data;
+  m_data = 0;
 }
 
 btClock::btClock(const btClock& other)

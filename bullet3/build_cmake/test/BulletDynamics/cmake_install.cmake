@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/test/BulletDynamics
+# Install script for directory: /home/tboult/WORK/bullet3/test/BulletDynamics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/BulletDynamics/pendulum/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/test/BulletDynamics/pendulum/cmake_install.cmake")
 
 endif()
 

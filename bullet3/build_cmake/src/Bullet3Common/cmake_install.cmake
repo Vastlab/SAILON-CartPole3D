@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Common
+# Install script for directory: /home/tboult/WORK/bullet3/src/Bullet3Common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,8 +50,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Common/libBullet3Common.so.3.19"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Common/libBullet3Common.so"
+    "/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Common/libBullet3Common.so.3.19"
+    "/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Common/libBullet3Common.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libBullet3Common.so.3.19"
@@ -67,6 +67,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bullet" TYPE DIRECTORY FILES "/home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Common" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE REGEX "/CMakeFiles$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bullet" TYPE DIRECTORY FILES "/home/tboult/WORK/bullet3/src/Bullet3Common" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE REGEX "/CMakeFiles$" EXCLUDE)
 endif()
 

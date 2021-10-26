@@ -4,16 +4,16 @@
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/GraphicsClientExample.o
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryBlock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryBlock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/GraphicsServerExample.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -30,27 +30,27 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/GraphicsServ
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryBlock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsSharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryBlock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsSharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/IKTrajectoryHelper.o
  ../examples/ThirdPartyLibs/BussIK/Jacobian.h
  ../examples/ThirdPartyLibs/BussIK/LinearR3.h
@@ -77,23 +77,23 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/IKTrajectory
  ../src/LinearMath/btSpatialAlgebra.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/InProcessMemory.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
  ../src/LinearMath/btHashMap.h
  ../src/LinearMath/btScalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClient.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientC_API.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3Logging.h
@@ -109,18 +109,18 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClien
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientExample.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3Logging.h
@@ -238,35 +238,35 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClien
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/Common2dCanvasInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonParameterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientExample.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientExample.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/Common2dCanvasInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonParameterInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientExample.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientExample.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommon.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -283,24 +283,24 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClien
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btSerializer.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/autogenerated/bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDefines.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/BodyJointInfoUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryBlock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryUserData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/autogenerated/bullet.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bCommon.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDefines.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/BodyJointInfoUtility.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryBlock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryUserData.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory2.o
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
@@ -308,47 +308,47 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClien
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory2_C_API.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsClientSharedMemory_C_API.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirect.o
  ../src/Bullet3Common/b3Logging.h
  ../src/LinearMath/btAlignedAllocator.h
@@ -359,23 +359,23 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirec
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btSerializer.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/autogenerated/bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDefines.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/BodyJointInfoUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryUserData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/autogenerated/bullet.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bCommon.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDefines.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.h
+ /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/BodyJointInfoUtility.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryUserData.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirectC_API.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
@@ -387,21 +387,21 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsDirec
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsLoopBack.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
@@ -413,42 +413,42 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsLoopB
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsLoopBackC_API.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServer.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerCommandProcessor.o
  ../Extras/InverseDynamics/MultiBodyNameMap.hpp
  ../Extras/InverseDynamics/MultiBodyTreeCreator.hpp
@@ -931,57 +931,57 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServe
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryUserData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginCollisionInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/fileIOPlugin/fileIOPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/grpcPlugin/grpcPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/KinTree.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/MathUtil.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/RBDModel.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/RBDUtil.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/Shape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/stablePDPlugin/SpAlg.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/vrSyncPlugin/vrSyncPlugin.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SoftDemo/BunnyMesh.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyAudio/b3SoundEngine.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyAudio/b3Sound_C_Api.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3BulletDefaultFileIO.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryUserData.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginCollisionInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/eglPlugin/eglRendererPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/fileIOPlugin/fileIOPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/grpcPlugin/grpcPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/BulletConversion.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/KinTree.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/MathUtil.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/RBDModel.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/RBDUtil.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/Shape.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/stablePDPlugin/SpAlg.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/vrSyncPlugin/vrSyncPlugin.h
+ /home/tboult/WORK/bullet3/examples/SoftDemo/BunnyMesh.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/TinyAudio/b3SoundEngine.h
+ /home/tboult/WORK/bullet3/examples/TinyAudio/b3Sound_C_Api.h
+ /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.h
+ /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3BulletDefaultFileIO.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerExample.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -1105,28 +1105,28 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServe
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/Common2dCanvasInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonParameterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyVRGui.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/Common2dCanvasInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonParameterInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.h
+ /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyVRGui.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommon.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerExampleBullet2.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
@@ -1138,15 +1138,15 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServe
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServerSharedMemory.o
  ../src/Bullet3Common/b3Logging.h
  ../src/BulletCollision/BroadphaseCollision/btAxisSweep3.h
@@ -1248,47 +1248,47 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PhysicsServe
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryBlock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryBlock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/PosixSharedMemory.o
  ../src/Bullet3Common/b3Logging.h
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
  ../src/LinearMath/btScalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/SharedMemoryCommandProcessor.o
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryBlock.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommands.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsCommandProcessorInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryBlock.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommandProcessor.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommands.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/Win32SharedMemory.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -1304,13 +1304,13 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o
  ../examples/OpenGLWindow/ShapeData.h
  ../src/Bullet3Common/b3AlignedAllocator.h
@@ -1359,30 +1359,30 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btSerializer.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfLexicalCast.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfLexicalCast.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o
  ../examples/ThirdPartyLibs/stb_image/stb_image.h
  ../src/Bullet3Common/b3AlignedAllocator.h
@@ -1395,24 +1395,24 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
  ../src/Bullet3Common/b3HashMap.h
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -1424,19 +1424,19 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstancingRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLPrimitiveRenderer.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleOpenGL3App.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o
  ../examples/OpenGLWindow/ShapeData.h
  ../src/Bullet3Common/b3AlignedAllocator.h
@@ -1517,27 +1517,27 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btTransformUtil.h
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3BulletDefaultFileIO.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ColladaGraphicsInstance.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/btMatrix4x4.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/LoadMeshFromSTL.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/GLInstanceGraphicsShape.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3BulletDefaultFileIO.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o
  ../src/BulletCollision/BroadphaseCollision/btAxisSweep3.h
  ../src/BulletCollision/BroadphaseCollision/btAxisSweep3Internal.h
@@ -1649,11 +1649,11 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o
  ../src/Bullet3Common/b3Logging.h
  ../src/BulletCollision/BroadphaseCollision/btBroadphaseInterface.h
@@ -1718,12 +1718,12 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btTransformUtil.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MultiBodyCreationInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFImporterInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/UrdfParser.o
  ../src/Bullet3Common/b3Logging.h
  ../src/LinearMath/btAlignedAllocator.h
@@ -1736,34 +1736,34 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfLexicalCast.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/SDFAudioTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDFJointTypes.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfFindMeshFile.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfLexicalCast.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
  ../src/LinearMath/btScalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/MultiThreading/b3PosixThreadSupport.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/MultiThreading/b3ThreadSupportInterface.o
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
+ /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/OpenGLWindow/SimpleCamera.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3Logging.h
@@ -1774,19 +1774,19 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/OpenGLWin
  ../src/Bullet3Common/b3Scalar.h
  ../src/Bullet3Common/b3Transform.h
  ../src/Bullet3Common/b3Vector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/stb_image/stb_image.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+ /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/TinyRenderer.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -1799,61 +1799,61 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRende
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/ShapeData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3BulletDefaultFileIO.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/OpenGLWindow/ShapeData.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/model.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3BulletDefaultFileIO.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/geometry.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/model.o
  ../src/Bullet3Common/b3Logging.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/model.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/our_gl.o
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3MinMax.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/TinyRenderer/tgaimage.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.h
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp
+ /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/ChromeTraceUtil.o
  ../src/Bullet3Common/b3Logging.h
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
  ../src/LinearMath/btQuickprof.h
  ../src/LinearMath/btScalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp
+ /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/RobotLoggingUtil.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
  ../src/LinearMath/btScalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.h
+ /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp
+ /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/b3Clock.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp
+ /home/tboult/WORK/bullet3/examples/Utils/b3Clock.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/__/Utils/b3ResourcePath.o
  ../src/Bullet3Common/b3FileUtils.h
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3PluginManager.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
@@ -1865,22 +1865,22 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3PluginMana
  ../src/LinearMath/btMinMax.h
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3BulletDefaultFileIO.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonFileIOInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3BulletDefaultFileIO.h
+ /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3RobotSimulatorClientAPI_NoDirect.o
  ../src/Bullet3Common/b3Logging.h
  ../src/LinearMath/btAlignedAllocator.h
@@ -1892,16 +1892,16 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/b3RobotSimul
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_InternalData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_InternalData.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/main.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3CommandLineArgs.h
@@ -2020,35 +2020,35 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/main.o
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
  ../src/btBulletDynamicsCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCallbacks.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/main.cpp
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCallbacks.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonCameraInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonExampleInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGUIHelperInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonGraphicsAppInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonMultiBodyBase.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonRenderInterface.h
+ /home/tboult/WORK/bullet3/examples/CommonInterfaces/CommonWindowInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryCommon.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/main.cpp
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/collisionFilterPlugin/collisionFilterPlugin.o
  ../src/Bullet3Common/b3AlignedAllocator.h
  ../src/Bullet3Common/b3AlignedObjectArray.h
  ../src/Bullet3Common/b3HashMap.h
  ../src/Bullet3Common/b3Logging.h
  ../src/Bullet3Common/b3Scalar.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginCollisionInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginCollisionInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/pdControlPlugin/pdControlPlugin.o
  ../src/LinearMath/btAlignedAllocator.h
  ../src/LinearMath/btAlignedObjectArray.h
@@ -2059,19 +2059,19 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/pdCo
  ../src/LinearMath/btScalar.h
  ../src/LinearMath/btTransform.h
  ../src/LinearMath/btVector3.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_InternalData.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_InternalData.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o
  ../examples/CommonInterfaces/CommonCameraInterface.h
  ../examples/CommonInterfaces/CommonFileIOInterface.h
@@ -2176,20 +2176,20 @@ examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/tiny
  ../src/LinearMath/btTransformUtil.h
  ../src/LinearMath/btVector3.h
  ../src/btBulletCollisionCommon.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h
 examples/SharedMemory/CMakeFiles/App_PhysicsServer_SharedMemory.dir/plugins/tinyRendererPlugin/tinyRendererPlugin.o
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryPublic.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
- /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h
+ /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfRenderingInterface.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory2_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryPublic.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginAPI.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/b3PluginContext.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.h
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
+ /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.h

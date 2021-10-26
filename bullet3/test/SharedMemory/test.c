@@ -93,7 +93,7 @@ void testSharedMemory(b3PhysicsClientHandle sm)
 			numJoints = b3GetNumJoints(sm, bodyUniqueId);
 			ASSERT_EQ(numJoints, 7);
 
-#if 0
+#if 1
             b3Printf("numJoints: %d\n", numJoints);
             for (i=0;i<numJoints;i++)
             {

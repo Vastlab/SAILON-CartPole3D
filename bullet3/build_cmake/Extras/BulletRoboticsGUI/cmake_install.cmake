@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/BulletRoboticsGUI
+# Install script for directory: /home/tboult/WORK/bullet3/Extras/BulletRoboticsGUI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,8 +50,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRoboticsGUI/libBulletRoboticsGUI.so.3.19"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRoboticsGUI/libBulletRoboticsGUI.so"
+    "/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRoboticsGUI/libBulletRoboticsGUI.so.3.19"
+    "/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRoboticsGUI/libBulletRoboticsGUI.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libBulletRoboticsGUI.so.3.19"
@@ -61,7 +61,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRobotics:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/InverseDynamics:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletWorldImporter:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletFileLoader:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletSoftBody:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletDynamics:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletInverseDynamics:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/LinearMath:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/Gwen:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/BussIK:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Common:"
+           OLD_RPATH "/home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser:/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRobotics:/home/tboult/WORK/bullet3/build_cmake/Extras/InverseDynamics:/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletWorldImporter:/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletFileLoader:/home/tboult/WORK/bullet3/build_cmake/src/BulletSoftBody:/home/tboult/WORK/bullet3/build_cmake/src/BulletDynamics:/home/tboult/WORK/bullet3/build_cmake/src/BulletCollision:/home/tboult/WORK/bullet3/build_cmake/src/BulletInverseDynamics:/home/tboult/WORK/bullet3/build_cmake/src/LinearMath:/home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow:/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/Gwen:/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/BussIK:/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Common:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
@@ -71,6 +71,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRoboticsGUI/bullet_robotics_gui.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRoboticsGUI/bullet_robotics_gui.pc")
 endif()
 

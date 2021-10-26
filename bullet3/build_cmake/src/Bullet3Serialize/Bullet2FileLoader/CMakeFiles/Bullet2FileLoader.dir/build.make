@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/depend.make
@@ -59,16 +59,16 @@ include src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/flags.make
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o: ../src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o -c /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp > CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp > CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.i
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3BulletFile.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.s
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3BulletFile.o.requires:
 
@@ -83,16 +83,16 @@ src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Bullet
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/flags.make
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o: ../src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o -c /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet2FileLoader.dir/b3Chunk.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp > CMakeFiles/Bullet2FileLoader.dir/b3Chunk.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp > CMakeFiles/Bullet2FileLoader.dir/b3Chunk.i
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet2FileLoader.dir/b3Chunk.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3Chunk.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Chunk.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3Chunk.s
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.o.requires:
 
@@ -107,16 +107,16 @@ src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Chunk.
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/flags.make
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o: ../src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3DNA.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3DNA.o -c /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet2FileLoader.dir/b3DNA.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp > CMakeFiles/Bullet2FileLoader.dir/b3DNA.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp > CMakeFiles/Bullet2FileLoader.dir/b3DNA.i
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet2FileLoader.dir/b3DNA.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3DNA.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3DNA.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3DNA.s
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o.requires:
 
@@ -131,16 +131,16 @@ src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3DNA.o.
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/flags.make
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o: ../src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3File.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3File.o -c /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet2FileLoader.dir/b3File.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp > CMakeFiles/Bullet2FileLoader.dir/b3File.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp > CMakeFiles/Bullet2FileLoader.dir/b3File.i
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet2FileLoader.dir/b3File.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3File.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3File.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3File.s
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o.requires:
 
@@ -155,16 +155,16 @@ src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3File.o
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/flags.make
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o: ../src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o -c /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet2FileLoader.dir/b3Serializer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp > CMakeFiles/Bullet2FileLoader.dir/b3Serializer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp > CMakeFiles/Bullet2FileLoader.dir/b3Serializer.i
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet2FileLoader.dir/b3Serializer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3Serializer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader/b3Serializer.cpp -o CMakeFiles/Bullet2FileLoader.dir/b3Serializer.s
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/b3Serializer.o.requires:
 
@@ -196,9 +196,9 @@ src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so.3.19: src/Bullet3
 src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so.3.19: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/build.make
 src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so.3.19: src/Bullet3Common/libBullet3Common.so.3.19
 src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so.3.19: src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libBullet2FileLoader.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bullet2FileLoader.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -E cmake_symlink_library libBullet2FileLoader.so.3.19 libBullet2FileLoader.so.3.19 libBullet2FileLoader.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX shared library libBullet2FileLoader.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bullet2FileLoader.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -E cmake_symlink_library libBullet2FileLoader.so.3.19 libBullet2FileLoader.so.3.19 libBullet2FileLoader.so
 
 src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so: src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Bullet3Serialize/Bullet2FileLoader/libBullet2FileLoader.so
@@ -217,10 +217,10 @@ src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/requires
 .PHONY : src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/requires
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -P CMakeFiles/Bullet2FileLoader.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader && $(CMAKE_COMMAND) -P CMakeFiles/Bullet2FileLoader.dir/cmake_clean.cmake
 .PHONY : src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/clean
 
 src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Serialize/Bullet2FileLoader /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/src/Bullet3Serialize/Bullet2FileLoader /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Bullet3Serialize/Bullet2FileLoader/CMakeFiles/Bullet2FileLoader.dir/depend
 

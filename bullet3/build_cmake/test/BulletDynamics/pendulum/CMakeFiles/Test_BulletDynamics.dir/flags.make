@@ -6,5 +6,5 @@ CXX_FLAGS = -g -D_DEBUG
 
 CXX_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK -DUSE_GTEST -D_VARIADIC_MAX=10
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/test/gtest-1.7.0/include -I/home/nwindesh/SAILON-CartPole3D/bullet3/test/BulletDynamics/pendulum/. -I/home/nwindesh/SAILON-CartPole3D/bullet3/test/BulletDynamics/pendulum/../../../src -I/home/nwindesh/SAILON-CartPole3D/bullet3/test/BulletDynamics/pendulum/../../gtest-1.7.0/include 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/test/gtest-1.7.0/include -I/home/tboult/WORK/bullet3/test/BulletDynamics/pendulum/. -I/home/tboult/WORK/bullet3/test/BulletDynamics/pendulum/../../../src -I/home/tboult/WORK/bullet3/test/BulletDynamics/pendulum/../../gtest-1.7.0/include 
 

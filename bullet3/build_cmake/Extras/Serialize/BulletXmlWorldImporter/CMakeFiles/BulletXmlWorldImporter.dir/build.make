@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/depend.make
@@ -59,16 +59,16 @@ include Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporte
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o: Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/flags.make
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o: ../Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp > CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp > CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.i
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/btBulletXmlWorldImporter.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.s
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/btBulletXmlWorldImporter.o.requires:
 
@@ -83,16 +83,16 @@ Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/bt
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o: Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/flags.make
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o: ../Extras/Serialize/BulletXmlWorldImporter/string_split.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/string_split.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/string_split.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletXmlWorldImporter.dir/string_split.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp > CMakeFiles/BulletXmlWorldImporter.dir/string_split.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp > CMakeFiles/BulletXmlWorldImporter.dir/string_split.i
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletXmlWorldImporter.dir/string_split.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/string_split.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter/string_split.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/string_split.s
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/string_split.o.requires:
 
@@ -107,16 +107,16 @@ Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/st
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/flags.make
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: ../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/__/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o.requires:
 
@@ -148,9 +148,9 @@ Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so.3.19: src/B
 Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so.3.19: Extras/Serialize/BulletFileLoader/libBulletFileLoader.so.3.19
 Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so.3.19: src/LinearMath/libLinearMath.so.3.19
 Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so.3.19: Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libBulletXmlWorldImporter.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletXmlWorldImporter.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletXmlWorldImporter.so.3.19 libBulletXmlWorldImporter.so.3.19 libBulletXmlWorldImporter.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX shared library libBulletXmlWorldImporter.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletXmlWorldImporter.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletXmlWorldImporter.so.3.19 libBulletXmlWorldImporter.so.3.19 libBulletXmlWorldImporter.so
 
 Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so: Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate Extras/Serialize/BulletXmlWorldImporter/libBulletXmlWorldImporter.so
@@ -167,10 +167,10 @@ Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/re
 .PHONY : Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/requires
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -P CMakeFiles/BulletXmlWorldImporter.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter && $(CMAKE_COMMAND) -P CMakeFiles/BulletXmlWorldImporter.dir/cmake_clean.cmake
 .PHONY : Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/clean
 
 Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletXmlWorldImporter /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/Extras/Serialize/BulletXmlWorldImporter /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter /home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Extras/Serialize/BulletXmlWorldImporter/CMakeFiles/BulletXmlWorldImporter.dir/depend
 

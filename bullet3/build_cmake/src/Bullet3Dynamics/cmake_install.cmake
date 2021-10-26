@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics
+# Install script for directory: /home/tboult/WORK/bullet3/src/Bullet3Dynamics
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,8 +50,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics/libBullet3Dynamics.so.3.19"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics/libBullet3Dynamics.so"
+    "/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics/libBullet3Dynamics.so.3.19"
+    "/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics/libBullet3Dynamics.so"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libBullet3Dynamics.so.3.19"
@@ -61,7 +61,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Collision:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Geometry:/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Common:"
+           OLD_RPATH "/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Collision:/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Geometry:/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Common:"
            NEW_RPATH "")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
@@ -71,6 +71,6 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bullet" TYPE DIRECTORY FILES "/home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE REGEX "/CMakeFiles$" EXCLUDE)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bullet" TYPE DIRECTORY FILES "/home/tboult/WORK/bullet3/src/Bullet3Dynamics" FILES_MATCHING REGEX "/[^/]*\\.h$" REGEX "/\\.svn$" EXCLUDE REGEX "/CMakeFiles$" EXCLUDE)
 endif()
 

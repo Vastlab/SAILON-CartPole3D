@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/depend.make
@@ -59,16 +59,16 @@ include examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o: ../examples/TwoJoint/TwoJointMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/TwoJointMain.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TwoJoint/TwoJointMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/TwoJointMain.o -c /home/tboult/WORK/bullet3/examples/TwoJoint/TwoJointMain.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/TwoJointMain.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TwoJoint/TwoJointMain.cpp > CMakeFiles/App_TwoJoint.dir/TwoJointMain.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TwoJoint/TwoJointMain.cpp > CMakeFiles/App_TwoJoint.dir/TwoJointMain.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/TwoJointMain.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TwoJoint/TwoJointMain.cpp -o CMakeFiles/App_TwoJoint.dir/TwoJointMain.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TwoJoint/TwoJointMain.cpp -o CMakeFiles/App_TwoJoint.dir/TwoJointMain.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o.requires:
 
@@ -83,16 +83,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/TwoJointMain.o.provides.build: exa
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: ../examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o.requires:
 
@@ -107,16 +107,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/collisionF
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: ../examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o.requires:
 
@@ -131,16 +131,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/pdControlP
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: ../examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o.requires:
 
@@ -155,16 +155,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3RobotSimulatorCl
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o: ../examples/SharedMemory/IKTrajectoryHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper.o.requires:
 
@@ -179,16 +179,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/IKTrajectoryHelper
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o: ../examples/ExampleBrowser/InProcessExampleBrowser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExampleBrowser.o.requires:
 
@@ -203,16 +203,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ExampleBrowser/InProcessExample
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o.requires:
 
@@ -227,16 +227,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRender
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o.requires:
 
@@ -251,16 +251,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/plugins/tinyRender
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o: ../examples/OpenGLWindow/SimpleCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o.requires:
 
@@ -275,16 +275,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/OpenGLWindow/SimpleCamera.o.pro
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o: ../examples/TinyRenderer/geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o.requires:
 
@@ -299,16 +299,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/geometry.o.provide
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o: ../examples/TinyRenderer/model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o.requires:
 
@@ -323,16 +323,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/model.o.provides.b
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o: ../examples/TinyRenderer/tgaimage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o.requires:
 
@@ -347,16 +347,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/tgaimage.o.provide
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o: ../examples/TinyRenderer/our_gl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o.requires:
 
@@ -371,16 +371,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/our_gl.o.provides.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o: ../examples/TinyRenderer/TinyRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o.requires:
 
@@ -395,16 +395,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/TinyRenderer/TinyRenderer.o.pro
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o: ../examples/SharedMemory/InProcessMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o.requires:
 
@@ -419,16 +419,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/InProcessMemory.o.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o: ../examples/SharedMemory/PhysicsClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o.requires:
 
@@ -443,16 +443,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClient.o.pr
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o: ../examples/SharedMemory/PhysicsServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o.requires:
 
@@ -467,16 +467,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServer.o.pr
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o: ../examples/SharedMemory/GraphicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExample.o.requires:
 
@@ -491,16 +491,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsServerExam
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o: ../examples/SharedMemory/GraphicsClientExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExample.o.requires:
 
@@ -515,16 +515,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/GraphicsClientExam
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o: ../examples/SharedMemory/RemoteGUIHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o.requires:
 
@@ -539,16 +539,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelper.o.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o: ../examples/SharedMemory/RemoteGUIHelperTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP.o.requires:
 
@@ -563,16 +563,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/RemoteGUIHelperTCP
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o: ../examples/SharedMemory/PhysicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExample.o.requires:
 
@@ -587,16 +587,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExamp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: ../examples/SharedMemory/PhysicsServerExampleBullet2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExampleBullet2.o.requires:
 
@@ -611,16 +611,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerExamp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: ../examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o.requires:
 
@@ -635,16 +635,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/SharedMemoryInProc
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o: ../examples/SharedMemory/PhysicsServerSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerSharedMemory.o.requires:
 
@@ -659,16 +659,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerShare
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o: ../examples/SharedMemory/PhysicsDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o.requires:
 
@@ -683,16 +683,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirect.o.pr
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o: ../examples/SharedMemory/PhysicsDirectC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API.o.requires:
 
@@ -707,16 +707,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsDirectC_API
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o: ../examples/SharedMemory/PhysicsServerCommandProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerCommandProcessor.o.requires:
 
@@ -731,16 +731,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsServerComma
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o: ../examples/SharedMemory/b3PluginManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o.requires:
 
@@ -755,16 +755,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/b3PluginManager.o.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o: ../examples/SharedMemory/PhysicsClientSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory.o.requires:
 
@@ -779,16 +779,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientShare
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o: ../examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o.requires:
 
@@ -803,16 +803,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientShare
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o: ../examples/SharedMemory/PhysicsClientC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API.o.requires:
 
@@ -827,16 +827,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientC_API
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o: ../examples/SharedMemory/Win32SharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.o.requires:
 
@@ -851,16 +851,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/Win32SharedMemory.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o: ../examples/SharedMemory/PosixSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.o.requires:
 
@@ -875,16 +875,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PosixSharedMemory.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o: ../examples/Utils/b3ResourcePath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o -c /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o.requires:
 
@@ -899,16 +899,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/b3ResourcePath.o.provides
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o: ../examples/Utils/RobotLoggingUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o -c /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o.requires:
 
@@ -923,16 +923,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Utils/RobotLoggingUtil.o.provid
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o: ../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o.requires:
 
@@ -947,16 +947,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/tinyxml2/tinyxml
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: ../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o.requires:
 
@@ -971,16 +971,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/Wavefront/tiny_o
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o: ../examples/ThirdPartyLibs/stb_image/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_image.o.requires:
 
@@ -995,16 +995,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/stb_image/stb_im
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o: ../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o.requires:
 
@@ -1019,16 +1019,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportColladaDemo/Loa
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o: ../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o.requires:
 
@@ -1043,16 +1043,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/LoadMes
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: ../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o.requires:
 
@@ -1067,16 +1067,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportObjDemo/Wavefro
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o: ../examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o.requires:
 
@@ -1091,16 +1091,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMJCFDemo/Bullet
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o: ../examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o.requires:
 
@@ -1115,16 +1115,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/Bullet
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o: ../examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o.requires:
 
@@ -1139,16 +1139,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/MyMult
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o: ../examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o.requires:
 
@@ -1163,16 +1163,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/URDF2B
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o: ../examples/Importers/ImportURDFDemo/UrdfParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfParser.o.requires:
 
@@ -1187,16 +1187,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/UrdfPa
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o: ../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o.requires:
 
@@ -1211,16 +1211,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportURDFDemo/urdfSt
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o: ../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o.requires:
 
@@ -1235,16 +1235,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/Importers/ImportMeshUtility/b3I
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o: ../examples/MultiThreading/b3PosixThreadSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSupport.o.requires:
 
@@ -1259,16 +1259,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3PosixThreadSup
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o: ../examples/MultiThreading/b3Win32ThreadSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSupport.o.requires:
 
@@ -1283,16 +1283,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3Win32ThreadSup
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o: ../examples/MultiThreading/b3ThreadSupportInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp > CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp -o CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportInterface.o.requires:
 
@@ -1307,16 +1307,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/MultiThreading/b3ThreadSupportI
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o: ../examples/SharedMemory/PhysicsClientUDP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o.requires:
 
@@ -1331,16 +1331,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP.o
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o: ../examples/SharedMemory/PhysicsClientUDP_C_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientUDP_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C_API.o.requires:
 
@@ -1355,16 +1355,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientUDP_C
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o: ../examples/ThirdPartyLibs/enet/win32.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/win32.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/win32.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/win32.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/win32.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/win32.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/win32.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o.requires:
 
@@ -1379,16 +1379,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/win32.o.pro
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o: ../examples/ThirdPartyLibs/enet/unix.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/unix.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/unix.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/unix.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/unix.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/unix.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/unix.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o.requires:
 
@@ -1403,16 +1403,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/unix.o.prov
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o: ../examples/ThirdPartyLibs/enet/callbacks.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/callbacks.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/callbacks.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/callbacks.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/callbacks.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/callbacks.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/callbacks.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o.requires:
 
@@ -1427,16 +1427,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/callbacks.o
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o: ../examples/ThirdPartyLibs/enet/compress.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/compress.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/compress.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/compress.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/compress.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/compress.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/compress.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o.requires:
 
@@ -1451,16 +1451,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/compress.o.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o: ../examples/ThirdPartyLibs/enet/host.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/host.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/host.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/host.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/host.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/host.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/host.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o.requires:
 
@@ -1475,16 +1475,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/host.o.prov
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o: ../examples/ThirdPartyLibs/enet/list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/list.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/list.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/list.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/list.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/list.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o.requires:
 
@@ -1499,16 +1499,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/list.o.prov
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o: ../examples/ThirdPartyLibs/enet/packet.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/packet.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/packet.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/packet.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/packet.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/packet.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/packet.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o.requires:
 
@@ -1523,16 +1523,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/packet.o.pr
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o: ../examples/ThirdPartyLibs/enet/peer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/peer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/peer.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/peer.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/peer.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/peer.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/peer.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o.requires:
 
@@ -1547,16 +1547,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/peer.o.prov
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o: ../examples/ThirdPartyLibs/enet/protocol.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o   -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/protocol.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building C object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o   -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/protocol.c
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/protocol.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/protocol.c > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/protocol.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/protocol.c -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o.requires:
 
@@ -1571,16 +1571,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/enet/protocol.o.
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o: ../examples/SharedMemory/PhysicsClientTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o.requires:
 
@@ -1595,16 +1595,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP.o
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o: ../examples/SharedMemory/PhysicsClientTCP_C_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp > CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientTCP_C_API.cpp -o CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C_API.o.requires:
 
@@ -1619,16 +1619,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/SharedMemory/PhysicsClientTCP_C
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o: ../examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o.requires:
 
@@ -1643,16 +1643,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/Sim
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o: ../examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o.requires:
 
@@ -1667,16 +1667,16 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/Act
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/flags.make
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o: ../examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp > CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.i
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.cpp -o CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.s
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o.requires:
 
@@ -1846,9 +1846,9 @@ examples/TwoJoint/App_TwoJoint_d-3.19: src/BulletDynamics/libBulletDynamics.so.3
 examples/TwoJoint/App_TwoJoint_d-3.19: src/BulletCollision/libBulletCollision.so.3.19
 examples/TwoJoint/App_TwoJoint_d-3.19: src/LinearMath/libLinearMath.so.3.19
 examples/TwoJoint/App_TwoJoint_d-3.19: examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking CXX executable App_TwoJoint_d"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_TwoJoint.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -E cmake_symlink_executable App_TwoJoint_d-3.19 App_TwoJoint_d
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Linking CXX executable App_TwoJoint_d"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_TwoJoint.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -E cmake_symlink_executable App_TwoJoint_d-3.19 App_TwoJoint_d
 
 examples/TwoJoint/App_TwoJoint_d: examples/TwoJoint/App_TwoJoint_d-3.19
 
@@ -1930,10 +1930,10 @@ examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/requires: examples/TwoJoint/CMakeF
 .PHONY : examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/requires
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -P CMakeFiles/App_TwoJoint.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint && $(CMAKE_COMMAND) -P CMakeFiles/App_TwoJoint.dir/cmake_clean.cmake
 .PHONY : examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/clean
 
 examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TwoJoint /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/examples/TwoJoint /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint /home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/TwoJoint/CMakeFiles/App_TwoJoint.dir/depend
 

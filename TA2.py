@@ -37,6 +37,18 @@ from UCCS_TA2_helper import UCCSTA2
 import uuid
 import csv
 
+from datetime import datetime, timedelta
+
+
+
+import tracemalloc
+
+tracemalloc.start(10)
+snapshot1 = snapshot2 = tracemalloc.take_snapshot()
+top_stats = snapshot1.statistics('lineno')
+
+
+
 
 class ThreadedProcessingExample(threading.Thread):
     def __init__(self, processing_object: list, response_queue: queue.Queue):
@@ -263,6 +275,17 @@ class TA2Agent(TA2Logic):
         """
         self.log.info('Testing Episode Start: #{}'.format(episode_number))
         self.UCCS.reset(episode_number)
+        # if(True or self.UCCS.debug):
+        #     snapshot1 = tracemalloc.take_snapshot()
+
+
+
+
+        self.UCCS.starttime = datetime.now()
+       
+
+#        print("start episode",  self.UCCS.cnt)
+        
         return
 
         # One step predictions here
@@ -287,8 +310,9 @@ class TA2Agent(TA2Logic):
                 strictly enforced and the incorrect format will result in an exception being thrown.
         """
 
+        self.UCCS.noveltyindicator = novelty_indicator
         self.UCCS.debugstring=""
-
+       
         if (self.UCCS.cnt < 1):
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
@@ -306,8 +330,15 @@ class TA2Agent(TA2Logic):
         self.log.debug(self.UCCS.debugstring)
         self.totalSteps += 1
 
+
         # format the return of novelty and actions
         action = {"action": action}
+
+
+        
+
+        
+        
 
         return action
 
@@ -322,7 +353,7 @@ class TA2Agent(TA2Logic):
             budget set in the TA1. If there is no feedback, the object will be None.
         """
 
-        #        self.log.debug('Test Performance: {}'.format(performance))
+        #        self.log.info('Test Performance: {}'.format(performance))
 
         return
 
@@ -349,15 +380,48 @@ class TA2Agent(TA2Logic):
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()
+        novelty_characterization['stringdump']=self.UCCS.character
+
+        end =  datetime.now()
+        self.UCCS.cumtime +=  end - self.UCCS.starttime
+        
+
+        self.UCCS.totalcnt += 1
+        self.UCCS.perf += performance
+        rcorrect=pcorrect=0
+        if(performance > .99): rcorrect = 1.0
+        iscorrect=0
+        if((self.UCCS.noveltyindicator == True) and (novelty_probability >= .5)): iscorrect=1
+        if((self.UCCS.noveltyindicator == False) and (novelty_probability < .5)): iscorrect=1
+        self.UCCS.correctcnt = self.UCCS.correctcnt + iscorrect
+        self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect,rcorrect)
+        pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
+        rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
 
         #        print("Novelty Probability:", novelty_probability)
         #        print("Total Steps:", self.totalSteps)
-        self.log.debug('Testing Episode End: performance={}, NovelProbs={},steps={}, WC={},'.format(performance,
-                                                                                                    self.UCCS.problist,
-                                                                                                    self.totalSteps,
-                                                                                                    novelty_probability))
-        self.log.info('Training Episode End: steps={}, WC={},'.format(self.totalSteps, novelty_probability))
+
+        self.log.info('Testing Episode #{} End: time={}, atime={}  NovInd={}     steps={}, Perf={}, CumPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={},RCCnt={} TCN={}, {}   Char={}  '.format(
+            self.UCCS.episode,round((end - self.UCCS.starttime).total_seconds(),1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(),1),
+            self.UCCS.noveltyindicator,self.totalSteps,  performance, round(rperf,1),round(novelty_probability,2),iscorrect,rcorrect, round(pcorrect,2),self.UCCS.correctcnt,self.UCCS.rcorrectcnt, self.UCCS.totalcnt,
+            "\n", str(novelty_characterization) ))
         self.totalSteps = 0
+        
+        self.UCCS.starttime = datetime.now()
+        # if(self.UCCS.debug):
+        #     snapshot2 = tracemalloc.take_snapshot()
+
+        #     current, peak = tracemalloc.get_traced_memory()
+        #     print(f"Current memory usage is {current / 10**6}MB; Peak was {peak / 10**6}MB")
+
+        # if(self.UCCS.debug):
+        #     top_stats = snapshot2.compare_to(snapshot1, 'lineno')
+        #     print("[ Top 20 differences ]")
+        #     for stat in top_stats[:20]:
+        #         print(stat)
+
+
+        
         # if(self.UCCS.given):
         #      fname = 'Given-History-{}-{}-{}.csv'.format(self.UCCS.trial,self.UCCS.episode,uuid.uuid4().hex)
         #      with open(fname, "w", newline="") as f:

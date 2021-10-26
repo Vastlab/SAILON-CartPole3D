@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/depend.make
@@ -59,16 +59,16 @@ include test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o: ../test/SharedMemory/gtestwrap.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/test/SharedMemory/gtestwrap.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o -c /home/tboult/WORK/bullet3/test/SharedMemory/gtestwrap.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/test/SharedMemory/gtestwrap.cpp > CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/test/SharedMemory/gtestwrap.cpp > CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/test/SharedMemory/gtestwrap.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/test/SharedMemory/gtestwrap.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o.requires:
 
@@ -83,16 +83,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/gtestwrap.o.provides.b
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o: ../examples/SharedMemory/PhysicsClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClient.o.requires:
 
@@ -107,16 +107,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: ../examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o.requires:
 
@@ -131,16 +131,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: ../examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o.requires:
 
@@ -155,16 +155,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: ../examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o.requires:
 
@@ -179,16 +179,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o: ../examples/SharedMemory/IKTrajectoryHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/IKTrajectoryHelper.o.requires:
 
@@ -203,16 +203,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o: ../examples/SharedMemory/PhysicsServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServer.o.requires:
 
@@ -227,16 +227,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o: ../examples/SharedMemory/PhysicsServerSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerSharedMemory.o.requires:
 
@@ -251,16 +251,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o: ../examples/SharedMemory/PhysicsDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirect.o.requires:
 
@@ -275,16 +275,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o: ../examples/SharedMemory/PhysicsDirectC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsDirectC_API.o.requires:
 
@@ -299,16 +299,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o: ../examples/SharedMemory/PhysicsServerCommandProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsServerCommandProcessor.o.requires:
 
@@ -323,16 +323,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o: ../examples/SharedMemory/b3PluginManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/b3PluginManager.o.requires:
 
@@ -347,16 +347,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o: ../examples/SharedMemory/PhysicsClientSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory.o.requires:
 
@@ -371,16 +371,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o: ../examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientSharedMemory_C_API.o.requires:
 
@@ -395,16 +395,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o: ../examples/SharedMemory/PhysicsClientC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsClientC_API.o.requires:
 
@@ -419,16 +419,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o: ../examples/SharedMemory/PhysicsLoopBack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBack.o.requires:
 
@@ -443,16 +443,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o: ../examples/SharedMemory/PhysicsLoopBackC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PhysicsLoopBackC_API.o.requires:
 
@@ -467,16 +467,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o: ../examples/SharedMemory/Win32SharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/Win32SharedMemory.o.requires:
 
@@ -491,16 +491,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o: ../examples/SharedMemory/PosixSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/PosixSharedMemory.o.requires:
 
@@ -515,16 +515,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o: ../examples/Utils/b3ResourcePath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3ResourcePath.o.requires:
 
@@ -539,16 +539,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o: ../examples/Utils/b3Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o -c /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b3Clock.o.requires:
 
@@ -563,16 +563,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/b
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o: ../examples/Utils/ChromeTraceUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o -c /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/ChromeTraceUtil.o.requires:
 
@@ -587,16 +587,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/C
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o: ../examples/Utils/RobotLoggingUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o -c /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/RobotLoggingUtil.o.requires:
 
@@ -611,16 +611,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Utils/R
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o.requires:
 
@@ -635,16 +635,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o.requires:
 
@@ -659,16 +659,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/SharedM
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o: ../examples/OpenGLWindow/SimpleCamera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o -c /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/OpenGLWindow/SimpleCamera.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLWindow/SimpleCamera.o.requires:
 
@@ -683,16 +683,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/OpenGLW
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o: ../examples/TinyRenderer/geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/geometry.o.requires:
 
@@ -707,16 +707,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRen
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o: ../examples/TinyRenderer/model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/model.o.requires:
 
@@ -731,16 +731,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRen
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o: ../examples/TinyRenderer/tgaimage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/tgaimage.o.requires:
 
@@ -755,16 +755,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRen
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o: ../examples/TinyRenderer/our_gl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/our_gl.o.requires:
 
@@ -779,16 +779,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRen
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o: ../examples/TinyRenderer/TinyRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRenderer/TinyRenderer.o.requires:
 
@@ -803,16 +803,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/TinyRen
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: ../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o.requires:
 
@@ -827,16 +827,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPa
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: ../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o.requires:
 
@@ -851,16 +851,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPa
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o: ../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o.requires:
 
@@ -875,16 +875,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o: ../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o.requires:
 
@@ -899,16 +899,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: ../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o.requires:
 
@@ -923,16 +923,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o: ../examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.o.requires:
 
@@ -947,16 +947,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o: ../examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o.requires:
 
@@ -971,16 +971,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o: ../examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o.requires:
 
@@ -995,16 +995,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o: ../examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o.requires:
 
@@ -1019,16 +1019,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o: ../examples/Importers/ImportURDFDemo/UrdfParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o.requires:
 
@@ -1043,16 +1043,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o: ../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o.requires:
 
@@ -1067,16 +1067,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o: ../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o.requires:
 
@@ -1091,16 +1091,16 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/Importe
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/flags.make
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o: ../examples/ThirdPartyLibs/stb_image/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o.requires:
 
@@ -1220,8 +1220,8 @@ test/SharedMemory/Test_PhysicsClientServer: examples/ThirdPartyLibs/BussIK/libBu
 test/SharedMemory/Test_PhysicsClientServer: Extras/Serialize/BulletFileLoader/libBulletFileLoader.so.3.19
 test/SharedMemory/Test_PhysicsClientServer: src/LinearMath/libLinearMath.so.3.19
 test/SharedMemory/Test_PhysicsClientServer: test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable Test_PhysicsClientServer"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test_PhysicsClientServer.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable Test_PhysicsClientServer"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test_PhysicsClientServer.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/build: test/SharedMemory/Test_PhysicsClientServer
@@ -1276,10 +1276,10 @@ test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/requires: test/SharedM
 .PHONY : test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/requires
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory && $(CMAKE_COMMAND) -P CMakeFiles/Test_PhysicsClientServer.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory && $(CMAKE_COMMAND) -P CMakeFiles/Test_PhysicsClientServer.dir/cmake_clean.cmake
 .PHONY : test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/clean
 
 test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/test/SharedMemory /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/test/SharedMemory /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory /home/tboult/WORK/bullet3/build_cmake/test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/SharedMemory/CMakeFiles/Test_PhysicsClientServer.dir/depend
 

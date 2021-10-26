@@ -6,5 +6,5 @@ CXX_FLAGS = -g -D_DEBUG -fPIC
 
 CXX_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DGIMPACTUtils_EXPORTS -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/GIMPACT/include -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/GIMPACTUtils -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/Extras/GIMPACT/include -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/Extras/GIMPACTUtils -I/home/tboult/WORK/bullet3/Extras/ConvexDecomposition 
 

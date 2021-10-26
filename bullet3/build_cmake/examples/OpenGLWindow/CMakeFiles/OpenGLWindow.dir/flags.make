@@ -7,11 +7,11 @@ C_FLAGS = -g -fPIC
 
 C_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DDYNAMIC_LOAD_X11_FUNCTIONS=1 -DGLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1 -DGLEW_INIT_OPENGL11_FUNCTIONS=1 -DGLEW_STATIC -DOpenGLWindow_EXPORTS -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK
 
-C_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/.. -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../../src -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../ThirdPartyLibs/glad -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/optionalX11 
+C_INCLUDES = -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/.. -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../ThirdPartyLibs -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../../src -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../ThirdPartyLibs/glad -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/optionalX11 
 
 CXX_FLAGS = -g -D_DEBUG -fPIC  
 
 CXX_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DDYNAMIC_LOAD_X11_FUNCTIONS=1 -DGLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1 -DGLEW_INIT_OPENGL11_FUNCTIONS=1 -DGLEW_STATIC -DOpenGLWindow_EXPORTS -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/.. -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../../src -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/OpenGLWindow/../ThirdPartyLibs/glad -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/optionalX11 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/.. -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../ThirdPartyLibs -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../../src -I/home/tboult/WORK/bullet3/examples/OpenGLWindow/../ThirdPartyLibs/glad -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/optionalX11 
 

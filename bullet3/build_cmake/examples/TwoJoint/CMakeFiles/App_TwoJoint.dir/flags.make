@@ -7,11 +7,11 @@ C_FLAGS = -g
 
 C_DEFINES = -DBT_ENABLE_CLSOCKET -DBT_ENABLE_ENET -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DGLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1 -DGLEW_INIT_OPENGL11_FUNCTIONS=1 -DGLEW_STATIC -DHAS_SOCKLEN_T -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK -D_LINUX
 
-C_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/include -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/btgui/OpenGLWindow/GlewWindows 
+C_INCLUDES = -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/examples -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/include -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src -I/home/tboult/WORK/bullet3/btgui/OpenGLWindow/GlewWindows 
 
 CXX_FLAGS = -g -D_DEBUG  
 
 CXX_DEFINES = -DBT_ENABLE_CLSOCKET -DBT_ENABLE_ENET -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DGLEW_DYNAMIC_LOAD_ALL_GLX_FUNCTIONS=1 -DGLEW_INIT_OPENGL11_FUNCTIONS=1 -DGLEW_STATIC -DHAS_SOCKLEN_T -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK -D_LINUX
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/include -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/btgui/OpenGLWindow/GlewWindows 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/examples -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/include -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src -I/home/tboult/WORK/bullet3/btgui/OpenGLWindow/GlewWindows 
 

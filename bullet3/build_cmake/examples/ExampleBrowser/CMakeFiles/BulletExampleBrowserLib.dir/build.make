@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/depend.make
@@ -59,16 +59,16 @@ include examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.mak
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o: ../examples/ExampleBrowser/OpenGLExampleBrowser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp > CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp > CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLExampleBrowser.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrowser.o.requires:
 
@@ -83,16 +83,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLExampleBrow
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o: ../examples/ExampleBrowser/OpenGLGuiHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp > CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp > CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/OpenGLGuiHelper.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o.requires:
 
@@ -107,16 +107,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/OpenGLGuiHelper.o
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o: ../examples/ExampleBrowser/GL_ShapeDrawer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GL_ShapeDrawer.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o.requires:
 
@@ -131,16 +131,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GL_ShapeDrawer.o.
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o: ../examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp > CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp > CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/CollisionShape2TriangleMesh.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2TriangleMesh.o.requires:
 
@@ -155,16 +155,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/CollisionShape2Tr
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o: ../examples/Utils/b3Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o -c /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.o.requires:
 
@@ -179,16 +179,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Clock.
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o: ../examples/Utils/ChromeTraceUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o -c /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/ChromeTraceUtil.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/ChromeTraceUtil.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTraceUtil.o.requires:
 
@@ -203,16 +203,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/ChromeTr
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o: ../examples/Utils/b3ResourcePath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o -c /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3ResourcePath.o.requires:
 
@@ -227,16 +227,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/__/Utils/b3Resour
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o: ../examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GraphingTexture.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GraphingTexture.o.requires:
 
@@ -251,16 +251,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/Gr
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o: ../examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenParameterInterface.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenParameterInterface.o.requires:
 
@@ -275,16 +275,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/Gw
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o: ../examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenProfileWindow.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenProfileWindow.o.requires:
 
@@ -299,16 +299,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/Gw
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o: ../examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/GwenTextureWindow.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/GwenTextureWindow.o.requires:
 
@@ -323,16 +323,16 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/Gw
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o: ../examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp > CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.i
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/GwenGUISupport/gwenUserInterface.cpp -o CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.s
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/GwenGUISupport/gwenUserInterface.o.requires:
 
@@ -387,9 +387,9 @@ examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19: src/BulletCollision/
 examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19: src/LinearMath/libLinearMath.so.3.19
 examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19: src/Bullet3Common/libBullet3Common.so.3.19
 examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19: examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libBulletExampleBrowserLib.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletExampleBrowserLib.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletExampleBrowserLib.so.3.19 libBulletExampleBrowserLib.so.3.19 libBulletExampleBrowserLib.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX shared library libBulletExampleBrowserLib.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/BulletExampleBrowserLib.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_symlink_library libBulletExampleBrowserLib.so.3.19 libBulletExampleBrowserLib.so.3.19 libBulletExampleBrowserLib.so
 
 examples/ExampleBrowser/libBulletExampleBrowserLib.so: examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate examples/ExampleBrowser/libBulletExampleBrowserLib.so
@@ -415,10 +415,10 @@ examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/requires: example
 .PHONY : examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/requires
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -P CMakeFiles/BulletExampleBrowserLib.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -P CMakeFiles/BulletExampleBrowserLib.dir/cmake_clean.cmake
 .PHONY : examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/clean
 
 examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/examples/ExampleBrowser /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/ExampleBrowser/CMakeFiles/BulletExampleBrowserLib.dir/depend
 

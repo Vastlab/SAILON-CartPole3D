@@ -59,6 +59,7 @@ class CartPoleBulletEnv(gym.Env):
         self.TB2Dbullet=True
         self.setbase=False
         self.basepos=[0,0,0]
+        self.lastscore=0
 
         if self._discrete_actions:
             self.action_space = spaces.Discrete(5)
@@ -191,7 +192,6 @@ class CartPoleBulletEnv(gym.Env):
         # self.close()
         # Set time paremeter for sensor value
         self.time = time.time()
-
         # Create client if it doesnt exist
         if self._physics_client_id < 0:
             self.generate_world()
@@ -243,11 +243,11 @@ class CartPoleBulletEnv(gym.Env):
         p = self._p
 
         # Delete cartpole
-        if self.cartpole == -10:
-            self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
-        else:
-            p.removeBody(self.cartpole)
-            self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
+        # if self.cartpole == -10:
+        #     self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
+        # else:
+        #     p.removeBody(self.cartpole)
+        #     self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
 
 
         # This big line sets the spehrical joint on the pole to loose
@@ -284,6 +284,7 @@ class CartPoleBulletEnv(gym.Env):
             base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
             cartoffset = [0,0,0]
             if(self.setbase):
+#                print("Initial base", feature_vector)
                 self.setbase=False
                 self.basepos=cart_pos
                 # if base is 0 then set meaningful base from features
@@ -411,7 +412,7 @@ class CartPoleBulletEnv(gym.Env):
 
         # Handle pos, ori
         base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-        pos, vel, jRF, aJMT = p.getJointStateMultiDof(self.cartpole, 0)
+        pos, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
         state['x_position'] = round(pos[0] + base_pose[0], round_amount)
         state['y_position'] = round(pos[1] + base_pose[1], round_amount)
         state['z_position'] = round(0.1 + base_pose[2], round_amount)
@@ -422,13 +423,14 @@ class CartPoleBulletEnv(gym.Env):
         state['z_velocity'] = round(0.0, round_amount)
 
         world_state['cart'] = state
+        del state 
 
         # Get pole info =============================================
         state = dict()
         use_euler = False
 
         # Position and orientation, the other two not used
-        pos, vel, jRF, aJMT = p.getJointStateMultiDof(self.cartpole, 1)
+        pos, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 1)
 
         # Convert quats to eulers
         eulers = self.quaternion_to_euler(*pos)
@@ -450,7 +452,8 @@ class CartPoleBulletEnv(gym.Env):
         state['z_velocity'] = round(vel[2], round_amount)
 
         world_state['pole'] = state
-
+        del state 
+        
         # get block info ====================================
         block_state = list()
         for ind, val in enumerate(self.blocks):
@@ -468,8 +471,11 @@ class CartPoleBulletEnv(gym.Env):
             state['z_velocity'] = round(vel[2], round_amount)
 
             block_state.append(state)
-
         world_state['blocks'] = block_state
+        state = None
+        del state
+        del block_state
+        
 
         # # Get wall info ======================================
         # # Hardcoded cause I don't know how to get the info :(
@@ -596,7 +602,8 @@ class CartPoleBulletEnv(gym.Env):
             self._p.disconnect()
         self._physics_client_id = -1
 
-    def get_best_action(self, feature_vector):
+
+    def get_best_twostep_action(self, feature_vector):
         '''
             This function computes the best action to take for two step lookahead
              and returns it as a string
@@ -613,11 +620,11 @@ class CartPoleBulletEnv(gym.Env):
 
         for action in best_action.keys():
             # left, left
-            best_action[action][0] = self.step_env(feature_vector, [action, 'left'])
-            best_action[action][1] = self.step_env(feature_vector, [action, 'right'])
-            best_action[action][2] = self.step_env(feature_vector, [action, 'forward'])
-            best_action[action][3] = self.step_env(feature_vector, [action, 'backward'])
-            best_action[action][4] = self.step_env(feature_vector, [action, 'nothing'])
+            best_action[action][0] = self.two_step_env(feature_vector, [action, 'left'])
+            best_action[action][1] = self.two_step_env(feature_vector, [action, 'right'])
+            best_action[action][2] = self.two_step_env(feature_vector, [action, 'forward'])
+            best_action[action][3] = self.two_step_env(feature_vector, [action, 'backward'])
+            best_action[action][4] = self.two_step_env(feature_vector, [action, 'nothing'])
 
         best_score = best_action['left'][0][0]
         expected_state = best_action['left'][0][1]
@@ -633,12 +640,17 @@ class CartPoleBulletEnv(gym.Env):
                     action = i
                     next_action = j
                     expected_state = best_action[i][j][1]
+        self.lastscore=best_score
+        # if(best_score > 1):
+#        print("2 Best score/action: ", best_score, action)        
 
         second_action = ["left", "right", "forward", "backward", "nothing"]
+        
+        self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
 
         return action, second_action[next_action], expected_state
 
-    def step_env(self, feature_vector, steps):
+    def two_step_env(self, feature_vector, steps):
         '''
         Step the environment with the given steps
         :param env:
@@ -653,48 +665,123 @@ class CartPoleBulletEnv(gym.Env):
         self.step(steps[1])
         return [self.get_score(self.get_state()), state]
 
+
+    #structured like the two-step but that was expensive so teting one steo to see gain vs cost
+    def get_best_onestep_action(self, feature_vector):
+        '''
+            This function computes the best action to take for two step lookahead
+             and returns it as a string
+            :return: string action
+            '''
+        # Create dict of scores
+        # Key is first action, scores are rated by second action in order
+        # left, right, up, down, nothing
+        best_action = {"left": [None for i in range(1)],
+                       "right": [None for i in range(1)],
+                       "forward": [None for i in range(1)],
+                       "backward": [None for i in range(1)],
+                       "nothing": [None for i in range(1)]}
+
+        for action in best_action.keys():
+            # left, 0
+            best_action[action][0] = self.one_step_env(feature_vector, [action, 'nothing'])
+
+        best_score = best_action['left'][0][0]
+        expected_state = best_action['left'][0][1]
+        action = 'left'
+        next_action = 0
+        # return the best scoring action
+        for i in best_action.keys():
+            for j in range(len(best_action[i])):
+                # print(best_action[i][j])
+                if best_action[i][j][0] < best_score:
+                    best_score = best_action[i][j][0]
+                    action = i
+                    next_action = j
+                    expected_state = best_action[i][j][1]
+        # if(best_score > 1):
+#        print("1 Best Score/action : ", best_score,action)
+
+        self.lastscore=best_score
+        self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state        
+        
+        return action, "nothing", expected_state
+
+    def one_step_env(self, feature_vector, steps):
+        '''
+        Step the environment with the given steps
+        :param env:
+        :param feature_vector:
+        :param steps:
+        :return: Score
+        '''
+        self.reset(feature_vector)
+        self.step(steps[0])
+        state = self.get_state()
+        return [self.get_score(state), state]
+    
+
+
+    # get best action.. if our prediciton probablities (arg)  are good, use one step, else use two
+    #this is where we should try to adapt physics parmeters if things are going badly.. 
+    def get_best_action(self, feature_vector, prob=0):
+
+#  value from test 11        
+#        if((prob < .5 and self.lastscore < .5) or (self.lastscore < .25) ):            # make it mroe often just one making it faster
+        if((prob < .5 and self.lastscore < 2) or (self.lastscore < 1) ):            # make it even faster 
+            return self.get_best_onestep_action(feature_vector)
+        else:
+            return self.get_best_twostep_action(feature_vector)
+        
+
+
     def get_score(self, feature_vector):
         '''
         Score the current state of the environment.
         :return: float score
         '''
 
-        cart_x, cart_y, cart_z = feature_vector["cart"]["x_position"], \
-                                 feature_vector["cart"]["y_position"], \
-                                 feature_vector["cart"]["z_position"]
-        # Convert pole quaternions to euler angle
-        pole_x, pole_y, pole_z = self.quaternion_to_euler(feature_vector["pole"]["x_quaternion"],
-                                                         feature_vector["pole"]["y_quaternion"],
-                                                         feature_vector["pole"]["z_quaternion"],
-                                                         feature_vector["pole"]["w_quaternion"])
-        # The cost can be the angles of x and y, since that is used to determine env done
-        # We want to minimize those so the larger they are the higher the cost
-        #print("Pole quat vals: ", [pole_x, pole_y, pole_z])
-        cornerScores = 0
-        # Get distance
-        for corner in self.world_edges:
-            dist = math.sqrt((cart_x - corner[0]) ** 2
-                             + (cart_y - corner[1]) ** 2
-                             + (cart_z - corner[2]) ** 2)
+        cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]
 
-            # Scale
-            # World origin should be 0, increase from there
-            # Factor by 0.01, angle should have the most important weight
-            if dist < self.origin_dist:
-                # Weight the dist
-                cornerScores += dist * 0.01
+        p = self._p
+        pos, vel, jRF, aJMT = p.getJointStateMultiDof(self.cartpole, 1)
+        quat = pos;
+        pos = self.quaternion_to_euler(*pos)
+        pole_x = x_angle = abs(pos[0])
+        pole_y = y_angle = abs(pos[1])
+        pole_z = y_angle = abs(pos[2])        
+        
+        #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
+        
+        # start with min distance to walls which are at +- 5
+        mindist = min(abs(abs(cart_x) - 5), abs(abs(cart_y) - 5))
 
-        blockSum = 0
-        # Get distance of the cart to each block
-        for block in feature_vector["blocks"]:
-            # Get dist
-            blockDist = math.sqrt((cart_x - block["x_position"]) ** 2
-                                  + (cart_y - block["y_position"]) ** 2
-                                  + (cart_z - block["z_position"]) ** 2)
-            # Apply linear penalty function
-            blockSum -= abs(blockDist * 0.05)
+        for ablock in self.blocks:
+            nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
+            for c in nearpoints:           
+                contactdist = c[8]
+                mindist = min(mindist,contactdist)
 
-        cost = abs(pole_x) + abs(pole_y) + blockSum
+
+        tdist = mindist  #for debugging so we can see orginal minimal distance
+        if(tdist > 4): tdist = 4
+#        if(tdist < .1):
+#            print("Small minim distance ", tdist)            
+
+        if(tdist <=.01):
+            mdist = 4000
+        else:           
+            mindist = 4/(tdist*tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position 
+
+        
+        #  we weight the larger of the two errors more, but still consider the other
+        cost = 3*max(abs(pole_x), abs(pole_y)) + min(abs(pole_x), abs(pole_y))     + mindist -1
+#        cost = (abs(pole_x) +  abs(pole_y))      + mindist -1        
+
+#        if(tdist < .1):
+#            print("cost,  pole (x y z),  ", cost, abs(pole_x), abs(pole_y),abs(pole_z), "  dists ", mindist,tdist,  "   quat ", quat)
+        
+
 
         return cost
 

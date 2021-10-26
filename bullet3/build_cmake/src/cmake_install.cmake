@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/src
+# Install script for directory: /home/tboult/WORK/bullet3/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,24 +39,24 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/bullet" TYPE FILE FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/src/btBulletCollisionCommon.h"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/src/btBulletDynamicsCommon.h"
+    "/home/tboult/WORK/bullet3/src/btBulletCollisionCommon.h"
+    "/home/tboult/WORK/bullet3/src/btBulletDynamicsCommon.h"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3OpenCL/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Collision/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Geometry/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletInverseDynamics/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletSoftBody/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletCollision/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/BulletDynamics/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/LinearMath/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Common/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3OpenCL/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Serialize/Bullet2FileLoader/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Collision/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Geometry/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/BulletInverseDynamics/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/BulletSoftBody/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/BulletCollision/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/BulletDynamics/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/LinearMath/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/Bullet3Common/cmake_install.cmake")
 
 endif()
 

@@ -6,5 +6,5 @@ CXX_FLAGS = -g -D_DEBUG
 
 CXX_DEFINES = -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/Extras/obj2sdf/. -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/src 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/Extras/obj2sdf/. -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs -I/home/tboult/WORK/bullet3/src 
 

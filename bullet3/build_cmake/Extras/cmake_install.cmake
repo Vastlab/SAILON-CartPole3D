@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/Extras
+# Install script for directory: /home/tboult/WORK/bullet3/Extras
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,14 +39,14 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/InverseDynamics/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRoboticsGUI/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/BulletRobotics/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/obj2sdf/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/HACD/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/GIMPACTUtils/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/InverseDynamics/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRoboticsGUI/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/BulletRobotics/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/obj2sdf/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/HACD/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/GIMPACTUtils/cmake_install.cmake")
 
 endif()
 

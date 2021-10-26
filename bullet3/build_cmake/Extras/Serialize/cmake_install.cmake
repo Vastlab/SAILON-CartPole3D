@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize
+# Install script for directory: /home/tboult/WORK/bullet3/Extras/Serialize
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletFileLoader/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/Serialize/BulletWorldImporter/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletFileLoader/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletXmlWorldImporter/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/Serialize/BulletWorldImporter/cmake_install.cmake")
 
 endif()
 

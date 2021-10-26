@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket
+# Install script for directory: /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,16 +38,16 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/clsocket/libclsocket.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/clsocket/libclsocket.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h"
+    "/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/ActiveSocket.h"
+    "/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/Host.h"
+    "/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/PassiveSocket.h"
+    "/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/SimpleSocket.h"
+    "/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src/StatTimer.h"
     )
 endif()
 

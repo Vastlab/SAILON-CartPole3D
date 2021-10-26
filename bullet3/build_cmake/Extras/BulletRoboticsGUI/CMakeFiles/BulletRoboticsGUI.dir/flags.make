@@ -6,5 +6,5 @@ CXX_FLAGS = -g -D_DEBUG -fPIC
 
 CXX_DEFINES = -DBT_ENABLE_CLSOCKET -DBT_ENABLE_ENET -DBT_USE_DOUBLE_PRECISION -DBT_USE_EGL -DBulletRoboticsGUI_EXPORTS -DHAS_SOCKLEN_T -DPHYSICS_SERVER_DIRECT -DPYBULLET_USE_NUMPY -DUSE_GRAPHICAL_BENCHMARK -D_LINUX
 
-CXX_INCLUDES = -I/home/nwindesh/SAILON-CartPole3D/bullet3/src -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/enet/include -I/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/clsocket/src 
+CXX_INCLUDES = -I/home/tboult/WORK/bullet3/src -I/home/tboult/WORK/bullet3/examples -I/home/tboult/WORK/bullet3/examples/SharedMemory -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/enet/include -I/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/clsocket/src 
 

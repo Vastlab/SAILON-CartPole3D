@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3/examples
+# Install script for directory: /home/tboult/WORK/bullet3/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,17 +39,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/HelloWorld/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/BasicDemo/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/SharedMemory/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/Gwen/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/BussIK/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ThirdPartyLibs/clsocket/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/OpenGLWindow/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/TwoJoint/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/pybullet/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/HelloWorld/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/BasicDemo/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/SharedMemory/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/Gwen/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/BussIK/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/ThirdPartyLibs/clsocket/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/OpenGLWindow/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/TwoJoint/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/pybullet/cmake_install.cmake")
 
 endif()
 

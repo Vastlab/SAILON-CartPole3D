@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/depend.make
@@ -59,16 +59,16 @@ include examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o: ../examples/RobotSimulator/RobotSimulatorMain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o -c /home/tboult/WORK/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp > CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp > CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp -o CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RobotSimulator/RobotSimulatorMain.cpp -o CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o.requires:
 
@@ -83,16 +83,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o.p
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o: ../examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o -c /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp > CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp > CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp -o CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp -o CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o.requires:
 
@@ -107,16 +107,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClient
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o: ../examples/RobotSimulator/MinitaurSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/MinitaurSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o -c /home/tboult/WORK/bullet3/examples/RobotSimulator/MinitaurSetup.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/MinitaurSetup.cpp > CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RobotSimulator/MinitaurSetup.cpp > CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/MinitaurSetup.cpp -o CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RobotSimulator/MinitaurSetup.cpp -o CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o.requires:
 
@@ -131,16 +131,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o.provid
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o: ../examples/ExampleBrowser/InProcessExampleBrowser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o.requires:
 
@@ -155,16 +155,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InPr
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o: ../examples/SharedMemory/GraphicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o.requires:
 
@@ -179,16 +179,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Graphi
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o: ../examples/SharedMemory/GraphicsClientExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o.requires:
 
@@ -203,16 +203,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Graphi
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o: ../examples/SharedMemory/RemoteGUIHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o.requires:
 
@@ -227,16 +227,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Remote
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o: ../examples/SharedMemory/RemoteGUIHelperTCP.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelperTCP.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o.requires:
 
@@ -251,16 +251,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Remote
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o: ../examples/SharedMemory/PhysicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o.requires:
 
@@ -275,16 +275,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Physic
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: ../examples/SharedMemory/PhysicsServerExampleBullet2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o.requires:
 
@@ -299,16 +299,16 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/Physic
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/flags.make
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: ../examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o.requires:
 
@@ -365,9 +365,9 @@ examples/RobotSimulator/App_RobotSimulator_d-3.19: src/BulletCollision/libBullet
 examples/RobotSimulator/App_RobotSimulator_d-3.19: src/LinearMath/libLinearMath.so.3.19
 examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/ThirdPartyLibs/BussIK/libBussIK.so
 examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable App_RobotSimulator_d"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_RobotSimulator.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_symlink_executable App_RobotSimulator_d-3.19 App_RobotSimulator_d
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable App_RobotSimulator_d"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_RobotSimulator.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_symlink_executable App_RobotSimulator_d-3.19 App_RobotSimulator_d
 
 examples/RobotSimulator/App_RobotSimulator_d: examples/RobotSimulator/App_RobotSimulator_d-3.19
 
@@ -392,10 +392,10 @@ examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/requires: examples/Rob
 .PHONY : examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/requires
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -P CMakeFiles/App_RobotSimulator.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -P CMakeFiles/App_RobotSimulator.dir/cmake_clean.cmake
 .PHONY : examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/clean
 
 examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/examples/RobotSimulator /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/depend
 

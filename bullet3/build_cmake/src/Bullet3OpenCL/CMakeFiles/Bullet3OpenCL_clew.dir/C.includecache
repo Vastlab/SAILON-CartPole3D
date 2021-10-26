@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/src/clew/clew.c
+/home/tboult/WORK/bullet3/src/clew/clew.c
 clew.h
-/home/nwindesh/SAILON-CartPole3D/bullet3/src/clew/clew.h
+/home/tboult/WORK/bullet3/src/clew/clew.h
 windows.h
 -
 dlfcn.h
@@ -16,7 +16,7 @@ dlfcn.h
 stdlib.h
 -
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/src/clew/clew.h
+/home/tboult/WORK/bullet3/src/clew/clew.h
 AvailabilityMacros.h
 -
 stdint.h

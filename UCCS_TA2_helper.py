@@ -30,6 +30,11 @@ import random
 import csv
 import importlib.util
 
+from datetime import datetime, timedelta
+
+
+
+
 try:
     torch.multiprocessing.set_sharing_strategy('file_system')
 except RuntimeError:
@@ -48,8 +53,19 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
+        self.scoreforKl=20        # we only use the first sets of scores for KL because novels worlds close when balanced
         self.num_epochs = 200
         self.num_dims = 4
+        self.scalelargescores=20
+        # takes a while for some randome starts to stabilise so don't reset too early as it
+        # reduces world change sensitvity        
+        self.skipfirstNscores=3
+
+        # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
+        # too large in hopes of  better ccotrol
+        self.scoretoreset=20
+        
+
 
         # TODO: change evm data dimensions
         if (self.num_dims == 4):
@@ -72,6 +88,11 @@ class UCCSTA2():
         self.maxprob = 0
         self.meanprob = 0
         self.expected_backone = np.zeros(4)
+        self.noveltyindicator = None
+        self.correctcnt=0
+        self.rcorrectcnt=0        
+        self.totalcnt=0        
+        self.perf=0                
         #        self.expected_backtwo = np.zeros(4)
         self.episode = 0
         self.trial = 0
@@ -79,6 +100,8 @@ class UCCSTA2():
         self.statelist = []
         self.debug = True
         self.debugstring = ""
+        self.character=""
+        
         # Create prediction environment
         env_location = importlib.util.spec_from_file_location('CartPoleBulletEnv', \
                                                               'cartpolepp/new2dcart.py')
@@ -106,6 +129,8 @@ class UCCSTA2():
 
             evm_model = pickle.load(open(filename, "rb"))
             self.evm_inference_obj = EVM_Inference_cpu_max_knowness_prob(args_evm.distance_metric, evm_model)
+            self.starttime = datetime.now()
+            self.cumtime = self.starttime - datetime.now()
         return
 
     def reset(self, episode):
@@ -115,6 +140,8 @@ class UCCSTA2():
         self.maxprob = 0
         self.meanprob = 0
         self.cnt = 0
+        self.character=""
+        self.debugstring=""        
         self.episode = episode
         self.worldchanged = 0
         self.env_prediction.resetbase()
@@ -125,9 +152,7 @@ class UCCSTA2():
     # env should be a CartPoleBulletEnv
     def takeOneStep(self, state_given, env, pertub=False):
         observation = state_given
-        if(self.cnt <2):
-            observation = env.reset(state_given)    #TB  its more sensitive to pertubations if we don't reset after first step
-        action, next_action, expected_state = env.get_best_action(observation)
+        action, next_action, expected_state = env.get_best_action(observation,self.meanprob)
         # if doing well pertub it so we can better chance of detecting novelties
         '''ra = int(state_given[0] * 10000) % 4
         if (pertub and
@@ -170,8 +195,13 @@ class UCCSTA2():
         return np.asarray(state)
 
     def world_change_prob(self,settrain=False):
-        mu = np.mean(self.problist)
-        sigma = np.std(self.problist)
+        mlength = len(self.problist)
+        mlength = min(self.scoreforKl,mlength)
+        # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
+#        mu = max(np.mean(self.problist[:mlength]), np.mean(self.problist[-mlength:]))
+#        sigma = max(np.std(self.problist[:mlength]), np.std(self.problist[-mlength:]))
+        mu = np.mean(self.problist[:mlength])
+        sigma = np.std(self.problist[:mlength])
         if(settrain):
            self.mean_train = mu;
            self.stdev_train = sigma;
@@ -179,19 +209,20 @@ class UCCSTA2():
            self.worldchanged = 0
            return 0;
         if( self.mean_train == 0):
-           self.mean_train = 0.07495867168990145   #these guessted values for Phase 2 incase we get called without training
-           self.stdev_train = 0.09200903267659786
+           self.mean_train = 0.052   #these guessted values for Phase 2 incase we get called without training
+           self.stdev_train = 0.091
            self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
            
 
 #        if (len(self.problist) < 3):
 #            print("Very short, world must have changed")
 #            return 1;
-#        if (len(self.problist) < 198):   #for real work
-        if (len(self.problist) < 98):            # for testing model lenght =100
-            if (self.debug):
-                self.debugstring = 'Short  list of len {} world mush have changed'.format(self.problist)
-            return 1;        # we can alway balance in normal world.. if our trial ends early its novel
+        if (len(self.problist) < 198):   #for real work
+            if (True or self.debug):
+                self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
+                self.debugstring = '   ***Short World Change Prob ={},mu={}, sigmas {}, mean {} stdev{} val {} thresh {}'.format(
+                    [round(num,2) for num in self.problist], round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold),3)
+                print(self.debugstring)
         if (sigma == 0):
             if (mu == self.mean_train):
                 return 0;
@@ -199,13 +230,17 @@ class UCCSTA2():
                 sigma = self.stdev_train
 
             #        pdb.set_trace()
-        self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
+        if(mu < self.mean_train):   #no point computing if world differences are smaller, it may be "much" smaller but that is okay
+            self.KL_val = 0   
+        else: 
+            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
         KLscale = (
                               self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start down to  1/2
         prob = min(1.0, KLscale * self.KL_val / (2 * self.KL_threshold))
-        if (self.debug):
-                self.debugstring = 'Wolrd Change Prob ={},mu={}, sigmas {}, mean {} stdev{} val {} thresh {} scale {}'.format(
-                prob, mu, sigma, self.mean_train, self.stdev_train ,self.KL_val, self.KL_threshold, KLscale)
+        if (True or self.debug):
+                self.debugstring = '      World Change Prob ={},mu={}, sigmas {}, mean {} stdev{} val {} thresh {} scale {}'.format(
+                    round(prob,2), round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold),3)
+                print(self.debugstring)
         
         #        self.worldchanged = max(prob,self.worldchanged)
         self.worldchanged = prob
@@ -214,17 +249,76 @@ class UCCSTA2():
     def process_instance(self, actual_state):
         #        pertub = (self.cnt > 100) and (self.maxprob < .5)
         pertub = False
+        forcedreset=False
 #        pdb.set_trace()
+        if(self.cnt ==0 ):
+            observation = self.env_prediction.reset(actual_state)    #TB  its more sensitive to pertubations if we don't reset after first step
+
         action, expected_state = self.takeOneStep(actual_state, self.env_prediction, pertub)
+
+        #we don't reset in first few steps because random start may be a bad position yielding large score
+        #might be were we search for better world parmaters if we get time for that
+        if(self.cnt > self.skipfirstNscores and self.env_prediction.lastscore > self.scoretoreset):
+#            print("At step ", self.cnt, "resettin to actual because of a large score", self.env_prediction.lastscore)
+            self.env_prediction.reset(actual_state)
+            forcedreset=True            
 
         data_val = self.expected_backone
         self.expected_backone = expected_state
         self.cnt += 1
         if (self.cnt < 3):  # skip prob estiamtes for the first ones as we need history to get prediction
+            if (self.cnt == 1):
+                self.debugstring = 'Testing initial state for obvious world changes: actual_state={}, next={}, dataval={}, '.format(actual_state,
+                                                                                                   expected_state,
+
+                                                                                                                                    data_val)
+                initprob=0  # assume nothing new in world
+                #check if any abs (block velocities) < 6 > 10 in any dimension   Done as a hack.. better to do EVT fitting on  values based on training ranges. 
+                cart_pos = [actual_state['cart']['x_position'],actual_state['cart']['y_position'],actual_state['cart']['z_position']]
+                cart_pos = np.asarray(cart_pos)
+                
+                for block in actual_state["blocks"]:
+                    pos = [block["x_position"],
+                           block["y_position"],
+                           block["z_position"]]
+                    vel = [block["x_velocity"],
+                           block["y_velocity"],
+                           block["z_velocity"]]
+                    pos = np.asarray(pos)                     
+                    # in normal world  in z block were  (+-4)(+5) so in range 1 to 9 and
+                    # in normal world  in cart never clsoer than 1 unit
+                    #gravity impact things and they did one step before sending us stuff so leave a little room in test from ideal conditions and slowly grow initprob so 1 random thing is nt enough                    
+                    if(np.linalg.norm(cart_pos[0:2] - pos[0:2]) < .9):initprob += 1 - (np.linalg.norm(cart_pos[0:2] - pos[0:2])) ; self.character += "block norm too close;"; #print('norm fail',initprob,block)
+                    if(pos[2] < .9): initprob += 1 - pos[2] ;  self.character += "block pos2 too smalll;";  #print('pos2 fail',initprob,block)
+                    if(pos[2] > 10.1): initprob +=  pos[2]-10; self.character += "block pos2 too large;"; #print('pos2 fail',initprob,block)  
+                    if(abs(pos[0])>4.1): initprob +=  abs(4 - abs(pos[0]));self.character += "block pos0 out of range;";#print('pos0 fail',initprob,block)
+                    if(abs(pos[1])>4.1): initprob +=  abs(4 - abs(pos[1]));self.character += "block pos1 out of range;";#print('pos1 fail',initprob,block)                                                        
+
+
+                    #gravity impact velocities faster allow greater error 
+                    if(abs(abs(vel[0]) - 7.5 ) > 3): initprob += abs(abs(vel[0]) - 7.5 );self.character += "block vel0 out of range;"; #print('vel0 fail',initprob,block)
+                    if(abs(abs(vel[1]) - 7.5 ) > 3): initprob += abs(abs(vel[1]) - 7.5 ); self.character += "block vel1 out of range;";#print('vel2 fail',initprob,block)
+                    if(abs(abs(vel[2]) - 7.5 ) > 3): initprob += abs(abs(vel[2]) - 7.5 ); self.character += "block vel2 out of range;";#print('vel2 fail',initprob,block)                    
+
+                #any other inital checks go here.. updating  initprob
+
+                #update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
+                self.maxprob = max(initprob, self.maxprob)
+                if(initprob >0):
+                    self.problist.append(initprob)  # add a very big bump in prob space so KL will see it
+                    # print('Inital probability checks set prob to 1 with actual_state={}, next={}, dataval={}, '.format(actual_state,
+                    #                                                                                expected_state,
+                    #                                                                                data_val))                          
+                          
+                    
+
+
+
             if (False and self.debug):
                 self.debugstring = 'Early Instance: actual_state={}, next={}, dataval={}, '.format(actual_state,
                                                                                                    expected_state,
                                                                                                    data_val)
+                
             return action
         else:
             data_val = self.format_data(data_val)
@@ -241,21 +335,25 @@ class UCCSTA2():
             mval = max(abs(current) )
             if (mval < 1e-4):
                 probability = 0
-            elif (self.meanprob > .8):
-                # hack for speed, no point recomputing if we already have a high mean probability as world changed detected with this much probability so cannot go back
-                probability = self.meanprob
             else:
-                # compute EVM proabilties
+                # compute gusssian  proabilties for now  replace next 3 lines with EVT calc
 
                 zscores = abs((valavg - current)/valstd)
-                prob_values = [(2*st.norm.cdf(z)-1) for z in zscores]
-                probability = max(prob_values)
+                prob_values = [(2*st.norm.cdf(z)-1) for z in zscores]  # this is like evt w-score 
+                probability = max(prob_values)   #take max over dimensions of probability of unkown
+                if(probability > .5):
+                    maxindex = np.argmax(prob_values)
+                    self.character += 'Delta[{}] prob {}  @ step {};'.format(maxindex,probability,self.cnt)
+                del zscores
 
                 # data_tensor = torch.from_numpy(np.asarray(current))
                 # probs = self.evm_inference_obj(data_tensor)
                 # probability = self.prob_scale * (
                 # probs.numpy()[0]) - 1  # probably of novelty so knowns have prob 0,  unknown prob 1.
                 self.maxprob = max(probability, self.maxprob)
+                # we can also include the score from control algorithm,   we'll have to test to see if it helps..
+                #first testing suggests is not great as when block interfer it raises score as we try to fix it but then it seems novel. 
+#                self.maxprob=min(1,self.maxprob +  self.env_prediction.lastscore / self.scalelargescores)
                 if (self.cnt > 6):
                     self.meanprob = np.mean(self.problist)
                 #              print(self.meanprob, self.problist)
@@ -264,10 +362,13 @@ class UCCSTA2():
 #                self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
 #                    self.cnt, actual_state, expected_state, current, probability)
 #                self.debugstring  +=           print("prob/probval", probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)                
-#            if(probability > .001):
-#                print("prob/maxval", probability, mval, "maxprob", self.maxprob, "meanprob", self.meanprob,  " current", current)                
+            # if(probability > .5):
+            #     print("prob/maxval", probability, mval, "maxprob", self.maxprob, "meanprob", self.meanprob )
+            #     print( " diff ", current)                                
+            #     print("  exected", data_val)
+            #     print("  actual", actual_state)                
                 
             #          elif(self.given): self.statelist.append([action,actual_state,expected_state,current])
-
+            del prob_values
             self.problist.append(probability)
         return action

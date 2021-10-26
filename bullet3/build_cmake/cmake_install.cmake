@@ -1,4 +1,4 @@
-# Install script for directory: /home/nwindesh/SAILON-CartPole3D/bullet3
+# Install script for directory: /home/tboult/WORK/bullet3
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,22 +38,22 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/bullet.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/tboult/WORK/bullet3/build_cmake/bullet.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/bullet" TYPE FILE FILES
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/UseBullet.cmake"
-    "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/BulletConfig.cmake"
+    "/home/tboult/WORK/bullet3/UseBullet.cmake"
+    "/home/tboult/WORK/bullet3/build_cmake/BulletConfig.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/cmake_install.cmake")
-  include("/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/examples/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/Extras/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/src/cmake_install.cmake")
+  include("/home/tboult/WORK/bullet3/build_cmake/test/cmake_install.cmake")
 
 endif()
 
@@ -65,5 +65,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/tboult/WORK/bullet3/build_cmake/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -118,7 +118,7 @@ X11/keysymdef.h
 
 ../examples/ThirdPartyLibs/optionalX11/X11/keysymdef.h
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/egl.c
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/egl.c
 stdio.h
 -
 stdlib.h
@@ -136,7 +136,7 @@ windows.h
 dlfcn.h
 -
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/gl.c
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/gl.c
 stdio.h
 -
 stdlib.h
@@ -154,7 +154,7 @@ windows.h
 dlfcn.h
 -
 
-/home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/glad/glx.c
+/home/tboult/WORK/bullet3/examples/ThirdPartyLibs/glad/glx.c
 stdio.h
 -
 stdlib.h

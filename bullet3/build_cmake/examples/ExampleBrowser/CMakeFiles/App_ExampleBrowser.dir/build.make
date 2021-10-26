@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/depend.make
@@ -59,16 +59,16 @@ include examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o: ../examples/ExampleBrowser/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/main.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/main.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/main.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/main.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/main.cpp > CMakeFiles/App_ExampleBrowser.dir/main.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/main.cpp > CMakeFiles/App_ExampleBrowser.dir/main.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/main.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/main.cpp -o CMakeFiles/App_ExampleBrowser.dir/main.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/main.cpp -o CMakeFiles/App_ExampleBrowser.dir/main.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o.requires:
 
@@ -83,16 +83,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/main.o.provides.build:
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o: ../examples/ExampleBrowser/ExampleEntries.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/ExampleEntries.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/ExampleEntries.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/ExampleEntries.cpp > CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/ExampleEntries.cpp > CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/ExampleEntries.cpp -o CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/ExampleEntries.cpp -o CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o.requires:
 
@@ -107,16 +107,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/ExampleEntries.o.provi
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o: ../examples/ExtendedTutorials/Chain.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Chain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Chain.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Chain.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Chain.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Chain.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Chain.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Chain.o.requires:
 
@@ -131,16 +131,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/C
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o: ../examples/ExtendedTutorials/Bridge.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Bridge.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Bridge.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Bridge.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Bridge.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/Bridge.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/Bridge.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/Bridge.o.requires:
 
@@ -155,16 +155,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/B
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o: ../examples/ExtendedTutorials/RigidBodyFromObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/RigidBodyFromObj.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/RigidBodyFromObj.o.requires:
 
@@ -179,16 +179,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/R
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o: ../examples/ExtendedTutorials/SimpleBox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleBox.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleBox.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleBox.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleBox.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleBox.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleBox.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleBox.o.requires:
 
@@ -203,16 +203,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/S
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o: ../examples/ExtendedTutorials/MultipleBoxes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultipleBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultipleBoxes.o.requires:
 
@@ -227,16 +227,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/M
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o: ../examples/ExtendedTutorials/CompoundBoxes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/CompoundBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/CompoundBoxes.o.requires:
 
@@ -251,16 +251,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/C
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o: ../examples/ExtendedTutorials/SimpleCloth.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleCloth.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleCloth.o.requires:
 
@@ -275,16 +275,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/S
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o: ../examples/ExtendedTutorials/SimpleJoint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/SimpleJoint.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/SimpleJoint.o.requires:
 
@@ -299,16 +299,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/S
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o: ../examples/ExtendedTutorials/NewtonsCradle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsCradle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsCradle.o.requires:
 
@@ -323,16 +323,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/N
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o: ../examples/ExtendedTutorials/InclinedPlane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/InclinedPlane.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/InclinedPlane.o.requires:
 
@@ -347,16 +347,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/I
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o: ../examples/ExtendedTutorials/MultiPendulum.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/MultiPendulum.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/MultiPendulum.o.requires:
 
@@ -371,16 +371,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/M
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o: ../examples/BulletRobotics/FixJointBoxes.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/FixJointBoxes.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o -c /home/tboult/WORK/bullet3/examples/BulletRobotics/FixJointBoxes.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/FixJointBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/BulletRobotics/FixJointBoxes.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/FixJointBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/BulletRobotics/FixJointBoxes.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJointBoxes.o.requires:
 
@@ -395,16 +395,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/FixJ
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o: ../examples/BulletRobotics/BoxStack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/BoxStack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o -c /home/tboult/WORK/bullet3/examples/BulletRobotics/BoxStack.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/BoxStack.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/BulletRobotics/BoxStack.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/BoxStack.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/BulletRobotics/BoxStack.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxStack.o.requires:
 
@@ -419,16 +419,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/BoxS
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o: ../examples/BulletRobotics/JointLimit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/JointLimit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o -c /home/tboult/WORK/bullet3/examples/BulletRobotics/JointLimit.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/JointLimit.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/BulletRobotics/JointLimit.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BulletRobotics/JointLimit.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/BulletRobotics/JointLimit.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/JointLimit.o.requires:
 
@@ -443,16 +443,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BulletRobotics/Join
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o: ../examples/TinyRenderer/geometry.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/geometry.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geometry.o.requires:
 
@@ -467,16 +467,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/geomet
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o: ../examples/TinyRenderer/model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/model.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.o.requires:
 
@@ -491,16 +491,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/model.
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o: ../examples/TinyRenderer/tgaimage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/tgaimage.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaimage.o.requires:
 
@@ -515,16 +515,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/tgaima
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o: ../examples/TinyRenderer/our_gl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/our_gl.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl.o.requires:
 
@@ -539,16 +539,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/our_gl
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o: ../examples/TinyRenderer/TinyRenderer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o -c /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp > CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/TinyRenderer/TinyRenderer.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRenderer.o.requires:
 
@@ -563,16 +563,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/TinyRenderer/TinyRe
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o: ../examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/collisionFilterPlugin/collisionFilterPlugin.o.requires:
 
@@ -587,16 +587,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugin
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o: ../examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/pdControlPlugin/pdControlPlugin.o.requires:
 
@@ -611,16 +611,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugin
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/tinyRendererPlugin.o.requires:
 
@@ -635,16 +635,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugin
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o: ../examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugins/tinyRendererPlugin/TinyRendererVisualShapeConverter.o.requires:
 
@@ -659,16 +659,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/plugin
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o: ../examples/SharedMemory/IKTrajectoryHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/IKTrajectoryHelper.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTrajectoryHelper.o.requires:
 
@@ -683,16 +683,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/IKTraj
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o: ../examples/SharedMemory/PhysicsServer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServer.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServer.o.requires:
 
@@ -707,16 +707,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o: ../examples/SharedMemory/PhysicsClientSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory.o.requires:
 
@@ -731,16 +731,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o: ../examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientSharedMemory_C_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientSharedMemory_C_API.o.requires:
 
@@ -755,16 +755,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o: ../examples/SharedMemory/PhysicsClient.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClient.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClient.o.requires:
 
@@ -779,16 +779,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o: ../examples/SharedMemory/PhysicsClientC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientC_API.o.requires:
 
@@ -803,16 +803,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o: ../examples/SharedMemory/GraphicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsServerExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsServerExample.o.requires:
 
@@ -827,16 +827,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Graphi
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o: ../examples/SharedMemory/GraphicsClientExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/GraphicsClientExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/GraphicsClientExample.o.requires:
 
@@ -851,16 +851,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Graphi
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o: ../examples/SharedMemory/RemoteGUIHelper.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/RemoteGUIHelper.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/RemoteGUIHelper.o.requires:
 
@@ -875,16 +875,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Remote
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o: ../examples/SharedMemory/PhysicsServerExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExample.o.requires:
 
@@ -899,16 +899,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o: ../examples/SharedMemory/PhysicsServerExampleBullet2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerExampleBullet2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerExampleBullet2.o.requires:
 
@@ -923,16 +923,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o: ../examples/SharedMemory/PhysicsClientExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsClientExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsClientExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsClientExample.o.requires:
 
@@ -947,16 +947,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o: ../examples/SharedMemory/PosixSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PosixSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixSharedMemory.o.requires:
 
@@ -971,16 +971,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PosixS
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o: ../examples/SharedMemory/Win32SharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/Win32SharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32SharedMemory.o.requires:
 
@@ -995,16 +995,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Win32S
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o: ../examples/SharedMemory/InProcessMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/InProcessMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/InProcessMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProcessMemory.o.requires:
 
@@ -1019,16 +1019,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/InProc
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o: ../examples/SharedMemory/PhysicsServerSharedMemory.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerSharedMemory.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerSharedMemory.o.requires:
 
@@ -1043,16 +1043,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o: ../examples/SharedMemory/PhysicsDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirect.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirect.o.requires:
 
@@ -1067,16 +1067,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o: ../examples/SharedMemory/PhysicsDirectC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsDirectC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsDirectC_API.o.requires:
 
@@ -1091,16 +1091,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o: ../examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/SharedMemoryInProcessPhysicsC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o.requires:
 
@@ -1115,16 +1115,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Shared
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o: ../examples/SharedMemory/PhysicsLoopBack.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBack.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBack.o.requires:
 
@@ -1139,16 +1139,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o: ../examples/SharedMemory/PhysicsLoopBackC_API.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsLoopBackC_API.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsLoopBackC_API.o.requires:
 
@@ -1163,16 +1163,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o: ../examples/SharedMemory/PhysicsServerCommandProcessor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/PhysicsServerCommandProcessor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/PhysicsServerCommandProcessor.o.requires:
 
@@ -1187,16 +1187,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/Physic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o: ../examples/SharedMemory/b3PluginManager.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3PluginManager.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3PluginManager.o.requires:
 
@@ -1211,16 +1211,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3Plug
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o: ../examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoGUI.o.requires:
 
@@ -1235,16 +1235,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3Robo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o: ../examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o -c /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3RobotSimulatorClientAPI_NoDirect.o.requires:
 
@@ -1259,16 +1259,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SharedMemory/b3Robo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o: ../examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o -c /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RobotSimulator/b3RobotSimulatorClientAPI.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3RobotSimulatorClientAPI.o.requires:
 
@@ -1283,16 +1283,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RobotSimulator/b3Ro
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o: ../examples/BasicDemo/BasicExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BasicDemo/BasicExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o -c /home/tboult/WORK/bullet3/examples/BasicDemo/BasicExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BasicDemo/BasicExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/BasicDemo/BasicExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/BasicDemo/BasicExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/BasicDemo/BasicExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExample.o.requires:
 
@@ -1307,16 +1307,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/BasicDemo/BasicExam
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o: ../examples/InverseDynamics/InverseDynamicsExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o -c /home/tboult/WORK/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/InverseDynamics/InverseDynamicsExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/InverseDynamicsExample.o.requires:
 
@@ -1331,16 +1331,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseDynamics/Inv
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o: ../examples/InverseKinematics/InverseKinematicsExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o -c /home/tboult/WORK/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/InverseKinematics/InverseKinematicsExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/InverseKinematicsExample.o.requires:
 
@@ -1355,16 +1355,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/InverseKinematics/I
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o: ../examples/ForkLift/ForkLiftDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ForkLift/ForkLiftDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_55) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o -c /home/tboult/WORK/bullet3/examples/ForkLift/ForkLiftDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ForkLift/ForkLiftDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ForkLift/ForkLiftDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ForkLift/ForkLiftDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ForkLift/ForkLiftDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDemo.o.requires:
 
@@ -1379,16 +1379,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ForkLift/ForkLiftDe
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o: ../examples/MultiThreadedDemo/MultiThreadedDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_56) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o -c /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/MultiThreadedDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/MultiThreadedDemo.o.requires:
 
@@ -1403,16 +1403,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/M
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o: ../examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_57) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o -c /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreadedDemo/CommonRigidBodyMTBase.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/CommonRigidBodyMTBase.o.requires:
 
@@ -1427,16 +1427,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreadedDemo/C
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o: ../examples/Heightfield/HeightfieldExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Heightfield/HeightfieldExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_58) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o -c /home/tboult/WORK/bullet3/examples/Heightfield/HeightfieldExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Heightfield/HeightfieldExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Heightfield/HeightfieldExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Heightfield/HeightfieldExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Heightfield/HeightfieldExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/HeightfieldExample.o.requires:
 
@@ -1451,16 +1451,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Heightfield/Heightf
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o: ../examples/Tutorial/Tutorial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Tutorial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_59) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o -c /home/tboult/WORK/bullet3/examples/Tutorial/Tutorial.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Tutorial.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Tutorial/Tutorial.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Tutorial.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Tutorial/Tutorial.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o.requires:
 
@@ -1475,16 +1475,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Tutorial.o
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o: ../examples/Tutorial/Dof6ConstraintTutorial.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_60) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o -c /home/tboult/WORK/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Tutorial/Dof6ConstraintTutorial.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6ConstraintTutorial.o.requires:
 
@@ -1499,16 +1499,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Tutorial/Dof6Constr
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o: ../examples/Evolution/NN3DWalkers.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Evolution/NN3DWalkers.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_61) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o -c /home/tboult/WORK/bullet3/examples/Evolution/NN3DWalkers.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Evolution/NN3DWalkers.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Evolution/NN3DWalkers.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Evolution/NN3DWalkers.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Evolution/NN3DWalkers.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalkers.o.requires:
 
@@ -1523,16 +1523,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Evolution/NN3DWalke
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o: ../examples/ExtendedTutorials/NewtonsRopeCradle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_62) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o -c /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExtendedTutorials/NewtonsRopeCradle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/NewtonsRopeCradle.o.requires:
 
@@ -1547,16 +1547,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ExtendedTutorials/N
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o: ../examples/Collision/CollisionSdkC_Api.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionSdkC_Api.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_63) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o -c /home/tboult/WORK/bullet3/examples/Collision/CollisionSdkC_Api.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionSdkC_Api.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Collision/CollisionSdkC_Api.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionSdkC_Api.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Collision/CollisionSdkC_Api.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionSdkC_Api.o.requires:
 
@@ -1571,16 +1571,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Collision
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o: ../examples/Collision/CollisionTutorialBullet2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionTutorialBullet2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_64) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o -c /home/tboult/WORK/bullet3/examples/Collision/CollisionTutorialBullet2.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionTutorialBullet2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Collision/CollisionTutorialBullet2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/CollisionTutorialBullet2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Collision/CollisionTutorialBullet2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/CollisionTutorialBullet2.o.requires:
 
@@ -1595,16 +1595,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Collision
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o: ../examples/Collision/Internal/Bullet2CollisionSdk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_65) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o -c /home/tboult/WORK/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Collision/Internal/Bullet2CollisionSdk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/Bullet2CollisionSdk.o.requires:
 
@@ -1619,16 +1619,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o: ../examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_66) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o -c /home/tboult/WORK/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Collision/Internal/RealTimeBullet3CollisionSdk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/RealTimeBullet3CollisionSdk.o.requires:
 
@@ -1643,16 +1643,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Collision/Internal/
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o: ../examples/GyroscopicDemo/GyroscopicSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_67) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o -c /home/tboult/WORK/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/GyroscopicDemo/GyroscopicSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/GyroscopicSetup.o.requires:
 
@@ -1667,16 +1667,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/GyroscopicDemo/Gyro
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o: ../examples/Planar2D/Planar2D.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Planar2D/Planar2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_68) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o -c /home/tboult/WORK/bullet3/examples/Planar2D/Planar2D.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Planar2D/Planar2D.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Planar2D/Planar2D.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Planar2D/Planar2D.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Planar2D/Planar2D.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o.requires:
 
@@ -1691,16 +1691,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Planar2D/Planar2D.o
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o: ../examples/RollingFrictionDemo/RollingFrictionDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_69) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o -c /home/tboult/WORK/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RollingFrictionDemo/RollingFrictionDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo/RollingFrictionDemo.o.requires:
 
@@ -1715,16 +1715,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RollingFrictionDemo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o: ../examples/FractureDemo/FractureDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/FractureDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o -c /home/tboult/WORK/bullet3/examples/FractureDemo/FractureDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/FractureDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/FractureDemo/FractureDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/FractureDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/FractureDemo/FractureDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/FractureDemo.o.requires:
 
@@ -1739,16 +1739,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/Fractu
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o: ../examples/FractureDemo/btFractureBody.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureBody.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o -c /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureBody.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureBody.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureBody.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureBody.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureBody.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureBody.o.requires:
 
@@ -1763,16 +1763,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFrac
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o: ../examples/FractureDemo/btFractureDynamicsWorld.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_72) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o -c /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp > CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/FractureDemo/btFractureDynamicsWorld.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFractureDynamicsWorld.o.requires:
 
@@ -1787,16 +1787,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/FractureDemo/btFrac
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o: ../examples/DynamicControlDemo/MotorDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DynamicControlDemo/MotorDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o -c /home/tboult/WORK/bullet3/examples/DynamicControlDemo/MotorDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DynamicControlDemo/MotorDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DynamicControlDemo/MotorDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DynamicControlDemo/MotorDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DynamicControlDemo/MotorDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/MotorDemo.o.requires:
 
@@ -1811,16 +1811,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DynamicControlDemo/
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o: ../examples/MultiThreading/MultiThreadingExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/MultiThreadingExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/MultiThreadingExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/MultiThreadingExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/MultiThreadingExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/MultiThreadingExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/MultiThreadingExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/MultiThreadingExample.o.requires:
 
@@ -1835,16 +1835,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/Mult
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o: ../examples/MultiThreading/b3PosixThreadSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3PosixThreadSupport.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3PosixThreadSupport.o.requires:
 
@@ -1859,16 +1859,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Po
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o: ../examples/MultiThreading/b3Win32ThreadSupport.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3Win32ThreadSupport.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Win32ThreadSupport.o.requires:
 
@@ -1883,16 +1883,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Wi
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o: ../examples/MultiThreading/b3ThreadSupportInterface.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_77) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o -c /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiThreading/b3ThreadSupportInterface.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3ThreadSupportInterface.o.requires:
 
@@ -1907,16 +1907,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiThreading/b3Th
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o: ../examples/RenderingExamples/TinyRendererSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_78) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyRendererSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyRendererSetup.o.requires:
 
@@ -1931,16 +1931,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/T
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o: ../examples/RenderingExamples/TimeSeriesCanvas.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_79) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesCanvas.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesCanvas.o.requires:
 
@@ -1955,16 +1955,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/T
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o: ../examples/RenderingExamples/TimeSeriesFontData.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_80) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesFontData.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesFontData.o.requires:
 
@@ -1979,16 +1979,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/T
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o: ../examples/RenderingExamples/DynamicTexturedCubeDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_81) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/DynamicTexturedCubeDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/DynamicTexturedCubeDemo.o.requires:
 
@@ -2003,16 +2003,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/D
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o: ../examples/RenderingExamples/TinyVRGui.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyVRGui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_82) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyVRGui.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyVRGui.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyVRGui.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TinyVRGui.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/TinyVRGui.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TinyVRGui.o.requires:
 
@@ -2027,16 +2027,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/T
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o: ../examples/RoboticsLearning/GripperGraspExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_83) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o -c /home/tboult/WORK/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RoboticsLearning/GripperGraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/GripperGraspExample.o.requires:
 
@@ -2051,16 +2051,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/Gr
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o: ../examples/RoboticsLearning/R2D2GraspExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_84) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o -c /home/tboult/WORK/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RoboticsLearning/R2D2GraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2D2GraspExample.o.requires:
 
@@ -2075,16 +2075,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/R2
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o: ../examples/RoboticsLearning/KukaGraspExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_85) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o -c /home/tboult/WORK/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RoboticsLearning/KukaGraspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/KukaGraspExample.o.requires:
 
@@ -2099,16 +2099,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RoboticsLearning/Ku
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o: ../examples/RenderingExamples/CoordinateSystemDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_86) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/CoordinateSystemDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/CoordinateSystemDemo.o.requires:
 
@@ -2123,16 +2123,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/C
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o: ../examples/RenderingExamples/RaytracerSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RaytracerSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_87) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/RaytracerSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RaytracerSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/RaytracerSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RaytracerSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/RaytracerSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RaytracerSetup.o.requires:
 
@@ -2147,16 +2147,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/R
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o: ../examples/RenderingExamples/RenderInstancingDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_88) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/RenderInstancingDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/RenderInstancingDemo.o.requires:
 
@@ -2171,16 +2171,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/R
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o: ../examples/RenderingExamples/TimeSeriesExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_89) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o -c /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RenderingExamples/TimeSeriesExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/TimeSeriesExample.o.requires:
 
@@ -2195,16 +2195,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RenderingExamples/T
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o: ../examples/Benchmarks/BenchmarkDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Benchmarks/BenchmarkDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_90) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o -c /home/tboult/WORK/bullet3/examples/Benchmarks/BenchmarkDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Benchmarks/BenchmarkDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Benchmarks/BenchmarkDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Benchmarks/BenchmarkDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Benchmarks/BenchmarkDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/BenchmarkDemo.o.requires:
 
@@ -2219,16 +2219,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Benchmarks/Benchmar
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o: ../examples/Raycast/RaytestDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Raycast/RaytestDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_91) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o -c /home/tboult/WORK/bullet3/examples/Raycast/RaytestDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Raycast/RaytestDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Raycast/RaytestDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Raycast/RaytestDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Raycast/RaytestDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo.o.requires:
 
@@ -2243,16 +2243,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Raycast/RaytestDemo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o: ../examples/Importers/ImportBullet/SerializeSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_92) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportBullet/SerializeSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBullet/SerializeSetup.o.requires:
 
@@ -2267,16 +2267,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBul
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o: ../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_93) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMeshUtility/b3ImportMeshUtility.o.requires:
 
@@ -2291,16 +2291,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMes
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o: ../Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_94) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o.requires:
 
@@ -2315,16 +2315,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o: ../Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_95) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btMultiBodyWorldImporter.o.requires:
 
@@ -2339,16 +2339,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o: ../Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_96) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o.requires:
 
@@ -2363,16 +2363,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o: ../Extras/Serialize/BulletFileLoader/bChunk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_97) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o.requires:
 
@@ -2387,16 +2387,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o: ../Extras/Serialize/BulletFileLoader/bFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_98) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o.requires:
 
@@ -2411,16 +2411,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o: ../Extras/Serialize/BulletFileLoader/bDNA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_99) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o.requires:
 
@@ -2435,16 +2435,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o: ../Extras/Serialize/BulletFileLoader/btBulletFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_100) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp > CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o.requires:
 
@@ -2459,16 +2459,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/__/Extras/Serialize
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o: ../examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_101) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/BulletMJCFImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/BulletMJCFImporter.o.requires:
 
@@ -2483,16 +2483,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJC
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o: ../examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_102) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMJCFDemo/ImportMJCFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJCFDemo/ImportMJCFSetup.o.requires:
 
@@ -2507,16 +2507,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportMJC
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o: ../examples/Importers/ImportBsp/BspConverter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspConverter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_103) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspConverter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspConverter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspConverter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspConverter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspConverter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspConverter.o.requires:
 
@@ -2531,16 +2531,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o: ../examples/Importers/ImportBsp/BspLoader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_104) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspLoader.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspLoader.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspLoader.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/BspLoader.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/BspLoader.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/BspLoader.o.requires:
 
@@ -2555,16 +2555,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o: ../examples/Importers/ImportBsp/ImportBspExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_105) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportBsp/ImportBspExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp/ImportBspExample.o.requires:
 
@@ -2579,16 +2579,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportBsp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o: ../examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_106) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/ImportColladaSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/ImportColladaSetup.o.requires:
 
@@ -2603,16 +2603,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportCol
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o: ../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_107) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportColladaDemo/LoadMeshFromCollada.o.requires:
 
@@ -2627,16 +2627,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportCol
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o: ../examples/Importers/ImportObjDemo/ImportObjExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_108) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/ImportObjExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/ImportObjExample.o.requires:
 
@@ -2651,16 +2651,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObj
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o: ../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_109) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/LoadMeshFromObj.o.requires:
 
@@ -2675,16 +2675,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObj
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: ../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o.requires:
 
@@ -2699,16 +2699,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportObj
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o: ../examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportSTLDemo/ImportSTLSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTLDemo/ImportSTLSetup.o.requires:
 
@@ -2723,16 +2723,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSTL
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o: ../examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportSDFDemo/ImportSDFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDFDemo/ImportSDFSetup.o.requires:
 
@@ -2747,16 +2747,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportSDF
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o: ../examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/ImportURDFSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/ImportURDFSetup.o.requires:
 
@@ -2771,16 +2771,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o: ../examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/URDF2Bullet.o.requires:
 
@@ -2795,16 +2795,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o: ../examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/MyMultiBodyCreator.o.requires:
 
@@ -2819,16 +2819,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o: ../examples/Importers/ImportURDFDemo/UrdfParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/UrdfParser.o.requires:
 
@@ -2843,16 +2843,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o: ../examples/Utils/RobotLoggingUtil.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o -c /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/RobotLoggingUtil.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingUtil.o.requires:
 
@@ -2867,16 +2867,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Utils/RobotLoggingU
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o: ../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/urdfStringSplit.o.requires:
 
@@ -2891,16 +2891,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o: ../examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURDFDemo/BulletUrdfImporter.o.requires:
 
@@ -2915,16 +2915,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Importers/ImportURD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o: ../examples/VoronoiFracture/VoronoiFractureDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o -c /home/tboult/WORK/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/VoronoiFracture/VoronoiFractureDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/VoronoiFractureDemo.o.requires:
 
@@ -2939,16 +2939,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/Vor
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o: ../examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o -c /home/tboult/WORK/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp > CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp > CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btConvexConvexMprAlgorithm.o.requires:
 
@@ -2963,16 +2963,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/VoronoiFracture/btC
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o: ../examples/Vehicles/Hinge2Vehicle.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Vehicles/Hinge2Vehicle.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o -c /home/tboult/WORK/bullet3/examples/Vehicles/Hinge2Vehicle.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Vehicles/Hinge2Vehicle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Vehicles/Hinge2Vehicle.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Vehicles/Hinge2Vehicle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Vehicles/Hinge2Vehicle.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehicle.o.requires:
 
@@ -2987,16 +2987,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Vehicles/Hinge2Vehi
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o: ../examples/MultiBody/Pendulum.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/Pendulum.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o -c /home/tboult/WORK/bullet3/examples/MultiBody/Pendulum.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/Pendulum.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/Pendulum.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/Pendulum.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/Pendulum.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.o.requires:
 
@@ -3011,16 +3011,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Pendulum.
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o: ../examples/MultiBody/MultiBodySoftContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodySoftContact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o -c /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodySoftContact.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodySoftContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodySoftContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodySoftContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodySoftContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodySoftContact.o.requires:
 
@@ -3035,16 +3035,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBody
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o: ../examples/MultiBody/TestJointTorqueSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o -c /home/tboult/WORK/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/TestJointTorqueSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJointTorqueSetup.o.requires:
 
@@ -3059,16 +3059,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/TestJoint
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o: ../examples/MultiBody/InvertedPendulumPDControl.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o -c /home/tboult/WORK/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/InvertedPendulumPDControl.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedPendulumPDControl.o.requires:
 
@@ -3083,16 +3083,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/InvertedP
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o: ../examples/MultiBody/MultiBodyConstraintFeedback.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o -c /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/MultiBodyConstraintFeedback.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBodyConstraintFeedback.o.requires:
 
@@ -3107,16 +3107,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiBody
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o: ../examples/MultiBody/KinematicMultiBodyExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o -c /home/tboult/WORK/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/KinematicMultiBodyExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/KinematicMultiBodyExample.o.requires:
 
@@ -3131,16 +3131,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/Kinematic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o: ../examples/SoftDemo/SoftDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SoftDemo/SoftDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o -c /home/tboult/WORK/bullet3/examples/SoftDemo/SoftDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SoftDemo/SoftDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/SoftDemo/SoftDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/SoftDemo/SoftDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/SoftDemo/SoftDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o.requires:
 
@@ -3155,16 +3155,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/SoftDemo/SoftDemo.o
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o: ../examples/DeformableDemo/DeformableContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableContact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableContact.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableContact.o.requires:
 
@@ -3179,16 +3179,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Defo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o: ../examples/DeformableDemo/GraspDeformable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/GraspDeformable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/GraspDeformable.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/GraspDeformable.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/GraspDeformable.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/GraspDeformable.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/GraspDeformable.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/GraspDeformable.o.requires:
 
@@ -3203,16 +3203,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Gras
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o: ../examples/DeformableDemo/Pinch.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Pinch.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/Pinch.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Pinch.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/Pinch.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Pinch.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/Pinch.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinch.o.requires:
 
@@ -3227,16 +3227,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinc
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o: ../examples/DeformableDemo/DeformableSelfCollision.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableSelfCollision.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableSelfCollision.o.requires:
 
@@ -3251,16 +3251,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Defo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o: ../examples/DeformableDemo/PinchFriction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/PinchFriction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/PinchFriction.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/PinchFriction.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/PinchFriction.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/PinchFriction.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/PinchFriction.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/PinchFriction.o.requires:
 
@@ -3275,16 +3275,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Pinc
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o: ../examples/DeformableDemo/ClothFriction.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/ClothFriction.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/ClothFriction.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/ClothFriction.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/ClothFriction.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/ClothFriction.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/ClothFriction.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/ClothFriction.o.requires:
 
@@ -3299,16 +3299,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Clot
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o: ../examples/DeformableDemo/DeformableMultibody.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableMultibody.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableMultibody.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableMultibody.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableMultibody.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableMultibody.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableMultibody.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableMultibody.o.requires:
 
@@ -3323,16 +3323,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Defo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o: ../examples/DeformableDemo/DeformableRigid.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableRigid.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableRigid.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableRigid.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableRigid.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableRigid.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableRigid.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableRigid.o.requires:
 
@@ -3347,16 +3347,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Defo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o: ../examples/DeformableDemo/SplitImpulse.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/SplitImpulse.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/SplitImpulse.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/SplitImpulse.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/SplitImpulse.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/SplitImpulse.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/SplitImpulse.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/SplitImpulse.o.requires:
 
@@ -3371,16 +3371,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Spli
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o: ../examples/DeformableDemo/VolumetricDeformable.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/VolumetricDeformable.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/VolumetricDeformable.o.requires:
 
@@ -3395,16 +3395,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Volu
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o: ../examples/DeformableDemo/Collide.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Collide.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/Collide.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Collide.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/Collide.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/Collide.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/Collide.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Collide.o.requires:
 
@@ -3419,16 +3419,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Coll
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o: ../examples/DeformableDemo/LargeDeformation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/LargeDeformation.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/LargeDeformation.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/LargeDeformation.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/LargeDeformation.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/LargeDeformation.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/LargeDeformation.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/LargeDeformation.o.requires:
 
@@ -3443,16 +3443,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Larg
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o: ../examples/DeformableDemo/DeformableClothAnchor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/DeformableClothAnchor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/DeformableClothAnchor.o.requires:
 
@@ -3467,16 +3467,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Defo
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o: ../examples/DeformableDemo/MultibodyClothAnchor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o -c /home/tboult/WORK/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp > CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/DeformableDemo/MultibodyClothAnchor.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/MultibodyClothAnchor.o.requires:
 
@@ -3491,16 +3491,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/DeformableDemo/Mult
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o: ../examples/MultiBody/MultiDofDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiDofDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o -c /home/tboult/WORK/bullet3/examples/MultiBody/MultiDofDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiDofDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/MultiBody/MultiDofDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/MultiBody/MultiDofDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/MultiBody/MultiDofDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofDemo.o.requires:
 
@@ -3515,16 +3515,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/MultiBody/MultiDofD
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o: ../examples/RigidBody/RigidBodySoftContact.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/RigidBodySoftContact.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o -c /home/tboult/WORK/bullet3/examples/RigidBody/RigidBodySoftContact.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/RigidBodySoftContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RigidBody/RigidBodySoftContact.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/RigidBodySoftContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RigidBody/RigidBodySoftContact.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBodySoftContact.o.requires:
 
@@ -3539,16 +3539,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/RigidBody
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o: ../examples/RigidBody/KinematicRigidBodyExample.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o -c /home/tboult/WORK/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp > CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/RigidBody/KinematicRigidBodyExample.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/KinematicRigidBodyExample.o.requires:
 
@@ -3563,16 +3563,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/RigidBody/Kinematic
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o: ../examples/Constraints/TestHingeTorque.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/TestHingeTorque.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o -c /home/tboult/WORK/bullet3/examples/Constraints/TestHingeTorque.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/TestHingeTorque.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Constraints/TestHingeTorque.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/TestHingeTorque.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Constraints/TestHingeTorque.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHingeTorque.o.requires:
 
@@ -3587,16 +3587,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/TestHin
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o: ../examples/Constraints/ConstraintDemo.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintDemo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o -c /home/tboult/WORK/bullet3/examples/Constraints/ConstraintDemo.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Constraints/ConstraintDemo.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Constraints/ConstraintDemo.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintDemo.o.requires:
 
@@ -3611,16 +3611,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Constra
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o: ../examples/Constraints/Dof6Spring2Setup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/Dof6Spring2Setup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_149) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o -c /home/tboult/WORK/bullet3/examples/Constraints/Dof6Spring2Setup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/Dof6Spring2Setup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Constraints/Dof6Spring2Setup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/Dof6Spring2Setup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Constraints/Dof6Spring2Setup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spring2Setup.o.requires:
 
@@ -3635,16 +3635,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Dof6Spr
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o: ../examples/Constraints/ConstraintPhysicsSetup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_150) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o -c /home/tboult/WORK/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp > CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Constraints/ConstraintPhysicsSetup.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/ConstraintPhysicsSetup.o.requires:
 
@@ -3659,16 +3659,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/Constraints/Constra
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o: ../examples/ThirdPartyLibs/stb_image/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_151) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image.o.requires:
 
@@ -3683,16 +3683,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o: ../examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_152) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image_write.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_image/stb_image_write.o.requires:
 
@@ -3707,16 +3707,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/stb_
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: ../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_153) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wavefront/tiny_obj_loader.o.requires:
 
@@ -3731,16 +3731,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/Wave
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o: ../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_154) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tinyxml2/tinyxml2.o.requires:
 
@@ -3755,16 +3755,16 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/__/ThirdPartyLibs/tiny
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/flags.make
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o: ../examples/ExampleBrowser/InProcessExampleBrowser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_155) "Building CXX object examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o -c /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp > CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.i
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ExampleBrowser/InProcessExampleBrowser.cpp -o CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.s
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/InProcessExampleBrowser.o.requires:
 
@@ -4106,9 +4106,9 @@ examples/ExampleBrowser/App_ExampleBrowser: src/BulletCollision/libBulletCollisi
 examples/ExampleBrowser/App_ExampleBrowser: src/LinearMath/libLinearMath.so.3.19
 examples/ExampleBrowser/App_ExampleBrowser: src/Bullet3Common/libBullet3Common.so.3.19
 examples/ExampleBrowser/App_ExampleBrowser: examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Linking CXX executable App_ExampleBrowser"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_ExampleBrowser.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/cmake -E copy_directory /home/nwindesh/SAILON-CartPole3D/bullet3/data /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/data
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_156) "Linking CXX executable App_ExampleBrowser"
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_ExampleBrowser.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && /usr/bin/cmake -E copy_directory /home/tboult/WORK/bullet3/data /home/tboult/WORK/bullet3/build_cmake/data
 
 # Rule to build all files generated by this target.
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/build: examples/ExampleBrowser/App_ExampleBrowser
@@ -4274,10 +4274,10 @@ examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/requires: examples/Exa
 .PHONY : examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/requires
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -P CMakeFiles/App_ExampleBrowser.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser && $(CMAKE_COMMAND) -P CMakeFiles/App_ExampleBrowser.dir/cmake_clean.cmake
 .PHONY : examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/clean
 
 examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ExampleBrowser /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/examples/ExampleBrowser /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser /home/tboult/WORK/bullet3/build_cmake/examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/ExampleBrowser/CMakeFiles/App_ExampleBrowser.dir/depend
 

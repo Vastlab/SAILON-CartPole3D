@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/depend.make
@@ -59,16 +59,16 @@ include test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/fl
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o: ../test/InverseDynamics/test_invdyn_bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o -c /home/tboult/WORK/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/test/InverseDynamics/test_invdyn_bullet.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdyn_bullet.o.requires:
 
@@ -83,16 +83,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/test_invdy
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o: ../examples/Utils/b3ResourcePath.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o -c /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3ResourcePath.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3ResourcePath.o.requires:
 
@@ -107,16 +107,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o: ../examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/MyMultiBodyCreator.o.requires:
 
@@ -131,16 +131,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o: ../examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/BulletUrdfImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/BulletUrdfImporter.o.requires:
 
@@ -155,16 +155,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o: ../examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/urdfStringSplit.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/urdfStringSplit.o.requires:
 
@@ -179,16 +179,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o: ../examples/Importers/ImportURDFDemo/UrdfParser.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/UrdfParser.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/UrdfParser.o.requires:
 
@@ -203,16 +203,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o: ../examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportURDFDemo/URDF2Bullet.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportURDFDemo/URDF2Bullet.o.requires:
 
@@ -227,16 +227,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o: ../examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportMeshUtility/b3ImportMeshUtility.o.requires:
 
@@ -251,16 +251,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o: ../examples/ThirdPartyLibs/stb_image/stb_image.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/stb_image/stb_image.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/stb_image/stb_image.o.requires:
 
@@ -275,16 +275,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o: ../examples/Utils/b3Clock.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o -c /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Utils/b3Clock.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Utils/b3Clock.o.requires:
 
@@ -299,16 +299,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o: ../Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btBulletWorldImporter.o.requires:
 
@@ -323,16 +323,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o: ../Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletWorldImporter/btWorldImporter.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletWorldImporter/btWorldImporter.o.requires:
 
@@ -347,16 +347,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o: ../Extras/Serialize/BulletFileLoader/bChunk.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bChunk.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bChunk.o.requires:
 
@@ -371,16 +371,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o: ../Extras/Serialize/BulletFileLoader/bFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bFile.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bFile.o.requires:
 
@@ -395,16 +395,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o: ../Extras/Serialize/BulletFileLoader/bDNA.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/bDNA.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/bDNA.o.requires:
 
@@ -419,16 +419,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o: ../Extras/Serialize/BulletFileLoader/btBulletFile.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o -c /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/Serialize/BulletFileLoader/btBulletFile.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extras/Serialize/BulletFileLoader/btBulletFile.o.requires:
 
@@ -443,16 +443,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/Extr
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o: ../examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/Wavefront2GLInstanceGraphicsShape.o.requires:
 
@@ -467,16 +467,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o: ../examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportObjDemo/LoadMeshFromObj.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportObjDemo/LoadMeshFromObj.o.requires:
 
@@ -491,16 +491,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o: ../examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o -c /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/Importers/ImportColladaDemo/LoadMeshFromCollada.o.requires:
 
@@ -515,16 +515,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o: ../examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/Wavefront/tiny_obj_loader.o.requires:
 
@@ -539,16 +539,16 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/exam
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/flags.make
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o: ../examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o -c /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp > CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.i
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/examples/ThirdPartyLibs/tinyxml2/tinyxml2.cpp -o CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.s
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/__/__/examples/ThirdPartyLibs/tinyxml2/tinyxml2.o.requires:
 
@@ -618,8 +618,8 @@ test/InverseDynamics/Test_BulletInverseForwardDynamics: src/BulletDynamics/libBu
 test/InverseDynamics/Test_BulletInverseForwardDynamics: src/BulletCollision/libBulletCollision.so.3.19
 test/InverseDynamics/Test_BulletInverseForwardDynamics: src/LinearMath/libLinearMath.so.3.19
 test/InverseDynamics/Test_BulletInverseForwardDynamics: test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable Test_BulletInverseForwardDynamics"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test_BulletInverseForwardDynamics.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Linking CXX executable Test_BulletInverseForwardDynamics"
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Test_BulletInverseForwardDynamics.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/build: test/InverseDynamics/Test_BulletInverseForwardDynamics
@@ -651,10 +651,10 @@ test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/requires: 
 .PHONY : test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/requires
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics && $(CMAKE_COMMAND) -P CMakeFiles/Test_BulletInverseForwardDynamics.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics && $(CMAKE_COMMAND) -P CMakeFiles/Test_BulletInverseForwardDynamics.dir/cmake_clean.cmake
 .PHONY : test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/clean
 
 test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/test/InverseDynamics /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/test/InverseDynamics /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics /home/tboult/WORK/bullet3/build_cmake/test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : test/InverseDynamics/CMakeFiles/Test_BulletInverseForwardDynamics.dir/depend
 

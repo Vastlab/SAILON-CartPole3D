@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/depend.make
@@ -59,16 +59,16 @@ include src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o: ../src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp > CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp > CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp -o CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/b3CpuRigidBodyPipeline.cpp -o CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o.requires:
 
@@ -83,16 +83,16 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/b3CpuRigidBodyPipeline.o.prov
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o: ../src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3FixedConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConstraint.o.requires:
 
@@ -107,16 +107,16 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3FixedConst
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o: ../src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Generic6DofConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6DofConstraint.o.requires:
 
@@ -131,16 +131,16 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Generic6Do
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o: ../src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3PgsJacobiSolver.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiSolver.o.requires:
 
@@ -155,16 +155,16 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3PgsJacobiS
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o: ../src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3Point2PointConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2PointConstraint.o.requires:
 
@@ -179,16 +179,16 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3Point2Poin
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/flags.make
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o: ../src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o -c /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.i
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp > CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.i
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.s
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/src/Bullet3Dynamics/ConstraintSolver/b3TypedConstraint.cpp -o CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.s
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/ConstraintSolver/b3TypedConstraint.o.requires:
 
@@ -224,9 +224,9 @@ src/Bullet3Dynamics/libBullet3Dynamics.so.3.19: src/Bullet3Collision/libBullet3C
 src/Bullet3Dynamics/libBullet3Dynamics.so.3.19: src/Bullet3Geometry/libBullet3Geometry.so.3.19
 src/Bullet3Dynamics/libBullet3Dynamics.so.3.19: src/Bullet3Common/libBullet3Common.so.3.19
 src/Bullet3Dynamics/libBullet3Dynamics.so.3.19: src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libBullet3Dynamics.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bullet3Dynamics.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -E cmake_symlink_library libBullet3Dynamics.so.3.19 libBullet3Dynamics.so.3.19 libBullet3Dynamics.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX shared library libBullet3Dynamics.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bullet3Dynamics.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -E cmake_symlink_library libBullet3Dynamics.so.3.19 libBullet3Dynamics.so.3.19 libBullet3Dynamics.so
 
 src/Bullet3Dynamics/libBullet3Dynamics.so: src/Bullet3Dynamics/libBullet3Dynamics.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate src/Bullet3Dynamics/libBullet3Dynamics.so
@@ -246,10 +246,10 @@ src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/requires: src/Bullet3Dynamics
 .PHONY : src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/requires
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -P CMakeFiles/Bullet3Dynamics.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics && $(CMAKE_COMMAND) -P CMakeFiles/Bullet3Dynamics.dir/cmake_clean.cmake
 .PHONY : src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/clean
 
 src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/src/Bullet3Dynamics /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/src/Bullet3Dynamics /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics /home/tboult/WORK/bullet3/build_cmake/src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src/Bullet3Dynamics/CMakeFiles/Bullet3Dynamics.dir/depend
 

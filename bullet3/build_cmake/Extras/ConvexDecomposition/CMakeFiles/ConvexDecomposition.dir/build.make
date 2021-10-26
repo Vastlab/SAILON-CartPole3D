@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3
+CMAKE_SOURCE_DIR = /home/tboult/WORK/bullet3
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake
+CMAKE_BINARY_DIR = /home/tboult/WORK/bullet3/build_cmake
 
 # Include any dependencies generated for this target.
 include Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/depend.make
@@ -59,16 +59,16 @@ include Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o: ../Extras/ConvexDecomposition/bestfitobb.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/bestfitobb.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/bestfitobb.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/bestfitobb.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp > CMakeFiles/ConvexDecomposition.dir/bestfitobb.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp > CMakeFiles/ConvexDecomposition.dir/bestfitobb.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/bestfitobb.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp -o CMakeFiles/ConvexDecomposition.dir/bestfitobb.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfitobb.cpp -o CMakeFiles/ConvexDecomposition.dir/bestfitobb.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o.requires:
 
@@ -83,16 +83,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfitobb.o.provi
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o: ../Extras/ConvexDecomposition/ConvexBuilder.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp > CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp > CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp -o CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexBuilder.cpp -o CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o.requires:
 
@@ -107,16 +107,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexBuilder.o.pr
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o: ../Extras/ConvexDecomposition/cd_wavefront.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/cd_wavefront.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp > CMakeFiles/ConvexDecomposition.dir/cd_wavefront.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp > CMakeFiles/ConvexDecomposition.dir/cd_wavefront.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/cd_wavefront.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp -o CMakeFiles/ConvexDecomposition.dir/cd_wavefront.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_wavefront.cpp -o CMakeFiles/ConvexDecomposition.dir/cd_wavefront.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o.requires:
 
@@ -131,16 +131,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_wavefront.o.pro
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o: ../Extras/ConvexDecomposition/fitsphere.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/fitsphere.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/fitsphere.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/fitsphere.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/fitsphere.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/fitsphere.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/fitsphere.cpp > CMakeFiles/ConvexDecomposition.dir/fitsphere.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/fitsphere.cpp > CMakeFiles/ConvexDecomposition.dir/fitsphere.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/fitsphere.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/fitsphere.cpp -o CMakeFiles/ConvexDecomposition.dir/fitsphere.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/fitsphere.cpp -o CMakeFiles/ConvexDecomposition.dir/fitsphere.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o.requires:
 
@@ -155,16 +155,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/fitsphere.o.provid
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o: ../Extras/ConvexDecomposition/meshvolume.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/meshvolume.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/meshvolume.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/meshvolume.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/meshvolume.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/meshvolume.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/meshvolume.cpp > CMakeFiles/ConvexDecomposition.dir/meshvolume.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/meshvolume.cpp > CMakeFiles/ConvexDecomposition.dir/meshvolume.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/meshvolume.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/meshvolume.cpp -o CMakeFiles/ConvexDecomposition.dir/meshvolume.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/meshvolume.cpp -o CMakeFiles/ConvexDecomposition.dir/meshvolume.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o.requires:
 
@@ -179,16 +179,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/meshvolume.o.provi
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o: ../Extras/ConvexDecomposition/raytri.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/raytri.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/raytri.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/raytri.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/raytri.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/raytri.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/raytri.cpp > CMakeFiles/ConvexDecomposition.dir/raytri.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/raytri.cpp > CMakeFiles/ConvexDecomposition.dir/raytri.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/raytri.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/raytri.cpp -o CMakeFiles/ConvexDecomposition.dir/raytri.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/raytri.cpp -o CMakeFiles/ConvexDecomposition.dir/raytri.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o.requires:
 
@@ -203,16 +203,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/raytri.o.provides.
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o: ../Extras/ConvexDecomposition/vlookup.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/vlookup.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/vlookup.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/vlookup.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/vlookup.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/vlookup.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/vlookup.cpp > CMakeFiles/ConvexDecomposition.dir/vlookup.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/vlookup.cpp > CMakeFiles/ConvexDecomposition.dir/vlookup.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/vlookup.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/vlookup.cpp -o CMakeFiles/ConvexDecomposition.dir/vlookup.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/vlookup.cpp -o CMakeFiles/ConvexDecomposition.dir/vlookup.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o.requires:
 
@@ -227,16 +227,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/vlookup.o.provides
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o: ../Extras/ConvexDecomposition/bestfit.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/bestfit.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfit.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/bestfit.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfit.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/bestfit.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfit.cpp > CMakeFiles/ConvexDecomposition.dir/bestfit.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfit.cpp > CMakeFiles/ConvexDecomposition.dir/bestfit.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/bestfit.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/bestfit.cpp -o CMakeFiles/ConvexDecomposition.dir/bestfit.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/bestfit.cpp -o CMakeFiles/ConvexDecomposition.dir/bestfit.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o.requires:
 
@@ -251,16 +251,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/bestfit.o.provides
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o: ../Extras/ConvexDecomposition/cd_hull.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/cd_hull.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_hull.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/cd_hull.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_hull.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/cd_hull.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_hull.cpp > CMakeFiles/ConvexDecomposition.dir/cd_hull.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_hull.cpp > CMakeFiles/ConvexDecomposition.dir/cd_hull.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/cd_hull.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/cd_hull.cpp -o CMakeFiles/ConvexDecomposition.dir/cd_hull.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/cd_hull.cpp -o CMakeFiles/ConvexDecomposition.dir/cd_hull.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o.requires:
 
@@ -275,16 +275,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/cd_hull.o.provides
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o: ../Extras/ConvexDecomposition/ConvexDecomposition.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp > CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp > CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp -o CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/ConvexDecomposition.cpp -o CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecomposition.o.requires:
 
@@ -299,16 +299,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/ConvexDecompositio
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o: ../Extras/ConvexDecomposition/concavity.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/concavity.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/concavity.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/concavity.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/concavity.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/concavity.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/concavity.cpp > CMakeFiles/ConvexDecomposition.dir/concavity.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/concavity.cpp > CMakeFiles/ConvexDecomposition.dir/concavity.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/concavity.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/concavity.cpp -o CMakeFiles/ConvexDecomposition.dir/concavity.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/concavity.cpp -o CMakeFiles/ConvexDecomposition.dir/concavity.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o.requires:
 
@@ -323,16 +323,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/concavity.o.provid
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o: ../Extras/ConvexDecomposition/float_math.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/float_math.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/float_math.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/float_math.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/float_math.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/float_math.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/float_math.cpp > CMakeFiles/ConvexDecomposition.dir/float_math.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/float_math.cpp > CMakeFiles/ConvexDecomposition.dir/float_math.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/float_math.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/float_math.cpp -o CMakeFiles/ConvexDecomposition.dir/float_math.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/float_math.cpp -o CMakeFiles/ConvexDecomposition.dir/float_math.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o.requires:
 
@@ -347,16 +347,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/float_math.o.provi
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o: ../Extras/ConvexDecomposition/planetri.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/planetri.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/planetri.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/planetri.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/planetri.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/planetri.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/planetri.cpp > CMakeFiles/ConvexDecomposition.dir/planetri.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/planetri.cpp > CMakeFiles/ConvexDecomposition.dir/planetri.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/planetri.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/planetri.cpp -o CMakeFiles/ConvexDecomposition.dir/planetri.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/planetri.cpp -o CMakeFiles/ConvexDecomposition.dir/planetri.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o.requires:
 
@@ -371,16 +371,16 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/planetri.o.provide
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/flags.make
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o: ../Extras/ConvexDecomposition/splitplane.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/splitplane.o -c /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/splitplane.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ConvexDecomposition.dir/splitplane.o -c /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/splitplane.cpp
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ConvexDecomposition.dir/splitplane.i"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/splitplane.cpp > CMakeFiles/ConvexDecomposition.dir/splitplane.i
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/splitplane.cpp > CMakeFiles/ConvexDecomposition.dir/splitplane.i
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ConvexDecomposition.dir/splitplane.s"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition/splitplane.cpp -o CMakeFiles/ConvexDecomposition.dir/splitplane.s
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/tboult/WORK/bullet3/Extras/ConvexDecomposition/splitplane.cpp -o CMakeFiles/ConvexDecomposition.dir/splitplane.s
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/splitplane.o.requires:
 
@@ -431,9 +431,9 @@ Extras/ConvexDecomposition/libConvexDecomposition.so.3.19: Extras/ConvexDecompos
 Extras/ConvexDecomposition/libConvexDecomposition.so.3.19: src/BulletCollision/libBulletCollision.so.3.19
 Extras/ConvexDecomposition/libConvexDecomposition.so.3.19: src/LinearMath/libLinearMath.so.3.19
 Extras/ConvexDecomposition/libConvexDecomposition.so.3.19: Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libConvexDecomposition.so"
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ConvexDecomposition.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -E cmake_symlink_library libConvexDecomposition.so.3.19 libConvexDecomposition.so.3.19 libConvexDecomposition.so
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX shared library libConvexDecomposition.so"
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ConvexDecomposition.dir/link.txt --verbose=$(VERBOSE)
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -E cmake_symlink_library libConvexDecomposition.so.3.19 libConvexDecomposition.so.3.19 libConvexDecomposition.so
 
 Extras/ConvexDecomposition/libConvexDecomposition.so: Extras/ConvexDecomposition/libConvexDecomposition.so.3.19
 	@$(CMAKE_COMMAND) -E touch_nocreate Extras/ConvexDecomposition/libConvexDecomposition.so
@@ -461,10 +461,10 @@ Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/requires: Extras/C
 .PHONY : Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/requires
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/clean:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -P CMakeFiles/ConvexDecomposition.dir/cmake_clean.cmake
+	cd /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition && $(CMAKE_COMMAND) -P CMakeFiles/ConvexDecomposition.dir/cmake_clean.cmake
 .PHONY : Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/clean
 
 Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/depend:
-	cd /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nwindesh/SAILON-CartPole3D/bullet3 /home/nwindesh/SAILON-CartPole3D/bullet3/Extras/ConvexDecomposition /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition /home/nwindesh/SAILON-CartPole3D/bullet3/build_cmake/Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/tboult/WORK/bullet3/build_cmake && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/tboult/WORK/bullet3 /home/tboult/WORK/bullet3/Extras/ConvexDecomposition /home/tboult/WORK/bullet3/build_cmake /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition /home/tboult/WORK/bullet3/build_cmake/Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : Extras/ConvexDecomposition/CMakeFiles/ConvexDecomposition.dir/depend
 

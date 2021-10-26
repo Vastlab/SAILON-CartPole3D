@@ -11043,7 +11043,7 @@ bool PhysicsServerCommandProcessor::processInitPoseCommand(const struct SharedMe
                                 if((mb->getLink(i).m_jointType == btMultibodyLink::eSpherical) && (0==strcmp("NONOpole_to_cart",mb->getLink(i).m_jointName)))
                                   {
                                     //TB horrible hack to fix carpole, copy of pole joint needing raw copy, not requaterion  No cleary way to pass args this deep in a multi-threaded stamp-passing code, but shold eventually find a better solution
-                                    double pos[4];
+                                    double pos[8]={0,0,0,0,0,0,0,0};
                                     for(int j=0;j<4; j++) pos[j]= clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex+j];
                                     //                       fprintf(stderr,"\n TB raw 4d joint %lf %lf %lf %lf", pos[0],pos[1],pos[2],pos[3]);
                                     mb->setJointPosMultiDof(i, pos);
@@ -11051,20 +11051,26 @@ bool PhysicsServerCommandProcessor::processInitPoseCommand(const struct SharedMe
                                   if(0==strcmp("ground_to_cart",mb->getLink(i).m_jointName))                                  
                                   {
                                     //TB  fix for planar joints, do NOT make quaterions out of them
-                                    double pos[2];
+                                    double pos[8]={0,0,0,0,0,0,0,0};
                                     for(int j=0;j<2; j++) pos[j]= clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex+j];
                                     mb->setJointPosMultiDof(i, pos);
                                     //                                    fprintf(stderr,"\n TB raw 2 joint %lf %lf\n", pos[0],pos[1]);                       
                                   } else // orginal code we make quaterion from arg
                                   {
+
+                                    
                                     btQuaternion q(
                                                    clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex],
                                                    clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 1],
                                                    clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 2],
                                                    clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 3]);
-                                    q.normalize();
+                                    if(clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex] != 0 ||
+                                       clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 1] != 0 ||
+                                       clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 2]!= 0 ||
+                                       clientCmd.m_initPoseArgs.m_initialStateQ[posVarCountIndex + 3])  // cannot normalize if all 0..
+                                      q.normalize();
                                     mb->setJointPosMultiDof(i, &q[0]);
-                                    double vel[6] = {0, 0, 0, 0, 0, 0};
+                                    double vel[8] = {0, 0, 0, 0, 0, 0,0, 0};
                                     mb->setJointVelMultiDof(i, vel);
                                   }
                               }

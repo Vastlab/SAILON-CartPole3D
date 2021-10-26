@@ -451,8 +451,9 @@ btTransform ConvertURDF2BulletInternal(
 					}
 					else
 					{
+                                          b3Printf("Unimplmented Fixed joint\n");                                          
 #if 0
-						//b3Printf("Fixed joint\n");
+					
 
 						btGeneric6DofSpring2Constraint* dof6 = 0;
 
@@ -734,6 +735,8 @@ btTransform ConvertURDF2BulletInternal(
 		}
 	}
 
+        if(tmpShape) free(tmpShape)
+        
 	btAlignedObjectArray<int> urdfChildIndices;
 	u2b.getLinkChildIndices(urdfLinkIndex, urdfChildIndices);
 
@@ -802,14 +805,13 @@ void ConvertURDF2Bullet(
 #endif
 	bool createMultiBody, const char* pathPrefix, int flags, UrdfVisualShapeCache* cachedLinkGraphicsShapes)
 {
-	URDF2BulletCachedData cache;
+        URDF2BulletCachedData cache;
 	InitURDF2BulletCache(u2b, cache, flags);
 	int urdfLinkIndex = u2b.getRootLinkIndex();
 	int rootIndex = u2b.getRootLinkIndex();
 	B3_PROFILE("ConvertURDF2Bullet");
 
 	UrdfVisualShapeCache cachedLinkGraphicsShapesOut;
-
 
 	bool recursive = (flags & CUF_MAINTAIN_LINK_ORDER)==0;
 	if (recursive)
