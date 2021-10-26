@@ -330,20 +330,25 @@ class TA2Logic(object):
                 # Collect testing data until we get TestingEpisodeEnd.
                 while not isinstance(my_state, objects.TestingEpisodeEnd):
                     # Get testing data.
-                    test_data = self._amqp.get_testing_data()
-
-                    # Decompress the image if there is one.
+                  test_data = self._amqp.get_testing_data()
+                  #TB hack to skip data unknown "none" during testing
+                  if(False and test_data.novelty_indicator == None):
+                      print("Skipping test with Novelty Indicator=", test_data.novelty_indicator)
+                      continue
+                  else:
+                      # Decompress the image if there is one.
                     if 'image' in test_data.feature_vector:
                         if test_data.feature_vector['image'] is not None:
                             comp_image = b64decode(test_data.feature_vector['image'])
                             test_data.feature_vector['image'] \
                                 = blosc.unpack_array(comp_image)
 
+
                     # Evaluate the testing data.
                     label_prediction = \
                         self.testing_instance(feature_vector=test_data.feature_vector,
                                               novelty_indicator=test_data.novelty_indicator)
-
+                    
                     # Send the prediction and update my_state, expecting TestingDataAck until
                     # the training episode is over.
                     my_state = self._amqp.send_testing_predictions(
@@ -352,6 +357,7 @@ class TA2Logic(object):
                     if isinstance(my_state, objects.TestingDataAck):
                         self.testing_performance(performance=my_state.performance,
                                                  feedback=my_state.feedback)
+#                print("Next are results for testing with Novelty Indicator=", test_data.novelty_indicator)
 
                 # We are done with the training episode.
                 if isinstance(my_state, objects.TestingEpisodeEnd):
@@ -363,6 +369,8 @@ class TA2Logic(object):
                         novelty_probability=novelty_probability,
                         novelty_threshold=novelty_threshold,
                         novelty=novelty)
+
+
 
                 self.log.debug(str(my_state))
 

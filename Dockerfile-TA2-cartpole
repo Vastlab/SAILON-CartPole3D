@@ -1,7 +1,14 @@
-FROM python:3.7
-
+#FROM python:3.7
+FROM continuumio/miniconda
 RUN mkdir /code
 WORKDIR /code
-COPY ./requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
+
+# Copy conda env
+COPY environment.yml .
+RUN conda env create -f environment.yml python=3.7
+
+SHELL ["conda", "run", "-n", "cartpole", "/bin/bash", "-c"]
+
+#RUN conda activate cartpole
+
+#ENTRYPOINT ["conda", "run", "--no-capture-output", "-n", "cartpole", "python", "TA2.py"]
