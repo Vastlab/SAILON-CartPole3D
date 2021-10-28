@@ -726,7 +726,9 @@ class CartPoleBulletEnv(gym.Env):
     #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
 
-        if((prob < .5 and self.lastscore < .5) or (self.lastscore < .25) ):            # make it mroe often just one making it faster
+#  value from test 11        
+#        if((prob < .5 and self.lastscore < .5) or (self.lastscore < .25) ):            # make it mroe often just one making it faster
+        if((prob < .5 and self.lastscore < 2) or (self.lastscore < 1) ):            # make it even faster 
             return self.get_best_onestep_action(feature_vector)
         else:
             return self.get_best_twostep_action(feature_vector)

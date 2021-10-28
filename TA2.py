@@ -37,12 +37,16 @@ from UCCS_TA2_helper import UCCSTA2
 import uuid
 import csv
 
+from datetime import datetime, timedelta
+
+
 
 import tracemalloc
 
 tracemalloc.start(10)
 snapshot1 = snapshot2 = tracemalloc.take_snapshot()
 top_stats = snapshot1.statistics('lineno')
+
 
 
 
@@ -274,6 +278,12 @@ class TA2Agent(TA2Logic):
         # if(True or self.UCCS.debug):
         #     snapshot1 = tracemalloc.take_snapshot()
 
+
+
+
+        self.UCCS.starttime = datetime.now()
+       
+
 #        print("start episode",  self.UCCS.cnt)
         
         return
@@ -302,7 +312,7 @@ class TA2Agent(TA2Logic):
 
         self.UCCS.noveltyindicator = novelty_indicator
         self.UCCS.debugstring=""
-
+       
         if (self.UCCS.cnt < 1):
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
@@ -370,13 +380,11 @@ class TA2Agent(TA2Logic):
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()
+        novelty_characterization['stringdump']=self.UCCS.character
 
-        #        print("Novelty Probability:", novelty_probability)
-        #        print("Total Steps:", self.totalSteps)
-        self.log.debug('Testing Episode End: performance={}, NovelProbs={},steps={}, WC={},'.format(performance,
-                                                                                                    self.UCCS.problist,
-                                                                                                    self.totalSteps,
-                                                                                                    novelty_probability))
+        end =  datetime.now()
+        self.UCCS.cumtime +=  end - self.UCCS.starttime
+        
 
         self.UCCS.totalcnt += 1
         self.UCCS.perf += performance
@@ -389,10 +397,17 @@ class TA2Agent(TA2Logic):
         self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect,rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
         rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-        self.log.info('Testing Episode #{} End: steps={}, Perf={}, CumPerf={},NovInd={} WC={}, Correct={}, Rcorrect={}, pcorrect={}, CCnt={},RCCnt={}  '.format(
-            self.UCCS.episode,self.totalSteps,  performance, rperf,self.UCCS.noveltyindicator,novelty_probability,iscorrect,rcorrect, pcorrect,self.UCCS.correctcnt,self.UCCS.rcorrectcnt ))
+
+        #        print("Novelty Probability:", novelty_probability)
+        #        print("Total Steps:", self.totalSteps)
+
+        self.log.info('Testing Episode #{} End: time={}, atime={}  NovInd={}     steps={}, Perf={}, CumPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={},RCCnt={} TCN={}, {}   Char={}  '.format(
+            self.UCCS.episode,round((end - self.UCCS.starttime).total_seconds(),1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(),1),
+            self.UCCS.noveltyindicator,self.totalSteps,  performance, round(rperf,1),round(novelty_probability,2),iscorrect,rcorrect, round(pcorrect,2),self.UCCS.correctcnt,self.UCCS.rcorrectcnt, self.UCCS.totalcnt,
+            "\n", str(novelty_characterization) ))
         self.totalSteps = 0
         
+        self.UCCS.starttime = datetime.now()
         # if(self.UCCS.debug):
         #     snapshot2 = tracemalloc.take_snapshot()
 
