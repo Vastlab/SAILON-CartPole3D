@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/App_HelloBulletRobotics.dir/HelloBulletRobotics.o"
-  "App_HelloBulletRobotics_d.pdb"
-  "App_HelloBulletRobotics_d"
-  "App_HelloBulletRobotics_d-3.19"
+  "App_HelloBulletRobotics.pdb"
+  "App_HelloBulletRobotics"
+  "App_HelloBulletRobotics-3.19"
 )
 
 # Per-language clean rules from dependency scanning.

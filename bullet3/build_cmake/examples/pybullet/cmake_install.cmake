@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "Debug")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -39,8 +39,8 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet_d.so.3.19"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet_d.so"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet.so.3.19"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet.so"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")
@@ -50,12 +50,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages" TYPE SHARED_LIBRARY FILES
-    "/home/tboult/WORK/bullet3/build_cmake/examples/pybullet/pybullet_d.so.3.19"
-    "/home/tboult/WORK/bullet3/build_cmake/examples/pybullet/pybullet_d.so"
+    "/home/tboult/WORK/bullet3/build_cmake/examples/pybullet/pybullet.so.3.19"
+    "/home/tboult/WORK/bullet3/build_cmake/examples/pybullet/pybullet.so"
     )
   foreach(file
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet_d.so.3.19"
-      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet_d.so"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet.so.3.19"
+      "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/python3.7/site-packages/pybullet.so"
       )
     if(EXISTS "${file}" AND
        NOT IS_SYMLINK "${file}")

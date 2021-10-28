@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/pybullet.dir/pybullet.o"
-  "pybullet_d.pdb"
-  "pybullet_d.so.3.19"
-  "pybullet_d.so"
+  "pybullet.pdb"
+  "pybullet.so.3.19"
+  "pybullet.so"
 )
 
 # Per-language clean rules from dependency scanning.

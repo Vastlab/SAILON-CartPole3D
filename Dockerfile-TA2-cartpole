@@ -11,7 +11,7 @@ COPY . .
 
 WORKDIR bullet3
 RUN bash build_cmake_pybullet_double.sh
-RUN cp ./build_cmake/examples/pybullet/pybullet_d.so.3.19 \
+RUN cp ./build_cmake/examples/pybullet/pybullet.so.3.19 \
  /usr/local/lib/python3.7/site-packages/pybullet.cpython-37m-x86_64-linux-gnu.so
 
 WORKDIR /code

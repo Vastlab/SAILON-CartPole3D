@@ -67,9 +67,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/SimpleSocket.o"
   "CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/ActiveSocket.o"
   "CMakeFiles/App_TwoJoint.dir/__/ThirdPartyLibs/clsocket/src/PassiveSocket.o"
-  "App_TwoJoint_d.pdb"
-  "App_TwoJoint_d"
-  "App_TwoJoint_d-3.19"
+  "App_TwoJoint.pdb"
+  "App_TwoJoint"
+  "App_TwoJoint-3.19"
 )
 
 # Per-language clean rules from dependency scanning.

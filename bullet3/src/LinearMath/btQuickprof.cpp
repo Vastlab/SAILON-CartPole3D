@@ -93,8 +93,8 @@ btClock::btClock()
 
 btClock::~btClock()
 {
-  if(m_data != 0)  delete m_data;
-  m_data = 0;
+  //  if(m_data != 0)  delete m_data; // TB removing double frees
+  //  m_data = 0;
 }
 
 btClock::btClock(const btClock& other)

@@ -735,7 +735,6 @@ btTransform ConvertURDF2BulletInternal(
 		}
 	}
 
-        if(tmpShape) free(tmpShape)
         
 	btAlignedObjectArray<int> urdfChildIndices;
 	u2b.getLinkChildIndices(urdfLinkIndex, urdfChildIndices);

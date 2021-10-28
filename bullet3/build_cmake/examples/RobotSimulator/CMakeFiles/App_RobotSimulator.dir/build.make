@@ -338,42 +338,42 @@ App_RobotSimulator_OBJECTS = \
 # External object files for target App_RobotSimulator
 App_RobotSimulator_EXTERNAL_OBJECTS =
 
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/build.make
-examples/RobotSimulator/App_RobotSimulator_d-3.19: Extras/BulletRobotics/libBulletRobotics.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: Extras/Serialize/BulletWorldImporter/libBulletWorldImporter.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/BulletSoftBody/libBulletSoftBody.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: Extras/InverseDynamics/libBulletInverseDynamicsUtils.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/BulletInverseDynamics/libBulletInverseDynamics.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/OpenGLWindow/libOpenGLWindow.so
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/ThirdPartyLibs/Gwen/libgwen.so
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/Bullet3Common/libBullet3Common.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: Extras/Serialize/BulletFileLoader/libBulletFileLoader.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/BulletDynamics/libBulletDynamics.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/BulletCollision/libBulletCollision.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: src/LinearMath/libLinearMath.so.3.19
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/ThirdPartyLibs/BussIK/libBussIK.so
-examples/RobotSimulator/App_RobotSimulator_d-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable App_RobotSimulator_d"
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/RobotSimulatorMain.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/b3RobotSimulatorClientAPI.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/MinitaurSetup.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/ExampleBrowser/InProcessExampleBrowser.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsServerExample.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/GraphicsClientExample.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelper.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/RemoteGUIHelperTCP.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExample.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/PhysicsServerExampleBullet2.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/__/SharedMemory/SharedMemoryInProcessPhysicsC_API.o
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/build.make
+examples/RobotSimulator/App_RobotSimulator-3.19: Extras/BulletRobotics/libBulletRobotics.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/ExampleBrowser/libBulletExampleBrowserLib.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: Extras/Serialize/BulletWorldImporter/libBulletWorldImporter.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: src/BulletSoftBody/libBulletSoftBody.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: Extras/InverseDynamics/libBulletInverseDynamicsUtils.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: src/BulletInverseDynamics/libBulletInverseDynamics.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/OpenGLWindow/libOpenGLWindow.so
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/ThirdPartyLibs/Gwen/libgwen.so
+examples/RobotSimulator/App_RobotSimulator-3.19: src/Bullet3Common/libBullet3Common.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: Extras/Serialize/BulletFileLoader/libBulletFileLoader.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: src/BulletDynamics/libBulletDynamics.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: src/BulletCollision/libBulletCollision.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: src/LinearMath/libLinearMath.so.3.19
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/ThirdPartyLibs/BussIK/libBussIK.so
+examples/RobotSimulator/App_RobotSimulator-3.19: examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/tboult/WORK/bullet3/build_cmake/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable App_RobotSimulator"
 	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/App_RobotSimulator.dir/link.txt --verbose=$(VERBOSE)
-	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_symlink_executable App_RobotSimulator_d-3.19 App_RobotSimulator_d
+	cd /home/tboult/WORK/bullet3/build_cmake/examples/RobotSimulator && $(CMAKE_COMMAND) -E cmake_symlink_executable App_RobotSimulator-3.19 App_RobotSimulator
 
-examples/RobotSimulator/App_RobotSimulator_d: examples/RobotSimulator/App_RobotSimulator_d-3.19
+examples/RobotSimulator/App_RobotSimulator: examples/RobotSimulator/App_RobotSimulator-3.19
 
 
 # Rule to build all files generated by this target.
-examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/build: examples/RobotSimulator/App_RobotSimulator_d
+examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/build: examples/RobotSimulator/App_RobotSimulator
 
 .PHONY : examples/RobotSimulator/CMakeFiles/App_RobotSimulator.dir/build
 
