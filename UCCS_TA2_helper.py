@@ -53,19 +53,23 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
-        self.worldaccscale = .5        
         self.scoreforKl=10        # we only use the first sets of scores for KL because novels worlds close when balanced and longer increses change of ranoem error breaking non-novel predictions
-        self.num_epochs = 200
         self.num_dims = 4
         self.scalelargescores=20
         # takes a while for some randome starts to stabilise so don't reset too early as it
         # reduces world change sensitvity        
-        self.skipfirstNscores=3
+        self.skipfirstNscores=2
+        self.worldaccscale = .5        
+
+        self.skipfail=200  #no penalty for up to this many failures,   larger is more robsut for non-novel worlds so should be close to its expected failure rate.  start at 200 to see raw failure rate than set it based on that
+        self.failscale=50 #   we scale failures like (self.failcnt-self.skipfail)/self.failscale  and add as absolute offset ot blened estimate or world change. 
+
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
         # too large in hopes of  better ccotrol
         self.scoretoreset=20
         
+        self.num_epochs = 200
 
 
         # TODO: change evm data dimensions
@@ -83,6 +87,7 @@ class UCCSTA2():
         self.cnt = 0
         self.worldchanged = 0
         self.worldchangedacc = 0
+        self.failcnt = 0        
         self.worldchangeblend = 0                
         # from WSU "train".. might need ot make this computed.
         #        self.mean_train=  0.10057711735799268
@@ -152,6 +157,7 @@ class UCCSTA2():
         
         if(episode ==0):  #reset things that we carry over between episodes withing the same trial
             self.worldchangedacc = 0
+            self.failcnt = 0                    
             self.worldchangeblend = 0            
             self.worldaccscale = .5                    
 
@@ -257,16 +263,19 @@ class UCCSTA2():
         # if (len(self.problist) < self.scoreforKl):
         #     self.worldchanged = prob * len(self.problist)/self.scoreforKl        
         #for very short runs we scale probablilty because  we did not have enough data for a good KL test.  Inc  accumulator scaling so  we count it more if it keeps happening        
-        if (len(self.problist) < self.scoreforKl):
-            self.worldchanged = prob * len(self.problist)/(self.scoreforKl)
-            self.worldaccscale =  .5-(self.scoreforKl-len(self.problist))/self.scoreforKl
+        if (len(self.problist) < 2*self.scoreforKl):
+            self.worldchanged = prob * len(self.problist)/(2*self.scoreforKl)
+            self.worldaccscale =  .5+(self.scoreforKl-len(self.problist))/self.scoreforKl
         else:
             self.worldchanged = prob
             self.worldaccscale =  .5            
 
+            
+            
+
         #world change blend can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
-        self.worldchangeblend = min(1, (.5 *self.worldchanged + self.worldaccscale * self.worldchangeblend)/(.5 + self.worldaccscale))
-        self.worldchangedacc = max(self.worldchangedacc,self.worldchangeblend)         #final result is monotonicly increasing
+        self.worldchangeblend = min(1, (.5 *self.worldchanged + self.worldaccscale * self.worldchangeblend)/(.5 + self.worldaccscale) 
+        self.worldchangedacc = min(1,max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))         #final result is monotonicly increasing
         return self.worldchangedacc
 
     def process_instance(self, actual_state):
