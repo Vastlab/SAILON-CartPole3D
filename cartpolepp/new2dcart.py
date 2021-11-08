@@ -60,6 +60,7 @@ class CartPoleBulletEnv(gym.Env):
         self.setbase=False
         self.basepos=[0,0,0]
         self.lastscore=0
+        self.char=""        
 
         if self._discrete_actions:
             self.action_space = spaces.Discrete(5)
@@ -726,9 +727,9 @@ class CartPoleBulletEnv(gym.Env):
     #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
 
-#  value from test 11        
-#        if((prob < .5 and self.lastscore < .5) or (self.lastscore < .25) ):            # make it mroe often just one making it faster
-        if((prob < .5 and self.lastscore < 2) or (self.lastscore < 1) ):            # make it even faster 
+#       if we have colission potential for any action (char != "") so do two-step action search
+#       if we have low score  we can go faser uding one-setp  
+        if(((prob < .5 and self.lastscore < 200) or (self.lastscore < 100) )):            # make it mroe often just one making it faster
             return self.get_best_onestep_action(feature_vector)
         else:
             return self.get_best_twostep_action(feature_vector)
@@ -760,26 +761,36 @@ class CartPoleBulletEnv(gym.Env):
             nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
             for c in nearpoints:           
                 contactdist = c[8]
+                if(contactdist <0):
+                    if(self.char == ""):
+                        self.char += "  Collsion Potential!"
+                    else:
+                        self.char += "!"                        
+                        #                    print("Watchout ", self.char)
                 mindist = min(mindist,contactdist)
 
 
-        tdist = mindist  #for debugging so we can see orginal minimal distance
-        if(tdist > 4): tdist = 4
-#        if(tdist < .1):
-#            print("Small minim distance ", tdist)            
+        tdist = mindist-1    #try to keep the one unit away
+        if(tdist > 8): tdist = 8
+        if(tdist <=.1): tdist = .1
+        mindist = 1/(tdist*tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position 
+        if(mindist < 1):
+            tdist = mindist
+            if(tdist <=.1): tdist = .1            
+            mindist += 1/(tdist*tdist)    # if its closer than our ideal one unit,  add even more penalty
 
-        if(tdist <=.01):
-            mdist = 4000
-        else:           
-            mindist = 4/(tdist*tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position 
 
-        
         #  we weight the larger of the two errors more, but still consider the other
-        cost = 3*max(abs(pole_x), abs(pole_y)) + min(abs(pole_x), abs(pole_y))     + mindist -1
-#        cost = (abs(pole_x) +  abs(pole_y))      + mindist -1        
+        maxangle = max(abs(pole_x), abs(pole_y))
+        minangle = min(abs(pole_x), abs(pole_y))
+        slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**2 as a penlty so we big if we get close
+        if(slack < 0): cost  = 1e8;             slackcost = 1/slack**4
+        else:
+            slackcost = 1/slack**4
+            cost = slackcost  + maxangle**2 + minangle**2 +  mindist 
 
-#        if(tdist < .1):
-#            print("cost,  pole (x y z),  ", cost, abs(pole_x), abs(pole_y),abs(pole_z), "  dists ", mindist,tdist,  "   quat ", quat)
+#        if(cost > 100):
+#            print("cost,  slack, slackcost  ", cost, slack,slackcost, "pole (x y z)", abs(pole_x), abs(pole_y),abs(pole_z), "  dists ", mindist,tdist,   "angle limit", self.angle_limit )
         
 
 
