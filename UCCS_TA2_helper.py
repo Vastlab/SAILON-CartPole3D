@@ -20,8 +20,6 @@ from functools import partial
 from torch import Tensor
 import torch.multiprocessing as mp
 from my_lib import *
-from vast.opensetAlgos.EVM import EVM_Training, EVM_Inference, EVM_Inference_cpu_max_knowness_prob
-from vast import activations
 from statistics import mean
 import scipy.stats as st
 
@@ -134,12 +132,6 @@ class UCCSTA2():
             args_evm.distance_metric = distance_metric
             args_evm.chunk_size = 200
 
-            # TODO: change filenames for new trained evm
-            filename = "evm_models/evm_cosine_cartpole_tail_5000_ct_0.7_dm_0.55_largerdata.pkl"
-
-
-            evm_model = pickle.load(open(filename, "rb"))
-            self.evm_inference_obj = EVM_Inference_cpu_max_knowness_prob(args_evm.distance_metric, evm_model)
             self.starttime = datetime.now()
             self.cumtime = self.starttime - datetime.now()
         return
