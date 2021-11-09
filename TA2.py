@@ -401,9 +401,11 @@ class TA2Agent(TA2Logic):
         #        print("Novelty Probability:", novelty_probability)
         #        print("Total Steps:", self.totalSteps)
 
-        self.log.info('Testing Episode #{} End: time={}, atime={}  NovInd={}     steps={}, Perf={}, CumPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={},RCCnt={} TCN={}, {}   Char={}  '.format(
+        self.log.info('Testing Episode #{} End: time={}, atime={}  NovInd={}     steps={}, Perf={}, CumPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={},RCCnt={} TCN={}, {}   Prob={} {}   Scores={} {}   Char={}  '.format(
             self.UCCS.episode,round((end - self.UCCS.starttime).total_seconds(),1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(),1),
             self.UCCS.noveltyindicator,self.totalSteps,  performance, round(rperf,1),round(novelty_probability,2),iscorrect,rcorrect, round(pcorrect,2),self.UCCS.correctcnt,self.UCCS.rcorrectcnt, self.UCCS.totalcnt,
+            "\n", [round(num,2) for num in self.UCCS.problist],
+            "\n", [round(num,2) for num in self.UCCS.scorelist],            
             "\n", str(novelty_characterization) ))
         self.totalSteps = 0
         

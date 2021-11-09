@@ -63,8 +63,9 @@ class UCCSTA2():
         self.skipfirstNscores=2
         self.worldaccscale = .5        
 
-        self.skipfail=200  #no penalty for up to this many failures,   larger is more robsut for non-novel worlds so should be close to its expected failure rate.  start at 200 to see raw failure rate than set it based on that
-        self.failscale=50 #   we scale failures like (self.failcnt-self.skipfail)/self.failscale  and add as absolute offset ot blened estimate or world change. 
+        self.skipfail=4  #no penalty for up to this many failures,   larger is more robsut for non-novel worlds so should be close to its expected failure rate.  start at 200 to see raw failure rate than set it based on that
+        self.failscale=5 #   we scale failures like (self.failcnt-self.skipfail)/self.failscale  and add as absolute offset ot blened estimate or world change.
+        self.initfailscale=.2 #   we scale prob from initial state by this amount and add world accumulator each time. With .05 even a prob of 1 will take 20 steps to detect..  but this balances risk from going of on non-novel worlds
 
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
@@ -241,13 +242,13 @@ class UCCSTA2():
 
     # get probability differene froom initial state
     def istate_diff_prob(self,actual_state):
-        dimname=["Cart x", "Cart y", "Cart z",  "Cart x'", "Cart y'", "Cart x'",  "Pole x", "pole y", "Pole z","Pole w",  "Pole x'", "Pole y'", "Pole z'", "Block x", "Block y", "Block x",  "Block x'", "Block y'", "Block x'", "Wall 1x","Wall 1y","Wall 1z", "Wall 2x","Wall 2y","Wall 2z", "Wall 3x","Wall 3y","Wall 3z", "Wall 4x","Wall 4y","Wall 4z", "Wall 5x","Wall 5y","Wall 5z", "Wall 6x","Wall 6y","Wall 6z", "Wall 8x","Wall 8y","Wall 8z", "Wall 9x","Wall 9y","Wall 9z"]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart x'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
-        #load imin/imax from training.. 
+        #load imin/imax from training..  with some extensions. From code some of these values don't seem plausable (blockx for example) but we saw them in training data.  maybe nic mixed up some parms/files but won't hurt too much fi we mis some
         imin =  np.array([-2.991261, -2.997435,  0.1     , -0.491182, -0.019649,  0.      ,
                             -0.010097, -0.011602, -0.014616,  -0.999822, -0.032205, -0.177146,
-                            -0.530645, -4.14159 , -4.148426,  -0.837303, -9.868143, -9.848347,
-                            -9.844771, -5.      , -5.      ,  0.      ,  5.      , -5.      ,
+                            -0.530645, -4.14159 , -4.148426,  -0.837303, -20, -20,      
+                            -20, -5.      , -5.      ,  0.      ,  5.      , -5.      ,
                             0.      ,  5.      ,  5.      ,  0.      , -5.      ,  5.      ,
                             0.      , -5.      , -5.      , 10.      ,  5.      , -5.      ,
                             10.      ,  5.      ,  5.      , 10.      , -5.      ,  5.      ,
@@ -255,8 +256,8 @@ class UCCSTA2():
         imax =  np.array([ 3.000305e+00,  2.999666e+00,  1.000000e-01,  5.306980e-01,
                               1.966100e-02,  0.000000e+00,  1.012700e-02,  8.566000e-02,
                               1.398700e-02,  9.999990e-01,  3.111000e-02, 1.205450e-01,
-                              4.910830e-01,  4.143999e+00,  4.157679e+00,  9.168307e+00,
-                              9.857086e+00,  9.856729e+00,  9.855868e+00, -5.000000e+00,
+                              4.910830e-01,  4.143999e+00,  4.157679e+00,  9.968307e+00,
+                              20,  20,  20, -5.000000e+00,
                               -5.000000e+00,  0.000000e+00,  5.000000e+00, -5.000000e+00,
                               0.000000e+00,  5.000000e+00,  5.000000e+00,  0.000000e+00,
                               -5.000000e+00,  5.000000e+00,  0.000000e+00, -5.000000e+00,
@@ -278,32 +279,32 @@ class UCCSTA2():
         # do base state for cart(6)  and pole (7) 
         for j in range (13):
             if(istate[j] > imax[j]):
-                probv=  (istate[j] - imax[j]);
+                probv=  (istate[j] - imax[j]) / (abs(istate[j]) + abs(imax[j]))
                 if(probv>1e-6):
                     initprob += probv
-                    self.character += str(dimname[j]) + " inital too large  "+ " " + str(istate[j]) +" " + str(imax[j]) +" " + str(probv)
+                    self.character += str(dimname[j]) + " inital too large  "+ " " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))
   
                 
             if(istate[j] < imin[j]):
-                probv=  imin[j] - istate[j];
+                probv=  (imin[j] - istate[j])/ (abs(istate[j]) + abs(imin[j]))
                 if(probv>1e-6):
                     initprob += probv
-                    self.character += str(dimname[j]) + " inital too small  "+ " " + str(istate[j]) +" " + str(imin[j])+" " + str(probv) 
+                    self.character += str(dimname[j]) + " inital too small  "+ " " + str(round(istate[j],3)) +" " + str(round(imin[j],3))+" " + str(round(probv,3)) 
         
         wallstart= len(istate) - 24 
 #        pdb.set_trace()
         k=19 # for name max/ame indixing where we have only one block
         for j in range (wallstart,len(istate),1):
             if(istate[j] > imax[k]):
-                probv=  (istate[j] - imax[k]);  
+                probv=  (istate[j] - imax[k])/ (abs(istate[j]) + abs(imax[k]))
                 if(probv>1e-6):
                     initprob += probv
-                    self.character += str(dimname[k]) + " inital too large  " + " " + str(istate[j]) +" " + str(imax[k])+" " + str(probv)
+                    self.character += str(dimname[k]) + " inital too large  " + " " + str(round(istate[j],3)) +" " + str(round(imax[k],3))+" " + str(round(probv,3))
             if(istate[j] < imin[k]):
-                probv=  imin[k] - istate[j];
+                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
                 if(probv>1e-6):
                     initprob += probv
-                self.character += str(dimname[k]) + " inital too small  " + " " + str(istate[j]) +" " + str(imin[k])+" " + str(probv)
+                self.character += str(dimname[k]) + " inital too small  " + " " + str(round(istate[j],3)) +" " + str(round(imin[k],3))+" " + str(round(probv,3))
             k = k +1
 
                     
@@ -311,15 +312,15 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,wallstart,1):
             if(istate[j] > imax[k]):
-                probv =  (istate[j] - imax[k]);                
+                probv =  (istate[j] - imax[k]) / (abs(istate[j]) + abs(imax[k]))                
                 if(probv>1e-6):
                     initprob += probv
-                    self.character += str(dimname[k]) + " inital too large " +  " " + str(istate[j]) +" " + str(imax[k]) +" " + str(probv)
+                    self.character += str(dimname[k]) + " inital too large " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3))
             if(istate[j] < imin[k]):
-                probv=  imin[k] - istate[j];
+                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
                 if(probv>1e-6):
                     initprob += probv
-                    self.character += " " + str(dimname[k]) + " inital too small " +  " " + str(istate[j]) +" " + str(imin[k]) +" " + str(probv)
+                    self.character += " " + str(dimname[k]) + " inital too small " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3))
             k = k +1
             if(k==19): k=13;   #reset for next block
         return initprob
@@ -332,9 +333,9 @@ class UCCSTA2():
     
 
 
-    # get probability differene froom initial state
+    # get probability differene froom continuing state difference
     def cstate_diff_prob(self,cdiff):
-        dimname=["Cart x", "Cart y", "Cart z",  "Cart x'", "Cart y'", "Cart x'",  "Pole x", "pole y", "Pole z","Pole w",  "Pole x'", "Pole y'", "Pole z'", "Block x", "Block y", "Block x",  "Block x'", "Block y'", "Block x'", "Wall 1x","Wall 1y","Wall 1z", "Wall 2x","Wall 2y","Wall 2z", "Wall 3x","Wall 3y","Wall 3z", "Wall 4x","Wall 4y","Wall 4z", "Wall 5x","Wall 5y","Wall 5z", "Wall 6x","Wall 6y","Wall 6z", "Wall 8x","Wall 8y","Wall 8z", "Wall 9x","Wall 9y","Wall 9z"]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart x'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training.. 
         # imin = np.array([-1.00000000e-05, -6.25000000e-03,  -1.00000000e-06 -1.00000000e-05,
@@ -373,12 +374,12 @@ class UCCSTA2():
             if(istate[j] > imax[j]):
                 probv =  self.wcdf(istate[j],imax[j],iscale[j],ishape[j]);
                 if(probv>1e-6):
-                    self.character += dimname[j] + " above max change, prob " + " " + str(probv) + " " + str(istate[j]) +  " " + str(imax[j])
+                    self.character += dimname[j] + " above max change, prob " + " " + str(round(probv,3)) + " s/l " + str(round(istate[j],3)) +  " " + str(round(imax[j],3))
                 prob += probv
             elif(istate[j] < imin[j]):
                 probv =  self.wcdf(-istate[j],-imin[j],iscale[j],ishape[j]);
                 if(probv>1e-6):
-                    self.character += dimname[j] + " below min change, prob " + " " + str(probv) + " " + str(istate[j]) +  " " + str(imin[j])
+                    self.character += dimname[j] + " below min change, prob " + " " + str(round(probv,3)) + "  s/l " + str(round(istate[j],3)) +  " " + str(round(imin[j],3))
                 prob += probv
         
 
@@ -389,12 +390,12 @@ class UCCSTA2():
             if(istate[j] > imax[k]):
                 probv =  self.wcdf(istate[j],imax[k],iscale[j],ishape[j]);
                 if(probv>1e-6):
-                    self.character += " " + str(dimname[k]) + " above max change, prob " + " " + str(probv) + " " + str(istate[j]) +  " " + str(imax[j])
+                    self.character += " " + str(dimname[k]) + " above max change, prob " + " " + str(round(probv,3)) + "  s/l " + str(round(istate[j],3)) +  " " + str(round(imax[j],3))
                 prob += probv
             elif(istate[j] < imin[k]):
                 probv =  self.wcdf(-istate[j],-imin[k],iscale[j],ishape[j]);
                 if(probv>1e-6):
-                    self.character += " " + str(dimname[k]) + " below min change, prob " + " " + str(probv) + " " + str(istate[j]) +  " " + str(imin[j])
+                    self.character += " " + str(dimname[k]) + " below min change, prob " + " " + str(round(probv,3)) + " s/l " + str(round(istate[j],3)) +  " " + str(round(imin[j],3))
                 prob += probv
                 k = k +1
                 if(k==19): k=13;   #reset for next block
@@ -415,20 +416,20 @@ class UCCSTA2():
         if(settrain):
            self.mean_train = mu;
            self.stdev_train = sigma;
-           print("Set  world change train mu and sigma", mu, sigma)
+#           print("Set  world change train mu and sigma", mu, sigma)
            self.worldchanged = 0
            return 0;
         if( self.mean_train == 0):
            self.mean_train = 0.006   #these guessted values for Phase 2 incase we get called without training
            self.stdev_train = 0.028
            self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
-           
+
 
 #        if (len(self.problist) < 3):
 #            print("Very short, world must have changed")
 #            return 1;
         if (len(self.problist) < 198):   #for real work
-            if (True or self.debug):
+            if (self.debug):
                 self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
                 self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
                      round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
@@ -450,7 +451,7 @@ class UCCSTA2():
         KLscale = (
                               self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start down to  1/2
         prob = min(1.0, KLscale * self.KL_val / (2 * self.KL_threshold))
-        if (True or self.debug):
+        if (self.debug):
                 self.debugstring = '      World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}         scores{}'.format(
                      round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n",[round(num,2) for num in self.scorelist])
                 print(self.debugstring)                
@@ -460,9 +461,11 @@ class UCCSTA2():
         #for very short runs we scale probablilty because  we did not have enough data for a good KL test.  Inc  accumulator scaling so  we count it more if it keeps happening
         # if (len(self.problist) < self.scoreforKl):
         #     self.worldchanged = prob * len(self.problist)/self.scoreforKl        
-        #for very short runs we scale probablilty because  we did not have enough data for a good KL test.  Inc  accumulator scaling so  we count it more if it keeps happening        
-        if (len(self.problist) < 2*self.scoreforKl):
-            self.worldchanged = prob * len(self.problist)/(2*self.scoreforKl)
+#for very short runs we scale probablilty because  we did not have enough data for a good KL test.  Inc  accumulator scaling so  we count it more if it keeps happening        
+
+            
+        if (len(self.problist) < self.scoreforKl):
+            self.worldchanged = prob * len(self.problist)/(self.scoreforKl)
             self.worldaccscale =  .5+(self.scoreforKl-len(self.problist))/self.scoreforKl
         else:
             self.worldchanged = prob
@@ -472,9 +475,9 @@ class UCCSTA2():
             
 
         #world change blend can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
-        self.worldchangeblend = min(1, (.5 *self.worldchanged + self.worldaccscale * self.worldchangeblend)/(.5 + self.worldaccscale))
-        #final result is monotonicly increasing                                    
-        self.worldchangedacc = min(1,max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
+        self.worldchangeblend = min(1, (.25 *self.worldchanged + +.25 * self.worldchangedacc + .5*self.worldaccscale * self.worldchangeblend)/(1 + self.worldaccscale))
+        #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time                                 
+        self.worldchangedacc = min(1,self.problist[0]*self.initfailscale + max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
         return self.worldchangedacc
 
     def process_instance(self, actual_state):
@@ -602,5 +605,11 @@ class UCCSTA2():
                 
             #          elif(self.given): self.statelist.append([action,actual_state,expected_state,current])
 #            del prob_values
+
+            if(self.given):
+                probability=1
+                self.env_prediction.lastscore  = self.env_prediction.lastscore *10    #make the scores highrer so we tend to use the more exensive twostep                 
+            
+
             self.problist.append(probability)
         return action
