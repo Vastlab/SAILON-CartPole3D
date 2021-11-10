@@ -90,7 +90,7 @@ class UCCSTA2():
         self.worldchanged = 0
         self.worldchangedacc = 0
         self.failcnt = 0        
-        self.worldchangeblend = 0                
+        self.worldchangeblend = 0
         # from WSU "train".. might need ot make this computed.
         #        self.mean_train=  0.10057711735799268
         #       self.stdev_train = 0.00016
@@ -476,8 +476,10 @@ class UCCSTA2():
 
         #world change blend can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
         self.worldchangeblend = min(1, (.25 *self.worldchanged + +.25 * self.worldchangedacc + .5*self.worldaccscale * self.worldchangeblend)/(1 + self.worldaccscale))
-        #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time                                 
-        self.worldchangedacc = min(1,self.problist[0]*self.initfailscale + max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
+        #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time
+        if(        len(self.problist) > 0 ) :
+            self.worldchangedacc = min(1,self.problist[0]*self.initfailscale + max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
+            else:             self.worldchangedacc = min(1,max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
         return self.worldchangedacc
 
     def process_instance(self, actual_state):
@@ -606,9 +608,9 @@ class UCCSTA2():
             #          elif(self.given): self.statelist.append([action,actual_state,expected_state,current])
 #            del prob_values
 
-            if(self.given):
-                probability=1
-                self.env_prediction.lastscore  = self.env_prediction.lastscore *10    #make the scores highrer so we tend to use the more exensive twostep                 
+             if(self.given):
+                 probability=1
+                 self.env_prediction.lastscore  = self.env_prediction.lastscore *10    #make the scores highrer so we tend to use the more exensive twostep                 
             
 
             self.problist.append(probability)
