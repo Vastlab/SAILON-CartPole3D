@@ -493,8 +493,8 @@ class UCCSTA2():
             observation = self.env_prediction.reset(actual_state)    #TB  its more sensitive to pertubations if we don't reset after first step
 
         self.character += self.env_prediction.char  #copy overy any information about collisions
-        if("!!!!" in        self.env_prediction.char):
-            self.env_prediction.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
+#        if("!!!!" in        self.env_prediction.char):
+#            self.env_prediction.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
         self.scorelist.append(self.env_prediction.lastscore)        
         self.env_prediction.char = ""  #reset any information about collisions
         action, expected_state = self.takeOneStep(actual_state, self.env_prediction, pertub)
