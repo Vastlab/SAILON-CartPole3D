@@ -401,10 +401,20 @@ class UCCSTA2():
         mlength = len(self.problist)
         mlength = min(self.scoreforKl,mlength)
         # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
-#        mu = max(np.mean(self.problist[:mlength]), np.mean(self.problist[-mlength:]))
-#        sigma = max(np.std(self.problist[:mlength]), np.std(self.problist[-mlength:]))
-        mu = np.mean(self.problist[:mlength])
-        sigma = np.std(self.problist[:mlength])
+        
+
+        if(mlength >0) :
+            mu = np.mean(self.problist[:mlength])
+            sigma = np.std(self.problist[:mlength])
+        else:
+            mu = sigma = 0
+            self.debugstring = '   ***Zero Lenth World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
+                round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+            print(self.debugstring)
+            
+            self.worldchanged = self.worldchangedacc
+            return self.worldchangedacc;
+       
         if(settrain):
            self.mean_train = mu;
            self.stdev_train = sigma;
@@ -483,8 +493,10 @@ class UCCSTA2():
             observation = self.env_prediction.reset(actual_state)    #TB  its more sensitive to pertubations if we don't reset after first step
 
         self.character += self.env_prediction.char  #copy overy any information about collisions
-        self.env_prediction.char = ""  #reset any information about collisions
+        if("!!!!" in        self.env_prediction.char):
+            self.env_prediction.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
         self.scorelist.append(self.env_prediction.lastscore)        
+        self.env_prediction.char = ""  #reset any information about collisions
         action, expected_state = self.takeOneStep(actual_state, self.env_prediction, pertub)
 
 
@@ -584,7 +596,7 @@ class UCCSTA2():
             # we can also include the score from control algorithm,   we'll have to test to see if it helps..
             #first testing suggests is not great as when block interfer it raises score as we try to fix it but then it seems novel. 
             #                self.maxprob=min(1,self.maxprob +  self.env_prediction.lastscore / self.scalelargescores)
-            if (self.cnt > 6):
+            if (self.cnt > 6 and len(self.problist)>0 ):
                 self.meanprob = np.mean(self.problist)
 
 #            if (self.debug):
