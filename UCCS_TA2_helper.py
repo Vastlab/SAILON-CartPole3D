@@ -52,13 +52,13 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
-        self.scoreforKl=10        # we only use the first sets of scores for KL because novels worlds close when balanced
+        self.scoreforKl=20        # we only use the first sets of scores for KL because novels worlds close when balanced
         self.num_epochs = 200
         self.num_dims = 4
         self.scalelargescores=20
         # takes a while for some randome starts to stabilise so don't reset too early as it
         # reduces world change sensitvity        
-        self.skipfirstNscores=2
+        self.skipfirstNscores=5
         self.worldaccscale = .5        
 
         self.skipfail=4  #no penalty for up to this many failures,   larger is more robsut for non-novel worlds so should be close to its expected failure rate.  start at 200 to see raw failure rate than set it based on that
@@ -68,7 +68,7 @@ class UCCSTA2():
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
         # too large in hopes of  better ccotrol
-        self.scoretoreset=20
+        self.scoretoreset=200
         
 
 
@@ -118,22 +118,22 @@ class UCCSTA2():
         env_location.loader.exec_module(env_class)
         self.env_prediction = env_class.CartPoleBulletEnv()
         self.env_prediction.path = "./cartpolepp"
-        with open('evm_config.json', 'r') as json_file:
-            evm_config = json.loads(json_file.read())
-            cover_threshold = evm_config['cover_threshold']
-            distance_multiplier = evm_config['distance_multiplier']
-            tail_size = evm_config['tail_size']
-            distance_metric = evm_config['distance_metric']
-            torch.backends.cudnn.benchmark = True
-            args_evm = argparse.Namespace()
-            args_evm.cover_threshold = [cover_threshold]
-            args_evm.distance_multiplier = [distance_multiplier]
-            args_evm.tailsize = [tail_size]
-            args_evm.distance_metric = distance_metric
-            args_evm.chunk_size = 200
+        # with open('evm_config.json', 'r') as json_file:
+        #     evm_config = json.loads(json_file.read())
+        #     cover_threshold = evm_config['cover_threshold']
+        #     distance_multiplier = evm_config['distance_multiplier']
+        #     tail_size = evm_config['tail_size']
+        #     distance_metric = evm_config['distance_metric']
+        #     torch.backends.cudnn.benchmark = True
+        #     args_evm = argparse.Namespace()
+        #     args_evm.cover_threshold = [cover_threshold]
+        #     args_evm.distance_multiplier = [distance_multiplier]
+        #     args_evm.tailsize = [tail_size]
+        #     args_evm.distance_metric = distance_metric
+        #     args_evm.chunk_size = 200
 
-            self.starttime = datetime.now()
-            self.cumtime = self.starttime - datetime.now()
+        self.starttime = datetime.now()
+        self.cumtime = self.starttime - datetime.now()
         return
 
     def reset(self, episode):
@@ -221,12 +221,19 @@ class UCCSTA2():
         kl = np.log(s / sigma) + (((sigma ** 2) + ((mu - m) ** 2)) / (2 * (s ** 2))) - 0.5
         return kl
 
+    
+    def wcdf(self,x,imean,ishape,iscale):
+        prob = 1-math.pow(math.exp(-(x-imean)/iscale),ishape)
+#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,imean,ishape,iscale)
+        return prob
+
+
     def format_data(self, feature_vector):
         # Format data for use with evm
         state = []
         for i in feature_vector.keys():
-            if i != 'blocks' and i != 'time_stamp' and i != 'image':
-                #print(feature_vector[i])
+            if i != 'blocks' and i != 'time_stamp' and i != 'image' and i != 'ticks':
+#                print(i,feature_vector[i])
                 for j in feature_vector[i]:
                     state.append(feature_vector[i][j])
                 #print(state)
@@ -234,69 +241,87 @@ class UCCSTA2():
 
     # get probability differene froom initial state
     def istate_diff_prob(self,actual_state):
-        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart x'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart z'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training..  with some extensions. From code some of these values don't seem plausable (blockx for example) but we saw them in training data.  maybe nic mixed up some parms/files but won't hurt too much fi we mis some
-        imin =  np.array([-2.991261, -2.997435,  0.1     , -0.491182, -0.019649,  0.      ,
-                            -0.010097, -0.011602, -0.014616,  -0.999822, -0.032205, -0.177146,
-                            -0.530645, -4.14159 , -4.148426,  -0.837303, -20, -20,      
-                            -20, -5.      , -5.      ,  0.      ,  5.      , -5.      ,
-                            0.      ,  5.      ,  5.      ,  0.      , -5.      ,  5.      ,
-                            0.      , -5.      , -5.      , 10.      ,  5.      , -5.      ,
-                            10.      ,  5.      ,  5.      , 10.      , -5.      ,  5.      ,
-                            10.      ])
-        imax =  np.array([ 3.000305e+00,  2.999666e+00,  1.000000e-01,  5.306980e-01,
-                              1.966100e-02,  0.000000e+00,  1.012700e-02,  8.566000e-02,
-                              1.398700e-02,  9.999990e-01,  3.111000e-02, 1.205450e-01,
-                              4.910830e-01,  4.143999e+00,  4.157679e+00,  9.968307e+00,
-                              20,  20,  20, -5.000000e+00,
-                              -5.000000e+00,  0.000000e+00,  5.000000e+00, -5.000000e+00,
-                              0.000000e+00,  5.000000e+00,  5.000000e+00,  0.000000e+00,
-                              -5.000000e+00,  5.000000e+00,  0.000000e+00, -5.000000e+00,
-                              -5.000000e+00,  1.000000e+01,  5.000000e+00, -5.000000e+00,
-                              1.000000e+01,  5.000000e+00,  5.000000e+00,  1.000000e+01,
-                              -5.000000e+00,  5.000000e+00,  1.000000e+01])
-        #note we mult by 20% to allow slight variations from training.
-        imax = imax + .1*abs(imax)
-        imin = imin - .1*abs(imin)        
-        
+        imax = np.array([3.02983133e+00, 3.02845066e+00, 1.000000000-00, 1.99252800e-02,
+                         1.99414400e-02, 2.99252800e+01, 1.01747400e-02, 1.02434200e-02,
+                         1.47662000e-02, 1.01000000e+00, 3.03353500e-02, 3.08706500e-02,
+                         5.87575580e-01, 4.22939924e+00, 4.22508856e+00, 9.26742872e+00,
+                         1.84471612e+01, 1.80603737e+01, 1.85836536e+01, 5.05000000e+00,
+                         5.05000000e+00, 0.00000000e+00, 5.05000000e+00, 5.05000000e+00,
+                         0.00000000e+00, 5.05000000e+00, 5.05000000e+00, 0.00000000e+00,
+                         5.05000000e+00, 5.05000000e+00, 0.00000000e+00, 5.05000000e+00,
+                         5.05000000e+00, 1.01000000e+01, 5.05000000e+00, 5.05000000e+00,
+                         1.01000000e+01, 5.05000000e+00, 5.05000000e+00, 1.01000000e+01,
+                         5.05000000e+00, 5.05000000e+00, 1.01000000e+01])
+        imin = -1.0* imax; # they were rather symmetric so just use 1 and onely one weibul
+
+        ishape = np.array([7.12299551e+00, 5.05820433e+00, 1.00000000e-02, 2.09581662e+00,
+                           1.49024480e+00, 1.00000000e-02, 1.66552076e+00, 1.76849317e+00,
+                           1.94253219e-01, 1.25450493e+04, 1.84974739e-01, 1.29730633e-01,
+                           1.79739200e-01, 1.90687366e+00, 1.96760269e+00, 3.61965278e+00,
+                           5.31385658e-01, 5.54465564e-02, 8.94401156e-02, 1.50000000e-02,
+                           1.50000000e-02, 1.00000000e-02, 4.38300931e+07, 1.50000000e-02,
+                           1.00000000e-02, 4.38300931e+07, 4.38300931e+07, 1.00000000e-02,
+                           1.50000000e-02, 4.38300931e+07, 1.00000000e-02, 1.50000000e-02,
+                           1.50000000e-02, 1.44719714e+08, 4.38300931e+07, 1.50000000e-02,
+                           1.44719714e+08, 4.38300931e+07, 4.38300931e+07, 1.44719714e+08,
+                           1.50000000e-02, 4.38300931e+07, 1.44719714e+08])
+
+        iscale = np.array([2.99068399e-02, 2.99336951e-02, 1.00000000e-02, 1.96111340e-04,
+                           1.96318760e-04, 1.00000000e-02, 1.01364021e-04, 1.00600970e-04,
+                           1.36039061e-04, 9.99998769e-03, 2.89751595e-04, 2.84730233e-04,
+                           5.03655233e-03, 4.14503849e-02, 4.14271901e-02, 9.16351371e-02,
+                           2.00166559e+01, 2.16543968e+01, 2.08456424e+01, 1.23259516e-35,
+                           1.23259516e-35, 1.00000000e-02, 5.00000000e-02, 1.23259516e-35,
+                           1.00000000e-02, 5.00000000e-02, 5.00000000e-02, 1.00000000e-02,
+                           1.23259516e-35, 5.00000000e-02, 1.00000000e-02, 1.23259516e-35,
+                           1.23259516e-35, 1.00000000e-01, 5.00000000e-02, 1.23259516e-35,
+                           1.00000000e-01, 5.00000000e-02, 5.00000000e-02, 1.00000000e-01,
+                           1.23259516e-35, 5.00000000e-02, 1.00000000e-01])
         
         initprob=0  # assume nothing new in world
         #check if any abs (block velocities) < 6 > 10 in any dimension   Done as a hack.. better to do EVT fitting on  values based on training ranges. 
         cart_pos = [actual_state['cart']['x_position'],actual_state['cart']['y_position'],actual_state['cart']['z_position']]
         cart_pos = np.asarray(cart_pos)
 
+        charactermin=1e-3
         
         istate = self.format_istate_data(actual_state)
         # do base state for cart(6)  and pole (7) 
         for j in range (13):
             if(istate[j] > imax[j]):
-                probv=  (istate[j] - imax[j]) / (abs(istate[j]) + abs(imax[j]))
-                if(probv>1e-6):
+                probv =  self.wcdf(istate[j],0,iscale[j],ishape[j]);
+#                probv=  (istate[j] - imax[j]) / (abs(istate[j]) + abs(imax[j]))                
+                if(probv>charactermin):
                     initprob += probv
-                    self.character += str(dimname[j]) + " inital too large  "+ " " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))
-  
+                    self.character +=  str(dimname[j]) + " inital too large  " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))
+
                 
             if(istate[j] < imin[j]):
-                probv=  (imin[j] - istate[j])/ (abs(istate[j]) + abs(imin[j]))
-                if(probv>1e-6):
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);
+                if(probv>charactermin):
                     initprob += probv
-                    self.character += str(dimname[j]) + " inital too small  "+ " " + str(round(istate[j],3)) +" " + str(round(imin[j],3))+" " + str(round(probv,3)) 
+                    self.character += str(dimname[j]) + " inital too small  " + str(round(istate[j],3)) +" " + str(round(imin[j],3)) +" " + str(round(probv,3))
+
         
         wallstart= len(istate) - 24 
 #        pdb.set_trace()
         k=19 # for name max/ame indixing where we have only one block
         for j in range (wallstart,len(istate),1):
             if(istate[j] > imax[k]):
-                probv=  (istate[j] - imax[k])/ (abs(istate[j]) + abs(imax[k]))
-                if(probv>1e-6):
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);
+#                probv=  (istate[j] - imax[k])/ (abs(istate[j]) + abs(imax[k]))
+                if(probv>charactermin):
                     initprob += probv
-                    self.character += str(dimname[k]) + " inital too large  " + " " + str(round(istate[j],3)) +" " + str(round(imax[k],3))+" " + str(round(probv,3))
+                    self.character += str(dimname[k])+ " inital wall too large  " + " " + str(round(istate[j],3)) +" " + str(round(imax[k],3))+" " + str(round(probv,3))
             if(istate[j] < imin[k]):
-                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
-                if(probv>1e-6):
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);
+#                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
+                if(probv>charactermin):
                     initprob += probv
-                self.character += str(dimname[k]) + " inital too small  " + " " + str(round(istate[j],3)) +" " + str(round(imin[k],3))+" " + str(round(probv,3))
+                self.character += str(dimname[k]) + " inital wall too small  " + " " + str(round(istate[j],3)) +" " + str(round(imin[k],3))+" " + str(round(probv,3))
             k = k +1
 
                     
@@ -304,30 +329,27 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,wallstart,1):
             if(istate[j] > imax[k]):
-                probv =  (istate[j] - imax[k]) / (abs(istate[j]) + abs(imax[k]))                
-                if(probv>1e-6):
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);
+#               probv =  (istate[j] - imax[k]) / (abs(istate[j]) + abs(imax[k]))                
+                if(probv>charactermin):
                     initprob += probv
-                    self.character += str(dimname[k]) + " inital too large " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3))
+                    self.character += str(dimname[k])+ " inital block too large " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3))
             if(istate[j] < imin[k]):
-                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
-                if(probv>1e-6):
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);
+#                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
+                if(probv>charactermin):
                     initprob += probv
-                    self.character += " " + str(dimname[k]) + " inital too small " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3))
+                    self.character += " " + str(dimname[k]) + " inital block too small " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3))
             k = k +1
             if(k==19): k=13;   #reset for next block
         return initprob
 
-
-    def wcdf(self,x,imean,ishape,iscale):
-        prob = 1-math.pow(math.exp(-(x-imean)/iscale),ishape)
-#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,imean,ishape,iscale)
-        return prob
     
 
 
     # get probability differene froom continuing state difference
     def cstate_diff_prob(self,cdiff):
-        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart x'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart z'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training.. 
         # imin = np.array([-1.00000000e-05, -6.25000000e-03,  -1.00000000e-06 -1.00000000e-05,
@@ -335,43 +357,48 @@ class UCCSTA2():
         #                     -1.00000000e-05,  -1.00000000e-06, -6.64000000e-03, -6.69000000e-03,
         #                     -1.00000000e-05, -1.00000000e-05, -3.33333333e-06, -6.66666667e-06,
         #                     -6.66666667e-06, -6.66666667e-06, -6.66666667e-06])
-        imax =   1.20* np.array([1.0000e-04, 4.0100e-03, 1.0000e-06, 1.0000e-04, 3.6450e-03,
-                             1.0000e-06, 1.2000e-04, 2.4600e-03, 1.0000e-06, 2.0000e-03,
-                             2.1590e-03, 2.4606e-01, 1.0000e-06, 5.0000e-06, 5.0000e-06,
-                             5.0000e-06, 5.0000e-06, 5.0000e-06, 7.5000e-06])
+        imax =    np.array([5.0000e-02, 4.0100e-03, 1.0000e+00,
+                                3.8120e+00, 3.8450e+00,1.0000e+00,
+                                1.2000e-01, 2.4600e-01, 1.0000e+10, 2.0000e-00,
+                                2.1590e+01, 2.4606e+01, 1.0000e+10,
+                                5.0000e-06, 5.0000e-06, 5.0000e-06,
+                                5.0000e-06, 5.0000e-06, 7.5000e-06])
         imin = -imax
 
         #TB hand computed from nic's data.  not enough data but a start with weibull, 
 
-        iscale = np.array([3.47155906e-01, 3.31091666e-01, 1.00000000e-01, 1.73532410e-01,
-                      7.52148062e-01, 1.00000000e-01, 4.59669985e-01, 5.41859264e-01,
-                      1.60399038e-01, 2.28125787e-01, 4.72931708e-01, 5.40637291e-01,
-                      1.60559395e-01, 1.41297786e-01, 4.28488515e-01, 1.62137050e-01,
-                           7.06490146e-01, 2.14242695e-01, 8.10682558e-01])
+        iscale =  np.array([5.36730456e-01, 7.36218933e-012, 1.00000000e+00,
+                                3.9100120e+00, 3.98955494e+00, 5.37326929e-01,
+                                2.42654606e-01, 2.92230605e-01, 1.57330930e+11,1.53121833e-02,
+                                2.04798535e+01, 2.99956707e+01, 1.69539815e+11,
+                                1.93789708e-00, 1.36620048e-01, 1.28706085e-01,
+                                9.68980762e-01, 6.83380696e-01, 6.43169007e-01])
+        
 
-        ishape =      np.array([5.91607978e-01, 2.57201447e-01, 1.00000000e+01, 5.23808171e-01,
-                                8.58521831e-02, 1.00000000e+01, 3.49034382e-01, 5.20221998e-01,
-                                5.38516481e-01, 4.94342998e-01, 6.74897395e-01, 5.21548155e-02,
-                                4.97493719e-01, 3.28189478e-01, 2.52625107e-01, 2.68224616e-01,
-                                2.74367961e-01, 3.21022671e-01, 2.78388218e-01])
-
+        ishape =      np.array([2.00456014,  3.15852536,  1.        , 1.09069858,  0.99015564,
+                                1.94636277,  3.8733026 ,  1.61021915,  1.90361433,  1.18322955,
+                                2.56458026,  1.60793225,  1.59686699,  0.48553861,  0.50191352,
+                                0.5896634 ,  0.48552527,  0.50210158,  0.58940297])
         
         
-        prob=0  # assume nothing new in world
         #check if any abs (block velocities) < 6 > 10 in any dimension   Done as a hack.. better to do EVT fitting on  values based on training ranges. 
+        if(self.cnt < self.skipfirstNscores): return 0;
 
+        prob=0  #where we accumualte probability
+        charactermin=1e-2
         istate = cdiff
         # do base state for cart(6)  and pole (7) 
         for j in range (13):        
             if(istate[j] > imax[j]):
-                probv =  self.wcdf(istate[j],imax[j],iscale[j],ishape[j]);
-                if(probv>1e-6):
-                    self.character += dimname[j] + " above max change, prob " + " " + str(round(probv,3)) + " s/l " + str(round(istate[j],3)) +  " " + str(round(imax[j],3))
+#                probv =  self.wcdf(istate[j],imax[j],iscale[j],ishape[j]);
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j])                
+                if(probv>charactermin):
+                    self.character += dimname[j] + " above max change, prob " + " " + str(round(probv,5)) + " s/l " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))
                 prob += probv
             elif(istate[j] < imin[j]):
-                probv =  self.wcdf(-istate[j],-imin[j],iscale[j],ishape[j]);
-                if(probv>1e-6):
-                    self.character += dimname[j] + " below min change, prob " + " " + str(round(probv,3)) + "  s/l " + str(round(istate[j],3)) +  " " + str(round(imin[j],3))
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);                
+                if(probv>charactermin):
+                    self.character += dimname[j] + " below min change, prob " + " " + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
                 prob += probv
         
 
@@ -380,18 +407,21 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,len(istate),1):
             if(istate[j] > imax[k]):
-                probv =  self.wcdf(istate[j],imax[k],iscale[j],ishape[j]);
-                if(probv>1e-6):
-                    self.character += " " + str(dimname[k]) + " above max change, prob " + " " + str(round(probv,3)) + "  s/l " + str(round(istate[j],3)) +  " " + str(round(imax[j],3))
-                prob += probv
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);                
+                if(probv>charactermin):
+                    self.character += " " + str(dimname[k]) + " above max change, prob " + " "
+                    + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))
+                    prob += probv
             elif(istate[j] < imin[k]):
-                probv =  self.wcdf(-istate[j],-imin[k],iscale[j],ishape[j]);
-                if(probv>1e-6):
-                    self.character += " " + str(dimname[k]) + " below min change, prob " + " " + str(round(probv,3)) + " s/l " + str(round(istate[j],3)) +  " " + str(round(imin[j],3))
+                probv =  self.wcdf(abs(istate[j]),0,iscale[j],ishape[j]);                
+                if(probv>charactermin):
+                    self.character += " " + str(dimname[k]) + " below min change, prob " + " "
+                    + str(round(probv,5)) + " s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
                 prob += probv
                 k = k +1
                 if(k==19): k=13;   #reset for next block
 #        if(prob > 1e-4): print("Prob", prob)
+#        pdb.set_trace()
         return prob
     
                     
@@ -409,7 +439,7 @@ class UCCSTA2():
         else:
             mu = sigma = 0
             self.debugstring = '   ***Zero Lenth World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
-                round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+                round(self.worldchangedacc,5),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
             print(self.debugstring)
             
             self.worldchanged = self.worldchangedacc
@@ -431,15 +461,17 @@ class UCCSTA2():
 #            print("Very short, world must have changed")
 #            return 1;
         if (len(self.problist) < 198):   #for real work
-            if (self.debug):
-                self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
-                self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
-                     round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
+            self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
+                round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+                round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+            if (True or self.debug):
                 print(self.debugstring)
         if (sigma == 0):
             if (mu == self.mean_train):
                 self.debugstring = '      World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}         scores{}'.format(
-                     round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+                    round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+                    round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
                 print(self.debugstring)                
                 return 0;
             else:
@@ -453,9 +485,10 @@ class UCCSTA2():
         KLscale = (
                               self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start down to  1/2
         prob = min(1.0, KLscale * self.KL_val / (2 * self.KL_threshold))
-        if (self.debug):
+        if (True or self.debug):
                 self.debugstring = '      World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}         scores{}'.format(
-                     round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n",[round(num,2) for num in self.scorelist])
+                    round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+                    round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n",[round(num,2) for num in self.scorelist])
                 print(self.debugstring)                
         
         #        self.worldchanged = max(prob,self.worldchanged)
@@ -477,7 +510,7 @@ class UCCSTA2():
             
 
         #world change blend can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
-        self.worldchangeblend = min(1, (.25 *self.worldchanged + +.25 * self.worldchangedacc + .5*self.worldaccscale * self.worldchangeblend)/(1 + self.worldaccscale))
+        self.worldchangeblend = min(1, (.7 *self.worldchanged + .3 * self.worldchangedacc + .25*self.worldaccscale * self.worldchangeblend)/(1 + self.worldaccscale))
         #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time
         if(        len(self.problist) > 0 ) :
             self.worldchangedacc = min(1,self.problist[0]*self.initfailscale + max(self.worldchangedacc,self.worldchangeblend+max(0, (self.failcnt-self.skipfail)/self.failscale )))
@@ -557,10 +590,11 @@ class UCCSTA2():
             return action
         else:
 
-
+#            pdb.set_trace()
             data_val = self.format_data(data_val)
             prob_values = []
             actual_state = self.format_data(actual_state)
+
             difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
             current = difference_from_expected
 

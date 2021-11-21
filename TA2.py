@@ -193,7 +193,8 @@ class TA2Agent(TA2Logic):
             Integer representing the predicted novelty level.
             A JSON-valid dict characterizing the novelty.
         """
-        novelty_probability = self.UCCS.world_change_prob(True)
+#        novelty_probability = self.UCCS.world_change_prob(True)   # learn prob from train
+        novelty_probability = self.UCCS.world_change_prob(False)   #one bad start will break it so we use pretrained data insteadb     
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()

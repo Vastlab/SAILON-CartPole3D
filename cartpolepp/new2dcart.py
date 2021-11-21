@@ -60,7 +60,7 @@ class CartPoleBulletEnv(gym.Env):
         self.setbase=False
         self.basepos=[0,0,0]
         self.lastscore=0
-        self.char=""        
+        self.char=""
 
         if self._discrete_actions:
             self.action_space = spaces.Discrete(5)
@@ -118,26 +118,49 @@ class CartPoleBulletEnv(gym.Env):
         fx = self.force_mag * np.cos(cart_angle)
         fy = self.force_mag * np.sin(cart_angle) * -1
 
-        # based on action decide the x and y forces
-        if action == 0:
-            fx = 0.0
-            fy = 0.0
-        elif action == 1:
-            fx = fx
-            fy = fy
-        elif action == 2:
-            fx = -fx
-            fy = - fy
-        elif action == 3:
-            tmp = fx
-            fx = -fy
-            fy = tmp
-        elif action == 4:
-            tmp = fx
-            fx = fy
-            fy = -tmp
+        if(True):    #if true we use orginal  actions... if not we use -x direction which flips left and right
+            # based on action decide the x and y forces
+            if action == 0:
+                fx = 0.0
+                fy = 0.0
+            elif action == 1:  # flipped X actions
+                fx = -fx   
+                fy = -fy
+            elif action == 2:
+                fx = fx
+                fy = fy
+            elif action == 3:
+                tmp = fx
+                fx = -fy
+                fy = tmp
+            elif action == 4:
+                tmp = fx
+                fx = fy
+                fy = -tmp
+            else:
+                raise Exception("unknown discrete action [%s]" % action)
         else:
-            raise Exception("unknown discrete action [%s]" % action)
+            # based on action decide the x and y forces
+            if action == 0:
+                fx = 0.0
+                fy = 0.0
+            elif action == 1:
+                fx = fx   #TB hack since their coordinte system is backwards in x, negate actions in x
+                fy = fy
+            elif action == 2:
+                fx = -fx
+                fy = -fy
+            elif action == 3:
+                tmp = fx
+                fx = -fy
+                fy = tmp
+            elif action == 4:
+                tmp = fx
+                fx = fy
+                fy = -tmp
+            else:
+                raise Exception("unknown discrete action [%s]" % action)
+            
 
         # Apply correccted forces
         p.applyExternalForce(self.cartpole, 0, (fx, fy, 0.0), (0, 0, 0), p.LINK_FRAME)
@@ -198,6 +221,7 @@ class CartPoleBulletEnv(gym.Env):
             self.generate_world()
 
         self.tick = 0
+        self.char=""        
         self.reset_world(feature_vector)
 
         # Run for one step to get everything going
@@ -259,95 +283,72 @@ class CartPoleBulletEnv(gym.Env):
         cartoffset = [0,0,0]
         if(feature_vector is None):
             # Reset cart (technicaly ground object)
-            cart_pos = list(self.np_random.uniform(low=-3, high=3, size=(2,))) + [0]
-            cart_vel = list(self.np_random.uniform(low=-1, high=1, size=(2,))) + [0]
-            p.resetBasePositionAndOrientation(self.cartpole, cart_pos, [0, 0, 0, 1])
-            p.applyExternalForce(self.cartpole, 0, cart_vel, (0, 0, 0), p.WORLD_FRAME)
-            base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-        else:
-            if self.TB2Dbullet:
-                cart_pos = [feature_vector["cart"]["x_position"],
-                            feature_vector["cart"]["y_position"],
-                            feature_vector["cart"]["z_position"]-.1
-                ]
-                cart_vel = [feature_vector["cart"]["x_velocity"],
-                            feature_vector["cart"]["y_velocity"],
-                            feature_vector["cart"]["z_velocity"]
-                ]
-            else:
-                cart_pos = [feature_vector["cart"]["x_position"],
-                            feature_vector["cart"]["y_position"],
-                ]
-                cart_vel = [feature_vector["cart"]["x_velocity"],
-                            feature_vector["cart"]["y_velocity"],
-                ]
+            cart_position = list(self.np_random.uniform(low=-3, high=3, size=(2,))) + [0]
+            cart_velocity = list(self.np_random.uniform(low=-1, high=1, size=(2,))) + [0]
+            p.resetBasePositionAndOrientation(self.cartpole, cart_position, [0, 0, 0, 1])
+#            p.applyExternalForce(self.cartpole, 0, cart_velocity, (0, 0, 0), p.WORLD_FRAME)
+            p.resetJointStateMultiDof(self.cartpole, 0, targetValue=cartoffset, targetVelocity=cart_velocity)
+            
+            base_positione, _ = p.getBasePositionAndOrientation(self.cartpole)
+#            pdb.set_trace()
 
-            base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
+            
+        else:
+            cart_position = [-feature_vector["cart"]["x_position"],   # x if flipped compard to pybullet
+                             feature_vector["cart"]["y_position"],
+                             feature_vector["cart"]["z_position"]
+            ]
+            cart_velocity = [-feature_vector["cart"]["z_velocity"],    # we swap x and z for interface to pybullet
+                             feature_vector["cart"]["y_velocity"],
+                             feature_vector["cart"]["x_velocity"]
+            ]
+            
+            base_positione, _ = p.getBasePositionAndOrientation(self.cartpole)
             cartoffset = [0,0,0]
             if(self.setbase):
-#                print("Initial base", feature_vector)
                 self.setbase=False
-                self.basepos=cart_pos
+                self.basepos=cart_position
                 # if base is 0 then set meaningful base from features
-#                print("reset car base from ", base_pose, " to ",  cart_pos)
-#                cart_pos = [.80,.80,0]
-                cart_pos= [cart_pos[0] + 0* self.timeStep*cart_vel[0],
-                            cart_pos[1] + 0* self.timeStep*cart_vel[1],
-                            0]
-                cartoffset = [0,0,0]
-                p.resetBasePositionAndOrientation(self.cartpole, cart_pos, [0, 0, 0, 1])
-                base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-#                print("actual reset  from ", base_pose, " to ",  cart_pos)
-                #reset pos for joint reset below
-                base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-            elif self.TB2Dbullet:
-                base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-                base_pose = self.basepos
-                cartoffset = [feature_vector["cart"]["x_position"]-base_pose[0],
-                            feature_vector["cart"]["y_position"]-base_pose[1],
-                            (feature_vector["cart"]["z_position"]-base_pose[2]-.1) #.1 is the base offset that WSU wants in get_state
-                ]
-                cart_vel = [feature_vector["cart"]["x_velocity"],
-                            feature_vector["cart"]["y_velocity"]
-                            ,0
-                            #,
-#                            feature_vector["cart"]["z_velocity"]
-                ]
-#                print("ofsset cal",  cartoffset)
+                #                print("reset car base from ", base_positione, " to ",  cart_position)
+                #                cart_position = [.80,.80,0]
+                p.resetBasePositionAndOrientation(self.cartpole, cart_position, [0, 0, 0, 1])
+                p.resetJointStateMultiDof(self.cartpole, 0, targetValue=[0,0,0], targetVelocity=cart_velocity)                            
+                _, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
+                pos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
+#                print("Setbase  reset  from ", cart_position,cart_velocity, " to ",  pos,vel)
             else:
-                cartoffset = [feature_vector["cart"]["x_position"]-base_pose[0],
-                            feature_vector["cart"]["y_position"]-base_pose[1],
+                base_positione = self.basepos
+                cartoffset = [feature_vector["cart"]["z_position"]+base_positione[0],
+                              feature_vector["cart"]["y_position"]-base_positione[1],
+                              (feature_vector["cart"]["x_position"]-base_positione[2]) 
                 ]
-                cart_vel = [feature_vector["cart"]["x_velocity"],
-                            feature_vector["cart"]["y_velocity"]
-                ]
-#                print("ofsset cal",  cartoffset2)
-
-        p.resetBasePositionAndOrientation(self.cartpole, self.basepos, [0, 0, 0, 1])
-        p.resetJointStateMultiDof(self.cartpole, 0, targetValue=cartoffset, targetVelocity=cart_vel)
-        base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
-#        print("Joint reset cart to ", base_pose,cartoffset, cart_vel)
-
-
-
+                #really want just the next line so we can evolve link searpatelyb.. but it does not work so two lines following at least give us a rough position/velociy reset
+                #p.resetJointStateMultiDof(self.cartpole, 0, targetValue=cart_offset,targetVelocity=cart_velocity)                                
+                p.resetBasePositionAndOrientation(self.cartpole, cart_position, [0, 0, 0, 1])        
+                p.resetJointStateMultiDof(self.cartpole, 0, targetValue=[0,0,0],targetVelocity=cart_velocity)                
+                _, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
+                pos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
+#                print("Normal reset  from ", cart_position,cart_velocity, " to ",  pos,vel)
+            
+                
         # Reset pole
         if(feature_vector is None):
             # Reset pole
             randstate = list(self.np_random.uniform(low=-0.01, high=0.01, size=(6,)))
-            pole_pos = randstate[0:3] + [1]
+            pole_position = randstate[0:3] + [1]
             # zero so it doesnt spin like a top :)
             pole_ori = list(randstate[3:5]) + [0]
-            p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_pos, targetVelocity=pole_ori)
+            p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_position, targetVelocity=pole_ori)
         else:
             # Reset pole
-            pole_pos = [feature_vector["pole"]["x_quaternion"],
-                        feature_vector["pole"]["y_quaternion"],
+            pole_position = [feature_vector["pole"]["y_quaternion"],
+                        feature_vector["pole"]["x_quaternion"],
                         feature_vector["pole"]["z_quaternion"],
                         feature_vector["pole"]["w_quaternion"]]
-            pole_vel = [feature_vector["pole"]["x_velocity"],
-                        feature_vector["pole"]["y_velocity"],
+            pole_velocity = [feature_vector["pole"]["y_velocity"],
+                        feature_vector["pole"]["x_velocity"],
                         feature_vector["pole"]["z_velocity"]]
-            p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_pos, targetVelocity=pole_vel)
+            p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_position, targetVelocity=pole_velocity)
 
 
         # Delete old blocks
@@ -355,11 +356,12 @@ class CartPoleBulletEnv(gym.Env):
             p.removeBody(i)
 
 
-        # Load blocks in
+        #        Load blocks in
         if(feature_vector is None):
-            self.nb_blocks = np.random.randint(4) + 1
+            self.nb_blocks = np.random.randint(3) + 2
         else:
             self.nb_blocks = len(feature_vector['blocks'])
+
 
         self.blocks = [None] * self.nb_blocks
         for i in range(self.nb_blocks):
@@ -372,13 +374,13 @@ class CartPoleBulletEnv(gym.Env):
 
         # Set block posistions
         min_dist = 1
-        cart_pos, _ = p.getBasePositionAndOrientation(self.cartpole)
-        cart_pos = np.asarray(cart_pos)
+        cart_position, _ = p.getBasePositionAndOrientation(self.cartpole)
+        cart_position = np.asarray(cart_position)
         if(feature_vector is None):
             for i in self.blocks:
                 pos = self.np_random.uniform(low=-4.0, high=4.0, size=(3,))
                 pos[2] = pos[2] + 5.0
-                while np.linalg.norm(cart_pos[0:2] - pos[0:2]) < min_dist:
+                while np.linalg.norm(cart_position[0:2] - pos[0:2]) < min_dist:
                     pos = self.np_random.uniform(low=-4.0, high=4.0, size=(3,))
                     # Z is not centered at 0.0
                     pos[2] = pos[2] + 5.0
@@ -402,6 +404,7 @@ class CartPoleBulletEnv(gym.Env):
                 i = i+1
 
         return None
+
     # Unified function for getting state information
     def get_state(self, initial=False):
         p = self._p
@@ -412,16 +415,25 @@ class CartPoleBulletEnv(gym.Env):
         state = dict()
 
         # Handle pos, ori
-        base_pose, _ = p.getBasePositionAndOrientation(self.cartpole)
+        base_positione, _ = p.getBasePositionAndOrientation(self.cartpole)
         pos, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
-        state['x_position'] = round(pos[0] + base_pose[0], round_amount)
-        state['y_position'] = round(pos[1] + base_pose[1], round_amount)
-        state['z_position'] = round(0.1 + base_pose[2], round_amount)
+
+        _, nvel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
+        npos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
+#        print("npos,nvel",npos,nvel)
+        
+        # Handle pos, ori
+        _, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
+        pos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
+        state['x_position'] = round(-pos[0], round_amount)
+        state['y_position'] = round(pos[1], round_amount)
+        state['z_position'] = round(pos[2], round_amount)
 
         # Handle velocity
-        state['x_velocity'] = round(vel[0], round_amount)
+        state['x_velocity'] = round(-vel[2], round_amount)
         state['y_velocity'] = round(vel[1], round_amount)
-        state['z_velocity'] = round(0.0, round_amount)
+        state['z_velocity'] = round(vel[0], round_amount)
+
 
         world_state['cart'] = state
         del state 
@@ -442,14 +454,14 @@ class CartPoleBulletEnv(gym.Env):
             state['y_position'] = round(eulers[1], round_amount)
             state['z_position'] = round(eulers[2], round_amount)
         else:
-            state['x_quaternion'] = round(pos[0], round_amount)
-            state['y_quaternion'] = round(pos[1], round_amount)
+            state['x_quaternion'] = round(-pos[1], round_amount)
+            state['y_quaternion'] = round(pos[0], round_amount)
             state['z_quaternion'] = round(pos[2], round_amount)
             state['w_quaternion'] = round(pos[3], round_amount)
 
         # Velocity
-        state['x_velocity'] = round(vel[0], round_amount)
-        state['y_velocity'] = round(vel[1], round_amount)
+        state['x_velocity'] = round(-vel[1], round_amount)
+        state['y_velocity'] = round(vel[0], round_amount)
         state['z_velocity'] = round(vel[2], round_amount)
 
         world_state['pole'] = state
@@ -476,7 +488,8 @@ class CartPoleBulletEnv(gym.Env):
         state = None
         del state
         del block_state
-        
+
+        world_state['ticks'] = self.tick
 
         # # Get wall info ======================================
         # # Hardcoded cause I don't know how to get the info :(
@@ -662,9 +675,10 @@ class CartPoleBulletEnv(gym.Env):
         self.reset(feature_vector)
         self.step(steps[0])
         #print(self.get_state()["pole"])
-        state = self.get_state()
+        nextstate = self.get_state()
+        self.reset(nextstate)
         self.step(steps[1])
-        return [self.get_score(self.get_state()), state]
+        return [self.get_score(self.get_state()), nextstate]
 
 
     #structured like the two-step but that was expensive so teting one steo to see gain vs cost
@@ -729,11 +743,11 @@ class CartPoleBulletEnv(gym.Env):
 
 #       if we have colission potential for any action (char != "") so do two-step action search
 #       if we have low score  we can go faser uding one-setp  
-        if(((prob < .49 and self.lastscore < 100) or (self.lastscore < 50) )):            # make it mroe often just one making it faster
+#        if( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )):            # make it mroe often just one making it faster
             return self.get_best_onestep_action(feature_vector)
-        else:
-            return self.get_best_twostep_action(feature_vector)
-        
+#        else:
+#            return self.get_best_twostep_action(feature_vector)
+
 
 
     def get_score(self, feature_vector):
@@ -750,7 +764,7 @@ class CartPoleBulletEnv(gym.Env):
         pos = self.quaternion_to_euler(*pos)
         pole_x = x_angle = abs(pos[0])
         pole_y = y_angle = abs(pos[1])
-        pole_z = y_angle = abs(pos[2])        
+        pole_z = z_angle = abs(pos[2])        
         
         #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
         
@@ -770,27 +784,32 @@ class CartPoleBulletEnv(gym.Env):
                 mindist = min(mindist,contactdist)
 
 
-        tdist = mindist-1    #try to keep the one unit away
+        tdist = mindist-2    #try to keep the two unit away
         if(tdist > 8): tdist = 8
-        if(tdist <=.1): tdist = .1
-        mindist = 1/(tdist*tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position 
-        if(mindist < 1):
-            tdist = mindist
-            if(tdist <=.1): tdist = .1            
-            mindist += 1/(tdist*tdist)    # if its closer than our ideal one unit,  add even more penalty
+        if(tdist > .1):
+            mindist = 1/( tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position        
+        if(tdist <= .1 and mindist >.01):
+            mindist = 10+1/(mindist*mindist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
+        elif(mindist <.01): 
+            mindist = 1000+(mindist*mindist)    # if  colliding  makit it very large
+        
+        # if(mdist < 1):
+        #     tdist = mindist
+        #     if(tdist <=.1): tdist = .1            
+        #     mindist += 1/(tdist*tdist)    # if its closer than our ideal one unit,  add even more penalty
 
 
         #  we weight the larger of the two errors more, but still consider the other
         maxangle = max(abs(pole_x), abs(pole_y))
         minangle = min(abs(pole_x), abs(pole_y))
         slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**2 as a penlty so we big if we get close
-        if(slack < 0): cost  = 1e8;             slackcost = 1/slack**4
+        if(slack < 0): cost  = 1e8;             slackcost = 1e8
         else:
             slackcost = 1/slack**4
-            cost = slackcost  + maxangle**2 + minangle**2 +  mindist 
+            cost = slackcost   + mindist  + maxangle**2 + 10*minangle**2 
 
 #        if(cost > 100):
-#            print("cost,  slack, slackcost  ", cost, slack,slackcost, "pole (x y z)", abs(pole_x), abs(pole_y),abs(pole_z), "  dists ", mindist,tdist,   "angle limit", self.angle_limit )
+#        print("cost,  slack, slackcost  ", cost, slack,slackcost, "pole (x y z)", abs(pole_x), abs(pole_y),abs(pole_z), "  dists ", mindist,tdist,   "angle limit", self.angle_limit )
         
 
 
