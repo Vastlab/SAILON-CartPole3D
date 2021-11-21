@@ -1,0 +1,22 @@
+2021-11-21 01:53:40,257 - objects.TA2_logic.TA2 - INFO - Attempting to connect to an available TA1, if all are currently busy this will wait in line until one is available.
+2021-11-21 01:53:40,884 - objects.TA2_logic.TA2 - INFO - experiment is gathering requirements!
+2021-11-21 01:54:22,821 - objects.TA2_logic.TA2 - INFO - Attempting to connect to an available TA1, if all are currently busy this will wait in line until one is available.
+2021-11-21 01:54:23,444 - objects.TA2_logic.TA2 - INFO - experiment is gathering requirements!
+2021-11-21 01:54:25,240 - objects.TA2_logic.TA2 - INFO - Experiment Start
+2021-11-21 01:54:25,302 - objects.TA2_logic.TA2 - INFO - Training Start
+2021-11-21 01:54:25,369 - objects.TA2_logic.TA2 - INFO - Training Episode Start: #0
+2021-11-21 02:24:19,602 - objects.TA2_logic.TA2 - INFO - Attempting to connect to an available TA1, if all are currently busy this will wait in line until one is available.
+2021-11-21 02:24:21,885 - objects.TA2_logic.TA2 - INFO - {"obj_type": "experiment_start"}
+2021-11-21 02:24:21,886 - objects.TA2_logic.TA2 - INFO - Experiment Start
+2021-11-21 02:24:21,948 - objects.TA2_logic.TA2 - INFO - {"obj_type": "trial_start", "trial_number": 0, "total_trials": 0, "message": "Please RESET TA2 model to SAVED state.", "novelty_description": {}}
+2021-11-21 02:24:21,949 - objects.TA2_logic.TA2 - INFO - Trial Start: #0  novelty_desc: {}
+2021-11-21 02:24:21,949 - objects.TA2_logic.TA2 - INFO - Load model from disk.
+2021-11-21 02:24:22,008 - objects.TA2_logic.TA2 - INFO - Testing Start
+2021-11-21 02:24:22,091 - objects.TA2_logic.TA2 - INFO - Testing Episode Start: #0
+2021-11-21 02:25:35,006 - objects.TA2_logic.TA2 - INFO - Attempting to connect to an available TA1, if all are currently busy this will wait in line until one is available.
+2021-11-21 02:25:37,135 - objects.TA2_logic.TA2 - INFO - {"obj_type": "experiment_start"}
+2021-11-21 02:25:37,135 - objects.TA2_logic.TA2 - INFO - Experiment Start
+2021-11-21 02:25:37,196 - objects.TA2_logic.TA2 - INFO - {"obj_type": "trial_start", "trial_number": 1, "total_trials": 0, "message": "Please RESET TA2 model to SAVED state.", "novelty_description": {}}
+2021-11-21 02:25:37,196 - objects.TA2_logic.TA2 - INFO - Trial Start: #1  novelty_desc: {}
+2021-11-21 02:25:37,196 - objects.TA2_logic.TA2 - INFO - Load model from disk.
+2021-11-21 02:25:37,256 - objects.TA2_logic.TA2 - INFO - Testing Start
