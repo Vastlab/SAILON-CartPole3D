@@ -7,12 +7,11 @@ RUN mkdir /code
 WORKDIR /code
 COPY ./requirements.txt .
 RUN pip install -r requirements.txt
-COPY ./bullet3/. ./bullet3
-COPY ./cartpolepp/. ./cartpolepp
-COPY ./objects/. ./objects
-COPY ./*.py ./
-COPY ./evm_config.json ./
-
+COPY ./bullet3 .
+COPY ./cartpolepp .
+COPY ./objects .
+COPY ./*.py .
+COPY ./evm_config.json .
 
 WORKDIR bullet3
 RUN bash build_cmake_pybullet_double.sh
