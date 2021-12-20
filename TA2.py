@@ -90,7 +90,7 @@ class TA2Agent(TA2Logic):
         self.end_training_early = True
 
         # This variable is checked only during the evaluation phase.  If set to True the system
-        # will attempt to cleanly end the experiment at the conclusion of the current episode,
+        # will attempt to cleanly end the experiment at the conclusion of the current episode, 
         # or sooner if possible.
         self.end_experiment_early = False
 
@@ -99,6 +99,7 @@ class TA2Agent(TA2Logic):
         self.lasttime = 0
         self.UCCS = UCCSTA2()
         self.UCCS.debug = options.debug
+        self.UCCS.debug = False
         # Self states, always previous 4 steps
 
         return
@@ -201,11 +202,11 @@ class TA2Agent(TA2Logic):
 
         #        print("Novelty Probability:", novelty_probability)
         #        print("Total Steps:", self.totalSteps)
-        self.log.debug('Training Episode End: performance={}, NovelProb={},steps={}, WC={},'.format(performance,
+        self.log.debug('Training Episode End: performance={}, NovelProb={}, steps={}, WC={}, '.format(performance, 
                                                                                                     self.UCCS.problist,
                                                                                                     self.totalSteps,
                                                                                                     novelty_probability))
-        self.log.info('Training Episode End: steps={}, WC={},'.format(self.totalSteps, novelty_probability))
+        self.log.info('Training Episode End: steps={}, WC={}, '.format(self.totalSteps, novelty_probability))
         self.totalSteps = 0
         return novelty_probability, novelty_threshold, novelty, novelty_characterization
 
@@ -252,7 +253,7 @@ class TA2Agent(TA2Logic):
         novelty_description : dict
             A dictionary that will have a description of the trial's novelty.
         """
-        self.log.info('Trial Start: #{}  novelty_desc: {}'.format(trial_number,
+        self.log.info('Trial Start: #{}  novelty_desc: {}'.format(trial_number, 
                                                                   str(novelty_description)))
         self.UCCS.trial = trial_number
         '''if len(self.possible_answers) == 0:
@@ -279,14 +280,7 @@ class TA2Agent(TA2Logic):
         # if(True or self.UCCS.debug):
         #     snapshot1 = tracemalloc.take_snapshot()
 
-
-
-
         self.UCCS.starttime = datetime.now()
-       
-
-#        print("start episode",  self.UCCS.cnt)
-        
         return
 
         # One step predictions here
@@ -312,9 +306,8 @@ class TA2Agent(TA2Logic):
         """
 
         self.UCCS.noveltyindicator = novelty_indicator
-        self.UCCS.debugstring=""
-       
-        if (self.UCCS.cnt < 1):
+        self.UCCS.debugstring = ""
+        if(self.UCCS.cnt < 1):
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
             if (novelty_indicator == True):
@@ -334,13 +327,6 @@ class TA2Agent(TA2Logic):
 
         # format the return of novelty and actions
         action = {"action": action}
-
-
-        
-
-        
-        
-
         return action
 
     def testing_performance(self, performance: float, feedback: dict = None):
@@ -381,33 +367,31 @@ class TA2Agent(TA2Logic):
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()
-        novelty_characterization['stringdump']=self.UCCS.character
+        novelty_characterization['stringdump'] = self.UCCS.character
 
-        end =  datetime.now()
-        self.UCCS.cumtime +=  end - self.UCCS.starttime
+        end =datetime.now()
+        self.UCCS.cumtime += end - self.UCCS.starttime
         
 
         self.UCCS.totalcnt += 1
         self.UCCS.perf += performance
-        rcorrect=pcorrect=0
+        self.UCCS.perflist.append(performance)
+        
+        rcorrect = pcorrect = 0
         if(performance > .99): rcorrect = 1.0
-        iscorrect=0
-        if((self.UCCS.noveltyindicator == True) and (novelty_probability >= .5)): iscorrect=1
-        if((self.UCCS.noveltyindicator == False) and (novelty_probability < .5)): iscorrect=1
+        iscorrect = 0
+        if((self.UCCS.noveltyindicator == True) and (novelty_probability >= .5)): iscorrect = 1
+        if((self.UCCS.noveltyindicator == False) and (novelty_probability < .5)): iscorrect = 1
         self.UCCS.correctcnt = self.UCCS.correctcnt + iscorrect
-        self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect,rcorrect)
+        self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect, rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
         rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-
-        #        print("Novelty Probability:", novelty_probability)
-        #        print("Total Steps:", self.totalSteps)
-
-        self.log.info('Testing Episode #{} End: time={}, atime={}  NovInd={}     steps={}, Perf={}, CumPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={},RCCnt={} TCN={}, {}   Prob={} {}   Scores={} {}   Char={}  '.format(
-            self.UCCS.episode,round((end - self.UCCS.starttime).total_seconds(),1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(),1),
-            self.UCCS.noveltyindicator,self.totalSteps,  performance, round(rperf,1),round(novelty_probability,2),iscorrect,rcorrect, round(pcorrect,2),self.UCCS.correctcnt,self.UCCS.rcorrectcnt, self.UCCS.totalcnt,
-            "\n", [round(num,2) for num in self.UCCS.problist],
-            "\n", [round(num,2) for num in self.UCCS.scorelist],            
-            "\n", str(novelty_characterization) ))
+        self.log.info('Testing E #{} End: times={} {}  NovI={} steps={}, Perf={}, CPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={} {}   Prob={} {}   Scores={}   '.format(
+            self.UCCS.episode, round((end - self.UCCS.starttime).total_seconds(), 1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(), 1), 
+            self.UCCS.noveltyindicator, self.totalSteps,  performance, round(rperf, 1), round(novelty_probability, 2), iscorrect, rcorrect, round(pcorrect, 2), self.UCCS.correctcnt, self.UCCS.rcorrectcnt, self.UCCS.totalcnt, 
+            str(novelty_characterization),
+            "\n", [round(num, 2) for num in self.UCCS.problist], 
+            "\n", [round(num, 2) for num in self.UCCS.scorelist]))            
         self.totalSteps = 0
         
         self.UCCS.starttime = datetime.now()
@@ -426,7 +410,7 @@ class TA2Agent(TA2Logic):
 
         
         # if(self.UCCS.given):
-        #      fname = 'Given-History-{}-{}-{}.csv'.format(self.UCCS.trial,self.UCCS.episode,uuid.uuid4().hex)
+        #      fname = 'Given-History-{}-{}-{}.csv'.format(self.UCCS.trial, self.UCCS.episode, uuid.uuid4().hex)
         #      with open(fname, "w", newline="") as f:
         #         writer = csv.writer(f)
         #         writer.writerows(self.UCCS.statelist)
@@ -456,45 +440,45 @@ class TA2Agent(TA2Logic):
 
 if __name__ == "__main__":
     parser = optparse.OptionParser(usage="usage: %prog [options]")
-    parser.add_option("--config",
-                      dest="config",
-                      help="Custom ClientAgent config file.",
+    parser.add_option("--config", 
+                      dest="config", 
+                      help="Custom ClientAgent config file.", 
                       default="TA2.config")
-    parser.add_option("--debug",
-                      dest="debug",
-                      action="store_true",
-                      help="Set logging level to DEBUG from INFO.",
+    parser.add_option("--debug", 
+                      dest="debug", 
+                      action="store_true", 
+                      help="Set logging level to DEBUG from INFO.", 
                       default=False)
-    parser.add_option("--fulldebug",
-                      dest="fulldebug",
-                      action="store_true",
-                      help="Set logging level to DEBUG from INFO for all imported libraries.",
+    parser.add_option("--fulldebug", 
+                      dest="fulldebug", 
+                      action="store_true", 
+                      help="Set logging level to DEBUG from INFO for all imported libraries.", 
                       default=False)
-    parser.add_option("--logfile",
-                      dest="logfile",
+    parser.add_option("--logfile", 
+                      dest="logfile", 
                       help="Filename if you want to write the log to disk.")
-    parser.add_option("--printout",
-                      dest="printout",
-                      action="store_true",
-                      help="Print output to the screen at given logging level.",
+    parser.add_option("--printout", 
+                      dest="printout", 
+                      action="store_true", 
+                      help="Print output to the screen at given logging level.", 
                       default=False)
-    parser.add_option("--no-testing",
-                      dest="no_testing",
-                      action="store_true",
+    parser.add_option("--no-testing", 
+                      dest="no_testing", 
+                      action="store_true", 
                       help=('Instruct the TA2 to just create the experiment, update the config, '
                             'consume training data (if any), train the model (if needed), saves '
                             'the model to disk, and then exits. This disables the use of '
-                            '--just-one-trial when set.'),
+                            '--just-one-trial when set.'), 
                       default=False)
-    parser.add_option("--just-one-trial",
-                      dest="just_one_trial",
-                      action="store_true",
-                      help="Process just one trial and then exit.",
+    parser.add_option("--just-one-trial", 
+                      dest="just_one_trial", 
+                      action="store_true", 
+                      help="Process just one trial and then exit.", 
                       default=False)
-    parser.add_option("--ignore-secret",
-                      dest="ignore_secret",
-                      action="store_true",
-                      help='Causes the program to ignore any secret stored in experiment_secret.',
+    parser.add_option("--ignore-secret", 
+                      dest="ignore_secret", 
+                      action="store_true", 
+                      help='Causes the program to ignore any secret stored in experiment_secret.', 
                       default=False)
     (options, args) = parser.parse_args()
     if options.fulldebug:
