@@ -954,7 +954,7 @@ class UCCSTA2():
         #KLscale = (self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start 1 down to  1/2
         #        KLscale = min(1, 4*(1 + self.episode) / num_epochs)  # decrease scale (increase sensitvity)  from start 1 down to  1/2
         KLscale = 1
-        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-2))  ## if we have only one dynic failure,  this will scale it by .125  but it doubles each time we get another dynamic failrue in a row
+        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-2)))  ## if we have only one dynic failure,  this will scale it by .125  but it doubles each time we get another dynamic failrue in a row
         perfprob = min(1.0, self.PerfScale * PerfKL)  #make this smaller since it is slowly varying and  added every time.. less sensitive (good for FP avoid, sloer l
 
         #if we had  collisons and not consecuretive valiures, we don't use this episode for dynamic probability .. collisions are not well predicted
@@ -998,7 +998,7 @@ class UCCSTA2():
         if(previous_wc < .5):
             self.trialchar += self.character
             if(self.worldchangedacc        >= .5):
-                self.character += "##### Characterization of world change (at threshold):  "
+                self.character = "##### Characterization of world change (at threshold):  "
                 initcnt = self.trialchar.count("init")
                 blockcnt = self.trialchar.count("Block")
                 polecnt = self.trialchar.count("Pole")
