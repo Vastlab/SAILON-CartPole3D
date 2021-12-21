@@ -312,8 +312,10 @@ class TA2Agent(TA2Logic):
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
             if (novelty_indicator == True):
                 self.UCCS.given = True
+                self.UCCS.uccscart.givendetection = True                
             else:
                 self.UCCS.given = False
+                self.UCCS.uccscart.givendetection = False                                
 
 
         action = self.UCCS.process_instance(feature_vector)

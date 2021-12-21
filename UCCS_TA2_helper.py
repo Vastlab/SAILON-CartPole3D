@@ -124,6 +124,7 @@ class UCCSTA2():
         self.debug = True        
         self.debugstring = ""
         self.character=""
+        self.trialchar=""        
 
         self.imax = self.imin = self.ishape = self.iscale =  None
         self.dmax = self.dshape = self.dscale =  None        
@@ -189,6 +190,7 @@ class UCCSTA2():
             self.worldchangeblend = 0            
             self.consecutivefail=0
             self.perm_search=0
+            self.trialchar=""            
 
 
         # Take one step look ahead, return predicted environment and step
@@ -534,11 +536,11 @@ class UCCSTA2():
 
         
         initprob=0  # assume nothing new in world
-        #check if any abs (block velocities) < 6 > 10 in any dimension   Done as a hack.. better to do EVT fitting on  values based on training ranges. 
+
         cart_pos = [actual_state['cart']['x_position'],actual_state['cart']['y_position'],actual_state['cart']['z_position']]
         cart_pos = np.asarray(cart_pos)
 
-        charactermin=1e-3
+        charactermin=1e-2
         
         istate = self.format_istate_data(actual_state)
         # do base state for cart(6)  and pole (7) 
@@ -724,11 +726,10 @@ class UCCSTA2():
 #        if(cdiff[0] > .01):
 #            pdb.set_trace()
         
-        #check if any abs (block velocities) < 6 > 10 in any dimension   Done as a hack.. better to do EVT fitting on  values based on training ranges. 
         if(self.cnt < self.skipfirstNscores): return 0;    #need to be far enough along to get good prediciton
 
         prob=0  #where we accumualte probability
-        charactermin=1e-3
+        charactermin=1e-2
         istate = cdiff
         # do base state for cart(6)  and pole (7) 
         for j in range (13):        
@@ -777,37 +778,81 @@ class UCCSTA2():
         return prob
     
                     
+    def mark_tried_actions(self,action, paction):
+        '''  mark permutaiton indicies where the current action is in the perturbed action slot has been tried and did not work (used) '''
+        for index in range(len(self.uccscart.actions_plist)-1):
+            if(self.uccscart.actions_plist[index][action] == paction):
+                self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1                
+
+
 
     def try_actions_permutations(self,actual_state,diffprob):
-        ## try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
-        ## this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back
-        stepstaken = [self.prev_action]
+        ''' try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+         this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back'''
+    
+        action = self.prev_action
+        # Convert from string to int
+        if action == 'nothing':
+            action = 0
+        elif action == 'right':
+            action = 2    #tb flipped for testing
+        elif action == 'left':
+            action = 1
+        elif action == 'forward':
+            action = 4
+        elif action == 'backward':
+            action = 3
+
+
+
+        
         bestprob = diffprob
         bestindex = self.uccscart.actions_permutation_index
-        for index in range(len(self.uccscart.actions_plist)-1):
+#        self.mark_tried_actions(action,self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action])
+#        pdb.set_trace()        
+        #Run through all permutaitons and mark off those that are inconsitent with current step.
+        #        plen = len(self.uccscart.actions_plist)-1
+        plen = 119
+        while( self.uccscart.actions_permutation_index < plen):
             self.uccscart.actions_permutation_index += 1
-            score,state = self.uccscart.one_step_env(self.prev_state,stepstaken)
-            current = self.format_data(state) - actual_state
-            diffprobability = self.prob_scale * self.cstate_diff_prob(current)
+            if(self.uccscart.actions_permutation_index > len(self.uccscart.actions_plist)):
+                self.uccscart.actions_permutation_index=0
+            if(self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] >0): continue
+            print("indexs",  self.uccscart.actions_permutation_index, "actions", action,  self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action],
+                  "plist",  self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
+
+
+            # If here it has potential, mark it as being tried
+            self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1
+            score,state = self.uccscart.one_step_env(self.prev_state,[action])  # this uses current index to see what state results.
+            statediff = self.format_data(state) - actual_state
+            diffprobability = self.prob_scale * self.cstate_diff_prob(statediff)
             if(diffprobability < bestprob):            
                 if(diffprobability < .0005): # stop early if good score
-                    self.character += "Actions were perturbed.. Now using pertubation "
-                    self.character.join(self.uccscart.actions_plist[self.uccscart.actions_permutation_index])                    
+                    self.character += "Actions were perturbed.. Now using pertubation " 
+                    self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+                    print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )                    
                     return 1;
                 else:
                     bestprob = diffprobability
-                    bestindex = index
+                    bestindex = self.uccscart.actions_permutation_index
            
-                    
+
+        self.uccscart.reset(actual_state)                    #back to normal state
+#        pdb.set_trace()                    
         if(bestprob  < diffprobability and bestprob < .01): # not great but  better than where we started and maybe good enough. 
-            self.uccscart.actions_permutation_index = bestindex            
+            self.uccscart.actions_permutation_index = bestindex
+            print("Now using pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )
             self.character += "Actions might be  perturbed.. Now using pertubation "
-            self.character.join(self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
+            self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
             self.character += "with prob" + str(bestprob)
             return bestprob;
 
-        #else reset back to initial action list
-        self.uccscart.actions_permutation_index = 0 
+        #else nothing work so reset back to initial action list
+        self.uccscart.actions_permutation_index = 0
+        self.uccscart.actions_permutation_tried = np.zeros(len(self.uccscart.actions_permutation_tried))
+        
+        return 0
     
 
 
@@ -815,6 +860,8 @@ class UCCSTA2():
         mlength = len(self.problist)
         mlength = min(self.scoreforKL,mlength)
         # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
+
+        previous_wc = self.worldchangedacc
 
         window_width=11
         if (len(self.perflist) >2*self.scoreforKL):   #look at list of performacne to see if its deviation from training is so that is.. skip more since it needs to be stable for window smoothing+ mean/variance computaiton
@@ -936,6 +983,7 @@ class UCCSTA2():
                 self.character += "High FailFrac=" + str(self.failcnt/(self.episode+1))
                 failinc = max(0,  (self.failcnt/(self.episode+1)-self.failfrac)*self.failscale )
                 failinc *= min(1,(self.episode - self.scoreforKL)/self.scoreforKL)   #May ramp it up slowly as its more unstable when it first starts
+                failinc = min(1,failinc)
             
         if(len(self.problist) > 0 ) :
             self.worldchangedacc = min(1,self.problist[0]*(self.initprobscale * 2**(self.consecutiveinit-2)) + max(self.worldchangedacc,self.worldchangeblend+failinc))
@@ -946,6 +994,36 @@ class UCCSTA2():
             round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n",[round(num,4) for num in self.problist],"\n", [round(num,2) for num in self.scorelist])
         print(self.debugstring)                
         self.character += 'World Change Acc={} {} {}, D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(failinc,3), round(dprob,3), round(perfprob,3))
+
+        if(previous_wc < .5):
+            self.trialchar += self.character
+            if(self.worldchangedacc        >= .5):
+                self.character += "##### Characterization of world change (at threshold):  "
+                initcnt = self.trialchar.count("init")
+                blockcnt = self.trialchar.count("Block")
+                polecnt = self.trialchar.count("Pole")
+                cartcnt = self.trialchar.count("Cart")                                
+                diffcnt = self.trialchar.count("diff")
+                failcnt = self.trialchar.count("High")                
+                if(initcnt > diffcnt ):
+                    self.character += " Inital world "
+                if(initcnt > diffcnt ):
+                    self.character += " Dynamics of world "                    
+                if(blockcnt > polecnt and blockcnt > cartcnt ):                    
+                    self.character += " Dominated by Blocks"
+                  
+                if(cartcnt > polecnt and cartcnt >  blockcnt   ):                    
+                    self.character += " Dominated by Cart"
+                if(polecnt > cartcnt and polecnt > blockcnt ):                    
+                    self.character += " Dominated by Pole"
+                self.character += " Block Violations" + str(blockcnt)
+                self.character += " Cartcnt Violations" + str(cartcnt)
+                self.character += " Polekcnt Violations" + str(polecnt)                                                                            
+                self.character += "where violations mean violation of EVT model from  normal training range"
+                if(failcnt > 10):
+                    self.character += " Uncontrollable dynamics .. too many failures compared to training"
+                self.character += "#####"
+                
 
         return self.worldchangedacc
 
@@ -1009,21 +1087,20 @@ class UCCSTA2():
 
             diffprobability = self.prob_scale * self.cstate_diff_prob(current)
             probability += diffprobability
-            
             #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
-            if(diffprobability > .6 and self.consecutivefail > 3 and self.perm_search< 5):
-                self.perm_search += 1
-                actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart. 
-                probability += actprob
+#            pdb.set_trace()            
+#            if(((diffprobability > .2 and self.consecutivefail > 3)) and self.perm_search< 40):
+            if( False and  self.perm_search< 40):                
+               self.perm_search += 1
+               actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.                probability += actprob
+               if(actprob>0): self.character += "Action search with prob " + str(actprob)
+#               pdb.set_trace()
 
 
-#            if(probability>0): probability=1
+
+            probability = min(1,probability)
             self.problist.append(probability)
             
-#            if(self.given):
-#                probability=1
-#                self.uccscart.lastscore  = self.uccscart.lastscore *10    #make the scores highrer so we tend to use the more exensive twostep                 
-
 
             self.maxprob = max(probability, self.maxprob)
             # we can also include the score from control algorithm,   we'll have to test to see if it helps..
