@@ -1142,7 +1142,7 @@ class UCCSTA2():
 
             diffprobability = self.prob_scale * self.cstate_diff_prob(current)
             probability += diffprobability
-            pdb.set_trace()            
+#            pdb.set_trace()            
             #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
             #            if(((self.episode < 50) and (self.failcnt/(self.episode+1)-1.5* self.failfrac) > -1000) and self.perm_search< 20):
             if(False):  #idea not working 
