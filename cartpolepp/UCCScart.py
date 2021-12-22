@@ -73,6 +73,15 @@ class CartPoleBulletEnv(gym.Env):
         self.wcprob=0
         self.char=""
         self.tbdebuglevel=0
+        self.episode=0
+        self.force_action=-1                    
+
+
+        # where we story action/state history.. first dimension is action number, second is action (0-4 for stated from actions 0-4), 5 is action choice (only first value used), 6 is expected state, 7 is actual state returned,
+        # note we use format_data to reduce dictionary to a numeeric vector for faster comparisons but we ignore
+
+        self.action_history = np.zeros((5,2,13))
+        
         self.actions_permutation_index=0
         self.actions_plist= [(0, 1, 2, 3, 4),  #normal
                              (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
@@ -114,10 +123,7 @@ class CartPoleBulletEnv(gym.Env):
         self.np_random, seed = seeding.np_random(seed)
         return None
 
-    def step(self, action):
-        p = self._p
-        
-        
+    def string_to_actionnum(self,action):
         # Convert from string to int
         if action == 'nothing':
             action = 0
@@ -129,6 +135,23 @@ class CartPoleBulletEnv(gym.Env):
             action = 3
         elif action == 'backward':
             action = 4
+        return action
+
+    def actionnum_to_string(self,action):
+        #Convert from string to int
+        if action == 0: action = 'nothing'
+        elif action == 1:action = 'right'
+        elif action == 2: action = 'left'
+        elif action == 3: action = 'forward'
+        elif action == 4: action = 'backward'
+
+        return action
+
+
+    def step(self, action):
+        p = self._p
+        
+        action = self.string_to_actionnum(action)        
 
         #apply TB's preturbation search as needed (something remote may change actions_permutation_index to drive the search.. here we jsut use current index)
         action = self.actions_plist[self.actions_permutation_index][action]
@@ -218,12 +241,14 @@ class CartPoleBulletEnv(gym.Env):
         if self._physics_client_id < 0:
             self.generate_world()
 
-        self.tick = 0
         self.reset_world()
 
         # Run for one step to get everything going
         if(feature_vector is None):
+            self.tick = 0     # if not a reset to given state  we reset tick
+            self.episode=0            
             self.step(0)
+            self.force_action=-1                    
         else:
             self.set_world(feature_vector)
 
@@ -629,6 +654,19 @@ class CartPoleBulletEnv(gym.Env):
         return rgb_array
 
 
+    def format_data(self, feature_vector):
+        # Format data for use with evm
+
+        state = []
+        for i in feature_vector.keys():
+            if i == 'cart' or i == 'pole' :
+                for j in feature_vector[i]:
+                    state.append(feature_vector[i][j])
+                #print(state)
+        return np.asarray(state)
+
+    
+
 
 
     def get_best_twostep_action(self, feature_vector):
@@ -654,6 +692,7 @@ class CartPoleBulletEnv(gym.Env):
                 best_action[action][3] = self.two_step_env(feature_vector, [action, 'backward'])
                 best_action[action][4] = self.two_step_env(feature_vector, [action, 'nothing'])
 
+                
             best_score = best_action['left'][0][0]
             expected_state = best_action['left'][0][1]
             # print("Best score: ", best_score)
@@ -670,10 +709,18 @@ class CartPoleBulletEnv(gym.Env):
                         expected_state = best_action[i][j][1]
             self.lastscore=best_score
             # if(best_score > 1):
-    #        print("2 Best score/action: ", best_score, action)        
+
+            #if we are forcing actions because we are searching for a mapping
+            if(self.force_action>=0 and self.force_action < 5):
+                action = self.actionnum_to_string(self.force_action)
+                expected_state = best_action[action][4][1]
+            
+
 
             second_action = ["left", "right", "forward", "backward", "nothing"]
-
+            # rest of storing of history  emebdded in two_step_env wehre its more effiicent
+            if(self.force_action >=0 and self.force_action < 5):
+                self.action_history[self.force_action][0] = self.string_to_actionnum(action)
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
 
             return action, second_action[next_action], expected_state
@@ -689,8 +736,12 @@ class CartPoleBulletEnv(gym.Env):
             if(self.tbdebuglevel>1): print("Two step ", feature_vector) 
             self.reset(feature_vector)
             self.step(steps[0])
-            #print(self.get_state()["pole"])
+
             nextstate = self.get_state()
+            if(self.string_to_actionnum(steps[0]) == self.force_action):
+                print("Force action in two", self.force_action)                
+                self.action_history[self.force_action][0] = self.format_data(nextstate)                
+            
             if(self.tbdebuglevel>1): print("Try action", steps[0], nextstate)                            
             self.reset(nextstate)
             self.step(steps[1])
@@ -718,9 +769,11 @@ class CartPoleBulletEnv(gym.Env):
 
 
 
+
             for action in best_action.keys():
                 # left, 0
                 best_action[action][0] = self.one_step_env(feature_vector, [action, 'nothing'])
+                
 
             best_score = best_action['left'][0][0]
             expected_state = best_action['left'][0][1]
@@ -735,8 +788,15 @@ class CartPoleBulletEnv(gym.Env):
                         action = i
                         next_action = j
                         expected_state = best_action[i][j][1]
-            # if(best_score > 1):
-    #        print("1 Best Score/action : ", best_score,action)
+
+            #if we are forcing actions because we are searching for a mapping
+            if(self.force_action>=0 and self.force_action < 5):
+                print("Force action in one", self.force_action)
+                action = self.actionnum_to_string(self.force_action)
+                expected_state = best_action[action][0][1]
+                self.action_history[self.force_action][0] = self.format_data(expected_state)                
+                        
+
 
             self.lastscore=best_score
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state        
@@ -834,8 +894,8 @@ class CartPoleBulletEnv(gym.Env):
     def get_best_action(self, feature_vector, prob=0):
 
     #       if we have colission potential for any action (char != "") so do two-step action search
-    #       if we have low score  we can go faser uding one-setp  
-           if( ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) ))):            # make it mroe often just one making it faster
+    #       if we have low score  we can go faser uding one-setp
+           if( ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
                 state= self.get_best_onestep_action(feature_vector)
                 if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
            else:
@@ -844,4 +904,5 @@ class CartPoleBulletEnv(gym.Env):
            return state
 
 
-        
+
+

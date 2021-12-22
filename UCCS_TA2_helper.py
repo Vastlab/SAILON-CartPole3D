@@ -61,8 +61,9 @@ class UCCSTA2():
         self.skipfirstNscores=1
 
         self.consecutivefail=0
-        self.failscale=1.0 #   How we scale failures
-        self.failfrac=.30  #Max fail fraction,  when above  this we start giving world-change probability for  failures
+        # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
+        self.failscale=5.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
+        self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
         self.initprobscale=.05 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
@@ -183,6 +184,7 @@ class UCCSTA2():
         self.worldchanged = 0
         self.uccscart.resetbase()
         self.uccscart.reset()
+        self.uccscart.episode=episode
         
         if(episode ==0):  #reset things that we carry over between episodes withing the same trial
             self.worldchangedacc = 0
@@ -190,7 +192,8 @@ class UCCSTA2():
             self.worldchangeblend = 0            
             self.consecutivefail=0
             self.perm_search=0
-            self.trialchar=""            
+            self.trialchar=""
+
 
 
         # Take one step look ahead, return predicted environment and step
@@ -268,7 +271,8 @@ class UCCSTA2():
         # Format data for use with evm
         state = []
         for i in feature_vector.keys():
-            if i != 'blocks' and i != 'time_stamp' and i != 'image' and i != 'ticks':
+#            if i != 'blocks' and i != 'time_stamp' and i != 'image' and i != 'ticks':
+            if i == 'cart' or i == 'pole' :                
 #                print(i,feature_vector[i])
                 for j in feature_vector[i]:
                     state.append(feature_vector[i][j])
@@ -277,7 +281,7 @@ class UCCSTA2():
 
     # get probability differene froom initial state
     def istate_diff_prob(self,actual_state):
-        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart z'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block z'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z ",  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training..  with some extensions. From code some of these values don't seem plausable (blockx for example) but we saw them in training data.  maybe nic mixed up some parms/files but won't hurt too much fi we mis some
         #fitwblpy output for initial state data
@@ -612,7 +616,7 @@ class UCCSTA2():
 
     # get probability differene froom continuing state difference
     def cstate_diff_prob(self,cdiff):
-        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart x'" , " Cart y'" , " Cart z'" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole x'" , " Pole y'" , " Pole z'" , " Block x" , " Block y" , " Block x" ,  " Block x'" , " Block y'" , " Block x'" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
 
         if(self.dmax is None):        
         
@@ -787,73 +791,114 @@ class UCCSTA2():
 
 
     def try_actions_permutations(self,actual_state,diffprob):
-        ''' try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
-         this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back'''
-    
-        action = self.prev_action
-        # Convert from string to int
-        if action == 'nothing':
-            action = 0
-        elif action == 'right':
-            action = 2    #tb flipped for testing
-        elif action == 'left':
-            action = 1
-        elif action == 'forward':
-            action = 4
-        elif action == 'backward':
-            action = 3
+        ''' try various permuation of actions to see if they best explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+         this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back
+        If here action_history should be populated with all actions  
+        '''
+
+
+        diffprobability = np.zeros((5,5))
+        for action in  range(5):
+            for index in range(5):
+                statediff = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
+                diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff)
+
+        pdb.set_trace()                
+        plen = len(self.uccscart.actions_plist)
+        probs = np.zeros(plen)
+        for index in range(plen):
+            probs[index] = (diffprobability[0][self.uccscart.actions_plist[index][0]]
+                            +diffprobability[1][self.uccscart.actions_plist[index][1]]
+                            +diffprobability[2][self.uccscart.actions_plist[index][2]]
+                            +diffprobability[3][self.uccscart.actions_plist[index][3]]
+                            +diffprobability[4][self.uccscart.actions_plist[index][4]])
+            
+
+        index = np.argmin(probs)
+        minprob = np.min(probs)
+        pdb.set_trace()
+        #if there is a pertubation with lower overall error than        
+        if(minprob < probs[self.uccscart.actions_permutation_index]):
+            self.uccscart.actions_permutation_index = index   #keep that index
+            self.character += "Actions were perturbed.. Now using pertubation " 
+            self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+            print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index", self.uccscart.actions_permutation_index )
+            self.perm_search = 100   #mark it found
+            return 1
+        else: 
+            print("No pertubation needed was better  than current perm", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],
+                  "with index", self.uccscart.actions_permutation_index )                       
+            return 0
+
+        
+            
+
+
+#first  try at action remapping 
+#         action = self.prev_action
+#         # Convert from string to int
+#         if action == 'nothing':
+#             action = 0
+#         elif action == 'right':
+#             action = 2    #tb flipped for testing
+#         elif action == 'left':
+#             action = 1
+#         elif action == 'forward':
+#             action = 4
+#         elif action == 'backward':
+#             action = 3
 
 
 
         
-        bestprob = diffprob
-        bestindex = self.uccscart.actions_permutation_index
-#        self.mark_tried_actions(action,self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action])
-#        pdb.set_trace()        
-        #Run through all permutaitons and mark off those that are inconsitent with current step.
-        #        plen = len(self.uccscart.actions_plist)-1
-        plen = 119
-        while( self.uccscart.actions_permutation_index < plen):
-            self.uccscart.actions_permutation_index += 1
-            if(self.uccscart.actions_permutation_index > len(self.uccscart.actions_plist)):
-                self.uccscart.actions_permutation_index=0
-            if(self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] >0): continue
-            print("indexs",  self.uccscart.actions_permutation_index, "actions", action,  self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action],
-                  "plist",  self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
+#         bestprob = diffprob
+#         bestindex = 
+# #        self.mark_tried_actions(action,self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action])
+# #        pdb.set_trace()        
+#         #Run through all permutaitons and mark off those that are inconsitent with current step.
+#         #        plen = len(self.uccscart.actions_plist)-1
+#         plen = 119
+#         while( self.uccscart.actions_permutation_index < plen):
+#             self.uccscart.actions_permutation_index += 1
+#             if(self.uccscart.actions_permutation_index > len(self.uccscart.actions_plist)):
+#                 self.uccscart.actions_permutation_index=0
+#             if(self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] >0): continue
+#             print("indexs",  self.uccscart.actions_permutation_index, "actions", action,  self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action],
+#                   "plist",  self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
 
 
-            # If here it has potential, mark it as being tried
-            self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1
-            score,state = self.uccscart.one_step_env(self.prev_state,[action])  # this uses current index to see what state results.
-            statediff = self.format_data(state) - actual_state
-            diffprobability = self.prob_scale * self.cstate_diff_prob(statediff)
-            if(diffprobability < bestprob):            
-                if(diffprobability < .0005): # stop early if good score
-                    self.character += "Actions were perturbed.. Now using pertubation " 
-                    self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-                    print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )                    
-                    return 1;
-                else:
-                    bestprob = diffprobability
-                    bestindex = self.uccscart.actions_permutation_index
+#             # If here it has potential, mark it as being tried
+#             self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1
+#             score,state = self.uccscart.one_step_env(self.prev_state,[action])  # this uses current index to see what state results.
+#             statediff = self.format_data(state) - actual_state
+#             diffprobability = self.prob_scale * self.cstate_diff_prob(statediff)
+#             if(diffprobability < bestprob):            
+#                 if(diffprobability < .0005): # stop early if good score
+#                     self.character += "Actions were perturbed.. Now using pertubation " 
+#                     self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#                     print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )                    
+#                     return 1;
+#                 else:
+#                     bestprob = diffprobability
+#                     bestindex = self.uccscart.actions_permutation_index
            
 
-        self.uccscart.reset(actual_state)                    #back to normal state
-#        pdb.set_trace()                    
-        if(bestprob  < diffprobability and bestprob < .01): # not great but  better than where we started and maybe good enough. 
-            self.uccscart.actions_permutation_index = bestindex
-            print("Now using pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )
-            self.character += "Actions might be  perturbed.. Now using pertubation "
-            self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-            self.character += "with prob" + str(bestprob)
-            return bestprob;
+#         self.uccscart.reset(actual_state)                    #back to normal state
+# #        pdb.set_trace()                    
+#         if(bestprob  < diffprobability and bestprob < .01): # not great but  better than where we started and maybe good enough. 
+#             self.uccscart.actions_permutation_index = bestindex
+#             print("Now using pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )
+#             self.character += "Actions might be  perturbed.. Now using pertubation "
+#             self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#             self.character += "with prob" + str(bestprob)
+#             return bestprob;
 
-        #else nothing work so reset back to initial action list
-        self.uccscart.actions_permutation_index = 0
-        self.uccscart.actions_permutation_tried = np.zeros(len(self.uccscart.actions_permutation_tried))
+#         #else nothing work so reset back to initial action list
+#         self.uccscart.actions_permutation_index = 0
+#         self.uccscart.actions_permutation_tried = np.zeros(len(self.uccscart.actions_permutation_tried))
         
-        return 0
-    
+#         return 0
+
 
 
     def world_change_prob(self,settrain=False):
@@ -979,10 +1024,11 @@ class UCCSTA2():
         failinc = 0
         #if we are beyond KL window all we do is watch for failures to decide if we world is changed
         if(self.episode > self.scoreforKL+1):
-            if(self.failcnt/self.episode > self.failfrac):
+            faildiff = self.failcnt/(self.episode+1)-self.failfrac            
+            if(faildiff > 0):
                 self.character += "High FailFrac=" + str(self.failcnt/(self.episode+1))
-                failinc = max(0,  (self.failcnt/(self.episode+1)-self.failfrac)*self.failscale )
-                failinc *= min(1,(self.episode - self.scoreforKL)/self.scoreforKL)   #May ramp it up slowly as its more unstable when it first starts
+                failinc = max(0,  ((faildiff)*self.failscale)) 
+                failinc *= min(1,(self.episode - self.scoreforKL)/self.scoreforKL)   #Ramp it up slowly as its more unstable when it first starts at scoreforKL
                 failinc = min(1,failinc)
             
         if(len(self.problist) > 0 ) :
@@ -1001,27 +1047,31 @@ class UCCSTA2():
                 self.character = "##### Characterization of world change (at threshold):  "
                 initcnt = self.trialchar.count("init")
                 blockcnt = self.trialchar.count("Block")
+                blockvelcnt = self.trialchar.count("Block Vel")                
                 polecnt = self.trialchar.count("Pole")
                 cartcnt = self.trialchar.count("Cart")                                
                 diffcnt = self.trialchar.count("diff")
+                velcnt = self.trialchar.count("Vel")                                
                 failcnt = self.trialchar.count("High")                
                 if(initcnt > diffcnt ):
-                    self.character += " Inital world "
-                if(initcnt > diffcnt ):
-                    self.character += " Dynamics of world "                    
+                    self.character += " Inital world off and "
+                if(diffcnt > initcnt ):
+                    self.character += " Dynamics of world off and "                    
                 if(blockcnt > polecnt and blockcnt > cartcnt ):                    
-                    self.character += " Dominated by Blocks"
-                  
+                    self.character += " Dominated by Blocks with"
                 if(cartcnt > polecnt and cartcnt >  blockcnt   ):                    
-                    self.character += " Dominated by Cart"
+                    self.character += " Dominated by Cart with"
                 if(polecnt > cartcnt and polecnt > blockcnt ):                    
-                    self.character += " Dominated by Pole"
-                self.character += " Block Violations" + str(blockcnt)
-                self.character += " Cartcnt Violations" + str(cartcnt)
-                self.character += " Polekcnt Violations" + str(polecnt)                                                                            
-                self.character += "where violations mean violation of EVT model from  normal training range"
+                    self.character += " Dominated by Pole with"
+                self.character += " Velocity Violations " + str(velcnt)                                                                                                
+                self.character += " Agent Velocity Violations " + str(blockvelcnt)                
+                self.character += " Agent Total Violations " + str(blockcnt)
+                self.character += " Cart Total Violations " + str(cartcnt)
+                self.character += " Pole Total Violations " + str(polecnt)
+                self.character += " Pole Total Violations " + str(polecnt)                                                                                            
+                self.character += " where violations means that aspect of model had high accumulated EVT model probability of exceeding normal training  "
                 if(failcnt > 10):
-                    self.character += " Uncontrollable dynamics .. too many failures compared to training"
+                    self.character += " Uncontrollable dynamics for unknown reasons .. too many failures compared to training"
                 self.character += "#####"
                 
 
@@ -1039,8 +1089,13 @@ class UCCSTA2():
 #            self.uccscart.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
         self.scorelist.append(self.uccscart.lastscore)        
         self.uccscart.char = ""  #reset any information about collisions
-        action, expected_state = self.takeOneStep(actual_state, self.uccscart, pertub)
-        
+        action, expected_state = self.takeOneStep(actual_state,
+                                                  self.uccscart,
+                                                  pertub)
+
+        # we can now fill in previous history's actual 
+        if(self.uccscart.force_action >=0 and self.uccscart.force_action < 5):
+            self.uccscart.action_history[self.uccscart.force_action][1] = self.uccscart.format_data(actual_state)        
 
         #we don't reset in first few steps because random start may be a bad position yielding large score
         #might be were we search for better world parmaters if we get time for that
@@ -1087,20 +1142,26 @@ class UCCSTA2():
 
             diffprobability = self.prob_scale * self.cstate_diff_prob(current)
             probability += diffprobability
+            pdb.set_trace()            
             #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
-#            pdb.set_trace()            
-#            if(((diffprobability > .2 and self.consecutivefail > 3)) and self.perm_search< 40):
-            if( False and  self.perm_search< 40):                
-               self.perm_search += 1
-               actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.                probability += actprob
-               if(actprob>0): self.character += "Action search with prob " + str(actprob)
-#               pdb.set_trace()
+            #            if(((self.episode < 50) and (self.failcnt/(self.episode+1)-1.5* self.failfrac) > -1000) and self.perm_search< 20):
+            if(False):  #idea not working 
+                self.perm_search +=1 
+                #force each possible action into our history as we need them to get mapping ..  this effects the get_best_*_action functions which get the actions and story history
+                if(self.uccscart.force_action < 5):
+                    self.uccscart.force_action +=  1
+                    pdb.set_trace()                    
+                else:
+                    actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+                    probability += actprob
+                    if(actprob>0): self.character += "Action search with prob " + str(actprob)
+                    pdb.set_trace()
 
 
 
             probability = min(1,probability)
             self.problist.append(probability)
-            
+
 
             self.maxprob = max(probability, self.maxprob)
             # we can also include the score from control algorithm,   we'll have to test to see if it helps..
