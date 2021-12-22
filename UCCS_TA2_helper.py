@@ -62,10 +62,10 @@ class UCCSTA2():
 
         self.consecutivefail=0
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
-        self.failscale=5.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
+        self.failscale=6.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
-        self.initprobscale=.05 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        self.initprobscale=.06 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.consecutivedynamic=0   # if get consecutitve dynamic failures we keep increasing scale        
 
@@ -902,6 +902,14 @@ class UCCSTA2():
 
 
     def world_change_prob(self,settrain=False):
+
+        # don't let first episodes  impact world change.. need stabilsied scores/probabilites
+        if(self.episode<2):
+            self.worldchangedacc = 0
+            self.worldchangeblend = 0
+            return self.worldchangedacc            
+        
+        
         mlength = len(self.problist)
         mlength = min(self.scoreforKL,mlength)
         # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
@@ -999,7 +1007,7 @@ class UCCSTA2():
         #KLscale = (self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start 1 down to  1/2
         #        KLscale = min(1, 4*(1 + self.episode) / num_epochs)  # decrease scale (increase sensitvity)  from start 1 down to  1/2
         KLscale = 1
-        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-2)))  ## if we have only one dynic failure,  this will scale it by .125  but it doubles each time we get another dynamic failrue in a row
+        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-1)))  ## if we have only one dynic failure,  this will scale it by .25  but it doubles each time we get another dynamic failrue in a row
         perfprob = min(1.0, self.PerfScale * PerfKL)  #make this smaller since it is slowly varying and  added every time.. less sensitive (good for FP avoid, sloer l
 
         #if we had  collisons and not consecuretive valiures, we don't use this episode for dynamic probability .. collisions are not well predicted
@@ -1038,6 +1046,7 @@ class UCCSTA2():
         self.debugstring = '      World Change Acc={}, KLprobs={},{}, mu={}, sig {}, mean {} stdev{} vals {} {} thresh {}  Problist ={}, {}  scores{}'.format(
             round(self.worldchangedacc,3), round(dprob,3), round(perfprob,3),round(mu,3), round(sigma,3), round(self.mean_train,3),
             round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n",[round(num,4) for num in self.problist],"\n", [round(num,2) for num in self.scorelist])
+
         print(self.debugstring)                
         self.character += 'World Change Acc={} {} {}, D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(failinc,3), round(dprob,3), round(perfprob,3))
 
