@@ -60,7 +60,8 @@ class UCCSTA2():
         # reduces world change sensitvity.  Effective min is 1 as need at least a prior state to get prediction.
         self.skipfirstNscores=1
 
-        self.consecutivefail=0
+        self.maxconsecutivefailthresh= 6  # if we see this many in a row we declare world changed as we never see even 3 in training 
+        
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
         self.failscale=6.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
@@ -78,6 +79,12 @@ class UCCSTA2():
         self.mean_perf = 0.8883502538071065
         self.stdev_perf = 0.11824239133691708
         self.PerfScale = 0.1    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
+
+        self.consecutivesuccess=0
+        self.consecutivefail=0
+        self.maxconsecutivefail=0
+        self.maxconsecutivesuccess=0        
+        
         
 
         # TODO: change evm data dimensions
@@ -796,12 +803,17 @@ class UCCSTA2():
         If here action_history should be populated with all actions  
         '''
 
+        
 
+        '''
+        #this was an attempt at choosing pertubation based on minimizing the overall probbability  of differences in transitions.. but it did not work well enough.. identifies some but too much noise.  
+        # Maybe revisit when predictions are better
         diffprobability = np.zeros((5,5))
+        statediff = np.zeros((5,5,13))        
         for action in  range(5):
             for index in range(5):
-                statediff = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
-                diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff)
+                statediff[action][index] = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
+                diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff[action][index])
 
         pdb.set_trace()                
         plen = len(self.uccscart.actions_plist)
@@ -830,7 +842,7 @@ class UCCSTA2():
                   "with index", self.uccscart.actions_permutation_index )                       
             return 0
 
-        
+'''        
             
 
 
@@ -972,8 +984,15 @@ class UCCSTA2():
         #            print("Very short, world must have changed")
         #            return 1;
         if (len(self.problist) < 198):   #for real work
+            self.consecutivesuccess=0            
             self.failcnt += 1
-            if( self.consecutivefail >0): self.consecutivefail += 1
+            if( self.consecutivefail >0):
+                self.consecutivefail += 1
+                if(self.consecutivefail > self.maxconsecutivefail):
+                    self.maxconsecutivefail = self.consecutivefail
+                    if(self.maxconsecutivefail > self.maxconsecutivefailthresh):
+                        self.worldchangedacc = 1
+                        
             else: self.consecutivefail=1
 
             self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
@@ -984,6 +1003,10 @@ class UCCSTA2():
                 print(self.debugstring)
         else:
             self.consecutivefail=0
+            self.consecutivesuccess += 1
+            if(self.consecutivesuccess > self.maxconsecutivesuccess):
+                self.maxconsecutivesuccess = self.consecutivesuccess
+        
             
         if (sigma == 0):
             if (mu == self.mean_train):
@@ -1151,20 +1174,30 @@ class UCCSTA2():
 
             diffprobability = self.prob_scale * self.cstate_diff_prob(current)
             probability += diffprobability
-#            pdb.set_trace()            
+            #            pdb.set_trace()            
             #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
             #            if(((self.episode < 50) and (self.failcnt/(self.episode+1)-1.5* self.failfrac) > -1000) and self.perm_search< 20):
-            if(False):  #idea not working 
-                self.perm_search +=1 
-                #force each possible action into our history as we need them to get mapping ..  this effects the get_best_*_action functions which get the actions and story history
-                if(self.uccscart.force_action < 5):
-                    self.uccscart.force_action +=  1
-                    pdb.set_trace()                    
-                else:
-                    actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
-                    probability += actprob
-                    if(actprob>0): self.character += "Action search with prob " + str(actprob)
-                    pdb.set_trace()
+            # if(True):  #idea not working 
+            #     self.perm_search +=1 
+            #     #force each possible action into our history as we need them to get mapping ..  this effects the get_best_*_action functions which get the actions and story history
+            #     if(self.uccscart.force_action < 5):
+            #         self.uccscart.force_action +=  1
+            #     else:
+            #         actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+            #         probability += actprob
+            #         if(actprob>0): self.character += "Action search with prob " + str(actprob)
+            #         pdb.set_trace()
+
+            # if we have not had a lot successess in a row (sign index is right)   and declared world changed and  we ahve enough failures then try another index
+            if( self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
+                # try the next permuation.. see if we can reduce the fail rate
+                self.uccscart.actions_permutation_index += 1
+                print("too many failures, increased index")
+                if(self.uccscart.actions_permutation_index > (len(self.uccscart.actions_plist)-1)):
+                    self.uccscart.actions_permutation_index = 0                    
+                self.consecutivefail = 0
+            
+
 
 
 

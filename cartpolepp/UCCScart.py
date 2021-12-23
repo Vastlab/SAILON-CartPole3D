@@ -452,7 +452,6 @@ class CartPoleBulletEnv(gym.Env):
 #             _, _, _, _, _, _, vel, _ = p.getLinkState(self.cartpole, 0, 1)
 #             pos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
 #  #           print("Setbase  reset  from ", cart_position,cart_velocity, " to ",  pos,vel)
-#             #pdb.set_trace()
 #         else:
 #             #use two part model with base and link  .. ut so far not working right might need a bullet library fix
 #             base_position = self.basepos
@@ -720,7 +719,7 @@ class CartPoleBulletEnv(gym.Env):
             second_action = ["left", "right", "forward", "backward", "nothing"]
             # rest of storing of history  emebdded in two_step_env wehre its more effiicent
             if(self.force_action >=0 and self.force_action < 5):
-                self.action_history[self.force_action][0] = self.string_to_actionnum(action)
+                self.action_history[self.force_action][0] = self.format_data(expected_state)                                
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
 
             return action, second_action[next_action], expected_state
