@@ -992,6 +992,7 @@ class UCCSTA2():
                     self.maxconsecutivefail = self.consecutivefail
                     if(self.maxconsecutivefail > self.maxconsecutivefailthresh):
                         self.worldchangedacc = 1
+                        self.character += "#####? Uncontrollable world -- too many consecutive failures.  Guessing actions were remapped/perturbed but will take a while to confirm ##### "                         
                         
             else: self.consecutivefail=1
 
@@ -1192,9 +1193,12 @@ class UCCSTA2():
             if( self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
                 # try the next permuation.. see if we can reduce the fail rate
                 self.uccscart.actions_permutation_index += 1
-                print("too many failures, increased index")
                 if(self.uccscart.actions_permutation_index > (len(self.uccscart.actions_plist)-1)):
                     self.uccscart.actions_permutation_index = 0                    
+                self.character += "#####? Too many failures.  Guessing actions were mapped/perturbed.. Now using pertubation " 
+                self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+                self.character += "if this is the last time you see this message and performance is now good then characterize this as the action permutation in placeof the  uncontrollable characateration provided after world change provided earlier #####?"
+                print(self.character)
                 self.consecutivefail = 0
             
 
