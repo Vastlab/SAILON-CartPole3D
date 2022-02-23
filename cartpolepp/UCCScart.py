@@ -894,7 +894,7 @@ class CartPoleBulletEnv(gym.Env):
 
     #       if we have colission potential for any action (char != "") so do two-step action search
     #       if we have low score  we can go faser uding one-setp
-           if( ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
+           if( True or  ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
                 state= self.get_best_onestep_action(feature_vector)
                 if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
            else:
