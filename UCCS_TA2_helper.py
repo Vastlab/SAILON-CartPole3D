@@ -22,6 +22,8 @@ import torch.multiprocessing as mp
 from my_lib import *
 from statistics import mean
 import scipy.stats as st
+from scipy.stats import norm    
+
 
 import gc
 import random
@@ -60,6 +62,8 @@ class UCCSTA2():
         # reduces world change sensitvity.  Effective min is 1 as need at least a prior state to get prediction.
         self.skipfirstNscores=1
 
+        self.use_guassian   = True
+
         self.maxconsecutivefailthresh= 6  # if we see this many in a row we declare world changed as we never see even 3 in training 
         
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
@@ -95,9 +99,13 @@ class UCCSTA2():
         else:
             self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
             self.stdev_train = 0.051058052318592555
-            self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
+            self.mean_train = 0.002   #these guessted values for Phase 2 so need for training
             self.stdev_train = 0.006
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
+        if(self.use_guassian):            
+            self.mean_train = 0.056   #these were computed for guassian with 3sigma cutoff for UAI paper if using guassian  its between about 2  "detects" in the window
+            self.stdev_train = 0.229 
+
 
         self.cnt = 0
         self.worldchanged = 0
@@ -134,8 +142,8 @@ class UCCSTA2():
         self.character=""
         self.trialchar=""        
 
-        self.imax = self.imin = self.ishape = self.iscale =  None
-        self.dmax = self.dshape = self.dscale =  None        
+        self.imax = self.imin =   self.imean = self.istd = self.ishape = self.iscale =  None
+        self.dmax = self.dshape = self.dscale = self.dmean = self.dstd =   None        
 
         
         # Create prediction environment
@@ -227,6 +235,42 @@ class UCCSTA2():
         return action, expected_state
 
 
+#####!!!!!##### Start INDEPNDENT CODE for EVT-
+    def kullback_leibler(self, mu, sigma, m, s):
+        '''
+        Compute Kullback Leibler with Gaussian assumption of training data
+        mu: mean of test batch
+        sigm: standard deviation of test batch
+        m: mean of all data in training data set
+        s: standard deviation of all data in training data set
+        return: KL ditance, non negative double precison float
+        '''
+        sigma = max(sigma, .0000001)
+        s = max(s, .0000001)
+        kl = np.log(s / sigma) + (((sigma ** 2) + ((mu - m) ** 2)) / (2 * (s ** 2))) - 0.5
+        return kl
+
+    
+    def wcdf(self,x,iloc,ishape,iscale):
+        prob = 1-math.pow(math.exp(-abs(x-iloc)/iscale),ishape)
+#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
+        return prob
+
+
+
+    def gcdf(self,x,imean,istd):
+        if(abs(x-imean) < 2*istd):
+            return 0;
+        prob = abs(.5-norm.cdf(x,imean,istd))
+#        if(prob > 1e-4): print("in gcdf",round(prob,6),x,imean,istd)
+        return prob
+
+
+
+
+#####!!!!!##### End Doimain Independent CODE for EVT-    
+#####!!!!!##### Start Glue CODE for EVT-
+    
     def format_istate_data(self,feature_vector):
         # Format data for use with evm
         #print(feature_vector)
@@ -253,27 +297,6 @@ class UCCSTA2():
         return np.asarray(cur_state)
 
 
-    def kullback_leibler(self, mu, sigma, m, s):
-        '''
-        Compute Kullback Leibler with Gaussian assumption of training data
-        mu: mean of test batch
-        sigm: standard deviation of test batch
-        m: mean of all data in training data set
-        s: standard deviation of all data in training data set
-        return: KL ditance, non negative double precison float
-        '''
-        sigma = max(sigma, .0000001)
-        s = max(s, .0000001)
-        kl = np.log(s / sigma) + (((sigma ** 2) + ((mu - m) ** 2)) / (2 * (s ** 2))) - 0.5
-        return kl
-
-    
-    def wcdf(self,x,iloc,ishape,iscale):
-        prob = 1-math.pow(math.exp(-abs(x-iloc)/iscale),ishape)
-#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
-        return prob
-
-
     def format_data(self, feature_vector):
         # Format data for use with evm
         state = []
@@ -287,7 +310,7 @@ class UCCSTA2():
         return np.asarray(state)
 
     # get probability differene froom initial state
-    def istate_diff_prob(self,actual_state):
+    def istate_diff_W_prob(self,actual_state):
         dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z ",  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training..  with some extensions. From code some of these values don't seem plausable (blockx for example) but we saw them in training data.  maybe nic mixed up some parms/files but won't hurt too much fi we mis some
@@ -432,109 +455,6 @@ class UCCSTA2():
                                  [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
                                  [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
 
-            # self.imax = np.array([ 2.9992560e+00,  2.9979550e+00,  0.0000000e+00,  2.0129000e-02,
-            #                     1.9909000e-02,  0.0000000e+00,  9.9970000e-03,  9.9890000e-03,
-            #                     9.9930000e-03,  1.0000000e+00,  2.9892000e-02,  2.9460000e-02,
-            #                     6.9400000e-04,  4.1599750e+00,  4.1772000e+00,  9.1959550e+00,
-            #                     1.4164505e+01,  1.3935462e+01,  1.3447222e+01, 5.0000000e+00,
-            #                     5.0000000e+00,  0.0000000e+00,  5.0000000e+00, 5.0000000e+00,
-            #                     0.0000000e+00,  5.0000000e+00,  5.0000000e+00,  0.0000000e+00,
-            #                     5.0000000e+00,  5.0000000e+00,  0.0000000e+00, 5.0000000e+00,
-            #                     5.0000000e+00,  1.0000000e+01,  5.0000000e+00, 5.0000000e+00,
-            #                     1.0000000e+01,  5.0000000e+00,  5.0000000e+00,  1.0000000e+01,
-            #                     5.0000000e+00,  5.0000000e+00,  1.0000000e+01])
-
-        
-            # initwbl = np.array([[[3.78224871e-01, 0.00000000e+00, 6.42222350e-03],
-            #                      [1.45674772e+00, 0.00000000e+00, 7.22685918e-03],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.97583085e-01, 0.00000000e+00, 1.75580159e-04],
-            #                      [1.96821265e-01, 0.00000000e+00, 9.70341399e-05],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [2.02800383e+00, 0.00000000e+00, 3.99891262e-05],
-            #                      [3.03801773e+00, 0.00000000e+00, 4.40613359e-05],
-            #                      [1.51058401e+00, 0.00000000e+00, 2.94744087e-05],
-            #                      [1.00000000e+00, 0.00000000e+00, 8.31479419e-07],
-            #                      [1.82762278e+00, 0.00000000e+00, 1.78638160e-03],
-            #                      [3.15406134e-01, 0.00000000e+00, 1.36080652e-03],
-            #                      [1.70643986e+00, 0.00000000e+00, 6.31591494e-05],
-            #                      [7.64714520e-01, 0.00000000e+00, 2.64113853e-02],
-            #                      [1.18910528e+00, 0.00000000e+00, 3.46403602e-02],
-            #                      [1.18949256e+00, 0.00000000e+00, 3.22099289e-02],
-            #                      [4.43258952e-01, 0.00000000e+00, 2.21087674e-01],
-            #                      [3.77528575e-01, 0.00000000e+00, 1.25617083e-01],
-            #                      [3.79085005e-01, 0.00000000e+00, 5.70591679e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]],
-            #                     [[1.14647315e+03, 0.00000000e+00, 5.98184712e+00],
-            #                      [7.95907540e+02, 0.00000000e+00, 5.97032366e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.85856082e+02, 0.00000000e+00, 3.98647980e-02],
-            #                      [5.27281416e+02, 0.00000000e+00, 3.97249433e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [8.37233758e+02, 0.00000000e+00, 1.99057524e-02],
-            #                      [1.11290674e+03, 0.00000000e+00, 1.99002680e-02],
-            #                      [1.71697736e+03, 0.00000000e+00, 1.99088640e-02],
-            #                      [2.48200138e+01, 0.00000000e+00, 1.31926675e-04],
-            #                      [6.57437394e+01, 0.00000000e+00, 5.63167042e-02],
-            #                      [3.99549848e+01, 0.00000000e+00, 5.58715873e-02],
-            #                      [2.38534737e+01, 0.00000000e+00, 1.25244810e-03],
-            #                      [2.67750496e+02, 0.00000000e+00, 8.22415581e+00],
-            #                      [6.77758757e+02, 0.00000000e+00, 8.25039397e+00],
-            #                      [3.98975942e+02, 0.00000000e+00, 8.27973861e+00],
-            #                      [1.16961102e+01, 0.00000000e+00, 2.13144107e+01],
-            #                      [6.43380302e+00, 0.00000000e+00, 2.21857795e+01],
-            #                      [1.74231073e+03, 0.00000000e+00, 1.97013752e+01],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
 
             self.ishape = initwbl[0,:,0]
             self.iscale = initwbl[0,:,2]
@@ -572,24 +492,6 @@ class UCCSTA2():
 
         
         wallstart= len(istate) - 24 
-#         k=19 # for name max/ame indixing where we have only one block
-#         for j in range (wallstart,len(istate),1):
-#             if(j >= imax.shape[0] or j >= iscale.shape[0] ): break
-#             if(istate[j] > imax[k]):
-#                 probv =  self.wcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);
-# #                probv=  (istate[j] - imax[k])/ (abs(istate[j]) + abs(imax[k]))
-#                 if(probv>charactermin and len(self.character) < 256):
-#                     initprob += probv
-#                     self.character += str(dimname[k])+ " init wall too large  " + " " + str(round(istate[j],3)) +" " + str(round(imax[k],3))+" " + str(round(probv,3))
-#             if(istate[j] < imin[k]):
-#                 probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
-# #                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
-#                 if(probv>charactermin and len(self.character) < 256):
-#                     initprob += probv
-#                 self.character += str(dimname[k]) + " init wall too small  " + " " + str(round(istate[j],3)) +" " + str(round(imin[k],3))+" " + str(round(probv,3))
-#             k = k +1
-
-                    
         
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,wallstart,1):
@@ -622,7 +524,7 @@ class UCCSTA2():
 
 
     # get probability differene froom continuing state difference
-    def cstate_diff_prob(self,cdiff):
+    def cstate_diff_W_prob(self,cdiff):
         dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
 
         if(self.dmax is None):        
@@ -678,53 +580,6 @@ class UCCSTA2():
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])            
 
-            # np.array([ 0.056383,  0.056362,  0.      ,  1.391068,  1.731418,  0.      ,
-            #                           0.069045,  0.1484  ,  0.155603,  1.11127 , 15.884814, 13.092445,
-            #                           17.902195,  0.170244,  0.18108 ,  0.213811,  8.512197,  9.053995,
-            #                           10.690558])
-
-            # diffwbl = np.array([[[4.31394240e-01, 0.00000000e+00, 8.00241370e-03],
-            #                      [3.92759789e+00, 0.00000000e+00, 1.00268135e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.29478359e-01, 0.00000000e+00, 6.91484083e-02],
-            #                      [3.35595225e-01, 0.00000000e+00, 2.39486210e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.05788918e+00, 0.00000000e+00, 1.27401283e-02],
-            #                      [5.74234617e-01, 0.00000000e+00, 1.47940161e-02],
-            #                      [1.43991512e+00, 0.00000000e+00, 4.05398364e-02],
-            #                      [6.55524978e-01, 0.00000000e+00, 1.24303115e-01],
-            #                      [1.02330558e+00, 0.00000000e+00, 3.02142403e+00],
-            #                      [9.77731333e-01, 0.00000000e+00, 2.33579452e+00],
-            #                      [1.60333044e+00, 0.00000000e+00, 1.84570151e+00],
-            #                      [3.21389727e+00, 0.00000000e+00, 1.88286180e-02],
-            #                      [1.34330615e+00, 0.00000000e+00, 2.54176133e-02],
-            #                      [1.30368325e+00, 0.00000000e+00, 3.59191451e-02],
-            #                      [3.21398155e+00, 0.00000000e+00, 9.41423729e-01],
-            #                      [1.34327427e+00, 0.00000000e+00, 1.27085628e+00],
-            #                      [1.30368758e+00, 0.00000000e+00, 1.79586015e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]],
-            #                     [[1.59922572e+01, 0.00000000e+00, 6.08061393e-02],
-            #                      [2.07902979e+01, 0.00000000e+00, 8.62744624e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [6.27580542e-01, 0.00000000e+00, 2.24573798e-02],
-            #                      [5.24863381e-01, 0.00000000e+00, 6.64975959e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.11972791e+00, 0.00000000e+00, 7.42374787e-02],
-            #                      [9.11047920e+00, 0.00000000e+00, 2.99352992e-02],
-            #                      [9.81315330e-01, 0.00000000e+00, 4.05332430e-01],
-            #                      [2.85966393e+01, 0.00000000e+00, 1.55589272e-01],
-            #                      [1.41975186e+01, 0.00000000e+00, 3.28902023e+00],
-            #                      [2.15465624e+01, 0.00000000e+00, 3.92385061e+00],
-            #                      [1.34901067e+00, 0.00000000e+00, 5.33799457e+01],
-            #                      [1.37353995e+01, 0.00000000e+00, 3.22496309e-01],
-            #                      [2.31717538e+01, 0.00000000e+00, 3.04926977e-01],
-            #                      [2.27726846e+01, 0.00000000e+00, 2.72298682e-01],
-            #                      [1.37351558e+01, 0.00000000e+00, 1.61248042e+01],
-            #                      [2.31718613e+01, 0.00000000e+00, 1.52463323e+01],
-            #                      [2.27720116e+01, 0.00000000e+00, 1.36149254e+01],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
             self.dshape = diffwbl[0,:,0]
             self.dscale = diffwbl[0,:,2]        
         imax = self.dmax;
@@ -737,7 +592,7 @@ class UCCSTA2():
 #        if(cdiff[0] > .01):
 #            pdb.set_trace()
         
-        if(self.cnt < self.skipfirstNscores): return 0;    #need to be far enough along to get good prediciton
+        if(self.cnt < self.skipfirstnscores): return 0;    #need to be far enough along to get good prediciton
 
         prob=0  #where we accumualte probability
         charactermin=1e-2
@@ -784,132 +639,165 @@ class UCCSTA2():
             self.consecutivedynamic =0
 
 
+#        if(prob > charactermin): print("dprob @step/prob/char =",  self.cnt, prob, self.character)
+#        pdb.set_trace()
+        return prob
+
+
+
+        # get probability differene froom initial state
+    def istate_diff_G_prob(self,actual_state):
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,
+                 " Cart Vel x" , " Cart Vel y" , " Cart Vel z ",
+                 " Pole x" , " pole y" , " Pole z" ," Pole w" ,
+                 " Pole Vel x" , " Pole Vel y" , " Pole Vel z" ,
+                 " Block x" , " Block y" , " Block x" ,
+                 " Block Vel x" , " Block Vel y" , " Block Vel z" ,
+                 " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        
+        #load mean/std from training..  
+        #if first time load up data.. 
+        if(self.imean is None):
+#            pdb.set_trace()
+            #abuse tha terms since we are tryng to share code with  EVT version
+            self.imean = np.array([-3.88847920e-02,  1.79388544e-02,  0.00000000e+00, -8.32127574e-05,
+                                5.61661668e-05,  0.00000000e+00, -1.52076385e-04, -1.22921416e-05,
+                                9.18328334e-05,  9.99950191e-01, -2.47030594e-05,  2.25482903e-04,
+                                3.81943611e-06, -3.34521356e-03, -3.63842781e-02,  5.03422818e+00,
+                                -1.33613935e-02, -3.96377125e-02,  3.47097780e-03, -5.00000000e+00,
+                                -5.00000000e+00,  0.00000000e+00,  5.00000000e+00, -5.00000000e+00,
+                                0.00000000e+00,  5.00000000e+00,  5.00000000e+00,  0.00000000e+00,
+                                -5.00000000e+00,  5.00000000e+00,  0.00000000e+00, -5.00000000e+00,
+                                -5.00000000e+00,  1.00000000e+01,  5.00000000e+00, -5.00000000e+00,
+                                1.00000000e+01,  5.00000000e+00,  5.00000000e+00,  1.00000000e+01,
+                                -5.00000000e+00,  5.00000000e+00,  1.00000000e+01])
+
+
+            #adjusted based on code.. 
+            self.istd = np.array([1.70842105e+00, 1.72660247e+00, 1.00000000e-06, 1.14153952e-02,
+                                  1.14772434e-02, 1.00000000e-06, 5.79354090e-03, 5.75740406e-03,
+                                  5.73292428e-03, 2.60735246e-05, 1.21789231e-02, 1.21918190e-02,
+                                  1.96198184e-04, 2.32131483e+00, 2.33097704e+00, 2.29533051e+00,
+                                  7.97934966e+00, 7.97332509e+00, 8.02280604e+00, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06])
+
+
+
+        imean = self.imean            
+        istd = self.istd
+        
+        initprob=0  # assume nothing new in world
+
+        cart_pos = [actual_state['cart']['x_position'],actual_state['cart']['y_position'],actual_state['cart']['z_position']]
+        cart_pos = np.asarray(cart_pos)
+
+        charactermin=1e-2
+        
+        istate = self.format_istate_data(actual_state)
+        # do base state for cart(6)  and pole (7) 
+        for j in range (13):
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                initprob += probv
+                initprob = max(initprob,probv)                
+                self.character +=  str(dimname[j]) + " init out of range  " + str(round(istate[j],3)) +" " + str(round(imean[j],3)) +" "  + str(round(istd[j],3)) +" " + str(round(probv,3))
+
+        wallstart= len(istate) - 24                    
+        k=13 # for name max/ame indixing where we have only one block
+        for j in range (13,wallstart,1):
+            if("Wall"  in str(dimname[j])): break
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                initprob += probv
+                initprob = max(initprob,probv)                
+                self.character +=  str(dimname[j]) + " block init out of range  " + str(round(istate[j],3)) +" " + str(round(imean[j],3)) +" "  + str(round(istd[j],3)) +" " + str(round(probv,3))
+            k = k +1
+            if(k==19): k=13;   #reset for next block
+        self.character  += ";"
+        if(initprob >1): initprob = 1
+
+        if(initprob > 1e-4):
+             self.consecutiveinit += 1
+             if(self.uccscart.tbdebuglevel>1):             
+                 print("Initprob cnt char ", initprob, self.cnt,self.character)
+        else:
+            self.consecutiveinit =0
+        return initprob
+
+    
+
+
+    # get probability differene froom continuing state difference
+    def cstate_diff_G_prob(self,cdiff):
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+
+        if(self.dmean is None):        
+        
+            #load data from triningn
+            self.dmean =    np.array([-3.13321142e-07,  2.76174424e-05,  0.00000000e+00,
+                                      -3.22495249e-05,-4.54427372e-05,  0.00000000e+00,
+                                      -1.96683762e-06,  4.17344353e-06,-3.58822868e-06,  1.24106557e-04,
+                                      -1.90599960e-03,  6.85632951e-04, 2.24843167e-03,
+                                      -2.08509736e-06, -1.15790544e-05,  9.71314184e-05,
+                                      -1.04261269e-04, -5.78904334e-04,  4.85657617e-03])
+            self.dstd =    np.array([-3.13321142e-07,  2.76174424e-05,  1.00000000e-06,
+                                     -3.22495249e-05, -4.54427372e-05,  1.00000000e-06,
+                                     -1.96683762e-06,  4.17344353e-06,-3.58822868e-06,  1.24106557e-04,
+                                     -1.90599960e-03,  6.85632951e-04, 2.24843167e-03,
+                                     -2.08509736e-06, -1.15790544e-05,  9.71314184e-05,
+                                     -1.04261269e-04, -5.78904334e-04,  4.85657617e-03])
+
+
+        imean = self.dmean;
+        istd = self.dstd;
+
+        
+        if(self.cnt < self.skipfirstNscores): return 0;    #need to be far enough along to get good prediciton
+
+        prob=0  #where we accumualte probability
+        charactermin=1e-2
+        istate = cdiff
+        # do base state for cart(6)  and pole (7) 
+        for j in range (13):        
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                prob += probv
+                prob = max(prob,probv)                
+                self.character +=  str(dimname[j]) + " dyn out of range  " + str(round(istate[j],6)) +" " + str(round(imean[j],6)) +" "  + str(round(istd[j],6)) +" " + str(round(probv,3))
+
+        
+
+        #no walls in dtate diff just looping over blocks
+        
+        k=13 # for name max/ame indixing where we have only one block
+        for j in range (13,len(istate),1):
+            if("Wall"  in str(dimname[j])): break
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+                prob += probv
+                prob = max(prob,probv)                
+                self.character +=  str(dimname[j]) + " dyn out of range  " + str(round(istate[j],6)) +" " + str(round(imean[j],6)) +" "  + str(round(istd[j],6)) +" " + str(round(probv,3))
+            k = k +1
+            if(k==19): k=13;   #reset for next block
+        self.character  += ";"                
+
+        if(prob > 1e-2):
+            if(prob > 1): prob = 1
+            self.consecutivedynamic += 1
+        else:
+            self.consecutivedynamic =0
+
+
 #        if(prob > charactermin): print("DProb @step/prob/char =",  self.cnt, prob, self.character)
 #        pdb.set_trace()
         return prob
-    
-                    
-    def mark_tried_actions(self,action, paction):
-        '''  mark permutaiton indicies where the current action is in the perturbed action slot has been tried and did not work (used) '''
-        for index in range(len(self.uccscart.actions_plist)-1):
-            if(self.uccscart.actions_plist[index][action] == paction):
-                self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1                
 
 
-
-    def try_actions_permutations(self,actual_state,diffprob):
-        ''' try various permuation of actions to see if they best explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
-         this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back
-        If here action_history should be populated with all actions  
-        '''
-
-        
-
-        '''
-        #this was an attempt at choosing pertubation based on minimizing the overall probbability  of differences in transitions.. but it did not work well enough.. identifies some but too much noise.  
-        # Maybe revisit when predictions are better
-        diffprobability = np.zeros((5,5))
-        statediff = np.zeros((5,5,13))        
-        for action in  range(5):
-            for index in range(5):
-                statediff[action][index] = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
-                diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff[action][index])
-
-        pdb.set_trace()                
-        plen = len(self.uccscart.actions_plist)
-        probs = np.zeros(plen)
-        for index in range(plen):
-            probs[index] = (diffprobability[0][self.uccscart.actions_plist[index][0]]
-                            +diffprobability[1][self.uccscart.actions_plist[index][1]]
-                            +diffprobability[2][self.uccscart.actions_plist[index][2]]
-                            +diffprobability[3][self.uccscart.actions_plist[index][3]]
-                            +diffprobability[4][self.uccscart.actions_plist[index][4]])
-            
-
-        index = np.argmin(probs)
-        minprob = np.min(probs)
-        pdb.set_trace()
-        #if there is a pertubation with lower overall error than        
-        if(minprob < probs[self.uccscart.actions_permutation_index]):
-            self.uccscart.actions_permutation_index = index   #keep that index
-            self.character += "Actions were perturbed.. Now using pertubation " 
-            self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-            print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index", self.uccscart.actions_permutation_index )
-            self.perm_search = 100   #mark it found
-            return 1
-        else: 
-            print("No pertubation needed was better  than current perm", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],
-                  "with index", self.uccscart.actions_permutation_index )                       
-            return 0
-
-'''        
-            
-
-
-#first  try at action remapping 
-#         action = self.prev_action
-#         # Convert from string to int
-#         if action == 'nothing':
-#             action = 0
-#         elif action == 'right':
-#             action = 2    #tb flipped for testing
-#         elif action == 'left':
-#             action = 1
-#         elif action == 'forward':
-#             action = 4
-#         elif action == 'backward':
-#             action = 3
-
-
-
-        
-#         bestprob = diffprob
-#         bestindex = 
-# #        self.mark_tried_actions(action,self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action])
-# #        pdb.set_trace()        
-#         #Run through all permutaitons and mark off those that are inconsitent with current step.
-#         #        plen = len(self.uccscart.actions_plist)-1
-#         plen = 119
-#         while( self.uccscart.actions_permutation_index < plen):
-#             self.uccscart.actions_permutation_index += 1
-#             if(self.uccscart.actions_permutation_index > len(self.uccscart.actions_plist)):
-#                 self.uccscart.actions_permutation_index=0
-#             if(self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] >0): continue
-#             print("indexs",  self.uccscart.actions_permutation_index, "actions", action,  self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action],
-#                   "plist",  self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
-
-
-#             # If here it has potential, mark it as being tried
-#             self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1
-#             score,state = self.uccscart.one_step_env(self.prev_state,[action])  # this uses current index to see what state results.
-#             statediff = self.format_data(state) - actual_state
-#             diffprobability = self.prob_scale * self.cstate_diff_prob(statediff)
-#             if(diffprobability < bestprob):            
-#                 if(diffprobability < .0005): # stop early if good score
-#                     self.character += "Actions were perturbed.. Now using pertubation " 
-#                     self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-#                     print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )                    
-#                     return 1;
-#                 else:
-#                     bestprob = diffprobability
-#                     bestindex = self.uccscart.actions_permutation_index
-           
-
-#         self.uccscart.reset(actual_state)                    #back to normal state
-# #        pdb.set_trace()                    
-#         if(bestprob  < diffprobability and bestprob < .01): # not great but  better than where we started and maybe good enough. 
-#             self.uccscart.actions_permutation_index = bestindex
-#             print("Now using pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )
-#             self.character += "Actions might be  perturbed.. Now using pertubation "
-#             self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-#             self.character += "with prob" + str(bestprob)
-#             return bestprob;
-
-#         #else nothing work so reset back to initial action list
-#         self.uccscart.actions_permutation_index = 0
-#         self.uccscart.actions_permutation_tried = np.zeros(len(self.uccscart.actions_permutation_tried))
-        
-#         return 0
 
 
 
@@ -980,9 +868,6 @@ class UCCSTA2():
             print(self.debugstring)
            
 
-        #        if (len(self.problist) < 3):
-        #            print("Very short, world must have changed")
-        #            return 1;
         if (len(self.problist) < 198):   #for real work
             self.consecutivesuccess=0            
             self.failcnt += 1
@@ -1051,8 +936,9 @@ class UCCSTA2():
         #worldchange acc cannot not go down.. it includes max of old value..
         self.worldchangeblend = min(1, (        self.blendrate *self.worldchanged + (1-self.blendrate) * self.worldchangeblend ))
         #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time
+#####!!!!!##### end GLue CODE for EVT
 
-
+#####!!!!!#####  Domain Independent code tor consecurtiv efailures
         failinc = 0
         #if we are beyond KL window all we do is watch for failures to decide if we world is changed
         if(self.episode > self.scoreforKL+1):
@@ -1070,7 +956,10 @@ class UCCSTA2():
         self.debugstring = '      World Change Acc={}, KLprobs={},{}, mu={}, sig {}, mean {} stdev{} vals {} {} thresh {}  Problist ={}, {}  scores{}'.format(
             round(self.worldchangedacc,3), round(dprob,3), round(perfprob,3),round(mu,3), round(sigma,3), round(self.mean_train,3),
             round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n",[round(num,4) for num in self.problist],"\n", [round(num,2) for num in self.scorelist])
+#####!!!!!#####  End Domain Independent code tor consecurtiv efailures
 
+
+#####!!!!!#####  Start API code tor reporting
         print(self.debugstring)                
         self.character += 'World Change Acc={} {} {}, D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(failinc,3), round(dprob,3), round(perfprob,3))
 
@@ -1147,8 +1036,11 @@ class UCCSTA2():
             self.debugstring = 'Testing initial state for obvious world changes: actual_state={}, next={}, dataval={}, '.format(actual_state,
                                                                                                                                     expected_state,
                                                                                                                                     data_val)
-            initprob= self.istate_diff_prob(actual_state)
-
+            if(self.use_guassian):
+                initprob= self.istate_diff_G_prob(actual_state)
+            else:
+                initprob= self.istate_diff_W_prob(actual_state)
+                
             #update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
             self.maxprob = max(initprob, self.maxprob)
             if(initprob >0):
@@ -1173,7 +1065,11 @@ class UCCSTA2():
             current = difference_from_expected
 
 
-            diffprobability = self.prob_scale * self.cstate_diff_prob(current)
+            if(self.use_guassian): 
+                diffprobability = self.prob_scale * self.cstate_diff_G_prob(current)
+            else:
+                diffprobability = self.prob_scale * self.cstate_diff_W_prob(current)
+
             probability += diffprobability
             #            pdb.set_trace()            
             #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
@@ -1188,6 +1084,9 @@ class UCCSTA2():
             #         probability += actprob
             #         if(actprob>0): self.character += "Action search with prob " + str(actprob)
             #         pdb.set_trace()
+
+#####!!!!!#####  end GLUE/API code EVT-
+#####!!!!!#####  Start domain dependent adaption
 
             # if we have not had a lot successess in a row (sign index is right)   and declared world changed and  we ahve enough failures then try another index
             if( self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
@@ -1223,3 +1122,130 @@ class UCCSTA2():
             
         self.prev_action = action
         return action
+
+
+
+                    
+    def mark_tried_actions(self,action, paction):
+        '''  mark permutaiton indicies where the current action is in the perturbed action slot has been tried and did not work (used) '''
+        for index in range(len(self.uccscart.actions_plist)-1):
+            if(self.uccscart.actions_plist[index][action] == paction):
+                self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1                
+
+
+
+    def try_actions_permutations(self,actual_state,diffprob):
+        ''' try various permuation of actions to see if they best explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+         this can be called multiple times because the actual state transition can only use 1 action so if we swap say left-right  we might not see if we need to also swap front/back
+        If here action_history should be populated with all actions  
+        '''
+
+        return 0        
+#####!!!!!#####  end domain dependent adaption
+
+#         #this was an attempt at choosing pertubation based on minimizing the overall probbability  of differences in transitions.. but it did not work well enough.. identifies some but too much noise.  
+#         # Maybe revisit when predictions are better
+#         diffprobability = np.zeros((5,5))
+#         statediff = np.zeros((5,5,13))        
+#         for action in  range(5):
+#             for index in range(5):
+#                 statediff[action][index] = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
+#                 diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff[action][index])
+
+#         pdb.set_trace()                
+#         plen = len(self.uccscart.actions_plist)
+#         probs = np.zeros(plen)
+#         for index in range(plen):
+#             probs[index] = (diffprobability[0][self.uccscart.actions_plist[index][0]]
+#                             +diffprobability[1][self.uccscart.actions_plist[index][1]]
+#                             +diffprobability[2][self.uccscart.actions_plist[index][2]]
+#                             +diffprobability[3][self.uccscart.actions_plist[index][3]]
+#                             +diffprobability[4][self.uccscart.actions_plist[index][4]])
+            
+
+#         index = np.argmin(probs)
+#         minprob = np.min(probs)
+#         pdb.set_trace()
+#         #if there is a pertubation with lower overall error than        
+#         if(minprob < probs[self.uccscart.actions_permutation_index]):
+#             self.uccscart.actions_permutation_index = index   #keep that index
+#             self.character += "Actions were perturbed.. Now using pertubation " 
+#             self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#             print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index", self.uccscart.actions_permutation_index )
+#             self.perm_search = 100   #mark it found
+#             return 1
+#         else: 
+#             print("No pertubation needed was better  than current perm", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],
+#                   "with index", self.uccscart.actions_permutation_index )                       
+#             return 0
+            
+
+
+
+#first  try at action remapping 
+#         action = self.prev_action
+#         # Convert from string to int
+#         if action == 'nothing':
+#             action = 0
+#         elif action == 'right':
+#             action = 2    #tb flipped for testing
+#         elif action == 'left':
+#             action = 1
+#         elif action == 'forward':
+#             action = 4
+#         elif action == 'backward':
+#             action = 3
+
+
+
+        
+#         bestprob = diffprob
+#         bestindex = 
+# #        self.mark_tried_actions(action,self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action])
+# #        pdb.set_trace()        
+#         #Run through all permutaitons and mark off those that are inconsitent with current step.
+#         #        plen = len(self.uccscart.actions_plist)-1
+#         plen = 119
+#         while( self.uccscart.actions_permutation_index < plen):
+#             self.uccscart.actions_permutation_index += 1
+#             if(self.uccscart.actions_permutation_index > len(self.uccscart.actions_plist)):
+#                 self.uccscart.actions_permutation_index=0
+#             if(self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] >0): continue
+#             print("indexs",  self.uccscart.actions_permutation_index, "actions", action,  self.uccscart.actions_plist[self.uccscart.actions_permutation_index][action],
+#                   "plist",  self.uccscart.actions_plist[self.uccscart.actions_permutation_index])
+
+
+#             # If here it has potential, mark it as being tried
+#             self.uccscart.actions_permutation_tried[self.uccscart.actions_permutation_index] =1
+#             score,state = self.uccscart.one_step_env(self.prev_state,[action])  # this uses current index to see what state results.
+#             statediff = self.format_data(state) - actual_state
+#             diffprobability = self.prob_scale * self.cstate_diff_prob(statediff)
+#             if(diffprobability < bestprob):            
+#                 if(diffprobability < .0005): # stop early if good score
+#                     self.character += "Actions were perturbed.. Now using pertubation " 
+#                     self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#                     print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )                    
+#                     return 1;
+#                 else:
+#                     bestprob = diffprobability
+#                     bestindex = self.uccscart.actions_permutation_index
+           
+
+#         self.uccscart.reset(actual_state)                    #back to normal state
+# #        pdb.set_trace()                    
+#         if(bestprob  < diffprobability and bestprob < .01): # not great but  better than where we started and maybe good enough. 
+#             self.uccscart.actions_permutation_index = bestindex
+#             print("Now using pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index/tried", self.uccscart.actions_permutation_index, self.uccscart.actions_permutation_tried )
+#             self.character += "Actions might be  perturbed.. Now using pertubation "
+#             self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#             self.character += "with prob" + str(bestprob)
+#             return bestprob;
+
+#         #else nothing work so reset back to initial action list
+#         self.uccscart.actions_permutation_index = 0
+#         self.uccscart.actions_permutation_tried = np.zeros(len(self.uccscart.actions_permutation_tried))
+        
+#         return 0
+
+
+
