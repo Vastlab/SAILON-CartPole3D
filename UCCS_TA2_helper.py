@@ -611,7 +611,7 @@ class UCCSTA2():
         if(initprob >1): initprob = 1
 
         if(initprob > 1e-4):
-             self.consecutiveinit += 1
+             self.consecutiveinit = min( self.consecutiveinit + 1, self.maxconsecutivefailthresh+2)
              if(self.uccscart.tbdebuglevel>1):             
                  print("Initprob cnt char ", initprob, self.cnt,self.character)
         else:
@@ -779,7 +779,7 @@ class UCCSTA2():
 
         if(prob > 1e-2):
             if(prob > 1): prob = 1
-            self.consecutivedynamic += 1
+            self.consecutivedynamic = min( self.consecutivedynamic + 1, self.maxconsecutivefailthresh+2)
         else:
             self.consecutivedynamic =0
 
@@ -987,7 +987,7 @@ class UCCSTA2():
             self.consecutivesuccess=0            
             self.failcnt += 1
             if( self.consecutivefail >0):
-                self.consecutivefail += 1
+                self.consecutivefail = min(self.consecutivefail+ 1,   self.maxconsecutivefailthresh+2)
                 if(self.consecutivefail > self.maxconsecutivefail):
                     self.maxconsecutivefail = self.consecutivefail
                     if(self.maxconsecutivefail > self.maxconsecutivefailthresh):
