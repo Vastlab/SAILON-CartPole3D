@@ -388,13 +388,22 @@ class TA2Agent(TA2Logic):
         self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect, rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
         rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-        self.log.info('Testing E #{} End: times={} {}  NovI={} steps={}, Perf={}, CPerf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={} {}   Prob={} {}   Scores={}   '.format(
+        self.log.info('Testing E #{} End: times={} {}  NovI={} steps={}, Perf={}, Cperf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
             self.UCCS.episode, round((end - self.UCCS.starttime).total_seconds(), 1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(), 1), 
-            self.UCCS.noveltyindicator, self.totalSteps,  performance, round(rperf, 1), round(novelty_probability, 2), iscorrect, rcorrect, round(pcorrect, 2), self.UCCS.correctcnt, self.UCCS.rcorrectcnt, self.UCCS.totalcnt, 
-            str(novelty_characterization),
+            self.UCCS.noveltyindicator, self.totalSteps,  performance, round(rperf, 1), round(novelty_probability, 2), iscorrect, rcorrect, round(pcorrect, 2),
+            self.UCCS.correctcnt, self.UCCS.rcorrectcnt, self.UCCS.totalcnt, 
+            str(novelty_characterization)
+        ))
+
+
+        self.log.info('Debug Te#{} End:  Prob={} {}   Scores={}   '.format(
             "\n", [round(num, 2) for num in self.UCCS.problist], 
             "\n", [round(num, 2) for num in self.UCCS.scorelist]))            
         self.totalSteps = 0
+
+
+        self.totalSteps = 0
+        
         
         self.UCCS.starttime = datetime.now()
         # if(self.UCCS.debug):

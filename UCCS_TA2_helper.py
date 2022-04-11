@@ -10,7 +10,7 @@ import time
 #from utils import rollout
 import time
 import pickle
-# import cv2
+import cv2
 import PIL
 import torch
 import json
@@ -55,24 +55,26 @@ class UCCSTA2():
         self.scoreforKL=20        # we only use the first sets of scores for KL because novels worlds close when balanced
         self.num_epochs = 200
         self.num_dims = 4
+        self.num_blocks = None
         self.scalelargescores=20
         # takes a while for some randome starts to stabilise so don't reset too early as it
         # reduces world change sensitvity.  Effective min is 1 as need at least a prior state to get prediction.
         self.skipfirstNscores=1
 
-        self.maxconsecutivefailthresh= 6  # if we see this many in a row we declare world changed as we never see even 3 in training 
+        self.maxconsecutivefailthresh= 5  # if we see this many in a row we declare world changed as we never see even 3 in training 
         
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
         self.failscale=6.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
-        self.initprobscale=.06 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        #TB change from .06  for M30
+        self.initprobscale=.25 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.consecutivedynamic=0   # if get consecutitve dynamic failures we keep increasing scale        
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
         # too large in hopes of  better ccotrol
-        self.scoretoreset=200
+        self.scoretoreset=1000
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
@@ -100,9 +102,14 @@ class UCCSTA2():
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
         self.cnt = 0
+        self.framecnt = 0
+        self.saveframes = False
+        self.saveprefix = random.randint(1,10000)
+        
         self.worldchanged = 0
         self.worldchangedacc = 0
-        self.blendrate = .3
+        self.blenduprate = .5           # fraction of new prob we use when blending up..  should be greater than  blenddown.  Note blendup uses max so never goes down.
+        self.blenddownrate = .1         # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
         
         self.failcnt = 0        
         self.worldchangeblend = 0
@@ -134,8 +141,9 @@ class UCCSTA2():
         self.character=""
         self.trialchar=""        
 
-        self.imax = self.imin = self.ishape = self.iscale =  None
-        self.dmax = self.dshape = self.dscale =  None        
+        self.imax = self.imin =   self.imean = self.istd = self.ishape = self.iscale =  None
+        self.dmax = self.dshape = self.dscale = self.dmean = self.dstd =   None        
+
 
         
         # Create prediction environment
@@ -200,6 +208,7 @@ class UCCSTA2():
             self.consecutivefail=0
             self.perm_search=0
             self.trialchar=""
+            
 
 
 
@@ -227,6 +236,49 @@ class UCCSTA2():
         return action, expected_state
 
 
+#####!!!!!##### Start INDEPNDENT CODE for EVT-
+    def kullback_leibler(self, mu, sigma, m, s):
+        '''
+        Compute Kullback Leibler with Gaussian assumption of training data
+        mu: mean of test batch
+        sigm: standard deviation of test batch
+        m: mean of all data in training data set
+        s: standard deviation of all data in training data set
+        return: KL ditance, non negative double precison float
+        '''
+        sigma = max(sigma, .0000001)
+        s = max(s, .0000001)
+        kl = np.log(s / sigma) + (((sigma ** 2) + ((mu - m) ** 2)) / (2 * (s ** 2))) - 0.5
+        return kl
+
+    #reversed wbl for maxim fitting
+    def rwcdf(self,x,iloc,ishape,iscale):
+        if(x-iloc< 0) : prob = 0        
+        else: prob = 1-math.pow(math.exp(-(x-iloc)/iscale),ishape)
+#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
+        return prob
+
+    #abs wbl for unsided fitting    
+    def awcdf(self,x,iloc,ishape,iscale):
+        prob = 1-math.pow(math.exp(-abs(x-iloc)/iscale),ishape)
+#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
+        return prob
+    
+    
+    #regualr wbl for minimum fits
+    def wcdf(self,x,iloc,ishape,iscale):
+        if(iloc-x< 0) : prob = 0
+        else: prob = 1-math.pow(math.exp(-(iloc-x)/iscale),ishape)
+        #        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
+        return prob
+
+    
+
+
+
+#####!!!!!##### End Doimain Independent CODE for EVT-    
+#####!!!!!##### Start Glue CODE for EVT-
+    
     def format_istate_data(self,feature_vector):
         # Format data for use with evm
         #print(feature_vector)
@@ -247,31 +299,9 @@ class UCCSTA2():
                 # Add in data for the walls
                 for j in feature_vector[i]:
                     for k in j:
-
                         cur_state.append(k)
 
         return np.asarray(cur_state)
-
-
-    def kullback_leibler(self, mu, sigma, m, s):
-        '''
-        Compute Kullback Leibler with Gaussian assumption of training data
-        mu: mean of test batch
-        sigm: standard deviation of test batch
-        m: mean of all data in training data set
-        s: standard deviation of all data in training data set
-        return: KL ditance, non negative double precison float
-        '''
-        sigma = max(sigma, .0000001)
-        s = max(s, .0000001)
-        kl = np.log(s / sigma) + (((sigma ** 2) + ((mu - m) ** 2)) / (2 * (s ** 2))) - 0.5
-        return kl
-
-    
-    def wcdf(self,x,iloc,ishape,iscale):
-        prob = 1-math.pow(math.exp(-abs(x-iloc)/iscale),ishape)
-#        if(prob > 1e-4): print("in wcdf",round(prob,6),x,iloc,ishape,iscale)
-        return prob
 
 
     def format_data(self, feature_vector):
@@ -286,8 +316,37 @@ class UCCSTA2():
                 #print(state)
         return np.asarray(state)
 
+    def point_to_line_dist(self,istate,cpos, bpos, bvel):
+        pdiff = np.subtract(cpos ,bpos)
+        nval = np.linalg.norm(bvel)
+        if(nval >0) :
+            dist =  np.linalg.norm(np.cross(pdiff,bvel))/ nval
+        else: dist = np.linalg.norm(pdiff)  # if vector direction (velocity) is 0 then distance is distance between the two points
+        return dist
+
+    def block_pos(self,istate,blocknum):
+        return istate[13+blocknum*6:13+blocknum*6+2]
+
+    def block_vel(self,istate,blocknum):
+        return istate[13+blocknum*6+3:13+blocknum*6+5]
+
+    def cart_pos(self,istate):
+        return istate[0:2]
+
+    def cart_vel(self,istate):
+        return istate[3:5]    
+
+    def pole_pos(self,istate):
+        return istate[6:8]
+
+    def pole_vel(self,istate):
+        return istate[9:12]    
+
+
+        
+
     # get probability differene froom initial state
-    def istate_diff_prob(self,actual_state):
+    def istate_diff_EVT_prob(self,actual_state):
         dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z ",  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
         
         #load imin/imax from training..  with some extensions. From code some of these values don't seem plausable (blockx for example) but we saw them in training data.  maybe nic mixed up some parms/files but won't hurt too much fi we mis some
@@ -312,9 +371,9 @@ class UCCSTA2():
             self.imax = np.array([3.0+00, 3.0+00, 0.000000e+00,  #cart pos
                                   2.e-02, 2.e-02, 0.000000e+00,    #cart vel
                                   1.0e-02, 1.0e-02, 1.0e-02, 1.0e-00,    #pole pos quat
-                                  2.8e-02, 2.8e-02, 5.800000e-04,  # pole vel
-                                  9.50+00, 9.50+00, 9.50,  # block pos
-                                  10.0, 10.0, 10.0, #block vel
+                                  2.8e-02, 2.8e-02, 5.800000e-01,  # pole vel
+                                  4.50+00, 4.50+00, 9.50,  # block pos
+                                  11.5, 11.5, 11.5, #block vel.. they can speed up before first time we see them.. program limit is 10 but gravity can accelerate
                                   5.000000e+00, 5.000000e+00, 
                                   0.000000e+00, 5.000000e+00, 5.000000e+00,
                                   0.000000e+00, 5.000000e+00, 5.000000e+00,
@@ -328,8 +387,8 @@ class UCCSTA2():
                                   -2.e-02, -2.e-02, 0.000000e+00,    #cart vel
                                   -1.0e-02, -1.0e-02, -1.0e-02, 9.999970e-01,    #pole pos quat
                                   -2.8e-02, 2.8e-02, 5.800000e-04,  # pole vel
-                                  -4.090533e+00, -4.090533e+00, -4.0090533,  # block pos
-                                  5.1, 5.1, 5.1, #block vel  not quite as programmed as it can drop with gravity on first step which we we don't see
+                                  -4.50533e+00, -4.500533e+00, 0.05533,  # block pos
+                                  4.5, 4.5, 4.5, #block vel  based on  programmed values.. though as it can drop with gravity on first step which we we don't see
                                   5.000000e+00, 5.000000e+00, 
                                   0.000000e+00, 5.000000e+00, 5.000000e+00,
                                   0.000000e+00, 5.000000e+00, 5.000000e+00,
@@ -354,7 +413,7 @@ class UCCSTA2():
                                  [1.59112566e+00, 0.00000000e+00, 1.29455765e-03],
                                  [1.51114138e+00, 0.00000000e+00, 1.24665112e-03],
                                  [1.74512625e+00, 0.00000000e+00, 4.33527749e-05],
-                                 [7.19656366e-01, 0.00000000e+00, 1.14079390e-02],
+                                 [1.71965636e+00, 0.00000000e+00, 1.14079390e-02],
                                  [1.83879399e+00, 0.00000000e+00, 1.70432620e-02],
                                  [1.11644671e+00, 0.00000000e+00, 1.99680658e-02],
                                  [1.39686903e+00, 0.00000000e+00, 1.24734419e-02],
@@ -432,109 +491,6 @@ class UCCSTA2():
                                  [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
                                  [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
 
-            # self.imax = np.array([ 2.9992560e+00,  2.9979550e+00,  0.0000000e+00,  2.0129000e-02,
-            #                     1.9909000e-02,  0.0000000e+00,  9.9970000e-03,  9.9890000e-03,
-            #                     9.9930000e-03,  1.0000000e+00,  2.9892000e-02,  2.9460000e-02,
-            #                     6.9400000e-04,  4.1599750e+00,  4.1772000e+00,  9.1959550e+00,
-            #                     1.4164505e+01,  1.3935462e+01,  1.3447222e+01, 5.0000000e+00,
-            #                     5.0000000e+00,  0.0000000e+00,  5.0000000e+00, 5.0000000e+00,
-            #                     0.0000000e+00,  5.0000000e+00,  5.0000000e+00,  0.0000000e+00,
-            #                     5.0000000e+00,  5.0000000e+00,  0.0000000e+00, 5.0000000e+00,
-            #                     5.0000000e+00,  1.0000000e+01,  5.0000000e+00, 5.0000000e+00,
-            #                     1.0000000e+01,  5.0000000e+00,  5.0000000e+00,  1.0000000e+01,
-            #                     5.0000000e+00,  5.0000000e+00,  1.0000000e+01])
-
-        
-            # initwbl = np.array([[[3.78224871e-01, 0.00000000e+00, 6.42222350e-03],
-            #                      [1.45674772e+00, 0.00000000e+00, 7.22685918e-03],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.97583085e-01, 0.00000000e+00, 1.75580159e-04],
-            #                      [1.96821265e-01, 0.00000000e+00, 9.70341399e-05],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [2.02800383e+00, 0.00000000e+00, 3.99891262e-05],
-            #                      [3.03801773e+00, 0.00000000e+00, 4.40613359e-05],
-            #                      [1.51058401e+00, 0.00000000e+00, 2.94744087e-05],
-            #                      [1.00000000e+00, 0.00000000e+00, 8.31479419e-07],
-            #                      [1.82762278e+00, 0.00000000e+00, 1.78638160e-03],
-            #                      [3.15406134e-01, 0.00000000e+00, 1.36080652e-03],
-            #                      [1.70643986e+00, 0.00000000e+00, 6.31591494e-05],
-            #                      [7.64714520e-01, 0.00000000e+00, 2.64113853e-02],
-            #                      [1.18910528e+00, 0.00000000e+00, 3.46403602e-02],
-            #                      [1.18949256e+00, 0.00000000e+00, 3.22099289e-02],
-            #                      [4.43258952e-01, 0.00000000e+00, 2.21087674e-01],
-            #                      [3.77528575e-01, 0.00000000e+00, 1.25617083e-01],
-            #                      [3.79085005e-01, 0.00000000e+00, 5.70591679e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]],
-            #                     [[1.14647315e+03, 0.00000000e+00, 5.98184712e+00],
-            #                      [7.95907540e+02, 0.00000000e+00, 5.97032366e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.85856082e+02, 0.00000000e+00, 3.98647980e-02],
-            #                      [5.27281416e+02, 0.00000000e+00, 3.97249433e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [8.37233758e+02, 0.00000000e+00, 1.99057524e-02],
-            #                      [1.11290674e+03, 0.00000000e+00, 1.99002680e-02],
-            #                      [1.71697736e+03, 0.00000000e+00, 1.99088640e-02],
-            #                      [2.48200138e+01, 0.00000000e+00, 1.31926675e-04],
-            #                      [6.57437394e+01, 0.00000000e+00, 5.63167042e-02],
-            #                      [3.99549848e+01, 0.00000000e+00, 5.58715873e-02],
-            #                      [2.38534737e+01, 0.00000000e+00, 1.25244810e-03],
-            #                      [2.67750496e+02, 0.00000000e+00, 8.22415581e+00],
-            #                      [6.77758757e+02, 0.00000000e+00, 8.25039397e+00],
-            #                      [3.98975942e+02, 0.00000000e+00, 8.27973861e+00],
-            #                      [1.16961102e+01, 0.00000000e+00, 2.13144107e+01],
-            #                      [6.43380302e+00, 0.00000000e+00, 2.21857795e+01],
-            #                      [1.74231073e+03, 0.00000000e+00, 1.97013752e+01],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
 
             self.ishape = initwbl[0,:,0]
             self.iscale = initwbl[0,:,2]
@@ -554,64 +510,133 @@ class UCCSTA2():
         charactermin=1e-2
         
         istate = self.format_istate_data(actual_state)
-        # do base state for cart(6)  and pole (7) 
+        # do base state for cart(6)  and pole (7)   looking at position and velocity. 
         for j in range (13):
             if(abs(istate[j]) > imax[j]):
-                probv =  self.wcdf(istate[j],imax[j],iscale[j],ishape[j]);
-#                probv=  (istate[j] - imax[j]) / (abs(istate[j]) + abs(imax[j]))                
+                probv =  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
+                initprob += probv
                 if(probv>charactermin and len(self.character) < 256):
-                    initprob += probv
-                    self.character +=  str(dimname[j]) + " init too large  " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))
+                    self.character +=  "&" + str(dimname[j]) + " init too large  " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))
 
                 
             if(abs(istate[j]) < imin[j]):
-                probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
+                probv =  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
                 if(probv>charactermin and len(self.character) < 256):
                     initprob += probv
-                    self.character += str(dimname[j]) + " init too small  " + str(round(istate[j],3)) +" " + str(round(imin[j],3)) +" " + str(round(probv,3))
+                    self.character +=  "&" +  str(dimname[j]) + " init too small  " + str(round(istate[j],3)) +" " + str(round(imin[j],3)) +" " + str(round(probv,3))
 
-        
-        wallstart= len(istate) - 24 
-#         k=19 # for name max/ame indixing where we have only one block
-#         for j in range (wallstart,len(istate),1):
-#             if(j >= imax.shape[0] or j >= iscale.shape[0] ): break
-#             if(istate[j] > imax[k]):
-#                 probv =  self.wcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);
-# #                probv=  (istate[j] - imax[k])/ (abs(istate[j]) + abs(imax[k]))
-#                 if(probv>charactermin and len(self.character) < 256):
-#                     initprob += probv
-#                     self.character += str(dimname[k])+ " init wall too large  " + " " + str(round(istate[j],3)) +" " + str(round(imax[k],3))+" " + str(round(probv,3))
-#             if(istate[j] < imin[k]):
-#                 probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
-# #                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
-#                 if(probv>charactermin and len(self.character) < 256):
-#                     initprob += probv
-#                 self.character += str(dimname[k]) + " init wall too small  " + " " + str(round(istate[j],3)) +" " + str(round(imin[k],3))+" " + str(round(probv,3))
-#             k = k +1
 
+       ## look for walls to be in bad position 
+
+        wallstart= len(istate) - 24
+        if(wallstart < 19):  # whould have at least 2 blocks
+                probv =  1
+                initprob += probv
+                if(probv>charactermin and len(self.character) < 256):
+                    self.character +=  "&" +  " Too few blocks (Level 2 change) Len="+wallstart
+        if(wallstart > 19+5*6):  # sould have at most 5 blocks
+                probv =  1
+                initprob += probv
+                if(probv>charactermin and len(self.character) < 256):
+                    self.character +=  "&" +  " Too Many blocks (Level 2 change) Len="+wallstart
+
+
+
+       ## look for blocks to be in bad position or to have bad velocity
                     
-        
-        k=13 # for name max/ame indixing where we have only one block
+        k=13 # where block data begins 
+        self.num_blocks = 0    
         for j in range (13,wallstart,1):
             if(abs(istate[j]) > imax[k]):
-                probv =  self.wcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);
-#               probv =  (istate[j] - imax[k]) / (abs(istate[j]) + abs(imax[k]))                
+                probv =  self.awcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);
+                initprob += probv
                 if(probv>charactermin and len(self.character) < 256):
-                    initprob += probv
-                    self.character += str(dimname[k])+ " init block too large " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3))
+                    self.character +=  "&" +  str(dimname[k])+ " init block too large " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3))
             if(abs(istate[j]) < imin[k]):
-                probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
+                probv =  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
 #                probv=  (imin[k] - istate[j])/ (abs(istate[j]) + abs(imin[k]))
+                initprob += probv
                 if(probv>charactermin and len(self.character) < 256):
-                    initprob += probv
-                    self.character += " " + str(dimname[k]) + " init block too small " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3))
+                    self.character +=  "&" +  " " + str(dimname[k]) + " init block too small " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3))
             k = k +1
-            if(k==19): k=13;   #reset for next block
+            if(k==19):
+                self.num_blocks += 1
+                k=13;   #reset for next block
+                
         self.character  += ";"
-        if(initprob >1): initprob = 1
+
+
+       ## look for blocks to heading at cart's initital position
+
+        probv=0                    
+        k=13 # where block data begins 
+        for nb in range(self.num_blocks):
+            #  cart in position 0,   blocks are  position and then velocity 3d vectors starting at location k
+#            dist = self.point_to_line_dist(istate[0:3],istate[k+nb*6:k+nb*6+2],istate[k+nb*6+3:k+nb*6+5])
+            dist = self.point_to_line_dist(istate,self.cart_pos(istate),
+                                           self.block_pos(istate,nb),
+                                           self.block_vel(istate,nb))
+            if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack
+                probv = 1            
+            elif(dist < .01): # should do wlb fit on this.. but for now just a hack
+                probv = (.01-dist)/(.01-1e-3)
+                probv = probv*probv   # square it so its a bit more concentrated and smoother                        
+            initprob += probv
+            if(probv>charactermin and len(self.character) < 256):
+                self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction attacking cart " +" with prob " + str(probv)
+
+
+       ## look for blocks motions that heading to  other blocks initital position
+       
+        probv=0
+        k=13 # where block data begins 
+        for nb in range(self.num_blocks):
+            for nb2 in range(nb+1,self.num_blocks):
+                #  cart in position 0,   blocks are  position and then velocity 3d vectors starting at location k                
+#                dist = self.point_to_line_dist(istate[k+nb2*6:k+nb2*6+2],istate[k+nb*6:k+nb*6+2],istate[k+nb*6+3:k+nb*6+5])
+                dist = self.point_to_line_dist(istate,self.block_pos(istate,nb2),
+                                               self.block_pos(istate,nb),
+                                               self.block_vel(istate,nb))
+                
+                if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty
+                    probv = .25            
+                elif(dist < .01): # should do wlb fit on this.. but for now just a hack
+                    probv = .25*(.01-dist)/(.01-1e-3)
+                initprob += probv
+                if(probv>charactermin and len(self.character) < 256):
+                    self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction aiming at block" + str(nb2) +" with prob " + str(probv)
+
+                
+       ## look for blocks motions that are parallel/or anti-parallel 
+       
+        probv=0
+        k=13 # where block data begins 
+        for nb in range(self.num_blocks):
+            for nb2 in range(nb+1,self.num_blocks):
+                #  Use only block direction (velocity) for parallel test -- cross product should be near 0.  But if there vector norm is 0 then no cross product. fit
+                if(np.linalg.norm(self.block_vel(istate,nb2))>0 and np.linalg.norm(self.block_vel(istate,nb))>0):
+                    dist  = np.linalg.norm(np.cross(self.block_vel(istate,nb2), self.block_vel(istate,nb)))
+                    if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.. note can frequently happen accidently so not a full novelty prob change
+                        probv = .25          
+                    elif(dist < .01): # should do wlb fit on this.. but for now just a hack
+                        probv = .25*(.01-dist)/(.01-1e-3)
+                        probv = probv*probv   # square it so its a bit more concentrated and smoother                        
+                    initprob += probv
+                    if(probv>charactermin and len(self.character) < 256):
+                        self.character +=  "&" +   " M30 Char Block motion " + str(nb) + " is (anti-) parallel to  block" + str(nb2) +" with prob " + str(probv)
+
+
+        self.character  += ";"
+
+        #        was limiting to one.. its a prob of novelty overall.. so 
+        if(initprob >1):
+            self.character += "Iprob clamped from" +  str(initprob)             
+            initprob = 1
+
+
 
         if(initprob > 1e-4):
-             self.consecutiveinit += 1
+             self.consecutiveinit = min(self.consecutiveinit+ 1,self.maxconsecutivefailthresh+2)
              if(self.uccscart.tbdebuglevel>1):             
                  print("Initprob cnt char ", initprob, self.cnt,self.character)
         else:
@@ -621,8 +646,8 @@ class UCCSTA2():
     
 
 
-    # get probability differene froom continuing state difference
-    def cstate_diff_prob(self,cdiff):
+    # get probability differene from checking state difference from prediction
+    def cstate_diff_EVT_prob(self,cdiff):
         dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
 
         if(self.dmax is None):        
@@ -678,53 +703,6 @@ class UCCSTA2():
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])            
 
-            # np.array([ 0.056383,  0.056362,  0.      ,  1.391068,  1.731418,  0.      ,
-            #                           0.069045,  0.1484  ,  0.155603,  1.11127 , 15.884814, 13.092445,
-            #                           17.902195,  0.170244,  0.18108 ,  0.213811,  8.512197,  9.053995,
-            #                           10.690558])
-
-            # diffwbl = np.array([[[4.31394240e-01, 0.00000000e+00, 8.00241370e-03],
-            #                      [3.92759789e+00, 0.00000000e+00, 1.00268135e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.29478359e-01, 0.00000000e+00, 6.91484083e-02],
-            #                      [3.35595225e-01, 0.00000000e+00, 2.39486210e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [1.05788918e+00, 0.00000000e+00, 1.27401283e-02],
-            #                      [5.74234617e-01, 0.00000000e+00, 1.47940161e-02],
-            #                      [1.43991512e+00, 0.00000000e+00, 4.05398364e-02],
-            #                      [6.55524978e-01, 0.00000000e+00, 1.24303115e-01],
-            #                      [1.02330558e+00, 0.00000000e+00, 3.02142403e+00],
-            #                      [9.77731333e-01, 0.00000000e+00, 2.33579452e+00],
-            #                      [1.60333044e+00, 0.00000000e+00, 1.84570151e+00],
-            #                      [3.21389727e+00, 0.00000000e+00, 1.88286180e-02],
-            #                      [1.34330615e+00, 0.00000000e+00, 2.54176133e-02],
-            #                      [1.30368325e+00, 0.00000000e+00, 3.59191451e-02],
-            #                      [3.21398155e+00, 0.00000000e+00, 9.41423729e-01],
-            #                      [1.34327427e+00, 0.00000000e+00, 1.27085628e+00],
-            #                      [1.30368758e+00, 0.00000000e+00, 1.79586015e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]],
-            #                     [[1.59922572e+01, 0.00000000e+00, 6.08061393e-02],
-            #                      [2.07902979e+01, 0.00000000e+00, 8.62744624e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [6.27580542e-01, 0.00000000e+00, 2.24573798e-02],
-            #                      [5.24863381e-01, 0.00000000e+00, 6.64975959e-02],
-            #                      [1.00000000e+00, 0.00000000e+00, 1.00000000e+00],
-            #                      [3.11972791e+00, 0.00000000e+00, 7.42374787e-02],
-            #                      [9.11047920e+00, 0.00000000e+00, 2.99352992e-02],
-            #                      [9.81315330e-01, 0.00000000e+00, 4.05332430e-01],
-            #                      [2.85966393e+01, 0.00000000e+00, 1.55589272e-01],
-            #                      [1.41975186e+01, 0.00000000e+00, 3.28902023e+00],
-            #                      [2.15465624e+01, 0.00000000e+00, 3.92385061e+00],
-            #                      [1.34901067e+00, 0.00000000e+00, 5.33799457e+01],
-            #                      [1.37353995e+01, 0.00000000e+00, 3.22496309e-01],
-            #                      [2.31717538e+01, 0.00000000e+00, 3.04926977e-01],
-            #                      [2.27726846e+01, 0.00000000e+00, 2.72298682e-01],
-            #                      [1.37351558e+01, 0.00000000e+00, 1.61248042e+01],
-            #                      [2.31718613e+01, 0.00000000e+00, 1.52463323e+01],
-            #                      [2.27720116e+01, 0.00000000e+00, 1.36149254e+01],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
-            #                      [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]]])
             self.dshape = diffwbl[0,:,0]
             self.dscale = diffwbl[0,:,2]        
         imax = self.dmax;
@@ -745,15 +723,15 @@ class UCCSTA2():
         # do base state for cart(6)  and pole (7) 
         for j in range (13):        
             if(istate[j] > imax[j]):
-#                probv =  self.wcdf(istate[j],imax[j],iscale[j],ishape[j]);
-                probv =  self.wcdf(abs(istate[j]),imax[j],iscale[j],ishape[j])                
+#                probv =  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
+                probv =  self.awcdf(abs(istate[j]),imax[j],iscale[j],ishape[j])                
                 if(probv>charactermin and len(self.character) < 256):
-                    self.character += dimname[j] + " diff too large prob " + " " + str(round(probv,5)) + " s/l " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))
+                    self.character +=  "&" +  dimname[j] + " diff too large prob " + " " + str(round(probv,5)) + " s/l " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))
                 prob += probv
             elif(istate[j] < imin[j]):
-                probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);                
+                probv =  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);                
                 if(probv>charactermin and len(self.character) < 256):
-                    self.character += dimname[j] + " diff too small prob " + " " + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
+                    self.character +=  "&" +  dimname[j] + " diff too small prob " + " " + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
                 prob += probv
         
 
@@ -762,19 +740,175 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,len(istate),1):
             if(istate[j] > imax[k]):
-                probv =  self.wcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);                
+                probv =  self.awcdf(abs(istate[j]),imax[j],iscale[j],ishape[j]);                
                 if(probv>charactermin and len(self.character) < 256):
-                    self.character += " " + str(dimname[k]) + " diff too large, prob " + " "
+                    self.character +=  "&" +  " " + str(dimname[k]) + " diff too large, prob " + " "
                     + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))
                     prob += probv
             elif(istate[j] < imin[k]):
-                probv =  self.wcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);                
+                probv =  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);                
                 if(probv>charactermin and len(self.character) < 256):
-                    self.character += " " + str(dimname[k]) + " diff too small, prob " + " "
+                    self.character +=  "&" +  " " + str(dimname[k]) + " diff too small, prob " + " "
                     + str(round(probv,5)) + " s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
                 prob += probv
                 k = k +1
                 if(k==19): k=13;   #reset for next block
+        self.character  += ";"                
+
+        if(prob > 1e-2):
+            if(prob > 1): prob = 1
+            self.consecutivedynamic = min(self.consecutivedynamic+1,self.maxconsecutivefailthresh+2)
+        else:
+            self.consecutivedynamic =0
+
+
+#        if(prob > charactermin): print("DProb @step/prob/char =",  self.cnt, prob, self.character)
+#        pdb.set_trace()
+        return prob
+
+
+
+
+        # get probability differene froom initial state
+    def istate_diff_G_prob(self,actual_state):
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,
+                 " Cart Vel x" , " Cart Vel y" , " Cart Vel z ",
+                 " Pole x" , " pole y" , " Pole z" ," Pole w" ,
+                 " Pole Vel x" , " Pole Vel y" , " Pole Vel z" ,
+                 " Block x" , " Block y" , " Block x" ,
+                 " Block Vel x" , " Block Vel y" , " Block Vel z" ,
+                 " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+        
+        #load mean/std from training..  
+        #if first time load up data.. 
+        if(self.imean is None):
+#            pdb.set_trace()
+            #abuse tha terms since we are tryng to share code with  EVT version
+            self.imean = np.array([-3.88847920e-02,  1.79388544e-02,  0.00000000e+00, -8.32127574e-05,
+                                5.61661668e-05,  0.00000000e+00, -1.52076385e-04, -1.22921416e-05,
+                                9.18328334e-05,  9.99950191e-01, -2.47030594e-05,  2.25482903e-04,
+                                3.81943611e-06, -3.34521356e-03, -3.63842781e-02,  5.03422818e+00,
+                                -1.33613935e-02, -3.96377125e-02,  3.47097780e-03, -5.00000000e+00,
+                                -5.00000000e+00,  0.00000000e+00,  5.00000000e+00, -5.00000000e+00,
+                                0.00000000e+00,  5.00000000e+00,  5.00000000e+00,  0.00000000e+00,
+                                -5.00000000e+00,  5.00000000e+00,  0.00000000e+00, -5.00000000e+00,
+                                -5.00000000e+00,  1.00000000e+01,  5.00000000e+00, -5.00000000e+00,
+                                1.00000000e+01,  5.00000000e+00,  5.00000000e+00,  1.00000000e+01,
+                                -5.00000000e+00,  5.00000000e+00,  1.00000000e+01])
+
+
+            #adjusted based on code.. 
+            self.istd = np.array([1.70842105e+00, 1.72660247e+00, 1.00000000e-06, 1.14153952e-02,
+                                  1.14772434e-02, 1.00000000e-06, 5.79354090e-03, 5.75740406e-03,
+                                  5.73292428e-03, 2.60735246e-05, 1.21789231e-02, 1.21918190e-02,
+                                  1.96198184e-04, 2.32131483e+00, 2.33097704e+00, 2.29533051e+00,
+                                  7.97934966e+00, 7.97332509e+00, 8.02280604e+00, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06, 1.00000000e-06,
+                                  1.00000000e-06, 1.00000000e-06, 1.00000000e-06])
+
+
+
+        imean = self.imean            
+        istd = self.istd
+        
+        initprob=0  # assume nothing new in world
+
+        cart_pos = [actual_state['cart']['x_position'],actual_state['cart']['y_position'],actual_state['cart']['z_position']]
+        cart_pos = np.asarray(cart_pos)
+
+        charactermin=1e-2
+        
+        istate = self.format_istate_data(actual_state)
+        # do base state for cart(6)  and pole (7) 
+        for j in range (13):
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                initprob += probv
+                initprob = max(initprob,probv)                
+                self.character +=  "&" +   str(dimname[j]) + " init out of range  " + str(round(istate[j],3)) +" " + str(round(imean[j],3)) +" "  + str(round(istd[j],3)) +" " + str(round(probv,3))
+
+        wallstart= len(istate) - 24                    
+        k=13 # for name max/ame indixing where we have only one block
+        for j in range (13,wallstart,1):
+            if("Wall"  in str(dimname[j])): break
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                initprob += probv
+                initprob = max(initprob,probv)                
+                self.character +=  "&" +   str(dimname[j]) + " block init out of range  " + str(round(istate[j],3)) +" " + str(round(imean[j],3)) +" "  + str(round(istd[j],3)) +" " + str(round(probv,3))
+            k = k +1
+            if(k==19): k=13;   #reset for next block
+        self.character  += ";"
+
+        if(initprob >1): initprob = 1
+
+        if(initprob > 1e-4):
+             self.consecutiveinit += 1
+             if(self.uccscart.tbdebuglevel>1):             
+                 print("Initprob cnt char ", initprob, self.cnt,self.character)
+        else:
+            self.consecutiveinit =0
+        return initprob
+
+    
+
+
+    # get probability differene froom continuing state difference
+    def cstate_diff_G_prob(self,cdiff):
+        dimname=[" Cart x" , " Cart y" , " Cart z" ,  " Cart Vel x" , " Cart Vel y" , " Cart Vel z" ,  " Pole x" , " pole y" , " Pole z" ," Pole w" ,  " Pole Vel x" , " Pole Vel y" , " Pole Vel z" , " Block x" , " Block y" , " Block x" ,  " Block Vel x" , " Block Vel y" , " Block Vel z" , " Wall 1x" ," Wall 1y" ," Wall 1z" , " Wall 2x" ," Wall 2y" ," Wall 2z" , " Wall 3x" ," Wall 3y" ," Wall 3z" , " Wall 4x" ," Wall 4y" ," Wall 4z" , " Wall 5x" ," Wall 5y" ," Wall 5z" , " Wall 6x" ," Wall 6y" ," Wall 6z" , " Wall 8x" ," Wall 8y" ," Wall 8z" , " Wall 9x" ," Wall 9y" ," Wall 9z" ]
+
+        if(self.dmean is None):        
+        
+            #load data from triningn
+            self.dmean =    np.array([-3.13321142e-07,  2.76174424e-05,  0.00000000e+00,
+                                      -3.22495249e-05,-4.54427372e-05,  0.00000000e+00,
+                                      -1.96683762e-06,  4.17344353e-06,-3.58822868e-06,  1.24106557e-04,
+                                      -1.90599960e-03,  6.85632951e-04, 2.24843167e-03,
+                                      -2.08509736e-06, -1.15790544e-05,  9.71314184e-05,
+                                      -1.04261269e-04, -5.78904334e-04,  4.85657617e-03])
+            self.dstd =    np.array([-3.13321142e-07,  2.76174424e-05,  1.00000000e-06,
+                                     -3.22495249e-05, -4.54427372e-05,  1.00000000e-06,
+                                     -1.96683762e-06,  4.17344353e-06,-3.58822868e-06,  1.24106557e-04,
+                                     -1.90599960e-03,  6.85632951e-04, 2.24843167e-03,
+                                     -2.08509736e-06, -1.15790544e-05,  9.71314184e-05,
+                                     -1.04261269e-04, -5.78904334e-04,  4.85657617e-03])
+
+
+        imean = self.dmean;
+        istd = self.dstd;
+
+        
+        if(self.cnt < self.skipfirstNscores): return 0;    #need to be far enough along to get good prediciton
+
+        prob=0  #where we accumualte probability
+        charactermin=1e-2
+        istate = cdiff
+        # do base state for cart(6)  and pole (7) 
+        for j in range (13):        
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+#                prob += probv
+                prob = max(prob,probv)                
+                self.character +=  "&" +   str(dimname[j]) + " dyn out of range  " + str(round(istate[j],6)) +" " + str(round(imean[j],6)) +" "  + str(round(istd[j],6)) +" " + str(round(probv,3))
+
+        
+
+        #no walls in dtate diff just looping over blocks
+        
+        k=13 # for name max/ame indixing where we have only one block
+        for j in range (13,len(istate),1):
+            if("Wall"  in str(dimname[j])): break
+            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            if(probv>charactermin and len(self.character) < 256):
+                prob += probv
+                prob = max(prob,probv)                
+                self.character +=  "&" +   str(dimname[j]) + " dyn out of range  " + str(round(istate[j],6)) +" " + str(round(imean[j],6)) +" "  + str(round(istd[j],6)) +" " + str(round(probv,3))
+            k = k +1
+            if(k==19): k=13;   #reset for next block
         self.character  += ";"                
 
         if(prob > 1e-2):
@@ -787,7 +921,458 @@ class UCCSTA2():
 #        if(prob > charactermin): print("DProb @step/prob/char =",  self.cnt, prob, self.character)
 #        pdb.set_trace()
         return prob
+
+
     
+
+
+    def world_change_prob(self,settrain=False):
+
+        # don't let first episodes  impact world change.. need stabilsied scores/probabilites
+        if(self.episode<2):
+            self.worldchangedacc = 0
+            self.worldchangeblend = 0
+            return self.worldchangedacc            
+        
+        
+        mlength = len(self.problist)
+        mlength = min(self.scoreforKL,mlength)
+        # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
+
+        previous_wc = self.worldchangedacc
+
+        window_width=11
+        if (len(self.perflist) >2*self.scoreforKL):   #look at list of performacne to see if its deviation from training is so that is.. skip more since it needs to be stable for window smoothing+ mean/variance computaiton
+            #get smoothed performance 
+            cumsum_vec = np.cumsum(np.insert(self.perflist, 0, 0))
+            smoothed = (cumsum_vec[window_width:] - cumsum_vec[:-window_width]) / window_width
+            pmu = np.mean(smoothed[:-self.scoreforKL])  # we skip first/iniiprob... it is used elsehwere. 
+            psigma = np.std(smoothed[:-self.scoreforKL])
+            
+            # if(pmu > self.mean_perf):     #if we want only  KL for those what are worse.. 
+            #     PerfKL = 0 
+            # else:
+            PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf, self.stdev_perf)
+
+            # If there is still too much variation (too many FP) in the variance in the small window so we use stdev and just new mean this allows smaller (faster) window for detection. 
+            # PerfKL = self.kullback_leibler(pmu, self.stdev_perf, self.mean_perf, self.stdev_perf)
+        else:
+            PerfKL = 0
+
+        
+        
+
+        if(mlength > 1) :
+            mu = np.mean(self.problist[0:mlength-1])
+            sigma = np.std(self.problist[0:mlength-1])
+        else:
+            mu = sigma = 0
+            self.debugstring = '   ***Zero Lenth World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
+                round(self.worldchangedacc,5),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+            print(self.debugstring)
+            
+            self.worldchanged = self.worldchangedacc
+            return self.worldchangedacc;
+       
+        if(settrain):
+           self.mean_train = mu;
+           self.stdev_train = sigma;
+#           print("Set  world change train mu and sigma", mu, sigma)
+           self.worldchanged = 0
+           return 0;
+        if( self.mean_train == 0):
+           self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
+           self.stdev_train = 0.006
+           self.prob_scale = 2  # probably do need to scale but not tested sufficiently to see what it needs.
+
+        self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
+        self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
+            round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+            round(self.stdev_train,3) ,round(self.KL_val,5), round(self.KL_threshold,5), "\n", [round(num,2) for num in self.scorelist])
+        if (self.debug):
+            print(self.debugstring)
+           
+
+        if (len(self.problist) < 198):   #for real work
+            self.consecutivesuccess=0            
+            self.failcnt += 1
+            if( self.consecutivefail >0):
+                self.consecutivefail = min(self.consecutivefail+1, self.maxconsecutivefailthresh+2)
+                if(self.consecutivefail > self.maxconsecutivefail):
+                    self.maxconsecutivefail = self.consecutivefail
+                    if(self.maxconsecutivefail > self.maxconsecutivefailthresh):
+                        self.worldchangedacc = 1
+                        self.character +=  "&" +  "#####? Uncontrollable world -- too many consecutive failures.  Guessing actions were remapped/perturbed but will take a while to confirm ##### "                         
+                        
+            else: self.consecutivefail=1
+
+            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
+            self.debugstring = '   ***Short World Change Acc={}, Failcnt= {} Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
+                round(self.worldchangedacc,3),self.failcnt, [round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+                round(self.stdev_train,3) ,round(self.KL_val,5), round(self.KL_threshold,5), "\n", [round(num,2) for num in self.scorelist])
+            if (self.debug):
+                print(self.debugstring)
+        else:
+            self.consecutivefail=0
+            self.consecutivesuccess += 1
+            if(self.consecutivesuccess > self.maxconsecutivesuccess):
+                self.maxconsecutivesuccess = self.consecutivesuccess
+        
+            
+        if (sigma == 0):
+            if (mu == self.mean_train):
+                self.debugstring = '      BadSigma World Change Acc={}, Prob ={},mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}         scores{}'.format(
+                    round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
+                    round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
+                print(self.debugstring)                
+                return 0;
+
+            else:
+                sigma = self.stdev_train
+
+
+            #        pdb.set_trace()
+        if(mu < self.mean_train):   #no point computing if world differences are smaller, it may be "much" smaller but that is okay
+            self.KL_val = 0   
+        else: 
+            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
+
+
+        #KLscale = (self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start 1 down to  1/2
+        #        KLscale = min(1, 4*(1 + self.episode) / num_epochs)  # decrease scale (increase sensitvity)  from start 1 down to  1/2
+        KLscale = 1
+        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-1)))  ## if we have only one dynic failure,  this will scale it by .25  but it doubles each time we get another dynamic failrue in a row
+        perfprob = min(1.0, self.PerfScale * PerfKL)  #make this smaller since it is slowly varying and  added every time.. less sensitive (good for FP avoid, sloer l
+
+        #if we had  collisons and not consecuretive valiures, we don't use this episode for dynamic probability .. collisions are not well predicted
+        tlen = min(self.scoreforKL,len(self.uccscart.char))
+                   
+
+        #random collisions can occur and they destroy probability computation so ignore them
+        if( self.uccscart.char.count("CP") > 4 and "attack" not in self.uccscart.char and self.consecutivefail < 2):
+            prob = 0
+        else:
+            prob = min(1,(dprob+perfprob)/2) # use average of dynamic and long-term performance probabilities.
+
+
+                # infrequent checkto outputting cnts for setinng up wbls for actual cnts to use to see if we whould update world change
+        if((self.episode+1) % 10 == 0):
+            cntval= np.zeros(15)
+            cntprob= np.zeros(15)            
+            i=0
+            scale= 1./int((self.episode+10) )
+            cntval[i] = initcnt = scale*self.trialchar.count("init")
+            i+= 1; cntval[i] = blockcnt = scale*self.trialchar.count("Block")
+            i+= 1; cntval[i] =blockvelcnt = scale*self.trialchar.count("Block Vel")                
+            i+= 1; cntval[i] =polecnt = scale*self.trialchar.count("Pole")
+            i+= 1; cntval[i] =cartcnt = scale*self.trialchar.count("Cart")
+            i+= 1; cntval[i] =smallcnt = scale*self.trialchar.count("Cart")
+            i+= 1; cntval[i] =largecnt = scale*self.trialchar.count("Cart")                                
+            i+= 1; cntval[i] =diffcnt = scale*self.trialchar.count("diff")
+            i+= 1; cntval[i] =velcnt = scale*self.trialchar.count("Vel")                                
+            i+= 1; cntval[i] =failcnt = scale*self.trialchar.count("High")
+            i+= 1; cntval[i] =attcart = scale*self.trialchar.count("attacking cart")
+            i+= 1; cntval[i] =aimblock = scale*self.trialchar.count("aiming")
+            i+= 1; cntval[i] =parallelblock= scale*self.trialchar.count("parallel")
+            i+= 1; cntval[i] =SAcnt= scale*self.trialchar.count("SA")
+            i+= 1; cntval[i] =HAcnt= scale*self.trialchar.count("HA")                                                                                        
+
+
+            cntwbl = np.array([ [ 1.44423424, -0.19000001,  0.14582359],
+                                [ 0.77655005, -0.13000001,  0.07412372],
+                                [ 1.4183835 , -0.08000001,  0.06339877],
+                                [ 1.3369761 , -0.06000001,  0.04456476],
+                                [ 0.84213063, -0.06000001,  0.03392788],
+                                [ 0.84213063, -0.06000001,  0.03392788],
+                                [ 1.60734717, -0.10000001,  0.07514313],
+                                [ 1.37548511, -0.16000001,  0.11283754],
+                                [ 1.18602747, -0.11000001,  0.0627653 ],
+                                [ 1.70217044, -0.06000001,  0.05617951],
+                                [ 1.50681693, -0.06000001,  0.05125134],
+                                [ 1.50681693, -0.06000001,  0.05125134],
+                                [ 0.60246664, -0.08000001,  0.0598179 ]
+                              ] )
+
+            cntmax=0
+            for i in range(12):
+                cntprob[i] = self.wcdf(-cntval[i],cntwbl[i,1],cntwbl[i,0],cntwbl[i,2])
+                cntmax = max (cntmax,cntprob[i])
+
+
+            if(cntmax > .1): cntmax=.1;  #limit impact this this is really a cumulative test on things we have already seen
+            if(prob < cntmax):
+                self.character += 'Using detect as prob. detectcnts: {} dectprob {} '.format(cntval,cntprob)
+                prob = max(prob,cntmax)
+            else: self.character += 'detectcnts: {} dectprob {} '.format(cntval,cntprob)
+                
+            
+            
+            
+        if (len(self.problist) < self.scoreforKL):
+            self.worldchanged = prob * len(self.problist)/(self.scoreforKL)
+        else:
+            self.worldchanged = prob
+            
+
+#####!!!!!##### end GLue CODE for EVT
+
+#####!!!!!#####  Domain Independent code tor consecurtiv efailures
+        failinc = 0
+        #if we are beyond KL window all we do is watch for failures to decide if we world is changed
+        if(self.episode > self.scoreforKL+1):
+            faildiff = self.failcnt/(self.episode+1)-self.failfrac            
+            if(faildiff > 0):
+                self.character +=  "&" +  "High FailFrac=" + str(self.failcnt/(self.episode+1))
+                failinc = max(0,  ((faildiff)*self.failscale)) 
+                failinc *= min(1,(self.episode - self.scoreforKL)/self.scoreforKL)   #Ramp it up slowly as its more unstable when it first starts at scoreforKL
+                failinc = min(1,failinc)
+
+        #world change blend  can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
+        if(prob < .1 and  self.worldchangedacc > .1 and self.worldchangedacc <.5) : # blend wo  i.e. decrease world change accumulator to limit impact of randome events
+            self.worldchangeblend = min(1, (        self.blenddownrate *self.worldchanged + (1-self.blenddownrate) * self.worldchangeblend ))
+            self.worldchangedacc = min(1,self.worldchangeblend+failinc)            
+            self.debugstring = "BlendDown "                
+
+        else:
+            #worldchange acc cannot not go down.. it includes max of old value..
+            self.worldchangeblend = min(1, (        self.blenduprate *self.worldchanged + (1-self.blenduprate) * self.worldchangeblend ))
+
+            self.debugstring = "Blendup "                                
+            # we add in an impusle each step if the first step had initial world change.. so that accumulates over time
+
+            if(len(self.problist) > 0 ) :
+                self.worldchangedacc = min(1,self.problist[0]*(self.initprobscale * 2**(self.consecutiveinit-2)) + max(self.worldchangedacc,self.worldchangeblend+failinc))
+            else:
+                self.worldchangedacc = min(1,max(self.worldchangedacc,self.worldchangeblend+failinc))
+        self.debugstring += '    mu={}, sig {}, mean {} stdev{} vals {} {} thresh {} '.format(
+            round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n")
+            #        print(self.debugstring)
+        self.character +=  " " +    self.debugstring
+#####!!!!!#####  End Domain Independent code tor consecurtiv efailures
+
+
+#####!!!!!#####  Start API code tor reporting
+        self.character += 'World Change Acc={} {} {}, D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(failinc,3), round(dprob,3), round(perfprob,3))
+        self.trialchar += self.character
+
+
+
+
+        if(previous_wc < .5 and self.worldchangedacc        >= .5):
+            self.character += "#!#!#!  World change Detected #!#!#!  "
+
+        # if world changed an dour performance is below .8  we start using avoidance reaction
+        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 65) :
+                self.uccscart.use_avoid_reaction=True            
+
+
+            
+
+        if(self.episode == 199):
+            initcnt = self.trialchar.count("init")
+            blockcnt = self.trialchar.count("Block")
+            blockvelcnt = self.trialchar.count("Block Vel")                
+            polecnt = self.trialchar.count("Pole")
+            cartcnt = self.trialchar.count("Cart")
+            smallcnt = self.trialchar.count("Cart")
+            largecnt = self.trialchar.count("Cart")                                
+            diffcnt = self.trialchar.count("diff")
+            velcnt = self.trialchar.count("Vel")                                
+            failcnt = self.trialchar.count("High")
+            attcart = self.trialchar.count("attacking cart")
+            aimblock = self.trialchar.count("aiming")
+            parallelblock = self.trialchar.count("parallel")                                                                
+
+            if(self.worldchangedacc        <.5):
+                self.character += "##### @@@@@ Ending Characterization of potential observed novelities, but did not declare world novel  with  world change prob: " +str(self.worldchangedacc)
+            if(self.worldchangedacc        >= .5):                
+                self.character += "##### Ending Characterization of observed novelities in novel world   with  world change prob: " +str(self.worldchangedacc)
+            if(initcnt > diffcnt ):
+                self.character += " Inital world off and "
+            if(diffcnt > initcnt ):
+                self.character += " Dynamics of world off and "                    
+            if(blockcnt > polecnt and blockcnt > cartcnt ):                    
+                self.character += " Dominated by Blocks with"
+            if(cartcnt > polecnt and cartcnt >  blockcnt   ):                    
+                self.character += " Dominated by Cart with"
+            if(polecnt > cartcnt and polecnt > blockcnt ):                    
+                self.character += " Dominated by Pole with"
+            self.character += " Velocity Violations " + str(velcnt)                                                                                                
+            self.character += "; Agent Velocity Violations " + str(blockvelcnt)                
+            self.character += "; Cart Total Violations " + str(cartcnt)
+            self.character += "; Pole Total Violations " + str(polecnt)
+            self.character += "; Speed/position too small Violations " + str(smallcnt)
+            self.character += "; Speed/position too  large Violations " + str(largecnt)                                                                                                            
+            self.character += "; Attacking Cart Violations " + str(attcart)
+            self.character += "; Blocks aiming at blocks " + str(aimblock)                                                                                                            
+            self.character += "; Coordinated block motion " + str(parallelblock)
+            self.character += "; Agent Total Violations " + str(blockcnt + parallelblock + attcart + blockvelcnt)
+            self.character += ";  Violations means that aspect of model had high accumulated EVT model probability of exceeding normal training  "
+            if(failcnt > 10):
+                self.character += " Uncontrollable dynamics for unknown reasons .. Failure Frequencey too high compared to training"
+            self.character += "#####"
+
+
+                
+
+        return self.worldchangedacc
+
+    def process_instance(self, actual_state):
+        #        pertub = (self.cnt > 100) and (self.maxprob < .5)
+        pertub = False
+        if(self.saveframes):        
+            image= actual_state['image']
+        self.character += self.uccscart.char  #copy overy any information about collisions
+#        if(len(self.uccscart.char)>0): print("Process inst with char", self.uccscart.char)
+        probability = self.uccscart.wcprob  # if cart control detected something we start from that estiamte 
+
+
+#        if("CP in        self.uccscart.char):
+#            self.uccscart.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
+        self.scorelist.append(self.uccscart.lastscore)        
+        self.uccscart.char = ""  #reset any information about collisions
+        action, expected_state = self.takeOneStep(actual_state,
+                                                  self.uccscart,
+                                                  pertub)
+
+        # we can now fill in previous history's actual 
+        if(self.uccscart.force_action >=0 and self.uccscart.force_action < 5):
+            self.uccscart.action_history[self.uccscart.force_action][1] = self.uccscart.format_data(actual_state)        
+
+        #we don't reset in first few steps because random start may be a bad position yielding large score
+        #might be were we search for better world parmaters if we get time for that
+        #TB.. this does not seem to be needed as reset hasppend when searching for best action 
+#        if(self.cnt > self.skipfirstNscores and self.uccscart.lastscore > self.scoretoreset):
+#            print("At step ", self.cnt, "resettin to actual because of a large score", self.uccscart.lastscore)
+#            self.uccscart.reset(actual_state)
+
+
+
+        data_val = self.prev_predict
+        self.prev_predict = expected_state
+        self.prev_state = actual_state        
+        self.cnt += 1
+        if (self.cnt == 1):  # if first run cannot check dynamics just initial state
+            if(self.uccscart.tbdebuglevel>0):            
+                self.debugstring = 'Testing initial state for obvious world changes: actual_state={}, next={}, dataval={}, '.format(actual_state,
+                                                                                                                                    expected_state,
+                                                                                                                                    data_val)
+            initprob= self.istate_diff_EVT_prob(actual_state)
+
+            #update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
+            self.maxprob = max(initprob, self.maxprob)
+            if(initprob >0):
+                self.problist.append(initprob)  # add a very big bump in prob space so KL will see it
+                if(self.uccscart.tbdebuglevel>0):
+                    print('Init probability checks set prob to 1 with actual_state={}, next={}, dataval={}, problist={}, '.format(actual_state,
+                                                                                                                                expected_state,
+                                                                                                                                data_val,
+                                                                                                                                self.problist))
+
+                # if (self.debug):
+                #     self.debugstring = 'Early Instance: actual_state={}, next={}, dataval={}, '.format(actual_state,expected_state,data_val)
+                self.prev_action = action
+                return action
+        else:
+
+            data_val = self.format_data(data_val)
+            prob_values = []
+            actual_state = self.format_data(actual_state)
+
+            difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
+            current = difference_from_expected
+
+
+            diffprobability = self.prob_scale * self.cstate_diff_EVT_prob(current)
+            probability += diffprobability
+            #            pdb.set_trace()            
+            #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
+            #            if(((self.episode < 50) and (self.failcnt/(self.episode+1)-1.5* self.failfrac) > -1000) and self.perm_search< 20):
+            # if(True):  #idea not working 
+            #     self.perm_search +=1 
+            #     #force each possible action into our history as we need them to get mapping ..  this effects the get_best_*_action functions which get the actions and story history
+            #     if(self.uccscart.force_action < 5):
+            #         self.uccscart.force_action +=  1
+            #     else:
+            #         actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
+            #         probability += actprob
+            #         if(actprob>0): self.character += "Action search with prob " + str(actprob)
+            #         pdb.set_trace()
+
+#####!!!!!#####  end GLUE/API code EVT-
+#####!!!!!#####  Start domain dependent adaption
+
+            # if we have not had a lot successess in a row (sign index is right)   and declared world changed and  we ahve enough failures then try another index
+            if( False and self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
+                # try the next permuation.. see if we can reduce the fail rate
+                self.uccscart.actions_permutation_index += 1
+                if(self.uccscart.actions_permutation_index > (len(self.uccscart.actions_plist)-1)):
+                    self.uccscart.actions_permutation_index = 0                    
+                self.character += "#####? Too many failures.  Guessing actions were mapped/perturbed.. Now using pertubation " 
+                self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+                self.character += "if this is the last time you see this message and performance is now good then characterize this as the action permutation in placeof the  uncontrollable characateration provided after world change provided earlier #####?"
+                print(self.character)
+                self.consecutivefail = 0
+            
+
+
+
+
+            probability = min(1,probability)
+            self.problist.append(probability)
+
+
+            self.maxprob = max(probability, self.maxprob)
+            # we can also include the score from control algorithm,   we'll have to test to see if it helps..
+            #first testing suggests is not great as when block interfer it raises score as we try to fix it but then it seems novel. 
+            #                self.maxprob=min(1,self.maxprob +  self.uccscart.lastscore / self.scalelargescores)
+            if (self.cnt > 0 and len(self.problist)>0 ):
+                self.meanprob = np.mean(self.problist)
+
+            if (self.uccscart.tbdebuglevel>2):
+                self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
+                    self.cnt, actual_state, expected_state, current, probability)
+                print("prob/probval", probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob)  
+            
+        self.prev_action = action
+
+        if(self.saveframes):        
+#            image = feature_vector['image']  #done at begining now
+            if image is None:
+#                self.log.error('No image received. Did you set use_image to True in TA1.config '
+#                               'for cartpole?')
+                print('No image received. Did you set use_image to True in TA1.config '
+                      'for cartpole?')            
+                found_error = True
+                
+            else:
+                s = 640.0 / image.shape[1]
+                dim = (640, int(image.shape[0] * s))
+                resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                org = (10, 30)
+                fontScale = .5
+                # Blue color in BGR
+                if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
+                else  :            color = (0,0,255)
+                thickness = 2
+                fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
+                wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.character[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
+                outimage = cv2.putText(resized, wstring, org, font,
+                                       fontScale, color, thickness, cv2.LINE_AA)
+                cv2.imwrite(fname, outimage)
+
+                self.framecnt += 1
+                if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
+                    self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
+                    print(self.debugstring)
+
+                
+        
+        return action
+
+
+
                     
     def mark_tried_actions(self,action, paction):
         '''  mark permutaiton indicies where the current action is in the perturbed action slot has been tried and did not work (used) '''
@@ -803,47 +1388,46 @@ class UCCSTA2():
         If here action_history should be populated with all actions  
         '''
 
-        
+        return 0        
+#####!!!!!#####  end domain dependent adaption
 
-        '''
-        #this was an attempt at choosing pertubation based on minimizing the overall probbability  of differences in transitions.. but it did not work well enough.. identifies some but too much noise.  
-        # Maybe revisit when predictions are better
-        diffprobability = np.zeros((5,5))
-        statediff = np.zeros((5,5,13))        
-        for action in  range(5):
-            for index in range(5):
-                statediff[action][index] = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
-                diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff[action][index])
+#         #this was an attempt at choosing pertubation based on minimizing the overall probbability  of differences in transitions.. but it did not work well enough.. identifies some but too much noise.  
+#         # Maybe revisit when predictions are better
+#         diffprobability = np.zeros((5,5))
+#         statediff = np.zeros((5,5,13))        
+#         for action in  range(5):
+#             for index in range(5):
+#                 statediff[action][index] = self.uccscart.action_history[action][0] - self.uccscart.action_history[index][1] 
+#                 diffprobability[action][index] = self.prob_scale * self.cstate_diff_prob(statediff[action][index])
 
-        pdb.set_trace()                
-        plen = len(self.uccscart.actions_plist)
-        probs = np.zeros(plen)
-        for index in range(plen):
-            probs[index] = (diffprobability[0][self.uccscart.actions_plist[index][0]]
-                            +diffprobability[1][self.uccscart.actions_plist[index][1]]
-                            +diffprobability[2][self.uccscart.actions_plist[index][2]]
-                            +diffprobability[3][self.uccscart.actions_plist[index][3]]
-                            +diffprobability[4][self.uccscart.actions_plist[index][4]])
+#         pdb.set_trace()                
+#         plen = len(self.uccscart.actions_plist)
+#         probs = np.zeros(plen)
+#         for index in range(plen):
+#             probs[index] = (diffprobability[0][self.uccscart.actions_plist[index][0]]
+#                             +diffprobability[1][self.uccscart.actions_plist[index][1]]
+#                             +diffprobability[2][self.uccscart.actions_plist[index][2]]
+#                             +diffprobability[3][self.uccscart.actions_plist[index][3]]
+#                             +diffprobability[4][self.uccscart.actions_plist[index][4]])
             
 
-        index = np.argmin(probs)
-        minprob = np.min(probs)
-        pdb.set_trace()
-        #if there is a pertubation with lower overall error than        
-        if(minprob < probs[self.uccscart.actions_permutation_index]):
-            self.uccscart.actions_permutation_index = index   #keep that index
-            self.character += "Actions were perturbed.. Now using pertubation " 
-            self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-            print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index", self.uccscart.actions_permutation_index )
-            self.perm_search = 100   #mark it found
-            return 1
-        else: 
-            print("No pertubation needed was better  than current perm", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],
-                  "with index", self.uccscart.actions_permutation_index )                       
-            return 0
-
-'''        
+#         index = np.argmin(probs)
+#         minprob = np.min(probs)
+#         pdb.set_trace()
+#         #if there is a pertubation with lower overall error than        
+#         if(minprob < probs[self.uccscart.actions_permutation_index]):
+#             self.uccscart.actions_permutation_index = index   #keep that index
+#             self.character += "Actions were perturbed.. Now using pertubation " 
+#             self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
+#             print("Good pertubation ", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],"with index", self.uccscart.actions_permutation_index )
+#             self.perm_search = 100   #mark it found
+#             return 1
+#         else: 
+#             print("No pertubation needed was better  than current perm", self.uccscart.actions_plist[self.uccscart.actions_permutation_index],
+#                   "with index", self.uccscart.actions_permutation_index )                       
+#             return 0
             
+
 
 
 #first  try at action remapping 
@@ -913,313 +1497,3 @@ class UCCSTA2():
 
 
 
-    def world_change_prob(self,settrain=False):
-
-        # don't let first episodes  impact world change.. need stabilsied scores/probabilites
-        if(self.episode<2):
-            self.worldchangedacc = 0
-            self.worldchangeblend = 0
-            return self.worldchangedacc            
-        
-        
-        mlength = len(self.problist)
-        mlength = min(self.scoreforKL,mlength)
-        # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
-
-        previous_wc = self.worldchangedacc
-
-        window_width=11
-        if (len(self.perflist) >2*self.scoreforKL):   #look at list of performacne to see if its deviation from training is so that is.. skip more since it needs to be stable for window smoothing+ mean/variance computaiton
-            #get smoothed performance 
-            cumsum_vec = np.cumsum(np.insert(self.perflist, 0, 0))
-            smoothed = (cumsum_vec[window_width:] - cumsum_vec[:-window_width]) / window_width
-            pmu = np.mean(smoothed[:-self.scoreforKL])
-            psigma = np.std(smoothed[:-self.scoreforKL])
-            
-            # if(pmu > self.mean_perf):     #if we want only  KL for those what are worse.. 
-            #     PerfKL = 0 
-            # else:
-            PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf, self.stdev_perf)
-
-            # If there is still too much variation (too many FP) in the variance in the small window so we use stdev and just new mean this allows smaller (faster) window for detection. 
-            # PerfKL = self.kullback_leibler(pmu, self.stdev_perf, self.mean_perf, self.stdev_perf)
-        else:
-            PerfKL = 0
-
-        
-        
-
-        if(mlength > 1) :
-            mu = np.mean(self.problist[1:mlength-1])
-            sigma = np.std(self.problist[1:mlength-1])
-        else:
-            mu = sigma = 0
-            self.debugstring = '   ***Zero Lenth World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} val {} thresh {} {}        scores{}'.format(
-                round(self.worldchangedacc,5),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
-            print(self.debugstring)
-            
-            self.worldchanged = self.worldchangedacc
-            return self.worldchangedacc;
-       
-        if(settrain):
-           self.mean_train = mu;
-           self.stdev_train = sigma;
-#           print("Set  world change train mu and sigma", mu, sigma)
-           self.worldchanged = 0
-           return 0;
-        if( self.mean_train == 0):
-           self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
-           self.stdev_train = 0.006
-           self.prob_scale = 2  # probably do need to scale but not tested sufficiently to see what it needs.
-
-        self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
-        self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
-            round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
-            round(self.stdev_train,3) ,round(self.KL_val,5), round(self.KL_threshold,5), "\n", [round(num,2) for num in self.scorelist])
-        if (self.debug):
-            print(self.debugstring)
-           
-
-        #        if (len(self.problist) < 3):
-        #            print("Very short, world must have changed")
-        #            return 1;
-        if (len(self.problist) < 198):   #for real work
-            self.consecutivesuccess=0            
-            self.failcnt += 1
-            if( self.consecutivefail >0):
-                self.consecutivefail += 1
-                if(self.consecutivefail > self.maxconsecutivefail):
-                    self.maxconsecutivefail = self.consecutivefail
-                    if(self.maxconsecutivefail > self.maxconsecutivefailthresh):
-                        self.worldchangedacc = 1
-                        self.character += "#####? Uncontrollable world -- too many consecutive failures.  Guessing actions were remapped/perturbed but will take a while to confirm ##### "                         
-                        
-            else: self.consecutivefail=1
-
-            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
-            self.debugstring = '   ***Short World Change Acc={}, Failcnt= {} Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
-                round(self.worldchangedacc,3),self.failcnt, [round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
-                round(self.stdev_train,3) ,round(self.KL_val,5), round(self.KL_threshold,5), "\n", [round(num,2) for num in self.scorelist])
-            if (self.debug):
-                print(self.debugstring)
-        else:
-            self.consecutivefail=0
-            self.consecutivesuccess += 1
-            if(self.consecutivesuccess > self.maxconsecutivesuccess):
-                self.maxconsecutivesuccess = self.consecutivesuccess
-        
-            
-        if (sigma == 0):
-            if (mu == self.mean_train):
-                self.debugstring = '      World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}         scores{}'.format(
-                    round(self.worldchangedacc,3),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
-                    round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
-                print(self.debugstring)                
-                return 0;
-
-            else:
-                sigma = self.stdev_train
-
-
-            #        pdb.set_trace()
-        if(mu < self.mean_train):   #no point computing if world differences are smaller, it may be "much" smaller but that is okay
-            self.KL_val = 0   
-        else: 
-            self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
-
-
-        #KLscale = (self.num_epochs + 1 - self.episode / 2) / self.num_epochs  # decrease scale (increase sensitvity)  from start 1 down to  1/2
-        #        KLscale = min(1, 4*(1 + self.episode) / num_epochs)  # decrease scale (increase sensitvity)  from start 1 down to  1/2
-        KLscale = 1
-        dprob = min(1.0, ((KLscale * self.KL_val) *  2**(self.consecutivedynamic-1)))  ## if we have only one dynic failure,  this will scale it by .25  but it doubles each time we get another dynamic failrue in a row
-        perfprob = min(1.0, self.PerfScale * PerfKL)  #make this smaller since it is slowly varying and  added every time.. less sensitive (good for FP avoid, sloer l
-
-        #if we had  collisons and not consecuretive valiures, we don't use this episode for dynamic probability .. collisions are not well predicted
-        if( "CPCP" in  self.uccscart.char and self.consecutivefail < 2):
-            prob = 0
-        else:
-            prob = min(1,(dprob+perfprob)/2) # use average of dynamic and long-term performance probabilities.
-
-            
-        if (len(self.problist) < self.scoreforKL):
-            self.worldchanged = prob * len(self.problist)/(self.scoreforKL)
-        else:
-            self.worldchanged = prob
-            
-
-        #world change blend  can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
-        #worldchange acc cannot not go down.. it includes max of old value..
-        self.worldchangeblend = min(1, (        self.blendrate *self.worldchanged + (1-self.blendrate) * self.worldchangeblend ))
-        #final result is monotonicly increasing, and we add in an impusle each step if the first step had initial world change.. so that accumulates over time
-
-
-        failinc = 0
-        #if we are beyond KL window all we do is watch for failures to decide if we world is changed
-        if(self.episode > self.scoreforKL+1):
-            faildiff = self.failcnt/(self.episode+1)-self.failfrac            
-            if(faildiff > 0):
-                self.character += "High FailFrac=" + str(self.failcnt/(self.episode+1))
-                failinc = max(0,  ((faildiff)*self.failscale)) 
-                failinc *= min(1,(self.episode - self.scoreforKL)/self.scoreforKL)   #Ramp it up slowly as its more unstable when it first starts at scoreforKL
-                failinc = min(1,failinc)
-            
-        if(len(self.problist) > 0 ) :
-            self.worldchangedacc = min(1,self.problist[0]*(self.initprobscale * 2**(self.consecutiveinit-2)) + max(self.worldchangedacc,self.worldchangeblend+failinc))
-        else:
-            self.worldchangedacc = min(1,max(self.worldchangedacc,self.worldchangeblend+failinc))
-        self.debugstring = '      World Change Acc={}, KLprobs={},{}, mu={}, sig {}, mean {} stdev{} vals {} {} thresh {}  Problist ={}, {}  scores{}'.format(
-            round(self.worldchangedacc,3), round(dprob,3), round(perfprob,3),round(mu,3), round(sigma,3), round(self.mean_train,3),
-            round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n",[round(num,4) for num in self.problist],"\n", [round(num,2) for num in self.scorelist])
-
-        print(self.debugstring)                
-        self.character += 'World Change Acc={} {} {}, D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(failinc,3), round(dprob,3), round(perfprob,3))
-
-        if(previous_wc < .5):
-            self.trialchar += self.character
-            if(self.worldchangedacc        >= .5):
-                self.character = "##### Characterization of world change (at threshold):  "
-                initcnt = self.trialchar.count("init")
-                blockcnt = self.trialchar.count("Block")
-                blockvelcnt = self.trialchar.count("Block Vel")                
-                polecnt = self.trialchar.count("Pole")
-                cartcnt = self.trialchar.count("Cart")                                
-                diffcnt = self.trialchar.count("diff")
-                velcnt = self.trialchar.count("Vel")                                
-                failcnt = self.trialchar.count("High")                
-                if(initcnt > diffcnt ):
-                    self.character += " Inital world off and "
-                if(diffcnt > initcnt ):
-                    self.character += " Dynamics of world off and "                    
-                if(blockcnt > polecnt and blockcnt > cartcnt ):                    
-                    self.character += " Dominated by Blocks with"
-                if(cartcnt > polecnt and cartcnt >  blockcnt   ):                    
-                    self.character += " Dominated by Cart with"
-                if(polecnt > cartcnt and polecnt > blockcnt ):                    
-                    self.character += " Dominated by Pole with"
-                self.character += " Velocity Violations " + str(velcnt)                                                                                                
-                self.character += " Agent Velocity Violations " + str(blockvelcnt)                
-                self.character += " Agent Total Violations " + str(blockcnt)
-                self.character += " Cart Total Violations " + str(cartcnt)
-                self.character += " Pole Total Violations " + str(polecnt)
-                self.character += " Pole Total Violations " + str(polecnt)                                                                                            
-                self.character += " where violations means that aspect of model had high accumulated EVT model probability of exceeding normal training  "
-                if(failcnt > 10):
-                    self.character += " Uncontrollable dynamics for unknown reasons .. too many failures compared to training"
-                self.character += "#####"
-                
-
-        return self.worldchangedacc
-
-    def process_instance(self, actual_state):
-        #        pertub = (self.cnt > 100) and (self.maxprob < .5)
-        pertub = False
-        self.character += self.uccscart.char  #copy overy any information about collisions
-#        if(len(self.uccscart.char)>0): print("Process inst with char", self.uccscart.char)
-        probability = self.uccscart.wcprob  # if cart control detected something we start from that estiamte 
-
-
-#        if("CP in        self.uccscart.char):
-#            self.uccscart.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score. 
-        self.scorelist.append(self.uccscart.lastscore)        
-        self.uccscart.char = ""  #reset any information about collisions
-        action, expected_state = self.takeOneStep(actual_state,
-                                                  self.uccscart,
-                                                  pertub)
-
-        # we can now fill in previous history's actual 
-        if(self.uccscart.force_action >=0 and self.uccscart.force_action < 5):
-            self.uccscart.action_history[self.uccscart.force_action][1] = self.uccscart.format_data(actual_state)        
-
-        #we don't reset in first few steps because random start may be a bad position yielding large score
-        #might be were we search for better world parmaters if we get time for that
-        #TB.. this does not seem to be needed as reset hasppend when searching for best action 
-#        if(self.cnt > self.skipfirstNscores and self.uccscart.lastscore > self.scoretoreset):
-#            print("At step ", self.cnt, "resettin to actual because of a large score", self.uccscart.lastscore)
-#            self.uccscart.reset(actual_state)
-
-
-
-        data_val = self.prev_predict
-        self.prev_predict = expected_state
-        self.prev_state = actual_state        
-        self.cnt += 1
-        if (self.cnt == 1):  # if first run cannot check dynamics just initial state
-            self.debugstring = 'Testing initial state for obvious world changes: actual_state={}, next={}, dataval={}, '.format(actual_state,
-                                                                                                                                    expected_state,
-                                                                                                                                    data_val)
-            initprob= self.istate_diff_prob(actual_state)
-
-            #update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
-            self.maxprob = max(initprob, self.maxprob)
-            if(initprob >0):
-                self.problist.append(initprob)  # add a very big bump in prob space so KL will see it
-                if(self.uccscart.tbdebuglevel>0):
-                    print('Init probability checks set prob to 1 with actual_state={}, next={}, dataval={}, problist={}, '.format(actual_state,
-                                                                                                                                expected_state,
-                                                                                                                                data_val,
-                                                                                                                                self.problist))
-
-                # if (self.debug):
-                #     self.debugstring = 'Early Instance: actual_state={}, next={}, dataval={}, '.format(actual_state,expected_state,data_val)
-                self.prev_action = action
-                return action
-        else:
-
-            data_val = self.format_data(data_val)
-            prob_values = []
-            actual_state = self.format_data(actual_state)
-
-            difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
-            current = difference_from_expected
-
-
-            diffprobability = self.prob_scale * self.cstate_diff_prob(current)
-            probability += diffprobability
-            #            pdb.set_trace()            
-            #if we have high enough probability and failed often enough and have not searched for pertubations, try searching for action permuations
-            #            if(((self.episode < 50) and (self.failcnt/(self.episode+1)-1.5* self.failfrac) > -1000) and self.perm_search< 20):
-            # if(True):  #idea not working 
-            #     self.perm_search +=1 
-            #     #force each possible action into our history as we need them to get mapping ..  this effects the get_best_*_action functions which get the actions and story history
-            #     if(self.uccscart.force_action < 5):
-            #         self.uccscart.force_action +=  1
-            #     else:
-            #         actprob = self.try_actions_permutations(actual_state,diffprobability) # try various permuation of actions to see if they can explain the current state.  If it finds one return prob 1 and sets action permutation index in UCCScart.
-            #         probability += actprob
-            #         if(actprob>0): self.character += "Action search with prob " + str(actprob)
-            #         pdb.set_trace()
-
-            # if we have not had a lot successess in a row (sign index is right)   and declared world changed and  we ahve enough failures then try another index
-            if( self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
-                # try the next permuation.. see if we can reduce the fail rate
-                self.uccscart.actions_permutation_index += 1
-                if(self.uccscart.actions_permutation_index > (len(self.uccscart.actions_plist)-1)):
-                    self.uccscart.actions_permutation_index = 0                    
-                self.character += "#####? Too many failures.  Guessing actions were mapped/perturbed.. Now using pertubation " 
-                self.character.join(map(str,self.uccscart.actions_plist[self.uccscart.actions_permutation_index]))
-                self.character += "if this is the last time you see this message and performance is now good then characterize this as the action permutation in placeof the  uncontrollable characateration provided after world change provided earlier #####?"
-                print(self.character)
-                self.consecutivefail = 0
-            
-
-
-
-
-            probability = min(1,probability)
-            self.problist.append(probability)
-
-
-            self.maxprob = max(probability, self.maxprob)
-            # we can also include the score from control algorithm,   we'll have to test to see if it helps..
-            #first testing suggests is not great as when block interfer it raises score as we try to fix it but then it seems novel. 
-            #                self.maxprob=min(1,self.maxprob +  self.uccscart.lastscore / self.scalelargescores)
-            if (self.cnt > 0 and len(self.problist)>0 ):
-                self.meanprob = np.mean(self.problist)
-
-            if (self.uccscart.tbdebuglevel>2):
-                self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
-                    self.cnt, actual_state, expected_state, current, probability)
-                print("prob/probval", probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob)  
-            
-        self.prev_action = action
-        return action

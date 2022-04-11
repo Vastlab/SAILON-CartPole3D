@@ -6,6 +6,7 @@ Copied from http://incompleteideas.net/book/code/pole.c
 import os
 import sys
 import time
+import math
 import pdb
 
 import gym
@@ -51,6 +52,7 @@ class CartPoleBulletEnv(gym.Env):
 
         # Params
         self.init_zero = False
+        self.init_zero = True        
         self.config = self.params['config']
 
         # Object definitions
@@ -74,7 +76,19 @@ class CartPoleBulletEnv(gym.Env):
         self.char=""
         self.tbdebuglevel=0
         self.episode=0
-        self.force_action=-1                    
+        self.force_action=-1
+        self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
+
+        self.use_avoid_reaction=False
+        self.reactstep=0
+        self.avoid_list = [
+#            ['left','left','left','left','nothing','nothing','nothing','nothing','right','right','right'],
+            ['left','left','left','nothing','nothing','nothing','right','right'],            
+            ['right','right','right','nothing','nothing','nothing','left','left',],
+            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
+            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
+        ]
+        self.avoid_actions= self.avoid_list[0]
 
 
         # where we story action/state history.. first dimension is action number, second is action (0-4 for stated from actions 0-4), 5 is action choice (only first value used), 6 is expected state, 7 is actual state returned,
@@ -135,6 +149,12 @@ class CartPoleBulletEnv(gym.Env):
             action = 3
         elif action == 'backward':
             action = 4
+        # else ifits a number leave it alone, but warn
+        else:
+            if(type(action)==  int and action >=0 and action <= 4):
+                print("string-to-action passed int using it", action)                
+            else: 
+                print("invalid action", action)
         return action
 
     def actionnum_to_string(self,action):
@@ -144,7 +164,9 @@ class CartPoleBulletEnv(gym.Env):
         elif action == 2: action = 'left'
         elif action == 3: action = 'forward'
         elif action == 4: action = 'backward'
-
+        # else ifits a number leave it alone, but warn
+        else: print("invalid action", action)
+        
         return action
 
 
@@ -196,7 +218,8 @@ class CartPoleBulletEnv(gym.Env):
         done = self.is_done()
         reward = self.get_reward()
 
-        self.tick = self.tick + 1
+#tb remove tick here since not updated inreset..         
+#        self.tick = self.tick + 1
 
         return self.get_state(), reward, done, {}
 
@@ -248,7 +271,8 @@ class CartPoleBulletEnv(gym.Env):
             self.tick = 0     # if not a reset to given state  we reset tick
             self.episode=0            
             self.step(0)
-            self.force_action=-1                    
+            self.reactstep=0            
+            self.force_action=-1
         else:
             self.set_world(feature_vector)
 
@@ -400,10 +424,10 @@ class CartPoleBulletEnv(gym.Env):
 
             self.nb_blocks = len(state['blocks'])
             if(self.nb_blocks > 4):
-                self.character += "Too many blocks" +str(self.nb_blocks)
+                self.character += "& Too many blocks" +str(self.nb_blocks)
                 self.wcprob=1               
             elif(self.nb_blocks < 2):
-                self.character += "Too few blocks" +str(self.nb_blocks)                
+                self.character += "& Too few blocks" +str(self.nb_blocks)                
                 self.wcprob=1                               
                 
             self.blocks = [None] * self.nb_blocks
@@ -713,6 +737,7 @@ class CartPoleBulletEnv(gym.Env):
             if(self.force_action>=0 and self.force_action < 5):
                 action = self.actionnum_to_string(self.force_action)
                 expected_state = best_action[action][4][1]
+            ecart_x, ecart_y = expected_state["cart"]["x_position"],  expected_state["cart"]["y_position"]            
             
 
 
@@ -721,7 +746,8 @@ class CartPoleBulletEnv(gym.Env):
             if(self.force_action >=0 and self.force_action < 5):
                 self.action_history[self.force_action][0] = self.format_data(expected_state)                                
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
-
+            cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]            
+            if(self.tbdebuglevel>-1): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
             return action, second_action[next_action], expected_state
 
     def two_step_env(self, feature_vector, steps):
@@ -745,9 +771,10 @@ class CartPoleBulletEnv(gym.Env):
             self.reset(nextstate)
             self.step(steps[1])
             p = self._p            
-            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..                          
+            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
             if(self.tbdebuglevel>1): print("Try action", steps[1], self.get_state())                                        
-            return [self.get_score(self.get_state()), nextstate]
+#            return [self.get_score(self.get_state()), nextstate]
+            return [self.get_score(self.get_state()), self.get_state()]        
 
 
         #structured like the two-step but that was expensive so teting one steo to see gain vs cost
@@ -777,7 +804,6 @@ class CartPoleBulletEnv(gym.Env):
             best_score = best_action['left'][0][0]
             expected_state = best_action['left'][0][1]
             action = 'left'
-            next_action = 0
             # return the best scoring action
             for i in best_action.keys():
                 for j in range(len(best_action[i])):
@@ -785,7 +811,6 @@ class CartPoleBulletEnv(gym.Env):
                     if best_action[i][j][0] < best_score:
                         best_score = best_action[i][j][0]
                         action = i
-                        next_action = j
                         expected_state = best_action[i][j][1]
 
             #if we are forcing actions because we are searching for a mapping
@@ -815,12 +840,15 @@ class CartPoleBulletEnv(gym.Env):
             self.step(steps[0])
             state = self.get_state()
             p = self._p            
-            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..                          
+            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
             if(self.tbdebuglevel>1): print("Try action", steps[0],state)                                                    
             return [self.get_score(state), state]
 
 
 
+
+
+#####  Start domain depenent  adapter (its built into scoring)
 
     def get_score(self, feature_vector):
             '''
@@ -828,62 +856,113 @@ class CartPoleBulletEnv(gym.Env):
             :return: float score
             '''
 
-            cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]
+            cartpos = [feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"],feature_vector["cart"]["z_position"]]
+            cartvel = [feature_vector["cart"]["x_velocity"],  feature_vector["cart"]["y_velocity"],feature_vector["cart"]["z_velocity"]]            
 
 
             p = self._p
             _, _, _, _, _, ori, _, _ = p.getLinkState(self.cartpole, 1, 1)
             eulers = p.getEulerFromQuaternion(ori)
-            pole_x = x_angle = abs(eulers[0])
-            pole_y = y_angle = abs(eulers[1])
-            pole_z = z_angle = abs(eulers[2])        
+            pole_x =  abs(eulers[0])
+            pole_y =  abs(eulers[1])
+            pole_z =  abs(eulers[2])        
 
-            #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
-
-            # start with min distance to walls which are at +- 5
-            mindist = min(abs(abs(cart_x) - 5), abs(abs(cart_y) - 5))
-
-            for ablock in self.blocks:
-                nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
-                for c in nearpoints:           
-                    contactdist = c[8]
-                    if(contactdist <0):
-                        self.char += "CP"                         
-#                        print("Watchout ", self.char)
-                    mindist = min(mindist,contactdist)
-
-
-            tdist = mindist-2    #try to keep the two unit away
-            if(tdist > 8): tdist = 8
-            if(tdist > .1):
-                mindist = 1/( tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position        
-            if(tdist <= .1 and mindist >.01):
-                mindist = 10+1/(mindist*mindist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
-            elif(mindist <.01): 
-                mindist = 1000+(mindist*mindist)    # if  colliding  makit it very large
-
-            # if(mdist < 1):
-            #     tdist = mindist
-            #     if(tdist <=.1): tdist = .1            
-            #     mindist += 1/(tdist*tdist)    # if its closer than our ideal one unit,  add even more penalty
-
-
-            #            mindist= 0 #TB hack to see if we still get collion notics
-            
             #  we weight the larger of the two errors more, but still consider the other
             maxangle = max(abs(pole_x), abs(pole_y))
             minangle = min(abs(pole_x), abs(pole_y))
-            slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**2 as a penlty so we big if we get close
-            if(slack < 0): cost  = 1e8;             slackcost = 1e8
+            slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**4 as a penlty so we big if we get close
+            if(slack < .0000001): slackcost = 1e8
             else:
-                slackcost = 1/slack**4
-                cost = slackcost   + mindist  + maxangle**2 + 10*minangle**2 
+                slackcost = 100/(slack**2)
 
-#            if(cost > 100):
-            if(self.tbdebuglevel>1): 
-                print("cost,  slack, slackcost  ", round(cost,8), round(slack,3),round(slackcost,3), "pole (x y z)", round(abs(pole_x),3), round(abs(pole_y),3),round(abs(pole_z),3),
-                  "  dists ", round(mindist,3),round(tdist,3),   "angle limit", round(self.angle_limit,3) )
-                print("Get score", cart_x, cart_y, ori)                
+
+            collision_penalty  =0  # have to honor slack constraints and don't use react if we have no slack
+            mindist=999
+            cartspeed=0
+            ldist = 999 
+            mangle = -999
+
+
+            #If we don't hav a lot of slack, then ignore collision as we are more likely to die from pole angle
+            if(slack < .4):
+                # not enough slack.. if doing reactions.. stop it
+                self.reactstep = len(self.avoid_list[0])+1
+            else:
+
+
+                #if we have enough slack we consider potential colisions and attack vectors.
+                #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
+
+                # start with min distance to walls which are at +- 5
+                mindist = 10
+
+                for ablock in self.blocks:
+                    nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
+                    for c in nearpoints:           
+                        contactdist = c[8]
+                        if(contactdist <0):
+                            self.char += "CP"                         
+    #                        print("Watchout ", self.char)
+                        mindist = min(mindist,contactdist)
+
+
+                #see if  "distance" from  trajectory of  blocks would be an impact.. 
+                for block in feature_vector["blocks"]:
+                    bpos = [block["x_position"], block["y_position"],block["z_position"]]
+                    bvel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
+                    pdiff = np.subtract(cartpos ,bpos)
+                    nval = np.linalg.norm(bvel)
+                    if(nval >.01) :
+                        dist =  (np.linalg.norm(np.cross(bvel,pdiff))/ nval)
+                        if(dist <1.5):
+                            if(  self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
+                                self.reactstep=0
+                                # get angle so we can decide how to run.. 
+                                mangle = 180*math.atan2(pdiff[1],pdiff[0])/3.14159
+                                if((mangle >-45 and 45 <= mangle)
+                                   or  mangle <-135 or  mangle > 135  ):
+                                    if(pole_y > 0):
+                                        self.avoid_actions= self.avoid_list[3]
+                                    else:
+                                        self.avoid_actions= self.avoid_list[2]                                    
+                                else:
+                                    if(pole_x >0):                                
+                                        self.avoid_actions= self.avoid_list[1]
+                                    else:
+                                        self.avoid_actions= self.avoid_list[0]
+ #                               print("Mangle x y ", mangle, pdiff[0], pdiff[1], " Avoid with ",self.avoid_actions);
+                                self.char += "HA"                                
+                            else:
+                                self.char += "SA"
+#                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
+
+
+                    else: dist = ldist
+                    ldist = min(dist,ldist)
+
+
+                #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
+                cartspeed = np.linalg.norm(cartvel) 
+                if(cartspeed> ldist): ldist = ldist * cartspeed                 
+                mindist = min(ldist,mindist)
+            
+            
+            
+                if(mindist > 1 and mindist < 3):
+                    collision_penalty = (3-mindist)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
+                elif(mindist > 0):
+                    collision_penalty = 2+  1/( mindist*mindist)         #a  penalty that get's get very large as we get close , but enough power far away to avoid if we can
+
+
+            
+
+            cost = slackcost    + ( maxangle)**2 + (minangle)**2 +   collision_penalty                
+
+
+            if(False and cost > 1000):
+#            if(self.tbdebuglevel>1): 
+                print(" cost,  slack, slackcost  ", round(cost,8), round(slack,3),round(slackcost,3), "pole xyz", round(abs(pole_x),3), round(abs(pole_y),3),round(abs(pole_z),3),
+                      "  dists ", round(collision_penalty,3),round(mindist,3),   "angle limit", round(self.angle_limit,3), "  At", self.tick,"score=", round(cost,2),"at",round(cartpos[0],2), round(cartpos[1],2))
 
             return cost
 
@@ -891,17 +970,28 @@ class CartPoleBulletEnv(gym.Env):
             # get best action.. if our prediciton probablities (arg)  are good, use one step, else use two
         #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
+        if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
+            react = self.avoid_actions[self.reactstep]
+            self.char += "AV"+str(self.reactstep)                                            
+            print("Avoiding @reactstep", self.reactstep, " with ", react)
+            score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
+            state = [react,"nothing",nstate]
+            self.reactstep += 1
+            self.lastscore = -1.0
+
+        else:
 
     #       if we have colission potential for any action (char != "") so do two-step action search
     #       if we have low score  we can go faser uding one-setp
-           if( ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
+           if( True or ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
                 state= self.get_best_onestep_action(feature_vector)
                 if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
            else:
                 state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>1): print("Best two score", self.lastscore)                
-           return state
-
-
-
-
+                if(self.tbdebuglevel>1): print("Best two score", self.lastscore)
+           #we do tick here to update one timestep..
+        self.tick = self.tick + 1
+        if(self.tbdebuglevel>2):
+            print("Expected state", state)           
+        return state
+#####  end domain depenent  adapter (its built into scoring)
