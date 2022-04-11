@@ -1162,7 +1162,7 @@ class UCCSTA2():
             self.character += "#!#!#!  World change Detected #!#!#!  "
 
         # if world changed an dour performance is below .8  we start using avoidance reaction
-        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 65) :
+        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 60) :
                 self.uccscart.use_avoid_reaction=True            
 
 
