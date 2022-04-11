@@ -396,7 +396,7 @@ class TA2Agent(TA2Logic):
         ))
 
 
-        self.log.info('Debug Te#{} End:  Prob={} {}   Scores={}   '.format(
+        self.log.info('Debug Tend# {}  {} Prob={} {}Scores={}   '.format( self.UCCS.episode,
             "\n", [round(num, 2) for num in self.UCCS.problist], 
             "\n", [round(num, 2) for num in self.UCCS.scorelist]))            
         self.totalSteps = 0

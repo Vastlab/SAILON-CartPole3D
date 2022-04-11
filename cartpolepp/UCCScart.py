@@ -746,7 +746,7 @@ class CartPoleBulletEnv(gym.Env):
                 self.action_history[self.force_action][0] = self.format_data(expected_state)                                
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
             cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]            
-            if(self.tbdebuglevel>-1): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
+            if(self.tbdebuglevel>1): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
             return action, second_action[next_action], expected_state
 
     def two_step_env(self, feature_vector, steps):
@@ -874,6 +874,8 @@ class CartPoleBulletEnv(gym.Env):
             else:
                 slackcost = 100/(slack**2)
 
+            cost =0
+
 
             collision_penalty  =0  # have to honor slack constraints and don't use react if we have no slack
             mindist=999
@@ -933,6 +935,7 @@ class CartPoleBulletEnv(gym.Env):
                                 self.char += "HA"                                
                             else:
                                 self.char += "SA"
+                                cost += 300
 #                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
 
 
@@ -955,7 +958,7 @@ class CartPoleBulletEnv(gym.Env):
 
             
 
-            cost = slackcost    + ( maxangle)**2 + (minangle)**2 +   collision_penalty                
+            cost  += slackcost    + ( maxangle)**2 + (minangle)**2 +   collision_penalty                
 
 
             if(False and cost > 1000):
@@ -982,12 +985,12 @@ class CartPoleBulletEnv(gym.Env):
 
     #       if we have colission potential for any action (char != "") so do two-step action search
     #       if we have low score  we can go faser uding one-setp
-           if( True or ( ((prob < .49 and self.lastscore < 20) or (self.lastscore < 10) )) or (self.force_action>-1 and self.force_action< 6)):            # make it mroe often just one making it faster
+           if(  (self.lastscore > 0 and  ((prob < .49  and self.lastscore < 300) or (self.lastscore < 200) ))):            # make it mroe often just one making it faster
                 state= self.get_best_onestep_action(feature_vector)
-                if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
+                if(self.tbdebuglevel>-1): print("Best one score", self.lastscore)
            else:
                 state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>1): print("Best two score", self.lastscore)
+                if(self.tbdebuglevel>-1): print("Best two score", self.lastscore)
            #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):
