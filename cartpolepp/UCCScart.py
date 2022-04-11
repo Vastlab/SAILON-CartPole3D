@@ -139,7 +139,7 @@ class CartPoleBulletEnv(gym.Env):
 
     def string_to_actionnum(self,action):
         # Convert from string to int
-        if action == 'nothing':
+        if action == 'nothing' or action ==0:
             action = 0
         elif action == 'right':
             action = 1    
@@ -151,10 +151,9 @@ class CartPoleBulletEnv(gym.Env):
             action = 4
         # else ifits a number leave it alone, but warn
         else:
-            if(type(action)==  int and action >=0 and action <= 4):
-                print("string-to-action passed int using it", action)                
-            else: 
+            if(not (type(action)==  int and action >=0 and action <= 4)):
                 print("invalid action", action)
+                #else its a number so just use it..   reset call here with 
         return action
 
     def actionnum_to_string(self,action):
@@ -270,7 +269,7 @@ class CartPoleBulletEnv(gym.Env):
         if(feature_vector is None):
             self.tick = 0     # if not a reset to given state  we reset tick
             self.episode=0            
-            self.step(0)
+            self.step('nothing')
             self.reactstep=0            
             self.force_action=-1
         else:
