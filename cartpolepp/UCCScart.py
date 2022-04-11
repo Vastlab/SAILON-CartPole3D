@@ -153,7 +153,7 @@ class CartPoleBulletEnv(gym.Env):
         else:
             if(not (type(action)==  int and action >=0 and action <= 4)):
                 print("invalid action", action)
-                #else its a number so just use it..   reset call here with 
+            #else its a number so just use it..   reset call here with 
         return action
 
     def actionnum_to_string(self,action):
