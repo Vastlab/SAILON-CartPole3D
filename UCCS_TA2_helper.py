@@ -929,7 +929,7 @@ class UCCSTA2():
     def world_change_prob(self,settrain=False):
 
         # don't let first episodes  impact world change.. need stabilsied scores/probabilites
-        if(self.episode<2):
+        if(self.episode<1):
             self.worldchangedacc = 0
             self.worldchangeblend = 0
             return self.worldchangedacc            
@@ -1048,10 +1048,13 @@ class UCCSTA2():
         tlen = min(self.scoreforKL,len(self.uccscart.char))
                    
 
+
         #random collisions can occur and they destroy probability computation so ignore them
-        if( self.uccscart.char.count("CP") > 4 and "attack" not in self.uccscart.char and self.consecutivefail < 2):
+        if( self.character.count("CP") > 4)  and ( "attack" not in self.character) and (self.consecutivefail < 2):
             prob = 0
+            print("Debug found ", self.character.count("CP"), "CPs in string")
         else:
+            print("Debug did not find CP ", self.character.count("CP"), " in string")            
             prob = min(1,(dprob+perfprob)/2) # use average of dynamic and long-term performance probabilities.
 
 
