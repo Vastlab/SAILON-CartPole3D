@@ -67,8 +67,8 @@ class UCCSTA2():
         self.failscale=6.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
-        #TB change from .06  for M30
-        self.initprobscale=.25 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+
+        self.initprobscale=.1 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.consecutivedynamic=0   # if get consecutitve dynamic failures we keep increasing scale        
 
@@ -87,7 +87,7 @@ class UCCSTA2():
         self.maxconsecutivefail=0
         self.maxconsecutivesuccess=0        
         
-        
+
 
         # TODO: change evm data dimensions
         if (self.num_dims == 4):
@@ -97,8 +97,8 @@ class UCCSTA2():
         else:
             self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
             self.stdev_train = 0.051058052318592555
-            self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
-            self.stdev_train = 0.006
+            self.mean_train = 0.003   #these guessted values for Phase 2 incase we get called without training
+            self.stdev_train = 0.008
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
         self.cnt = 0
@@ -109,7 +109,7 @@ class UCCSTA2():
         self.worldchanged = 0
         self.worldchangedacc = 0
         self.blenduprate = .5           # fraction of new prob we use when blending up..  should be greater than  blenddown.  Note blendup uses max so never goes down.
-        self.blenddownrate = .1         # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
+        self.blenddownrate = .05        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
         
         self.failcnt = 0        
         self.worldchangeblend = 0
@@ -208,6 +208,15 @@ class UCCSTA2():
             self.consecutivefail=0
             self.perm_search=0
             self.trialchar=""
+            
+
+        if(episode ==15):  #reset things that we carry over between episodes withing the same trial
+            self.worldchangedacc = 0
+            self.failcnt = 0                    
+            self.worldchangeblend = 0            
+            self.consecutivefail=0
+            self.perm_search=0
+
             
 
 
@@ -577,10 +586,10 @@ class UCCSTA2():
                                            self.block_pos(istate,nb),
                                            self.block_vel(istate,nb))
             if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack
-                probv = 1            
+                probv = .25            
             elif(dist < .01): # should do wlb fit on this.. but for now just a hack
                 probv = (.01-dist)/(.01-1e-3)
-                probv = probv*probv   # square it so its a bit more concentrated and smoother                        
+                probv = .25*probv*probv   # square it so its a bit more concentrated and smoother                        
             initprob += probv
             if(probv>charactermin and len(self.character) < 256):
                 self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction attacking cart " +" with prob " + str(probv)
@@ -628,10 +637,10 @@ class UCCSTA2():
 
         self.character  += ";"
 
-        #        was limiting to one.. its a prob of novelty overall.. so 
-        if(initprob >1):
+        #        was limiting to one, but do want to allow more since  prob of novelty overall but we also discount this elesewhere
+        if(initprob >2):
             self.character += "Iprob clamped from" +  str(initprob)             
-            initprob = 1
+            initprob = 2
 
 
 
@@ -981,9 +990,9 @@ class UCCSTA2():
            self.worldchanged = 0
            return 0;
         if( self.mean_train == 0):
-           self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
-           self.stdev_train = 0.006
-           self.prob_scale = 2  # probably do need to scale but not tested sufficiently to see what it needs.
+            self.mean_train = 0.003   #these guessted values for Phase 2 incase we get called without training
+            self.stdev_train = 0.008
+            self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
         self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)                
         self.debugstring = '   ***Short World Change Acc={}, Prob ={},,mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
@@ -1059,7 +1068,7 @@ class UCCSTA2():
 
 
                 # infrequent checkto outputting cnts for setinng up wbls for actual cnts to use to see if we whould update world change
-        if((self.episode+1) % 10 == 0):
+        if((self.episode+1) % 20 == 0):
             cntval= np.zeros(15)
             cntprob= np.zeros(15)            
             i=0
@@ -1103,6 +1112,11 @@ class UCCSTA2():
 
 
             if(cntmax > .1): cntmax=.1;  #limit impact this this is really a cumulative test on things we have already seen
+            
+            #approximate wibul for  count of SA
+            cntprob[13] = self.wcdf(112.73 - cntval[13],0.1843,2.01214,36.5311)
+            cntmax += cntprob[13]
+            
             if(prob < cntmax):
                 self.character += 'Using detect as prob. detectcnts: {} dectprob {} '.format(cntval,cntprob)
                 prob = max(prob,cntmax)
