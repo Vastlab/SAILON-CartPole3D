@@ -68,7 +68,7 @@ class UCCSTA2():
         self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
 
-        self.initprobscale=.1 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        self.initprobscale=.15 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.consecutivedynamic=0   # if get consecutitve dynamic failures we keep increasing scale        
 
@@ -97,7 +97,7 @@ class UCCSTA2():
         else:
             self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
             self.stdev_train = 0.051058052318592555
-            self.mean_train = 0.003   #these guessted values for Phase 2 incase we get called without training
+            self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
             self.stdev_train = 0.008
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
@@ -586,10 +586,10 @@ class UCCSTA2():
                                            self.block_pos(istate,nb),
                                            self.block_vel(istate,nb))
             if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack
-                probv = .25            
+                probv = .3
             elif(dist < .01): # should do wlb fit on this.. but for now just a hack
                 probv = (.01-dist)/(.01-1e-3)
-                probv = .25*probv*probv   # square it so its a bit more concentrated and smoother                        
+                probv = .3*probv*probv   # square it so its a bit more concentrated and smoother                        
             initprob += probv
             if(probv>charactermin and len(self.character) < 256):
                 self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction attacking cart " +" with prob " + str(probv)
@@ -608,9 +608,9 @@ class UCCSTA2():
                                                self.block_vel(istate,nb))
                 
                 if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty
-                    probv = .25            
+                    probv = .3            
                 elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                    probv = .25*(.01-dist)/(.01-1e-3)
+                    probv = .3*(.01-dist)/(.01-1e-3)
                 initprob += probv
                 if(probv>charactermin and len(self.character) < 256):
                     self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction aiming at block" + str(nb2) +" with prob " + str(probv)
@@ -626,9 +626,9 @@ class UCCSTA2():
                 if(np.linalg.norm(self.block_vel(istate,nb2))>0 and np.linalg.norm(self.block_vel(istate,nb))>0):
                     dist  = np.linalg.norm(np.cross(self.block_vel(istate,nb2), self.block_vel(istate,nb)))
                     if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.. note can frequently happen accidently so not a full novelty prob change
-                        probv = .25          
+                        probv = .3          
                     elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                        probv = .25*(.01-dist)/(.01-1e-3)
+                        probv = .3*(.01-dist)/(.01-1e-3)
                         probv = probv*probv   # square it so its a bit more concentrated and smoother                        
                     initprob += probv
                     if(probv>charactermin and len(self.character) < 256):
@@ -990,7 +990,7 @@ class UCCSTA2():
            self.worldchanged = 0
            return 0;
         if( self.mean_train == 0):
-            self.mean_train = 0.003   #these guessted values for Phase 2 incase we get called without training
+            self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
             self.stdev_train = 0.008
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
 
