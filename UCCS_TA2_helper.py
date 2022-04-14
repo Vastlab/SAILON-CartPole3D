@@ -10,7 +10,7 @@ import time
 #from utils import rollout
 import time
 import pickle
-import cv2
+#import cv2
 import PIL
 import torch
 import json
@@ -1353,36 +1353,36 @@ class UCCSTA2():
             
         self.prev_action = action
 
-        if(self.saveframes):        
-#            image = feature_vector['image']  #done at begining now
-            if image is None:
-#                self.log.error('No image received. Did you set use_image to True in TA1.config '
-#                               'for cartpole?')
-                print('No image received. Did you set use_image to True in TA1.config '
-                      'for cartpole?')            
-                found_error = True
+#         if(self.saveframes):        
+# #            image = feature_vector['image']  #done at begining now
+#             if image is None:
+# #                self.log.error('No image received. Did you set use_image to True in TA1.config '
+# #                               'for cartpole?')
+#                 print('No image received. Did you set use_image to True in TA1.config '
+#                       'for cartpole?')            
+#                 found_error = True
                 
-            else:
-                s = 640.0 / image.shape[1]
-                dim = (640, int(image.shape[0] * s))
-                resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                org = (10, 30)
-                fontScale = .5
-                # Blue color in BGR
-                if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
-                else  :            color = (0,0,255)
-                thickness = 2
-                fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
-                wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.character[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
-                outimage = cv2.putText(resized, wstring, org, font,
-                                       fontScale, color, thickness, cv2.LINE_AA)
-                cv2.imwrite(fname, outimage)
+#             else:
+#                 s = 640.0 / image.shape[1]
+#                 dim = (640, int(image.shape[0] * s))
+#                 resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+#                 font = cv2.FONT_HERSHEY_SIMPLEX
+#                 org = (10, 30)
+#                 fontScale = .5
+#                 # Blue color in BGR
+#                 if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
+#                 else  :            color = (0,0,255)
+#                 thickness = 2
+#                 fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
+#                 wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.character[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
+#                 outimage = cv2.putText(resized, wstring, org, font,
+#                                        fontScale, color, thickness, cv2.LINE_AA)
+#                 cv2.imwrite(fname, outimage)
 
-                self.framecnt += 1
-                if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
-                    self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
-                    print(self.debugstring)
+#                 self.framecnt += 1
+#                 if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
+#                     self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
+#                     print(self.debugstring)
 
                 
         
