@@ -79,14 +79,18 @@ class CartPoleBulletEnv(gym.Env):
         self.force_action=-1
         self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
 
-        self.use_avoid_reaction=False
+        self.use_avoid_reaction=False   #set by UCCS_TA2  when world change is high enough
         self.reactstep=0
         self.avoid_list = [
 #            ['left','left','left','left','nothing','nothing','nothing','nothing','right','right','right'],
-            ['left','left','left','nothing','nothing','nothing','right','right'],            
-            ['right','right','right','nothing','nothing','nothing','left','left',],
-            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
-            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
+#            ['left','left','left','nothing','nothing','nothing','right','right'],            
+#            ['right','right','right','nothing','nothing','nothing','left','left',],
+#            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
+#            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
+            ['left','left','left','nothing','nothing','nothing'],            
+            ['right','right','right','nothing','nothing','nothing'],
+            ['forward','forward','forward','nothing','nothing','nothing'],
+            ['backward','backward','backward','nothing','nothing','nothing']                                                    
         ]
         self.avoid_actions= self.avoid_list[0]
 
@@ -423,10 +427,10 @@ class CartPoleBulletEnv(gym.Env):
 
             self.nb_blocks = len(state['blocks'])
             if(self.nb_blocks > 4):
-                self.character += "& Too many blocks" +str(self.nb_blocks)
+                self.character += "& Blocks increase: Too many blocks" +str(self.nb_blocks)
                 self.wcprob=1               
             elif(self.nb_blocks < 2):
-                self.character += "& Too few blocks" +str(self.nb_blocks)                
+                self.character += "& Blocks decrease: Too few blocks" +str(self.nb_blocks)                
                 self.wcprob=1                               
                 
             self.blocks = [None] * self.nb_blocks
@@ -872,7 +876,7 @@ class CartPoleBulletEnv(gym.Env):
             slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**4 as a penlty so we big if we get close
             if(slack < .0000001): slackcost = 1e8
             else:
-                slackcost = 100/(slack**2)
+                slackcost = 100/(slack**4)
 
             cost =0
 
@@ -889,7 +893,6 @@ class CartPoleBulletEnv(gym.Env):
                 # not enough slack.. if doing reactions.. stop it
                 self.reactstep = len(self.avoid_list[0])+1
             else:
-
 
                 #if we have enough slack we consider potential colisions and attack vectors.
                 #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
@@ -913,10 +916,10 @@ class CartPoleBulletEnv(gym.Env):
                     bvel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
                     pdiff = np.subtract(cartpos ,bpos)
                     nval = np.linalg.norm(bvel)
-                    if(nval >.01) :
+                    if(nval >.1) :
                         dist =  (np.linalg.norm(np.cross(bvel,pdiff))/ nval)
-                        if(dist <1.5):
-                            if(  self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
+                        if(dist <1):
+                            if( self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
                                 self.reactstep=0
                                 # get angle so we can decide how to run.. 
                                 mangle = 180*math.atan2(pdiff[1],pdiff[0])/3.14159
@@ -935,7 +938,7 @@ class CartPoleBulletEnv(gym.Env):
                                 self.char += "HA"                                
                             else:
                                 self.char += "SA"
-                                cost += 300
+                                cost += 100+1/(.01+dist)
 #                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
 
 
@@ -943,22 +946,27 @@ class CartPoleBulletEnv(gym.Env):
                     ldist = min(dist,ldist)
 
 
-                #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
-                cartspeed = np.linalg.norm(cartvel) 
-                if(cartspeed> ldist): ldist = ldist * cartspeed                 
+
+                # #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
+                #cartspeed = np.linalg.norm(cartvel) 
+                #if(cartspeed < ldist): 
                 mindist = min(ldist,mindist)
-            
-            
-            
-                if(mindist > 1 and mindist < 3):
-                    collision_penalty = (3-mindist)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
-                elif(mindist > 0):
-                    collision_penalty = 2+  1/( mindist*mindist)         #a  penalty that get's get very large as we get close , but enough power far away to avoid if we can
 
-
+                tdist = mindist-2    #try to keep the two unit away
+                if(tdist > 8): tdist = 8
+                if(tdist > .1):
+                    mindist = 1/( tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position        
+                elif(tdist <= .1 and mindist >.01):
+                    mindist = 10+1/(mindist*mindist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
+                elif(mindist <.01): 
+                    mindist = 1000+(mindist*mindist)    # if  colliding  makit it very large
+                
+            
+            
+                collision_penalty = (3-mindist) + 1/(ldist+.01)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
             
 
-            cost  += slackcost    + ( maxangle)**2 + (minangle)**2 +   collision_penalty                
+            cost  += slackcost    + ( maxangle)**2 + 10*(minangle)**2 +   collision_penalty                
 
 
             if(False and cost > 1000):
@@ -972,6 +980,7 @@ class CartPoleBulletEnv(gym.Env):
             # get best action.. if our prediciton probablities (arg)  are good, use one step, else use two
         #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
+        # if world has changed and we need to use avoida ction, do it
         if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
             react = self.avoid_actions[self.reactstep]
             self.char += "AV"+str(self.reactstep)                                            
@@ -990,7 +999,7 @@ class CartPoleBulletEnv(gym.Env):
                 if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
            else:
                 state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>-1): print("Two score", self.lastscore)
+                if(self.tbdebuglevel>1): print("Two score", self.lastscore)
            #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):

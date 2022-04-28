@@ -10,7 +10,7 @@ import time
 #from utils import rollout
 import time
 import pickle
-#import cv2
+import cv2
 import PIL
 import torch
 import json
@@ -60,12 +60,13 @@ class UCCSTA2():
         # takes a while for some randome starts to stabilise so don't reset too early as it
         # reduces world change sensitvity.  Effective min is 1 as need at least a prior state to get prediction.
         self.skipfirstNscores=1
+        self.maxinitprob=2.5
 
         self.maxconsecutivefailthresh= 5  # if we see this many in a row we declare world changed as we never see even 3 in training 
         
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
-        self.failscale=6.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
-        self.failfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures
+        self.failscale=8.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
+        self.failfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
 
         self.initprobscale=.15 #   we scale prob from initial state by this amount (scaled by 2**(consecuriteinit-2) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
@@ -95,8 +96,8 @@ class UCCSTA2():
             self.stdev_train = 0.0
             self.prob_scale = 2  # need to scale since EVM probability on perfect training data is .5  because of small range and tailsize
         else:
-            self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
-            self.stdev_train = 0.051058052318592555
+#            self.mean_train = .198   #these are old values from Phase 1 2D cartpole..  for Pahse 2 3D we compute frm a training run.
+#            self.stdev_train = 0.051058052318592555
             self.mean_train = 0.002   #these guessted values for Phase 2 incase we get called without training
             self.stdev_train = 0.008
             self.prob_scale = 1  # probably do need to scale but not tested sufficiently to see what it needs.
@@ -109,7 +110,7 @@ class UCCSTA2():
         self.worldchanged = 0
         self.worldchangedacc = 0
         self.blenduprate = .5           # fraction of new prob we use when blending up..  should be greater than  blenddown.  Note blendup uses max so never goes down.
-        self.blenddownrate = .05        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
+        self.blenddownrate = .03        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
         
         self.failcnt = 0        
         self.worldchangeblend = 0
@@ -608,9 +609,9 @@ class UCCSTA2():
                                                self.block_vel(istate,nb))
                 
                 if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty
-                    probv = .3            
+                    probv = .2            
                 elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                    probv = .3*(.01-dist)/(.01-1e-3)
+                    probv = .2*(.01-dist)/(.01-1e-3)
                 initprob += probv
                 if(probv>charactermin and len(self.character) < 256):
                     self.character +=  "&" +   " M30 Char Block " + str(nb) + " on initial direction aiming at block" + str(nb2) +" with prob " + str(probv)
@@ -638,9 +639,9 @@ class UCCSTA2():
         self.character  += ";"
 
         #        was limiting to one, but do want to allow more since  prob of novelty overall but we also discount this elesewhere
-        if(initprob >2):
+        if(initprob >self.maxinitprob):
             self.character += "Iprob clamped from" +  str(initprob)             
-            initprob = 2
+            initprob = self.maxinitprob
 
 
 
@@ -1059,7 +1060,7 @@ class UCCSTA2():
 
 
         #random collisions can occur and they destroy probability computation so ignore them
-        if( self.character.count("CP") > 4)  and ( "attack" not in self.character) and (self.consecutivefail < 2):
+        if( self.character.count("CP") > 4)  and ( "attack" not in self.character) and (self.consecutivefail < 4):
             prob = 0
             print("Debug found ", self.character.count("CP"), "CPs in string")
         else:
@@ -1093,12 +1094,12 @@ class UCCSTA2():
             cntwbl = np.array([ [ 1.44423424, -0.19000001,  0.14582359],
                                 [ 0.77655005, -0.13000001,  0.07412372],
                                 [ 1.4183835 , -0.08000001,  0.06339877],
-                                [ 1.3369761 , -0.06000001,  0.04456476],
-                                [ 0.84213063, -0.06000001,  0.03392788],
-                                [ 0.84213063, -0.06000001,  0.03392788],
-                                [ 1.60734717, -0.10000001,  0.07514313],
-                                [ 1.37548511, -0.16000001,  0.11283754],
-                                [ 1.18602747, -0.11000001,  0.0627653 ],
+                                [ 1.3369761 , -0.36100001,  0.04456476],
+                                [ 0.84213063, -0.37600001,  0.03392788],
+                                [ 0.84213063, -0.36500001,  0.03392788],
+                                [ 1.60734717, -0.35000001,  0.07514313],
+                                [ 1.37548511, -0.26000001,  0.11283754],
+                                [ 1.18602747, -0.21000001,  0.0627653 ],
                                 [ 1.70217044, -0.06000001,  0.05617951],
                                 [ 1.50681693, -0.06000001,  0.05125134],
                                 [ 1.50681693, -0.06000001,  0.05125134],
@@ -1114,7 +1115,7 @@ class UCCSTA2():
             if(cntmax > .1): cntmax=.1;  #limit impact this this is really a cumulative test on things we have already seen
             
             #approximate wibul for  count of SA
-            cntprob[13] = self.wcdf(112.73 - cntval[13],0.1843,2.01214,36.5311)
+            cntprob[13] = self.wcdf(152.73 - cntval[13],0.1843,2.01214,36.5311)
             cntmax += cntprob[13]
             
             if(prob < cntmax):
@@ -1165,6 +1166,12 @@ class UCCSTA2():
             round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3), round(self.KL_val,3),round(PerfKL,3),  "\n")
             #        print(self.debugstring)
         self.character +=  " " +    self.debugstring
+
+        # Until we have enough data, reset and worldchange 
+        if(self.episode < self.scoreforKL+1):
+            self.worldchangedacc = 0
+            self.worldchangeblend = 0            
+        
 #####!!!!!#####  End Domain Independent code tor consecurtiv efailures
 
 
@@ -1178,8 +1185,8 @@ class UCCSTA2():
         if(previous_wc < .5 and self.worldchangedacc        >= .5):
             self.character += "#!#!#!  World change Detected #!#!#!  "
 
-        # if world changed an dour performance is below .8  we start using avoidance reaction
-        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 60) :
+        # if world changed an dour performance is below .65  we start using avoidance reaction
+        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 65) :
                 self.uccscart.use_avoid_reaction=True            
 
 
@@ -1353,36 +1360,36 @@ class UCCSTA2():
             
         self.prev_action = action
 
-#         if(self.saveframes):        
-# #            image = feature_vector['image']  #done at begining now
-#             if image is None:
-# #                self.log.error('No image received. Did you set use_image to True in TA1.config '
-# #                               'for cartpole?')
-#                 print('No image received. Did you set use_image to True in TA1.config '
-#                       'for cartpole?')            
-#                 found_error = True
+        if(self.saveframes):        
+#            image = feature_vector['image']  #done at begining now
+            if image is None:
+#                self.log.error('No image received. Did you set use_image to True in TA1.config '
+#                               'for cartpole?')
+                print('No image received. Did you set use_image to True in TA1.config '
+                      'for cartpole?')            
+                found_error = True
                 
-#             else:
-#                 s = 640.0 / image.shape[1]
-#                 dim = (640, int(image.shape[0] * s))
-#                 resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
-#                 font = cv2.FONT_HERSHEY_SIMPLEX
-#                 org = (10, 30)
-#                 fontScale = .5
-#                 # Blue color in BGR
-#                 if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
-#                 else  :            color = (0,0,255)
-#                 thickness = 2
-#                 fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
-#                 wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.character[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
-#                 outimage = cv2.putText(resized, wstring, org, font,
-#                                        fontScale, color, thickness, cv2.LINE_AA)
-#                 cv2.imwrite(fname, outimage)
+            else:
+                s = 640.0 / image.shape[1]
+                dim = (640, int(image.shape[0] * s))
+                resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+                font = cv2.FONT_HERSHEY_SIMPLEX
+                org = (10, 30)
+                fontScale = .5
+                # Blue color in BGR
+                if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
+                else  :            color = (0,0,255)
+                thickness = 2
+                fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
+                wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.character[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
+                outimage = cv2.putText(resized, wstring, org, font,
+                                       fontScale, color, thickness, cv2.LINE_AA)
+                cv2.imwrite(fname, outimage)
 
-#                 self.framecnt += 1
-#                 if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
-#                     self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
-#                     print(self.debugstring)
+                self.framecnt += 1
+                if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
+                    self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
+                    print(self.debugstring)
 
                 
         
