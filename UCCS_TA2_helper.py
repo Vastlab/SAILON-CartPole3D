@@ -10,7 +10,7 @@ import time
 #from utils import rollout
 import time
 import pickle
-import cv2
+#import cv2
 import PIL
 import torch
 import json
@@ -78,7 +78,7 @@ class UCCSTA2():
         self.failscale=8.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
-        self.maxdynamicprob = .25
+        self.maxdynamicprob = .2
         # because of many many fields and its done each time step, we limit how much this can add per time step
         self.maxclampedprob = .005  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
         self.clampedprob =   self.maxclampedprob       
@@ -690,7 +690,7 @@ class UCCSTA2():
                 probv =  self.awcdf(abs(istate[j]),imax[k],iscale[k],ishape[k]);
                 if((abs(istate[j]) - imax[k]) > 1) :
                     self.logstr +=  "& P2+ LL2  " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
-                    initprob += max(.25.maxdynamicprob,probv)
+                    initprob += max(.24,probv)
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                 elif(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
@@ -699,7 +699,7 @@ class UCCSTA2():
                 if( (imin[k] - abs(istate[j])) > 1 ):
                     self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
-                    initprob += max(.25,probv)
+                    initprob += max(.24,probv)
                 else:
                     probv =  self.awcdf(abs(istate[j]),imin[k],iscale[k],ishape[k]);
                     initprob += probv
@@ -1001,7 +1001,7 @@ class UCCSTA2():
                     if(angle >3.1): probv= self.rwcdf(angle,3.14,.512,.1218)
                     if(probv > self.maxdynamicprob): probv= self.maxdynamicprob             #since this can happon randomly we never let it take longer                
                     prob += probv
-                    if(probv>charactermin and len(self.logstr) < self.maxcarlen):
+                    if(probv>0 and len(self.logstr) < self.maxcarlen):
                         self.logstr +=  "& P2+ LL3 or LL5" + "Step " + str(self.tick) +  " Char Block motion " + str(nb) + " dyn Block-Toward-Block " + str(nb2) +  " with prob " + str(probv) + "for angle" + str(angle)
 #                        self.logstr += str(self.current_state)                    
 
@@ -1014,7 +1014,7 @@ class UCCSTA2():
                     dist = self.line_to_line_dist(self.block_pos(astate,nb),self.block_vel(astate,nb),self.block_pos(astate,nb2),self.block_vel(astate,nb2))
                     # get weibul probabilities for the line-to-line-distance
                     probv=0                
-                    if(dist < .025):
+                    if(dist < .05):
                         probw = self.wcdf(angle,0.013,.474,.136)
                         probv= min(self.maxdynamicprob,probw)  # this can occur randomly so limit its impact
                         prob += probv
@@ -1637,9 +1637,10 @@ class UCCSTA2():
                         if(attcart > 5):
                            self.uccscart.characterization['change']='toward cart';                                                   
                     if (maxi == 4):
-                        #level 5 can look like livel 4 but will have more block errors than l4 tags. 
-                        if(blockmotion >  L4block or blockvelcnt > L4block or blockvelcnt > 1000 and L4block >= 20):
+                        #level 5 can look like livel 4 but will have many more block errors than l4 tags. 
+                        if(blockmotion >  2*L4block or blockvelcnt > 2*L4block):
                             maxi=5
+                            self.uccscart.characterization['level']=int(maxi);                                                        
                         else:
                             self.uccscart.characterization['attribute']="size";
                             if(self.trialchar.count("LL4 BLock Size decreased") <self.trialchar.count("LL4 BLock Size increased")):
@@ -1668,7 +1669,7 @@ class UCCSTA2():
                             self.uccscart.characterization['change']='increase';
                         else:
                             self.uccscart.characterization['change']='decrease';                    
-                    if (maxi == 7  or blockvelcnt > 1000 and L4block < 20):
+                    if (maxi == 7  or blockvelcnt > 10*L4block):    #l7 will have huge numbers of blockvelocity violations
                         # should do more to figure out direction of 
                         self.uccscart.characterization['attribute']="direction";
                         if(attcart > 5):
@@ -1728,6 +1729,11 @@ class UCCSTA2():
                 
         if(self.worldchangedacc > self.previous_wc):  self.previous_wc = self.worldchangedacc
         elif(self.worldchangedacc < self.previous_wc):  self.worldchangedacc = self.previous_wc 
+
+        print('Dend# {}  Logstr={} {} Prob={} {} Scores= {}   '.format( self.episode,  self.logstr,
+                                                                        "\n", [round(num, 2) for num in self.problist[:40]], 
+                                                                        "\n", [round(num, 2) for num in self.scorelist[:40]]))            
+        
 
         return self.worldchangedacc;
 
@@ -1905,24 +1911,24 @@ class UCCSTA2():
             else:
                 s = 640.0 / image.shape[1]
                 dim = (640, int(image.shape[0] * s))
-                resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
-                font = cv2.FONT_HERSHEY_SIMPLEX
-                org = (10, 30)
-                fontScale = .5
-                # Blue color in BGR
-                if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
-                else  :            color = (0,0,255)
-                thickness = 2
-                fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
-                wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.logstr[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
-                outimage = cv2.putText(resized, wstring, org, font,
-                                       fontScale, color, thickness, cv2.LINE_AA)
-                cv2.imwrite(fname, outimage)
+                # resized = cv2.resize(image, dim, interpolation=cv2.INTER_AREA)
+                # font = cv2.FONT_HERSHEY_SIMPLEX
+                # org = (10, 30)
+                # fontScale = .5
+                # # Blue color in BGR
+                # if(round(self.worldchangedacc,3) < .5):            color = (255, 0, 0)
+                # else  :            color = (0,0,255)
+                # thickness = 2
+                # fname = '/scratch/tboult/PNG/{1}-Frame-{0:04d}.png'.format(self.framecnt,self.saveprefix)            
+                # wstring = 'E={4:03d}.{0:03d} RP={7:4.3f} WC={2:4.3f} P{1:3.2f} N={6:.1} C={5:.4},S={3:12.6}'.format(self.uccscart.tick,probability,self.worldchangedacc,self.uccscart.lastscore,self.episode,self.logstr[-4:], str(self.noveltyindicator),100*self.perf/(max(1,self.totalcnt))        )            
+                # outimage = cv2.putText(resized, wstring, org, font,
+                #                        fontScale, color, thickness, cv2.LINE_AA)
+                # cv2.imwrite(fname, outimage)
 
-                self.framecnt += 1
-                if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
-                    self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
-                    print(self.debugstring)
+                # self.framecnt += 1
+                # if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
+                #     self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
+                #     print(self.debugstring)
 
                 
         

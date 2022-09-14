@@ -11,8 +11,9 @@ import numpy as np
 import torch
 import pdb
 
-NUM_ITERS = 100
+NUM_ITERS = 5000
 NUM_STEPS = 40
+TAILSIZE = 10
 
 FILENAME = (f"cartpole_{NUM_ITERS}iters_{NUM_STEPS}steps_no_change_np")
 
@@ -34,6 +35,7 @@ def print_format_data_order(feature_vector):
             if key != 'id':
                 cur_block.append(("B",key))
         block_data.append(cur_block)
+        
     out.append(block_data)
     print("Formated data order is",out)
     return 
@@ -55,10 +57,10 @@ def format_data(feature_vector, predicted_state):
         cur_block = []
         for key in block.keys():
             if key != 'id':
-                cur_block.append(predicted_state['blocks'][cnt][key] - block[key])
+                cur_block.append(abs(predicted_state['blocks'][cnt][key]) - abs(block[key]))
         cnt += 1
         block_data.append(cur_block)
-
+    
     block_diff = [0 for i in range(len(block_data[0]))]
     for data in block_data:
         for i in range(len(data)):
@@ -144,7 +146,7 @@ def format_data_torch(data, k): # Format the data using torch and tensors instea
     data = torch.tensor(data)
     formatted_data = torch.std(data, axis=0)
     formatted_data = torch.stack((formatted_data, torch.mean(data, axis=0)), dim=0)
-    # Get smallest 10
+    # Get smallest TAILSIZE
     smallest, indices = torch.topk(data, k, dim=0, largest=False)
     #print(smallest)
     largest, indices = torch.topk(data, k, dim=0)
@@ -157,11 +159,11 @@ def format_data_torch(data, k): # Format the data using torch and tensors instea
 
 # Create envs
 env_location = importlib.util.spec_from_file_location('CartPoleBulletEnv', \
-    'cartpoleplusplus.py')
+    'cartpolepp/cartpoleplusplus.py')
 env_class = importlib.util.module_from_spec(env_location)
 env_location.loader.exec_module(env_class)
 env1_location = importlib.util.spec_from_file_location('CartPoleBulletEnv', \
-    'UCCScart.py')
+    'cartpolepp/UCart.py')
 env1_class = importlib.util.module_from_spec(env1_location)
 env1_location.loader.exec_module(env1_class)
 
@@ -171,7 +173,7 @@ myconfig['start_zeroed_out'] = False
 
 # Package params here
 params = dict()
-params['seed'] = 0
+params['seed'] = 11
 params['config'] = myconfig
 params['path'] = "cartpolepp"
 params['use_img'] = False
@@ -202,17 +204,18 @@ for k in range(NUM_ITERS):
         env1.reset(feature_vector)
         #instance_data = []
     # Step envs
-#    pdb.set_trace()
+
 
         
     for i in range(NUM_STEPS):
-        #if i % 2 == 0:
+        pdb.set_trace()
+    #if i % 2 == 0:
         env1.reset(feature_vector)        
-        action, next_action, predicted_state = env1.get_best_onestep_action(feature_vector)
+        action, next_action, predicted_state = env1.get_best_action(feature_vector)
         feature_vector, _, done, _ = env.step(action)
-#        print(predicted_state)
+        print(predicted_state)
         prediction = format_data(feature_vector, predicted_state)
-#        print(action,prediction)
+        print("Action", action,"pred",prediction)
        
         '''else:
             print(next_action)
@@ -237,15 +240,16 @@ print(f"Success on {NUM_ITERS-failcnt} fail on {failcnt}  {NUM_ITERS}  for  {100
 #print(data.shape)
 #print("Average steps: ", totalSteps / NUM_ITERS)
 
-iter_data = format_data_torch(data, 10)
+iter_data = format_data_torch(data, TAILSIZE)
 #iter_data.numpy()
 #print("iter_data: ", iter_data.shape)
 
 np.save(FILENAME, iter_data.numpy())
+np.save("fulldata-dynamic.npy", data)
 
 
 # Collect 3000 starts data
-FILENAME = (f"cartpole_3000_resets_np")
+FILENAME = ("cartpole_3000_resets_np")
 data = np.array([format_data_reset(env.reset())])
 print(data.shape)
 totalSteps = 0
@@ -261,11 +265,12 @@ while cnt < 3000:
 data = np.array(data)
 print(data.shape)
 
-reset_data = format_data_torch(data, 10)
+reset_data = format_data_torch(data, TAILSIZE)
 
 #print(reset_data.shape)
 
 np.save(FILENAME, reset_data.numpy())
+np.save("fulldata-static.npy", data)
 
 # Save npy file
 #np.save(FILENAME, data)

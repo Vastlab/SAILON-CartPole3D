@@ -21,4 +21,5 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile-TA2-cartpole
-    command: python -u TA2.py --config=config/evaluation.config --printout --logfile=config/log.txt
+#    command: python -u TA2.py --config=config/evaluation.config --printout --logfile=config/log.txt
+    command: python -u TA2.py --config=config/evaluation/evaluation.config --printout --logfile=config/log.txt    
