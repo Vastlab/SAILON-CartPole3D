@@ -78,11 +78,11 @@ class UCCSTA2():
         self.failscale=8.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
         self.failfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
-        self.maxdynamicprob = .2
+        self.maxdynamicprob = .175
         # because of many many fields and its done each time step, we limit how much this can add per time step
         self.maxclampedprob = .005  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
         self.clampedprob =   self.maxclampedprob       
-        self.cartprobscale=.25 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
+        self.cartprobscale=.2 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
         self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.dynamiccount=0   # if get consecutitve dynamic failures we keep increasing scale
@@ -689,22 +689,22 @@ class UCCSTA2():
             if(abs(istate[j]) > imax[k]):
                 probv =  self.awcdf(abs(istate[j]),imax[k],iscale[k],ishape[k]);
                 if((abs(istate[j]) - imax[k]) > 1) :
-                    self.logstr +=  "& P2+ LL2  " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL3  " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
                     initprob += max(.24,probv)
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                 elif(probv>charactermin and len(self.logstr) < self.maxcarlen):
-                    self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL3 " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += str(self.current_state)                                        
             if(abs(istate[j]) < imin[k]):
                 if( (imin[k] - abs(istate[j])) > 1 ):
-                    self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL3 " + "Step " + str(self.tick) + str(dimname[k])+ " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                     initprob += max(.24,probv)
                 else:
                     probv =  self.awcdf(abs(istate[j]),imin[k],iscale[k],ishape[k]);
                     initprob += probv
                     if(probv>charactermin and len(self.logstr) < self.maxcarlen):
-                        self.logstr +=  "&P2+ LL2" + "Step " + str(self.tick) + " " + str(dimname[k]) + " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                        self.logstr +=  "&P2+ LL3" + "Step " + str(self.tick) + " " + str(dimname[k]) + " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
             k = k +1
             if(k==19):
@@ -1609,10 +1609,29 @@ class UCCSTA2():
             i+= 1; levelcnt[i] =L8block= self.trialchar.count("LL8")
 
             maxi = np.argmax(levelcnt)
-            self.uccscart.characterization['level']=int(maxi);
 
             # if level is 8 is already filled in,  no need to do any filling
-            if(self.uccscart.characterization['level'] != int(8)):
+            if(self.uccscart.characterization['level'] == int(8) or maxi ==8):
+                #8 had special code to do increase vs increasing
+                self.uccscart.characterization['level']=int(8);
+                self.uccscart.characterization['entity']="Block"; 
+                self.uccscart.characterization['attribute']="quantity";
+                if(self.logstr.count("LL8: Blocks quantity dec") > self.logstr.count("LL8: Blocks quantity inc")  ):  #if we had more than one chance its increasing
+                    if(self.logstr.count("LL8: Blocks quantity dec") >2  ):  #if we had more than one chance its increasing                    
+                        self.uccscart.characterization['change']='decreasing';
+                    else:
+                        self.uccscart.characterization['change']='decrease';                        
+                else:
+                    if(self.logstr.count("LL8: Blocks quantity inc") >2  ):  #if we had more than one chance its increasing                                        
+                        self.uccscart.characterization['change']='increasing';
+                    else:
+                        self.uccscart.characterization['change']='increase';                        
+            else:
+                self.uccscart.characterization['level']=int(maxi)
+                self.uccscart.characterization['level']=None
+                self.uccscart.characterization['entity']=None
+                self.uccscart.characterization['attribute']=None
+                self.uccscart.characterization['change']=None           
                 
                 if(maxi == 1 and levelcnt[1] > 1000):
                     self.uccscart.characterization['level']=int(1);
@@ -1620,18 +1639,20 @@ class UCCSTA2():
                         self.uccscart.characterization['entity']="Cart";
                     else:
                         self.uccscart.characterization['entity']="Pole";
-                        self.uccscart.characterization['attribute']="speed";
-                        if(inccnt > deccnt):
-                            self.uccscart.characterization['change']='increase';
-                        else:
-                            self.uccscart.characterization['change']='decrease';                    
+                    self.uccscart.characterization['attribute']="speed";
+                    if(inccnt > deccnt):
+                        self.uccscart.characterization['change']='increase';
+                    else:
+                        self.uccscart.characterization['change']='decrease';                    
                 else:
 
                     levelcnt[1] = 0 # remove level  as its noisy and often large but when really there its 1000s ao if here even if its the max something else is goign one. 
                     maxi = np.argmax(levelcnt)
                     self.uccscart.characterization['level']=int(maxi);                            
                     self.uccscart.characterization['entity']="Block";
-                    if(maxi == 3):
+                    if(maxi == 3 or  (maxi == 2 and (initcnt > diffcnt) )):
+                        maxi =3
+                        self.uccscart.characterization['level']=int(maxi);                                                                                
                         self.uccscart.characterization['attribute']="direction";
                         self.uccscart.characterization['change']='toward location';
                         if(attcart > 5):
@@ -1806,9 +1827,6 @@ class UCCSTA2():
             #if sizes changed then we have different number of blocks.. and it must be novel
             if(len(data_val) != len(actual_state)):
                 probability = 1.0
-                tstring= " & P2+ LL8: Blocks quantity change,  FV len "+ str(len(data_val)) + " changed to " + str(len(actual_state))
-                if(self.logstr.count("LL8") < 2): self.logstr += str(tstring)
-                print(tstring)
                 self.uccscart.characterization['level']=int(8);
                 self.uccscart.characterization['entity']="Block"; 
                 self.uccscart.characterization['attribute']="quantity";
@@ -1823,6 +1841,10 @@ class UCCSTA2():
                     else:
                         self.uccscart.characterization['change']='increasing';                
                 self.worldchangedacc=1
+                tstring= " & P2+ LL8: Blocks quantity " + str(self.uccscart.characterization['change']) + " FV len "+ str(len(data_val)) + " changed to " + str(len(actual_state))
+                if(self.logstr.count("LL8") < 2): self.logstr += str(tstring)
+                print(tstring)
+                
                 
             else:
                 # vectors can be subtracted
