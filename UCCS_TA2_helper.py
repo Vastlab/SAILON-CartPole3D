@@ -689,22 +689,22 @@ class UCCSTA2():
             if(abs(istate[j]) > imax[k]):
                 probv =  self.awcdf(abs(istate[j]),imax[k],iscale[k],ishape[k]);
                 if((abs(istate[j]) - imax[k]) > 1) :
-                    self.logstr +=  "& P2+ LL3  " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL2  " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
                     initprob += max(.24,probv)
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                 elif(probv>charactermin and len(self.logstr) < self.maxcarlen):
-                    self.logstr +=  "& P2+ LL3 " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init increase " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += str(self.current_state)                                        
             if(abs(istate[j]) < imin[k]):
                 if( (imin[k] - abs(istate[j])) > 1 ):
-                    self.logstr +=  "& P2+ LL3 " + "Step " + str(self.tick) + str(dimname[k])+ " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                    self.logstr +=  "& P2+ LL2 " + "Step " + str(self.tick) + str(dimname[k])+ " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                     initprob += max(.24,probv)
                 else:
                     probv =  self.awcdf(abs(istate[j]),imin[k],iscale[k],ishape[k]);
                     initprob += probv
                     if(probv>charactermin and len(self.logstr) < self.maxcarlen):
-                        self.logstr +=  "&P2+ LL3" + "Step " + str(self.tick) + " " + str(dimname[k]) + " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
+                        self.logstr +=  "&P2+ LL2" + "Step " + str(self.tick) + " " + str(dimname[k]) + " init decrease " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
             k = k +1
             if(k==19):
@@ -1658,7 +1658,7 @@ class UCCSTA2():
                         if(attcart > 5):
                            self.uccscart.characterization['change']='toward cart';                                                   
                     if (maxi == 4):
-                        #level 5 can look like livel 4 but will have many more block errors than l4 tags. 
+                        #level 5 can look like livel 4 but will have many more block errors than l4 tags.  (though not as many as in level 7)
                         if(blockmotion >  2*L4block or blockvelcnt > 2*L4block):
                             maxi=5
                             self.uccscart.characterization['level']=int(maxi);                                                        
@@ -1690,7 +1690,7 @@ class UCCSTA2():
                             self.uccscart.characterization['change']='increase';
                         else:
                             self.uccscart.characterization['change']='decrease';                    
-                    if (maxi == 7  or blockvelcnt > 10*L4block):    #l7 will have huge numbers of blockvelocity violations
+                    if (maxi == 7  or velcnt > 10*L4block):    #l7 will have huge numbers of blockvelocity violations
                         # should do more to figure out direction of 
                         self.uccscart.characterization['attribute']="direction";
                         if(attcart > 5):
@@ -1699,6 +1699,14 @@ class UCCSTA2():
                             self.uccscart.characterization['change']='toward block';
                         else:
                             self.uccscart.characterization['change']='toward location';
+
+
+                if(self.uccscart.characterization['level']==0):
+                    self.uccscart.characterization['level']=None                    
+                    self.uccscart.characterization['entity']=None
+                    self.uccscart.characterization['attribute']=None
+                    self.uccscart.characterization['change']=None           
+
 
                 
             self.trialchar += self.logstr  #save char string without any added summarization so we can compute over it. 
@@ -1725,8 +1733,8 @@ class UCCSTA2():
             self.summary += "; Agent Velocity Violations " + str(blockvelcnt)                
             self.summary += "; Cart Total Violations " + str(cartcnt)
             self.summary += "; Pole Total Violations " + str(polecnt)
-            self.summary += "; Speed/position decrease Violations " + str(smallcnt)
-            self.summary += "; Speed/position increase Violations " + str(largecnt)                                                                                                            
+            self.summary += "; Speed/position decrease Violations " + str(deccnt)
+            self.summary += "; Speed/position increase Violations " + str(inccnt)                                                                                                            
             self.summary += "; Attacking Cart Violations " + str(attcart)
             self.summary += "; Blocks aiming at blocks " + str(aimblock)                                                                                                            
             self.summary += "; Coordinated block motion " + str(parallelblock)
