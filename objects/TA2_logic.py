@@ -137,6 +137,9 @@ class TA2Logic(object):
         self._experiment_secret = None
         self._no_testing = False
         self._just_one_trial = False
+        self._episode_seed = None
+        self._start_zeroed_out = False
+        self._start_world_state = None
 
         self._experiment_type = self._config.get('aiq-sail-on', 'experiment_type')
         if self._experiment_type not in objects.VALID_EXPERIMENT_TYPES:
@@ -155,6 +158,13 @@ class TA2Logic(object):
         self._aiq_secret = self._config.get('aiq-sail-on', 'secret')
         if self._config.has_option('aiq-sail-on', 'seed'):
             self._seed = self._config.getint('aiq-sail-on', 'seed')
+        if self._config.has_option('aiq-sail-on', 'episode_seed'):
+            self._episode_seed = self._config.getint('aiq-sail-on', 'episode_seed')
+        if self._config.has_option('aiq-sail-on', 'start_zeroed_out'):
+            self._start_zeroed_out = self._config.getboolean('aiq-sail-on', 'start_zeroed_out')
+        if self._config.has_option('aiq-sail-on', 'start_world_state'):
+            self._start_world_state = self._config.get('aiq-sail-on', 'start_world_state')
+            self._start_world_state = json.loads(self.start_world_state)
 
         self._sail_on_domain = self._config.get('sail-on', 'domain')
         if self._sail_on_domain not in objects.VALID_DOMAINS:
@@ -202,6 +212,7 @@ class TA2Logic(object):
     def _get_command_line_options(self):
         parser = optparse.OptionParser(usage="usage: %prog [options]")
         parser = self._add_command_line_options(parser)
+        parser = self._add_ta2_command_line_options(parser)
 
         (options, args) = parser.parse_args()
         if options.fulldebug:
@@ -252,6 +263,9 @@ class TA2Logic(object):
                           help=('Causes the program to ignore any secret stored in experiment_'
                                 'secret.'),
                           default=False)
+        return parser
+
+    def _add_ta2_command_line_options(self, parser):
         return parser
 
     def _set_model_filename(self):
@@ -330,25 +344,20 @@ class TA2Logic(object):
                 # Collect testing data until we get TestingEpisodeEnd.
                 while not isinstance(my_state, objects.TestingEpisodeEnd):
                     # Get testing data.
-                  test_data = self._amqp.get_testing_data()
-                  #TB hack to skip data unknown "none" during testing
-                  if(False and test_data.novelty_indicator == None):
-                      print("Skipping test with Novelty Indicator=", test_data.novelty_indicator)
-                      continue
-                  else:
-                      # Decompress the image if there is one.
+                    test_data = self._amqp.get_testing_data()
+
+                    # Decompress the image if there is one.
                     if 'image' in test_data.feature_vector:
                         if test_data.feature_vector['image'] is not None:
                             comp_image = b64decode(test_data.feature_vector['image'])
                             test_data.feature_vector['image'] \
                                 = blosc.unpack_array(comp_image)
 
-
                     # Evaluate the testing data.
                     label_prediction = \
                         self.testing_instance(feature_vector=test_data.feature_vector,
                                               novelty_indicator=test_data.novelty_indicator)
-                    
+
                     # Send the prediction and update my_state, expecting TestingDataAck until
                     # the training episode is over.
                     my_state = self._amqp.send_testing_predictions(
@@ -357,7 +366,6 @@ class TA2Logic(object):
                     if isinstance(my_state, objects.TestingDataAck):
                         self.testing_performance(performance=my_state.performance,
                                                  feedback=my_state.feedback)
-#                print("Next are results for testing with Novelty Indicator=", test_data.novelty_indicator)
 
                 # We are done with the training episode.
                 if isinstance(my_state, objects.TestingEpisodeEnd):
@@ -369,8 +377,6 @@ class TA2Logic(object):
                         novelty_probability=novelty_probability,
                         novelty_threshold=novelty_threshold,
                         novelty=novelty)
-
-
 
                 self.log.debug(str(my_state))
 
@@ -559,14 +565,19 @@ class TA2Logic(object):
             else:
                 print(message)
 
+            generator_config = dict({'episode_seed': self._episode_seed,
+                                     'start_zeroed_out': self._start_zeroed_out,
+                                     'start_world_state': self._start_world_state})
             # Start a SAIL-ON experiment!
             if self._experiment_secret is None or self._no_testing:
                 # Based on these variables, we need to start a new experiment.
-                my_experiment = self._amqp.start_sail_on_experiment(model=model,
-                                                                    domain=self._sail_on_domain,
-                                                                    no_testing=self._no_testing,
-                                                                    seed=self._seed,
-                                                                    description=self._description)
+                my_experiment = self._amqp.start_sail_on_experiment(
+                    model=model,
+                    domain=self._sail_on_domain,
+                    no_testing=self._no_testing,
+                    seed=self._seed,
+                    description=self._description,
+                    generator_config=generator_config)
                 self.log.info('experiment is gathering requirements!')
                 # self.log.debug(str(my_experiment))
                 # Store the experiment_secret locally.
@@ -589,7 +600,8 @@ class TA2Logic(object):
                     model=model,
                     experiment_secret=self._experiment_secret,
                     just_one_trial=self._just_one_trial,
-                    domain=self._sail_on_domain)
+                    domain=self._sail_on_domain,
+                    generator_config=generator_config)
                 if isinstance(my_experiment, objects.CasasResponse):
                     if my_experiment.status == 'error':
                         for casas_error in my_experiment.error_list:

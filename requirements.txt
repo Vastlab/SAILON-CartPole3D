@@ -10,4 +10,3 @@ Pillow==8.4.0
 pybullet==3.1.9
 blosc
 opencv-python
-

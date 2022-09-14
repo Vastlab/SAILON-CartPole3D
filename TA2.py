@@ -19,7 +19,6 @@
 # **  Contact: Larry Holder (holder@wsu.edu)                                                    ** #
 # **  Contact: Diane J. Cook (djcook@wsu.edu)                                                   ** #
 # ************************************************************************************************ #
-
 import copy
 import optparse
 import queue
@@ -41,11 +40,12 @@ from datetime import datetime, timedelta
 
 
 
-import tracemalloc
+#import tracemalloc
 
-tracemalloc.start(10)
-snapshot1 = snapshot2 = tracemalloc.take_snapshot()
-top_stats = snapshot1.statistics('lineno')
+#tracemalloc.start(10)
+#snapshot1 = snapshot2 = tracemalloc.take_snapshot()
+#top_stats = snapshot1.statistics('lineno')
+
 
 
 
@@ -307,9 +307,14 @@ class TA2Agent(TA2Logic):
 
         self.UCCS.noveltyindicator = novelty_indicator
         self.UCCS.debugstring = ""
+#        self.log.debug('Testing Instance: feature_vector={}'.format(feature_vector))
+        
         if(self.UCCS.cnt < 1):
+            self.UCCS.hint=str(feature_vector['hint'])
+            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
+
             if (novelty_indicator == True):
                 self.UCCS.given = True
                 self.UCCS.uccscart.givendetection = True                
@@ -365,11 +370,25 @@ class TA2Agent(TA2Logic):
             A JSON-valid dict characterizing the novelty.
         """
 
+        global TA2_previous_worldchange   # global so it retains info between trials        
+        if(self.UCCS.episode <1):
+            TA2_previous_worldchange = 0
+        
         novelty_probability = self.UCCS.world_change_prob(False)
+        if(novelty_probability < TA2_previous_worldchange):
+            self.log.info("??? Unknown Error WorldChange whent down at episode {} from {} to {}.  Resetting".format(self.UCCS.episode,TA2_previous_worldchange,novelty_probability))
+            novelty_probability =  TA2_previous_worldchange
+            self.UCCS.worldchangeacc = TA2_previous_worldchange
+        else:
+            TA2_previous_worldchange = novelty_probability
+            
+                     
         novelty_threshold = 0.5
         novelty = 0
-        novelty_characterization = dict()
-        novelty_characterization['stringdump'] = self.UCCS.character
+        novelty_characterization =  self.UCCS.uccscart.characterization
+        novelty_characterization['summary'] = self.UCCS.summary        
+#        novelty_characterization['stringdump'] = self.UCCS.logstr
+
 
         end =datetime.now()
         self.UCCS.cumtime += end - self.UCCS.starttime
@@ -388,19 +407,22 @@ class TA2Agent(TA2Logic):
         self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect, rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
         rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-        self.log.info('Testing E #{} End: times={} {}  NovI={} steps={}, Perf={}, Cperf={}, WC={}, Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
-            self.UCCS.episode, round((end - self.UCCS.starttime).total_seconds(), 1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(), 1), 
-            self.UCCS.noveltyindicator, self.totalSteps,  performance, round(rperf, 1), round(novelty_probability, 2), iscorrect, rcorrect, round(pcorrect, 2),
+        self.log.info('Testing End#={}: WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
+            self.UCCS.episode,
+            round(novelty_probability, 5),
+            self.UCCS.hint,
+            self.totalSteps,            
+            round(rperf, 1),            
+            round((end - self.UCCS.starttime).total_seconds(), 1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(), 1), 
+            self.UCCS.noveltyindicator,     iscorrect, rcorrect, round(pcorrect, 2),
             self.UCCS.correctcnt, self.UCCS.rcorrectcnt, self.UCCS.totalcnt, 
             str(novelty_characterization)
         ))
 
 
-        self.log.info('Debug Tend# {}  {} Prob={} {}Scores={}   '.format( self.UCCS.episode,
-            "\n", [round(num, 2) for num in self.UCCS.problist], 
-            "\n", [round(num, 2) for num in self.UCCS.scorelist]))            
-        self.totalSteps = 0
-
+        self.log.debug('DTend# {}  Logstr={} {} Prob={} {} Scores= {}   '.format( self.UCCS.episode,  self.UCCS.logstr,
+            "\n", [round(num, 2) for num in self.UCCS.problist[:40]], 
+            "\n", [round(num, 2) for num in self.UCCS.scorelist[:40]]))            
 
         self.totalSteps = 0
         
