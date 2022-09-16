@@ -6,10 +6,9 @@ Copied from http://incompleteideas.net/book/code/pole.c
 import os
 import sys
 import time
-import math
-import pdb
-
+import random
 import gym
+import math
 from gym import spaces
 from gym.utils import seeding
 
@@ -17,6 +16,7 @@ import numpy as np
 import pybullet as p2
 from pybullet_utils import bullet_client as bc
 
+import pdb
 
 class CartPoleBulletEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
@@ -74,6 +74,7 @@ class CartPoleBulletEnv(gym.Env):
         self.givendetection=0        
         self.wcprob=0
         self.char=""
+        self.characterization={'level': None, 'entity': None, 'attribute': None, 'change': None}        
         self.tbdebuglevel=0
         self.episode=0
         self.force_action=-1
@@ -139,6 +140,7 @@ class CartPoleBulletEnv(gym.Env):
 
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
+        random.seed(seed)
         return None
 
     def string_to_actionnum(self,action):
@@ -211,6 +213,9 @@ class CartPoleBulletEnv(gym.Env):
 
         # Apply correccted forces
         p.applyExternalForce(self.cartpole, 0, (fx, fy, 0.0), (0, 0, 0), p.LINK_FRAME)
+        # Rotation forces
+        # p.applyExternalForce(self.cartpole, 0, (1, 0, 0.0), (1.0, 1.0, 0), p.LINK_FRAME)
+        # p.applyExternalForce(self.cartpole, 0, (-1, 0, 0.0), (-1.0, 0, 0), p.LINK_FRAME)
 
         # Apply anti-gravity to blocks
         for i in self.blocks:
@@ -267,7 +272,6 @@ class CartPoleBulletEnv(gym.Env):
         if self._physics_client_id < 0:
             self.generate_world()
 
-        self.reset_world()
 
         # Run for one step to get everything going
         if(feature_vector is None):
@@ -276,10 +280,11 @@ class CartPoleBulletEnv(gym.Env):
             self.step('nothing')
             self.reactstep=0            
             self.force_action=-1
+            self.reset_world()
         else:
             self.set_world(feature_vector)
 
-        return self.get_state(initial=True)
+        return self.get_state()
 
     # Used to generate the initial world state
     def generate_world(self):
@@ -288,9 +293,11 @@ class CartPoleBulletEnv(gym.Env):
             if 'start_zeroed_out' in self.config:
                 self.init_zero = self.config['start_zeroed_out']
             if 'episode_seed' in self.config:
-                self.seed(self.config['episode_seed'])
+                if self.config['episode_seed'] is not None:
+                    self.seed(self.config['episode_seed'])
             if 'start_world_state' in self.config:
-                self.set_world(self.config['start_world_state'])
+                if self.config['start_world_state'] is not None:
+                    self.set_world(self.config['start_world_state'])
 
         # Create bullet physics client
         if self._renders:
@@ -364,9 +371,9 @@ class CartPoleBulletEnv(gym.Env):
         for i in self.blocks:
             p.removeBody(i)
 
+
         # Load blocks in
-        self.nb_blocks = np.random.randint(3) + 2
-        if(self.init_zero): self.nb_blocks=0        
+        self.nb_blocks = random.randint(0, 2) + 2
         self.blocks = [None] * self.nb_blocks
         for i in range(self.nb_blocks):
             self.blocks[i] = p.loadURDF(os.path.join(self.path, 'models', 'block.urdf'))
@@ -393,12 +400,10 @@ class CartPoleBulletEnv(gym.Env):
         for i in self.blocks:
             vel = self.np_random.uniform(low=6.0, high=10.0, size=(3,))
             for ind, val in enumerate(vel):
-                if np.random.rand() < 0.5:
+                if random.random() < 0.5:
                     vel[ind] = val * -1
 
             p.resetBaseVelocity(i, vel, [0, 0, 0])
-
-        p.stepSimulation()            
 
         return None
 
@@ -420,19 +425,46 @@ class CartPoleBulletEnv(gym.Env):
         pole_velocity = [state["pole"]["x_velocity"],state["pole"]["y_velocity"],state["pole"]["z_velocity"]*0]
         p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_position, targetVelocity=pole_velocity)
 
-        # Delete old blocks if number is different
-        if(len(state['blocks']) != self.nb_blocks):
+        
+        numblocks = len(state['blocks'])
+        # deal with  old blocks if number is different
+        if( numblocks != self.nb_blocks ):
+
             for i in self.blocks:
                 p.removeBody(i)
 
-            self.nb_blocks = len(state['blocks'])
-            if(self.nb_blocks > 4):
-                self.character += "& Blocks increase: Too many blocks" +str(self.nb_blocks)
+            if(self.tick>0 and numblocks > self.nb_blocks ):
+                if(len(self.char)<256): self.char += " & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                self.characterization['level']=int(8);
+                self.characterization['entity']="Block"; 
+                self.characterization['attribute']="quantity";
+                self.characterization['change']='increasing';                
                 self.wcprob=1               
-            elif(self.nb_blocks < 2):
-                self.character += "& Blocks decrease: Too few blocks" +str(self.nb_blocks)                
+            elif(self.tick>0 and numblocks < self.nb_blocks ):
+                if(len(self.char)<256):                self.char += " & Level L8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                self.characterization['level']=int(8);
+                self.characterization['entity']="Block"; 
+                self.characterization['attribute']="quantity";
+                self.characterization['change']='decreasing';                
                 self.wcprob=1                               
-                
+            elif( numblocks > 4 ):  # if initial round it too large or small that is novel
+                self.characterization['level']=int(2);
+                self.characterization['entity']="Block"; 
+                self.characterization['attribute']="quantity";
+                self.characterization['change']='increase';                
+                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity increase "+ +str(numblocks)
+                self.wcprob=1               
+            elif( numblocks < 2 ):
+                self.characterization['level']=int(2);
+                self.characterization['entity']="Block"; 
+                self.characterization['attribute']="quantity";
+                self.characterization['change']='decrease';                
+                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity decrease "+ +str(numblocks)
+                self.wcprob=1                               
+
+
+                        
+            self.nb_blocks = numblocks
             self.blocks = [None] * self.nb_blocks
             for i in range(self.nb_blocks):
                 self.blocks[i] = p.loadURDF(os.path.join(self.path, 'models', 'block.urdf'))
@@ -750,7 +782,7 @@ class CartPoleBulletEnv(gym.Env):
                 self.action_history[self.force_action][0] = self.format_data(expected_state)                                
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
             cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]            
-            if(self.tbdebuglevel>1): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
+            if(self.tbdebuglevel>2): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
             return action, second_action[next_action], expected_state
 
     def two_step_env(self, feature_vector, steps):
@@ -761,7 +793,7 @@ class CartPoleBulletEnv(gym.Env):
             :param steps:
             :return: Score
                                        '''
-            if(self.tbdebuglevel>1): print("Two step ", feature_vector) 
+            if(self.tbdebuglevel>2): print("Two step ", feature_vector) 
             self.reset(feature_vector)
             self.step(steps[0])
 
@@ -770,12 +802,12 @@ class CartPoleBulletEnv(gym.Env):
                 print("Force action in two", self.force_action)                
                 self.action_history[self.force_action][0] = self.format_data(nextstate)                
             
-            if(self.tbdebuglevel>1): print("Try action", steps[0], nextstate)                            
+            if(self.tbdebuglevel>2): print("Try action", steps[0], nextstate)                            
             self.reset(nextstate)
             self.step(steps[1])
             p = self._p            
             p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
-            if(self.tbdebuglevel>1): print("Try action", steps[1], self.get_state())                                        
+            if(self.tbdebuglevel>2): print("Try action", steps[1], self.get_state())                                        
 #            return [self.get_score(self.get_state()), nextstate]
             return [self.get_score(self.get_state()), self.get_state()]        
 
@@ -838,13 +870,13 @@ class CartPoleBulletEnv(gym.Env):
             :param steps:
             :return: Score
             '''
-            if(self.tbdebuglevel>1): print("One step ", feature_vector)             
+            if(self.tbdebuglevel>2): print("One step ", feature_vector)             
             self.reset(feature_vector)
             self.step(steps[0])
             state = self.get_state()
             p = self._p            
             p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
-            if(self.tbdebuglevel>1): print("Try action", steps[0],state)                                                    
+            if(self.tbdebuglevel>2): print("Try action", steps[0],state)                                                    
             return [self.get_score(state), state]
 
 
@@ -916,7 +948,7 @@ class CartPoleBulletEnv(gym.Env):
                     bvel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
                     pdiff = np.subtract(cartpos ,bpos)
                     nval = np.linalg.norm(bvel)
-                    if(nval >.1) :
+                    if(nval >.1) :  # effectively ignore this for Phase 2+ testing.. 
                         dist =  (np.linalg.norm(np.cross(bvel,pdiff))/ nval)
                         if(dist <1):
                             if( self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
@@ -935,10 +967,12 @@ class CartPoleBulletEnv(gym.Env):
                                     else:
                                         self.avoid_actions= self.avoid_list[0]
  #                               print("Mangle x y ", mangle, pdiff[0], pdiff[1], " Avoid with ",self.avoid_actions);
-                                self.char += "HA"                                
+                                if(self.tbdebuglevel>1): 
+                                    self.char += "HA"                                
                             else:
-                                self.char += "SA"
-                                cost += 100+1/(.01+dist)
+                                if(self.tbdebuglevel>1):
+                                    self.char += "SA"
+                                cost += 100+1/(.001+dist)
 #                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
 
 
@@ -970,7 +1004,7 @@ class CartPoleBulletEnv(gym.Env):
 
 
             if(False and cost > 1000):
-#            if(self.tbdebuglevel>1): 
+#            if(self.tbdebuglevel>2): 
                 print(" cost,  slack, slackcost  ", round(cost,8), round(slack,3),round(slackcost,3), "pole xyz", round(abs(pole_x),3), round(abs(pole_y),3),round(abs(pole_z),3),
                       "  dists ", round(collision_penalty,3),round(mindist,3),   "angle limit", round(self.angle_limit,3), "  At", self.tick,"score=", round(cost,2),"at",round(cartpos[0],2), round(cartpos[1],2))
 
@@ -981,6 +1015,7 @@ class CartPoleBulletEnv(gym.Env):
         #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
+
         if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
             react = self.avoid_actions[self.reactstep]
             self.char += "AV"+str(self.reactstep)                                            
@@ -994,12 +1029,12 @@ class CartPoleBulletEnv(gym.Env):
 
     #       if we have colission potential for any action (char != "") so do two-step action search
     #       if we have low score  we can go faser uding one-setp
-           if(  (self.lastscore > 0 and  ((prob < .49  and self.lastscore < 1000) or (self.lastscore < 500) ))):            # make it mroe often just one making it faster
+           if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 50 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
                 state= self.get_best_onestep_action(feature_vector)
-                if(self.tbdebuglevel>1): print("Best one score", self.lastscore)
+                if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
            else:
                 state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>1): print("Two score", self.lastscore)
+                if(self.tbdebuglevel>2): print("Two score", self.lastscore)
            #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):
