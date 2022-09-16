@@ -310,8 +310,9 @@ class TA2Agent(TA2Logic):
 #        self.log.debug('Testing Instance: feature_vector={}'.format(feature_vector))
         
         if(self.UCCS.cnt < 1):
-            self.UCCS.hint=str(feature_vector['hint'])
-            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
+#            self.UCCS.hint=str(feature_vector['hint'])
+            self.UCCS.hint=""
+#            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
 
