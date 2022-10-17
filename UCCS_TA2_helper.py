@@ -846,10 +846,9 @@ class UCCSTA2():
 
 
 
-
         # get probability differene froom initial state
     def istate_diff_G_prob(self,actual_state):
-        dimname=[" x Cart" , " y Cart" , " z Cart" ,  " x Cart Vel" , " y Cart Vel" , " z Cart Vel ",  " x Pole" , " y Pole" , " z Pole" ," w Pole" ,  " x Pole Vel" , " y Pole Vel" , " z Pole Vel" , " z Block " , " y Block" , " z Block" ,  " x Block Vel" , " y Block Vel" , " z Block Vel" , " 1x Wall" ," 1y Wall" ," 1z Wall" , " 2x Wall" ," 2y Wall" ," 2z Wall" , " 3x Wall" ," 3y Wall" ," 3z Wall" , " 4x Wall" ," 4y Wall" ," 4z Wall" , " 5x Wall" ," 5y Wall" ," 5z Wall" , " 6x Wall" ," 6y Wall" ," 6z Wall" , " 8x Wall" ," 8y Wall" ," 8z Wall" , " 9x Wall" ," 9y Wall" ," 9z Wall" ] 
+        dimname=DATA.dimansion_name
         
         #load mean/std from training..  
         #if first time load up data.. 
@@ -908,7 +907,7 @@ class UCCSTA2():
 
     # get probability differene froom continuing state difference
     def cstate_diff_G_prob(self,cdiff):
-        dimname=[" x Cart" , " y Cart" , " z Cart" ,  " x Cart Vel" , " y Cart Vel" , " z Cart Vel ",  " x Pole" , " y Pole" , " z Pole" ," w Pole" ,  " x Pole Vel" , " y Pole Vel" , " z Pole Vel" , " z Block " , " y Block" , " z Block" ,  " x Block Vel" , " y Block Vel" , " z Block Vel" , " 1x Wall" ," 1y Wall" ," 1z Wall" , " 2x Wall" ," 2y Wall" ," 2z Wall" , " 3x Wall" ," 3y Wall" ," 3z Wall" , " 4x Wall" ," 4y Wall" ," 4z Wall" , " 5x Wall" ," 5y Wall" ," 5z Wall" , " 6x Wall" ," 6y Wall" ," 6z Wall" , " 8x Wall" ," 8y Wall" ," 8z Wall" , " 9x Wall" ," 9y Wall" ," 9z Wall" ] 
+        dimname=DATA.dimansion_name
 
         if(self.dmean is None):        
             #load data from triningn
