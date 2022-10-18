@@ -31,7 +31,7 @@ import importlib.util
 import math
 
 from datetime import datetime, timedelta
-from UCCS_TA2_Data_Loader import DATA
+import data_loader as DATA
 
 
 try:

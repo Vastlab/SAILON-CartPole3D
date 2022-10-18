@@ -18,7 +18,7 @@ from pybullet_utils import bullet_client as bc
 
 import pdb
 
-from UCart_Data import DATA
+import data_loader as DATA
 
 class CartPoleBulletEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
