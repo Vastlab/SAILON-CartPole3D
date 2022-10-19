@@ -4,19 +4,6 @@ import numpy as np
 dimansion_name = [" x Cart", " y Cart", " z Cart",  " x Cart Vel", " y Cart Vel", " z Cart Vel ",  " x Pole", " y Pole", " z Pole", " w Pole",  " x Pole Vel", " y Pole Vel", " z Pole Vel", " z Block ", " y Block", " z Block",  " x Block Vel", " y Block Vel", " z Block Vel", " 1x Wall",
                   " 1y Wall", " 1z Wall", " 2x Wall", " 2y Wall", " 2z Wall", " 3x Wall", " 3y Wall", " 3z Wall", " 4x Wall", " 4y Wall", " 4z Wall", " 5x Wall", " 5y Wall", " 5z Wall", " 6x Wall", " 6y Wall", " 6z Wall", " 8x Wall", " 8y Wall", " 8z Wall", " 9x Wall", " 9y Wall", " 9z Wall"]
 
-# computed
-imax = np.array([2.986346e+00, 2.980742e+00, 0.000000e+00, 1.984800e-02,
-                 1.971800e-02, 0.000000e+00, 9.936000e-03, 9.933000e-03,
-                 9.938000e-03, 9.999980e-01, 2.725000e-02, 2.736900e-02,
-                 5.800000e-04, 4.090533e+00, 4.099369e+00, 9.122096e+00,
-                 9.842307e+00, 9.854365e+00, 9.848242e+00, 5.000000e+00,
-                 5.000000e+00, 0.000000e+00, 5.000000e+00, 5.000000e+00,
-                 0.000000e+00, 5.000000e+00, 5.000000e+00, 0.000000e+00,
-                 5.000000e+00, 5.000000e+00, 0.000000e+00, 5.000000e+00,
-                 5.000000e+00, 1.000000e+01, 5.000000e+00, 5.000000e+00,
-                 1.000000e+01, 5.000000e+00, 5.000000e+00, 1.000000e+01,
-                 5.000000e+00, 5.000000e+00, 1.000000e+01])
-
 # adjusted based on code..
 imax = np.array([3.0+00, 3.0+00, 0.000000e+00,  # cart pos
                  2.e-02, 2.e-02, 0.000000e+00,  # cart vel
