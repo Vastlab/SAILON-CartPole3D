@@ -18,6 +18,8 @@ from pybullet_utils import bullet_client as bc
 
 import pdb
 
+import data_loader as DATA
+
 class CartPoleBulletEnv(gym.Env):
     metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
 
@@ -82,17 +84,7 @@ class CartPoleBulletEnv(gym.Env):
 
         self.use_avoid_reaction=False   #set by UCCS_TA2  when world change is high enough
         self.reactstep=0
-        self.avoid_list = [
-#            ['left','left','left','left','nothing','nothing','nothing','nothing','right','right','right'],
-#            ['left','left','left','nothing','nothing','nothing','right','right'],            
-#            ['right','right','right','nothing','nothing','nothing','left','left',],
-#            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
-#            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
-            ['left','left','left','nothing','nothing','nothing'],            
-            ['right','right','right','nothing','nothing','nothing'],
-            ['forward','forward','forward','nothing','nothing','nothing'],
-            ['backward','backward','backward','nothing','nothing','nothing']                                                    
-        ]
+        self.avoid_list = DATA.avoid_list
         self.avoid_actions= self.avoid_list[0]
 
 
@@ -102,36 +94,7 @@ class CartPoleBulletEnv(gym.Env):
         self.action_history = np.zeros((5,2,13))
         
         self.actions_permutation_index=0
-        self.actions_plist= [(0, 1, 2, 3, 4),  #normal
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor                            
-                             #rest are just remaining pertubations in  standard pertubation order. 
-                             (0, 1, 2, 4, 3), (0, 1, 3, 2, 4), (0, 1, 3, 4, 2), (0, 1, 4, 2, 3), (0, 1, 4, 3, 2),
-                             (0, 2, 3, 1, 4), (0, 2, 3, 4, 1), (0, 2, 4, 1, 3), (0, 2, 4, 3, 1), (0, 3, 1, 2, 4),
-                             (0, 3, 1, 4, 2), (0, 3, 2, 1, 4), (0, 3, 2, 4, 1),  (0, 3, 4, 2, 1),  (0, 4, 1, 2, 3),
-                             (0, 4, 1, 3, 2), (0, 4, 2, 1, 3), (0, 4, 2, 3, 1), (0, 4, 3, 1, 2),
-                             (1, 0, 2, 3, 4), (1, 0, 2, 4, 3), (1, 0, 3, 2, 4), (1, 0, 3, 4, 2), (1, 0, 4, 2, 3),
-                             (1, 0, 4, 3, 2), (1, 2, 0, 3, 4), (1, 2, 0, 4, 3), (1, 2, 3, 0, 4), (1, 2, 3, 4, 0),
-                             (1, 2, 4, 0, 3), (1, 2, 4, 3, 0), (1, 3, 0, 2, 4), (1, 3, 0, 4, 2), (1, 3, 2, 0, 4),
-                             (1, 3, 2, 4, 0), (1, 3, 4, 0, 2), (1, 3, 4, 2, 0), (1, 4, 0, 2, 3), (1, 4, 0, 3, 2),
-                             (1, 4, 2, 0, 3), (1, 4, 2, 3, 0), (1, 4, 3, 0, 2), (1, 4, 3, 2, 0),
-                             (2, 0, 1, 3, 4), (2, 0, 1, 4, 3), (2, 0, 3, 1, 4), (2, 0, 3, 4, 1), (2, 0, 4, 1, 3),
-                             (2, 0, 4, 3, 1), (2, 1, 0, 3, 4), (2, 1, 0, 4, 3), (2, 1, 3, 0, 4), (2, 1, 3, 4, 0),
-                             (2, 1, 4, 0, 3), (2, 1, 4, 3, 0), (2, 3, 0, 1, 4), (2, 3, 0, 4, 1), (2, 3, 1, 0, 4),
-                             (2, 3, 1, 4, 0), (2, 3, 4, 0, 1), (2, 3, 4, 1, 0), (2, 4, 0, 1, 3), (2, 4, 0, 3, 1),
-                             (2, 4, 1, 0, 3), (2, 4, 1, 3, 0), (2, 4, 3, 0, 1), (2, 4, 3, 1, 0),
-                             (3, 0, 1, 2, 4), (3, 0, 1, 4, 2), (3, 0, 2, 1, 4), (3, 0, 2, 4, 1), (3, 0, 4, 1, 2),
-                             (3, 0, 4, 2, 1), (3, 1, 0, 2, 4), (3, 1, 0, 4, 2), (3, 1, 2, 0, 4), (3, 1, 2, 4, 0),
-                             (3, 1, 4, 0, 2), (3, 1, 4, 2, 0), (3, 2, 0, 1, 4), (3, 2, 0, 4, 1), (3, 2, 1, 0, 4),
-                             (3, 2, 1, 4, 0), (3, 2, 4, 0, 1), (3, 2, 4, 1, 0), (3, 4, 0, 1, 2), (3, 4, 0, 2, 1),
-                             (3, 4, 1, 0, 2), (3, 4, 1, 2, 0), (3, 4, 2, 0, 1), (3, 4, 2, 1, 0), (4, 0, 1, 2, 3),
-                             (4, 0, 1, 3, 2), (4, 0, 2, 1, 3), (4, 0, 2, 3, 1), (4, 0, 3, 1, 2), (4, 0, 3, 2, 1),
-                             (4, 1, 0, 2, 3), (4, 1, 0, 3, 2), (4, 1, 2, 0, 3), (4, 1, 2, 3, 0), (4, 1, 3, 0, 2),
-                             (4, 1, 3, 2, 0), (4, 2, 0, 1, 3), (4, 2, 0, 3, 1), (4, 2, 1, 0, 3), (4, 2, 1, 3, 0),
-                             (4, 2, 3, 0, 1), (4, 2, 3, 1, 0), (4, 3, 0, 1, 2), (4, 3, 0, 2, 1), (4, 3, 1, 0, 2),
-                             (4, 3, 1, 2, 0), (4, 3, 2, 0, 1), (4, 3, 2, 1, 0)]
+        self.actions_plist= DATA.actions_plist
         self.actions_permutation_tried=np.zeros(len(self.actions_plist))
         self.actions_permutation_tried[0] = 1
         
