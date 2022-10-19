@@ -1,5 +1,4 @@
 # UCCS TA 2 helper
-from filecmp import dircmp
 import pdb
 import numpy as np
 import gym
