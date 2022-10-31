@@ -79,11 +79,12 @@ class UCCSTA2():
         self.failfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
 
         # because of noisy simulatn and  many many fields and its done each time step, we limit how much this can add per time step
-        self.maxdynamicprob = .175
+        self.maxdynamicprob = .15  # was .175 but too many false detects on non-novel trials so reduced it a bit. 
         self.maxclampedprob = .005  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
         self.clampedprob =   self.maxclampedprob       
         self.cartprobscale=.25 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
-        self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+#        self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        self.initprobscale=.5 #   Were getting too many detects on no-novel worlds.. so reduce
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.dynamiccount=0   # if get consecutitve dynamic failures we keep increasing scale
         self.consecutivewc=0   # if get consecutitve world change overall we keep increasing scale                
@@ -263,7 +264,8 @@ class UCCSTA2():
             self.blockmin=999
             self.blockmax=-999
             self.blockvelmax=-999
-        elif(episode < 2*self.scoreforKL):  #long term the noisy/bad probabilities seem to grow so reduce the max they can impact  
+#        elif(episode < 2*self.scoreforKL):  #long term the noisy/bad probabilities seem to grow so reduce the max they can impact  
+        elif(episode < 3*self.scoreforKL):  #Phase 3 is not as noisy.. could use hints to change or a develop a noise model
             self.clampedprob = self.maxclampedprob  *  ((2*self.scoreforKL-episode)/(self.scoreforKL))**2  # we reduce max from noisy ones over the window size
             self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time            
             self.blockmin=999
@@ -925,7 +927,8 @@ class UCCSTA2():
                     if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                         self.logstr +=  "& P2+ LL1  Step " + str(self.tick) + dimname[j] + " diff decrease prob " + " " + str(round(probv,5)) + "  s/l " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))
 
-        prob += probv
+#        prob += probv
+        prob += .5*probv        #  too many funky errors causing detection on non-novel trials, so reduced this. 
 #        print("at Step ", self.tick, " Dyn state ",istate)
 
 #        if(self.episode > 20):        pdb.set_trace()
