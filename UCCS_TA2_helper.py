@@ -591,7 +591,7 @@ class UCCSTA2():
                                            self.block_vel(istate,nb))
             probv=0                            
             if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack
-                probv = .5
+                probv = .5 # we should fix that
             elif(dist < .01): # should do wlb fit on this.. but for now just a hack
                 probv = (.01-dist)/(.01-1e-3)
                 probv = .5*probv*probv   # square it so its a bit more concentrated and smoother                        
