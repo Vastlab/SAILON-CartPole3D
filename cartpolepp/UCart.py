@@ -19,9 +19,12 @@ from pybullet_utils import bullet_client as bc
 import pdb
 
 import data_loader as DATA
+import formatter as formatter
+
 
 class CartPoleBulletEnv(gym.Env):
-    metadata = {'render.modes': ['human', 'rgb_array'], 'video.frames_per_second': 50}
+    metadata = {'render.modes': [
+        'human', 'rgb_array'], 'video.frames_per_second': 50}
 
     def __init__(self, params: dict = None):
         # start the bullet physics server
@@ -38,7 +41,7 @@ class CartPoleBulletEnv(gym.Env):
         # Environmental params
         self.force_mag = 10
         self.timeStep = 1.0 / 50.0
-        self.angle_limit = 10.0 * np.pi / 180.0 # 10 degrees in radians
+        self.angle_limit = 10.0 * np.pi / 180.0  # 10 degrees in radians
         self.actions = ['right', 'left', 'forward', 'backward', 'nothing']
         self.tick_limit = 200
 
@@ -54,7 +57,7 @@ class CartPoleBulletEnv(gym.Env):
 
         # Params
         self.init_zero = False
-        self.init_zero = True        
+        self.init_zero = True
         self.config = self.params['config']
 
         # Object definitions
@@ -69,35 +72,34 @@ class CartPoleBulletEnv(gym.Env):
         # Functions to be run directly after init
         self.seed(self.params['seed'])
 
-        #TB additions/hacks
-        self.setbase=False
-        self.basepos=[0,0,0]
-        self.lastscore=0
-        self.givendetection=0        
-        self.wcprob=0
-        self.char=""
-        self.characterization={'level': None, 'entity': None, 'attribute': None, 'change': None}        
-        self.tbdebuglevel=0
-        self.episode=0
-        self.force_action=-1
-        self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
+        # TB additions/hacks
+        self.setbase = False
+        self.basepos = [0, 0, 0]
+        self.lastscore = 0
+        self.givendetection = 0
+        self.wcprob = 0
+        self.char = ""
+        self.characterization = {
+            'level': None, 'entity': None, 'attribute': None, 'change': None}
+        self.tbdebuglevel = 0
+        self.episode = 0
+        self.force_action = -1
+        self.runandhide = 0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner
 
-        self.use_avoid_reaction=False   #set by UCCS_TA2  when world change is high enough
-        self.reactstep=0
+        self.use_avoid_reaction = False  # set by UCCS_TA2  when world change is high enough
+        self.reactstep = 0
         self.avoid_list = DATA.avoid_list
-        self.avoid_actions= self.avoid_list[0]
-
+        self.avoid_actions = self.avoid_list[0]
 
         # where we story action/state history.. first dimension is action number, second is action (0-4 for stated from actions 0-4), 5 is action choice (only first value used), 6 is expected state, 7 is actual state returned,
         # note we use format_data to reduce dictionary to a numeeric vector for faster comparisons but we ignore
 
-        self.action_history = np.zeros((5,2,13))
-        
-        self.actions_permutation_index=0
-        self.actions_plist= DATA.actions_plist
-        self.actions_permutation_tried=np.zeros(len(self.actions_plist))
+        self.action_history = np.zeros((5, 2, 13))
+
+        self.actions_permutation_index = 0
+        self.actions_plist = DATA.actions_plist
+        self.actions_permutation_tried = np.zeros(len(self.actions_plist))
         self.actions_permutation_tried[0] = 1
-        
 
         return
 
@@ -106,12 +108,12 @@ class CartPoleBulletEnv(gym.Env):
         random.seed(seed)
         return None
 
-    def string_to_actionnum(self,action):
+    def string_to_actionnum(self, action):
         # Convert from string to int
-        if action == 'nothing' or action ==0:
+        if action == 'nothing' or action == 0:
             action = 0
         elif action == 'right':
-            action = 1    
+            action = 1
         elif action == 'left':
             action = 2
         elif action == 'forward':
@@ -120,36 +122,40 @@ class CartPoleBulletEnv(gym.Env):
             action = 4
         # else ifits a number leave it alone, but warn
         else:
-            if(not (type(action)==  int and action >=0 and action <= 4)):
+            if (not (type(action) == int and action >= 0 and action <= 4)):
                 print("invalid action", action)
-            #else its a number so just use it..   reset call here with 
+            # else its a number so just use it..   reset call here with
         return action
 
-    def actionnum_to_string(self,action):
-        #Convert from string to int
-        if action == 0: action = 'nothing'
-        elif action == 1:action = 'right'
-        elif action == 2: action = 'left'
-        elif action == 3: action = 'forward'
-        elif action == 4: action = 'backward'
+    def actionnum_to_string(self, action):
+        # Convert from string to int
+        if action == 0:
+            action = 'nothing'
+        elif action == 1:
+            action = 'right'
+        elif action == 2:
+            action = 'left'
+        elif action == 3:
+            action = 'forward'
+        elif action == 4:
+            action = 'backward'
         # else ifits a number leave it alone, but warn
-        else: print("invalid action", action)
-        
-        return action
+        else:
+            print("invalid action", action)
 
+        return action
 
     def step(self, action):
         p = self._p
-        
-        action = self.string_to_actionnum(action)        
 
-        #apply TB's preturbation search as needed (something remote may change actions_permutation_index to drive the search.. here we jsut use current index)
+        action = self.string_to_actionnum(action)
+
+        # apply TB's preturbation search as needed (something remote may change actions_permutation_index to drive the search.. here we jsut use current index)
         action = self.actions_plist[self.actions_permutation_index][action]
-
 
         # Adjust forces so they always apply in reference to world frame
         _, ori, _, _, _, _ = p.getLinkState(self.cartpole, 0)
-        cart_angle = p.getEulerFromQuaternion(ori)[2] # yaw
+        cart_angle = p.getEulerFromQuaternion(ori)[2]  # yaw
         fx = self.force_mag * np.cos(cart_angle)
         fy = self.force_mag * np.sin(cart_angle) * -1
 
@@ -175,7 +181,8 @@ class CartPoleBulletEnv(gym.Env):
             raise Exception("unknown discrete action [%s]" % action)
 
         # Apply correccted forces
-        p.applyExternalForce(self.cartpole, 0, (fx, fy, 0.0), (0, 0, 0), p.LINK_FRAME)
+        p.applyExternalForce(
+            self.cartpole, 0, (fx, fy, 0.0), (0, 0, 0), p.LINK_FRAME)
         # Rotation forces
         # p.applyExternalForce(self.cartpole, 0, (1, 0, 0.0), (1.0, 1.0, 0), p.LINK_FRAME)
         # p.applyExternalForce(self.cartpole, 0, (-1, 0, 0.0), (-1.0, 0, 0), p.LINK_FRAME)
@@ -189,7 +196,7 @@ class CartPoleBulletEnv(gym.Env):
         done = self.is_done()
         reward = self.get_reward()
 
-#tb remove tick here since not updated inreset..         
+# tb remove tick here since not updated inreset..
 #        self.tick = self.tick + 1
 
         return self.get_state(), reward, done, {}
@@ -223,9 +230,8 @@ class CartPoleBulletEnv(gym.Env):
         return self.actions
 
     def resetbase(self):
-        self.setbase=True
+        self.setbase = True
         return None
-
 
     def reset(self, feature_vector=None):
         # Set time paremeter for sensor value
@@ -235,14 +241,13 @@ class CartPoleBulletEnv(gym.Env):
         if self._physics_client_id < 0:
             self.generate_world()
 
-
         # Run for one step to get everything going
-        if(feature_vector is None):
+        if (feature_vector is None):
             self.tick = 0     # if not a reset to given state  we reset tick
-            self.episode=0            
+            self.episode = 0
             self.step('nothing')
-            self.reactstep=0            
-            self.force_action=-1
+            self.reactstep = 0
+            self.force_action = -1
             self.reset_world()
         else:
             self.set_world(feature_vector)
@@ -268,7 +273,7 @@ class CartPoleBulletEnv(gym.Env):
         else:
             self._p = bc.BulletClient(connection_mode=p2.DIRECT)
             sys.stdout.write("\033[F")
-            sys.stdout.write("\033[K") # Clear to the end of line
+            sys.stdout.write("\033[K")  # Clear to the end of line
 
         # Client id link, for closing or checking if running
         self._physics_client_id = self._p._client
@@ -281,9 +286,12 @@ class CartPoleBulletEnv(gym.Env):
         p.setRealTimeSimulation(0)
 
         # Load world objects
-        self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
-        self.walls = p.loadURDF(os.path.join(self.path, 'models', 'walls.urdf'))
-        self.origin = p.loadURDF(os.path.join(self.path, 'models', 'origin.urdf'))
+        self.cartpole = p.loadURDF(os.path.join(
+            self.path, 'models', 'ground_cart.urdf'))
+        self.walls = p.loadURDF(os.path.join(
+            self.path, 'models', 'walls.urdf'))
+        self.origin = p.loadURDF(os.path.join(
+            self.path, 'models', 'origin.urdf'))
 
         # Set walls to be bouncy
         for joint_nb in range(-1, 6):
@@ -298,10 +306,12 @@ class CartPoleBulletEnv(gym.Env):
 
         # Delete cartpole
         if self.cartpole == -10:
-            self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
+            self.cartpole = p.loadURDF(os.path.join(
+                self.path, 'models', 'ground_cart.urdf'))
         else:
             p.removeBody(self.cartpole)
-            self.cartpole = p.loadURDF(os.path.join(self.path, 'models', 'ground_cart.urdf'))
+            self.cartpole = p.loadURDF(os.path.join(
+                self.path, 'models', 'ground_cart.urdf'))
 
         # This big line sets the spehrical joint on the pole to loose
         p.setJointMotorControlMultiDof(self.cartpole, 1, p.POSITION_CONTROL, targetPosition=[0, 0, 0, 1],
@@ -310,36 +320,44 @@ class CartPoleBulletEnv(gym.Env):
 
         # Reset cart (technicaly ground object)
         if self.init_zero:
-            cart_pos = list(self.np_random.uniform(low=0, high=0, size=(2,))) + [0]
-            cart_vel = list(self.np_random.uniform(low=0, high=0, size=(2,))) + [0]
+            cart_pos = list(self.np_random.uniform(
+                low=0, high=0, size=(2,))) + [0]
+            cart_vel = list(self.np_random.uniform(
+                low=0, high=0, size=(2,))) + [0]
         else:
-            cart_pos = list(self.np_random.uniform(low=-3, high=3, size=(2,))) + [0]
-            cart_vel = list(self.np_random.uniform(low=-1, high=1, size=(2,))) + [0]
+            cart_pos = list(self.np_random.uniform(
+                low=-3, high=3, size=(2,))) + [0]
+            cart_vel = list(self.np_random.uniform(
+                low=-1, high=1, size=(2,))) + [0]
 
-        p.resetBasePositionAndOrientation(self.cartpole, cart_pos, [0, 0, 0, 1])
-        p.applyExternalForce(self.cartpole, 0, cart_vel, (0, 0, 0), p.LINK_FRAME)
+        p.resetBasePositionAndOrientation(
+            self.cartpole, cart_pos, [0, 0, 0, 1])
+        p.applyExternalForce(self.cartpole, 0, cart_vel,
+                             (0, 0, 0), p.LINK_FRAME)
 
         # Reset pole
         if self.init_zero:
             randstate = list(self.np_random.uniform(low=0, high=0, size=(6,)))
         else:
-            randstate = list(self.np_random.uniform(low=-0.01, high=0.01, size=(6,)))
+            randstate = list(self.np_random.uniform(
+                low=-0.01, high=0.01, size=(6,)))
 
         pole_pos = randstate[0:3] + [1]
         # zero so it doesnt spin like a top :)
         pole_ori = list(randstate[3:5]) + [0]
-        p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_pos, targetVelocity=pole_ori)
+        p.resetJointStateMultiDof(
+            self.cartpole, 1, targetValue=pole_pos, targetVelocity=pole_ori)
 
         # Delete old blocks
         for i in self.blocks:
             p.removeBody(i)
 
-
         # Load blocks in
         self.nb_blocks = random.randint(0, 2) + 2
         self.blocks = [None] * self.nb_blocks
         for i in range(self.nb_blocks):
-            self.blocks[i] = p.loadURDF(os.path.join(self.path, 'models', 'block.urdf'))
+            self.blocks[i] = p.loadURDF(os.path.join(
+                self.path, 'models', 'block.urdf'))
 
         # Set blocks to be bouncy
         for i in self.blocks:
@@ -371,83 +389,95 @@ class CartPoleBulletEnv(gym.Env):
         return None
 
     def set_world(self, state):
-#        print('TBs Set World only approximately implemented :(')
-        p = self._p        
+        #        print('TBs Set World only approximately implemented :(')
+        p = self._p
 
+        cart_position = [state["cart"]["x_position"],
+                         state["cart"]["y_position"], state["cart"]["z_position"]]
+        # we swap x and z for velocity interface to pybullet
+        cart_velocity = [state["cart"]["z_velocity"],
+                         state["cart"]["y_velocity"], state["cart"]["x_velocity"]]
 
-        cart_position = [state["cart"]["x_position"],  state["cart"]["y_position"],state["cart"]["z_position"]]
-        # we swap x and z for velocity interface to pybullet        
-        cart_velocity = [state["cart"]["z_velocity"], state["cart"]["y_velocity"],state["cart"]["x_velocity"]]
-        
-        p.resetBasePositionAndOrientation(self.cartpole, cart_position, [0, 0, 0, 1])
-        p.resetJointStateMultiDof(self.cartpole, 0, targetValue=[0,0,0], targetVelocity=cart_velocity)
-
+        p.resetBasePositionAndOrientation(
+            self.cartpole, cart_position, [0, 0, 0, 1])
+        p.resetJointStateMultiDof(self.cartpole, 0, targetValue=[
+                                  0, 0, 0], targetVelocity=cart_velocity)
 
         # Reset pole
-        pole_position = [state["pole"]["x_quaternion"],state["pole"]["y_quaternion"],state["pole"]["z_quaternion"],state["pole"]["w_quaternion"]]
-        pole_velocity = [state["pole"]["x_velocity"],state["pole"]["y_velocity"],state["pole"]["z_velocity"]*0]
-        p.resetJointStateMultiDof(self.cartpole, 1, targetValue=pole_position, targetVelocity=pole_velocity)
+        pole_position = [state["pole"]["x_quaternion"], state["pole"]["y_quaternion"],
+                         state["pole"]["z_quaternion"], state["pole"]["w_quaternion"]]
+        pole_velocity = [state["pole"]["x_velocity"], state["pole"]
+                         ["y_velocity"], state["pole"]["z_velocity"]*0]
+        p.resetJointStateMultiDof(
+            self.cartpole, 1, targetValue=pole_position, targetVelocity=pole_velocity)
 
-        
         numblocks = len(state['blocks'])
         # deal with  old blocks if number is different
-        if( numblocks != self.nb_blocks ):
+        if (numblocks != self.nb_blocks):
 
             for i in self.blocks:
                 p.removeBody(i)
 
-            if(self.tick>0 and numblocks > self.nb_blocks ):
-                if(len(self.char)<256): self.char += " & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                self.characterization['level']=int(8);
-                self.characterization['entity']="Block"; 
-                self.characterization['attribute']="quantity";
-                self.characterization['change']='increasing';                
-                self.wcprob=1               
-            elif(self.tick>0 and numblocks < self.nb_blocks ):
-                if(len(self.char)<256):                self.char += " & Level L8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                self.characterization['level']=int(8);
-                self.characterization['entity']="Block"; 
-                self.characterization['attribute']="quantity";
-                self.characterization['change']='decreasing';                
-                self.wcprob=1                               
-            elif( numblocks > 4 ):  # if initial round it too large or small that is novel
-                self.characterization['level']=int(2);
-                self.characterization['entity']="Block"; 
-                self.characterization['attribute']="quantity";
-                self.characterization['change']='increase';                
-                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity increase "+ +str(numblocks)
-                self.wcprob=1               
-            elif( numblocks < 2 ):
-                self.characterization['level']=int(2);
-                self.characterization['entity']="Block"; 
-                self.characterization['attribute']="quantity";
-                self.characterization['change']='decrease';                
-                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity decrease "+ +str(numblocks)
-                self.wcprob=1                               
+            if (self.tick > 0 and numblocks > self.nb_blocks):
+                if (len(self.char) < 256):
+                    self.char += " & Level L8: Blocks quantity increaseing from " + \
+                        str(self.nb_blocks) + " to" + str(numblocks)
+                self.characterization['level'] = int(8)
+                self.characterization['entity'] = "Block"
+                self.characterization['attribute'] = "quantity"
+                self.characterization['change'] = 'increasing'
+                self.wcprob = 1
+            elif (self.tick > 0 and numblocks < self.nb_blocks):
+                if (len(self.char) < 256):
+                    self.char += " & Level L8: Blocks quantity decreaseing from " + \
+                        str(self.nb_blocks) + " to" + str(numblocks)
+                self.characterization['level'] = int(8)
+                self.characterization['entity'] = "Block"
+                self.characterization['attribute'] = "quantity"
+                self.characterization['change'] = 'decreasing'
+                self.wcprob = 1
+            elif (numblocks > 4):  # if initial round it too large or small that is novel
+                self.characterization['level'] = int(2)
+                self.characterization['entity'] = "Block"
+                self.characterization['attribute'] = "quantity"
+                self.characterization['change'] = 'increase'
+                if (len(self.char) < 256):
+                    self.char += " & Level L2: Blocks quantity increase " + + \
+                        str(numblocks)
+                self.wcprob = 1
+            elif (numblocks < 2):
+                self.characterization['level'] = int(2)
+                self.characterization['entity'] = "Block"
+                self.characterization['attribute'] = "quantity"
+                self.characterization['change'] = 'decrease'
+                if (len(self.char) < 256):
+                    self.char += " & Level L2: Blocks quantity decrease " + + \
+                        str(numblocks)
+                self.wcprob = 1
 
-
-                        
             self.nb_blocks = numblocks
             self.blocks = [None] * self.nb_blocks
             for i in range(self.nb_blocks):
-                self.blocks[i] = p.loadURDF(os.path.join(self.path, 'models', 'block.urdf'))
-                    
-        i=0
+                self.blocks[i] = p.loadURDF(os.path.join(
+                    self.path, 'models', 'block.urdf'))
+
+        i = 0
         for block in state["blocks"]:
-            pos = [block["x_position"], block["y_position"],block["z_position"]]
-            vel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
-            p.resetBasePositionAndOrientation(self.blocks[i], pos, [0, 0, 1, 0])
+            pos = [block["x_position"], block["y_position"], block["z_position"]]
+            vel = [block["x_velocity"], block["y_velocity"], block["z_velocity"]]
+            p.resetBasePositionAndOrientation(
+                self.blocks[i], pos, [0, 0, 1, 0])
             p.resetBaseVelocity(self.blocks[i], vel, [0, 0, 0])
             i = i+1
 
-#        p.stepSimulation()            
+#        p.stepSimulation()
 
         return None
 
-    
+
 #     def set_state(self, state):
 #         print('Set World is not yet fully tested :(')
-#         p = self._p        
+#         p = self._p
 #         cart_position = [state["cart"]["x_position"],   # x if flipped compard to pybullet
 #                          state["cart"]["y_position"],
 #                          state["cart"]["z_position"]
@@ -456,10 +486,10 @@ class CartPoleBulletEnv(gym.Env):
 #                          state["cart"]["y_velocity"],
 #                          state["cart"]["x_velocity"]
 #         ]
-        
+
 #         base_positione, _ = p.getBasePositionAndOrientation(self.cartpole)
 #         cartoffset = [0,0,0]
-#         self.setbase=True        
+#         self.setbase=True
 #         if(self.setbase):
 #             self.setbase=False
 #             self.basepos=cart_position
@@ -468,7 +498,7 @@ class CartPoleBulletEnv(gym.Env):
 #             #                cart_position = [.80,.80,0]
 #             p.resetBasePositionAndOrientation(self.cartpole, cart_position, [0, 0, 0, 1])
 #             p.resetJointStateMultiDof(self.cartpole, 0, targetValue=[0,0,0], targetVelocity=cart_velocity)
-# #            p.resetBasePositionAndOrientation(self.cartpole, [0,0,0], [0, 0, 0, 1])            
+# #            p.resetBasePositionAndOrientation(self.cartpole, [0,0,0], [0, 0, 0, 1])
 # #            p.resetJointStateMultiDof(self.cartpole, 0, targetValue=cart_position, targetVelocity=cart_velocity)
 
 #             _, _, _, _, _, _, vel, _ = p.getLinkState(self.cartpole, 0, 1)
@@ -478,11 +508,11 @@ class CartPoleBulletEnv(gym.Env):
 #             #use two part model with base and link  .. ut so far not working right might need a bullet library fix
 #             base_position = self.basepos
 #             cart_offset = [state["cart"]["x_position"]-base_position[0],state["cart"]["y_position"]-base_position[1],
-#                           (state["cart"]["z_position"]-base_position[2]) 
+#                           (state["cart"]["z_position"]-base_position[2])
 #             ]
-#             p.resetBasePositionAndOrientation(self.cartpole, base_position, [0, 0, 0, 1])                    
+#             p.resetBasePositionAndOrientation(self.cartpole, base_position, [0, 0, 0, 1])
 #             p.resetJointStateMultiDof(self.cartpole, 0, targetValue=cart_offset,targetVelocity=cart_velocity)
-      
+
 #             _, vel, _, _ = p.getJointStateMultiDof(self.cartpole, 0)
 #             pos, _, _, _, _, _ = p.getLinkState(self.cartpole, 0)
 #             print("Normal reset  from ", cart_position,cart_velocity, "with base/offset", base_position, cart_offset,  " to ",  pos,vel)
@@ -502,7 +532,7 @@ class CartPoleBulletEnv(gym.Env):
 #             self.blocks = [None] * self.nb_blocks
 #             for i in range(self.nb_blocks):
 #                 self.blocks[i] = p.loadURDF(os.path.join(self.path, 'models', 'block.urdf'))
-                    
+
 #         i=0
 #         for block in state["blocks"]:
 #             pos = [block["x_position"],block["y_position"],block["z_position"]]
@@ -511,10 +541,12 @@ class CartPoleBulletEnv(gym.Env):
 #             p.resetBaseVelocity(self.blocks[i], vel, [0, 0, 0])
 #             i = i+1
 
-        
+
 #         return None
 
     # Unified function for getting state information
+
+
     def get_state(self, initial=False):
         p = self._p
         world_state = dict()
@@ -636,7 +668,8 @@ class CartPoleBulletEnv(gym.Env):
 
         elif dist == 'follow':
             base_pose, _ = self._p.getBasePositionAndOrientation(self.cartpole)
-            pos, vel, jRF, aJMT = self._p.getJointStateMultiDof(self.cartpole, 0)
+            pos, vel, jRF, aJMT = self._p.getJointStateMultiDof(
+                self.cartpole, 0)
 
             x = pos[0] + base_pose[0]
             y = pos[1] + base_pose[1]
@@ -658,7 +691,7 @@ class CartPoleBulletEnv(gym.Env):
                 upAxisIndex=2)
             proj_matrix = self._p.computeProjectionMatrixFOV(fov=fov,
                                                              aspect=float(self._render_width) /
-                                                                    self._render_height,
+                                                             self._render_height,
                                                              nearVal=0.1,
                                                              farVal=100.0)
             (_, _, px, _, _) = self._p.getCameraImage(
@@ -668,339 +701,341 @@ class CartPoleBulletEnv(gym.Env):
                 viewMatrix=view_matrix,
                 projectionMatrix=proj_matrix)
         else:
-            px = np.array([[[255, 255, 255, 255]] * self._render_width] * self._render_height, dtype=np.uint8)
+            px = np.array([[[255, 255, 255, 255]] * self._render_width]
+                          * self._render_height, dtype=np.uint8)
         rgb_array = np.array(px, dtype=np.uint8)
-        rgb_array = np.reshape(np.array(px), (self._render_height, self._render_width, -1))
+        rgb_array = np.reshape(
+            np.array(px), (self._render_height, self._render_width, -1))
         rgb_array = rgb_array[:, :, :3]
         return rgb_array
 
-
-    def format_data(self, feature_vector):
-        # Format data for use with evm
-
-        state = []
-        for i in feature_vector.keys():
-            if i == 'cart' or i == 'pole' :
-                for j in feature_vector[i]:
-                    state.append(feature_vector[i][j])
-                #print(state)
-        return np.asarray(state)
-
-    
-
-
-
     def get_best_twostep_action(self, feature_vector):
+        '''
+            This function computes the best action to take for two step lookahead
+             and returns it as a string
+            :return: string action
             '''
-                This function computes the best action to take for two step lookahead
-                 and returns it as a string
-                :return: string action
-                '''
-            # Create dict of scores
-            # Key is first action, scores are rated by second action in order
-            # left, right, up, down, nothing
-            best_action = {"left": [None for i in range(5)],
-                           "right": [None for i in range(5)],
-                           "forward": [None for i in range(5)],
-                           "backward": [None for i in range(5)],
-                           "nothing": [None for i in range(5)]}
+        # Create dict of scores
+        # Key is first action, scores are rated by second action in order
+        # left, right, up, down, nothing
+        best_action = {"left": [None for i in range(5)],
+                       "right": [None for i in range(5)],
+                       "forward": [None for i in range(5)],
+                       "backward": [None for i in range(5)],
+                       "nothing": [None for i in range(5)]}
 
-            for action in best_action.keys():
-                # left, left
-                best_action[action][0] = self.two_step_env(feature_vector, [action, 'left'])
-                best_action[action][1] = self.two_step_env(feature_vector, [action, 'right'])
-                best_action[action][2] = self.two_step_env(feature_vector, [action, 'forward'])
-                best_action[action][3] = self.two_step_env(feature_vector, [action, 'backward'])
-                best_action[action][4] = self.two_step_env(feature_vector, [action, 'nothing'])
+        for action in best_action.keys():
+            # left, left
+            best_action[action][0] = self.two_step_env(
+                feature_vector, [action, 'left'])
+            best_action[action][1] = self.two_step_env(
+                feature_vector, [action, 'right'])
+            best_action[action][2] = self.two_step_env(
+                feature_vector, [action, 'forward'])
+            best_action[action][3] = self.two_step_env(
+                feature_vector, [action, 'backward'])
+            best_action[action][4] = self.two_step_env(
+                feature_vector, [action, 'nothing'])
 
-                
-            best_score = best_action['left'][0][0]
-            expected_state = best_action['left'][0][1]
-            # print("Best score: ", best_score)
-            action = 'left'
-            next_action = 0
-            # return the best scoring action
-            for i in best_action.keys():
-                for j in range(len(best_action[i])):
-                    # print(best_action[i][j])
-                    if best_action[i][j][0] < best_score:
-                        best_score = best_action[i][j][0]
-                        action = i
-                        next_action = j
-                        expected_state = best_action[i][j][1]
-            self.lastscore=best_score
-            # if(best_score > 1):
+        best_score = best_action['left'][0][0]
+        expected_state = best_action['left'][0][1]
+        # print("Best score: ", best_score)
+        action = 'left'
+        next_action = 0
+        # return the best scoring action
+        for i in best_action.keys():
+            for j in range(len(best_action[i])):
+                # print(best_action[i][j])
+                if best_action[i][j][0] < best_score:
+                    best_score = best_action[i][j][0]
+                    action = i
+                    next_action = j
+                    expected_state = best_action[i][j][1]
+        self.lastscore = best_score
+        # if(best_score > 1):
 
-            #if we are forcing actions because we are searching for a mapping
-            if(self.force_action>=0 and self.force_action < 5):
-                action = self.actionnum_to_string(self.force_action)
-                expected_state = best_action[action][4][1]
-            ecart_x, ecart_y = expected_state["cart"]["x_position"],  expected_state["cart"]["y_position"]            
-            
+        # if we are forcing actions because we are searching for a mapping
+        if (self.force_action >= 0 and self.force_action < 5):
+            action = self.actionnum_to_string(self.force_action)
+            expected_state = best_action[action][4][1]
+        ecart_x, ecart_y = expected_state["cart"]["x_position"],  expected_state["cart"]["y_position"]
 
-
-            second_action = ["left", "right", "forward", "backward", "nothing"]
-            # rest of storing of history  emebdded in two_step_env wehre its more effiicent
-            if(self.force_action >=0 and self.force_action < 5):
-                self.action_history[self.force_action][0] = self.format_data(expected_state)                                
-            self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state
-            cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]            
-            if(self.tbdebuglevel>2): print("Best Two step action ", action, " score ", best_score, " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)             
-            return action, second_action[next_action], expected_state
+        second_action = ["left", "right", "forward", "backward", "nothing"]
+        # rest of storing of history  emebdded in two_step_env wehre its more effiicent
+        if (self.force_action >= 0 and self.force_action < 5):
+            self.action_history[self.force_action][0] = formatter.format_data_without_blocks(
+                expected_state)
+        # put us back in the state we started.. stepping messed with our state
+        self.reset(feature_vector)
+        cart_x, cart_y = feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"]
+        if (self.tbdebuglevel > 2):
+            print("Best Two step action ", action, " score ", best_score,
+                  " from ", cart_x, cart_y, " by ", ecart_x-cart_x, ecart_y-cart_y)
+        return action, second_action[next_action], expected_state
 
     def two_step_env(self, feature_vector, steps):
-            '''
-            Step the environment with the given steps
-            :param env:
-            :param feature_vector:
-            :param steps:
-            :return: Score
-                                       '''
-            if(self.tbdebuglevel>2): print("Two step ", feature_vector) 
-            self.reset(feature_vector)
-            self.step(steps[0])
+        '''
+        Step the environment with the given steps
+        :param env:
+        :param feature_vector:
+        :param steps:
+        :return: Score
+                                   '''
+        if (self.tbdebuglevel > 2):
+            print("Two step ", feature_vector)
+        self.reset(feature_vector)
+        self.step(steps[0])
 
-            nextstate = self.get_state()
-            if(self.string_to_actionnum(steps[0]) == self.force_action):
-                print("Force action in two", self.force_action)                
-                self.action_history[self.force_action][0] = self.format_data(nextstate)                
-            
-            if(self.tbdebuglevel>2): print("Try action", steps[0], nextstate)                            
-            self.reset(nextstate)
-            self.step(steps[1])
-            p = self._p            
-            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
-            if(self.tbdebuglevel>2): print("Try action", steps[1], self.get_state())                                        
+        nextstate = self.get_state()
+        if (self.string_to_actionnum(steps[0]) == self.force_action):
+            print("Force action in two", self.force_action)
+            self.action_history[self.force_action][0] = formatter.format_data_without_blocks(
+                nextstate)
+
+        if (self.tbdebuglevel > 2):
+            print("Try action", steps[0], nextstate)
+        self.reset(nextstate)
+        self.step(steps[1])
+        p = self._p
+        # then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
+        p.stepSimulation()
+        if (self.tbdebuglevel > 2):
+            print("Try action", steps[1], self.get_state())
 #            return [self.get_score(self.get_state()), nextstate]
-            return [self.get_score(self.get_state()), self.get_state()]        
+        return [self.get_score(self.get_state()), self.get_state()]
 
+        # structured like the two-step but that was expensive so teting one steo to see gain vs cost
 
-        #structured like the two-step but that was expensive so teting one steo to see gain vs cost
     def get_best_onestep_action(self, feature_vector):
+        '''
+            This function computes the best action to take for two step lookahead
+             and returns it as a string
+            :return: string action
             '''
-                This function computes the best action to take for two step lookahead
-                 and returns it as a string
-                :return: string action
-                '''
-            # Create dict of scores
-            # Key is first action, scores are rated by second action in order
-            # left, right, up, down, nothing
-            best_action = {"left": [None for i in range(1)],
-                           "right": [None for i in range(1)],
-                           "forward": [None for i in range(1)],
-                           "backward": [None for i in range(1)],
-                           "nothing": [None for i in range(1)]}
+        # Create dict of scores
+        # Key is first action, scores are rated by second action in order
+        # left, right, up, down, nothing
+        best_action = {"left": [None for i in range(1)],
+                       "right": [None for i in range(1)],
+                       "forward": [None for i in range(1)],
+                       "backward": [None for i in range(1)],
+                       "nothing": [None for i in range(1)]}
 
+        for action in best_action.keys():
+            # left, 0
+            best_action[action][0] = self.one_step_env(
+                feature_vector, [action, 'nothing'])
 
+        best_score = best_action['left'][0][0]
+        expected_state = best_action['left'][0][1]
+        action = 'left'
+        # return the best scoring action
+        for i in best_action.keys():
+            for j in range(len(best_action[i])):
+                # print(best_action[i][j])
+                if best_action[i][j][0] < best_score:
+                    best_score = best_action[i][j][0]
+                    action = i
+                    expected_state = best_action[i][j][1]
 
+        # if we are forcing actions because we are searching for a mapping
+        if (self.force_action >= 0 and self.force_action < 5):
+            print("Force action in one", self.force_action)
+            action = self.actionnum_to_string(self.force_action)
+            expected_state = best_action[action][0][1]
+            self.action_history[self.force_action][0] = formatter.format_data_without_blocks(
+                expected_state)
 
-            for action in best_action.keys():
-                # left, 0
-                best_action[action][0] = self.one_step_env(feature_vector, [action, 'nothing'])
-                
+        self.lastscore = best_score
+        # put us back in the state we started.. stepping messed with our state
+        self.reset(feature_vector)
 
-            best_score = best_action['left'][0][0]
-            expected_state = best_action['left'][0][1]
-            action = 'left'
-            # return the best scoring action
-            for i in best_action.keys():
-                for j in range(len(best_action[i])):
-                    # print(best_action[i][j])
-                    if best_action[i][j][0] < best_score:
-                        best_score = best_action[i][j][0]
-                        action = i
-                        expected_state = best_action[i][j][1]
-
-            #if we are forcing actions because we are searching for a mapping
-            if(self.force_action>=0 and self.force_action < 5):
-                print("Force action in one", self.force_action)
-                action = self.actionnum_to_string(self.force_action)
-                expected_state = best_action[action][0][1]
-                self.action_history[self.force_action][0] = self.format_data(expected_state)                
-                        
-
-
-            self.lastscore=best_score
-            self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state        
-
-            return action, "nothing", expected_state
+        return action, "nothing", expected_state
 
     def one_step_env(self, feature_vector, steps):
-            '''
-            Step the environment with the given steps
-            :param env:
-            :param feature_vector:
-            :param steps:
-            :return: Score
-            '''
-            if(self.tbdebuglevel>2): print("One step ", feature_vector)             
-            self.reset(feature_vector)
-            self.step(steps[0])
-            state = self.get_state()
-            p = self._p            
-            p.stepSimulation() #then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
-            if(self.tbdebuglevel>2): print("Try action", steps[0],state)                                                    
-            return [self.get_score(state), state]
+        '''
+        Step the environment with the given steps
+        :param env:
+        :param feature_vector:
+        :param steps:
+        :return: Score
+        '''
+        if (self.tbdebuglevel > 2):
+            print("One step ", feature_vector)
+        self.reset(feature_vector)
+        self.step(steps[0])
+        state = self.get_state()
+        p = self._p
+        # then do nothing for 1 time step so pushes take affect.. no action actually moves cart just changes velocity..
+        p.stepSimulation()
+        if (self.tbdebuglevel > 2):
+            print("Try action", steps[0], state)
+        return [self.get_score(state), state]
 
 
-
-
-
-#####  Start domain depenent  adapter (its built into scoring)
+# Start domain depenent  adapter (its built into scoring)
 
     def get_score(self, feature_vector):
-            '''
-            Score the current state of the environment.
-            :return: float score
-            '''
+        '''
+        Score the current state of the environment.
+        :return: float score
+        '''
 
-            cartpos = [feature_vector["cart"]["x_position"],  feature_vector["cart"]["y_position"],feature_vector["cart"]["z_position"]]
-            cartvel = [feature_vector["cart"]["x_velocity"],  feature_vector["cart"]["y_velocity"],feature_vector["cart"]["z_velocity"]]            
+        cartpos = [feature_vector["cart"]["x_position"],  feature_vector["cart"]
+                   ["y_position"], feature_vector["cart"]["z_position"]]
+        cartvel = [feature_vector["cart"]["x_velocity"],  feature_vector["cart"]
+                   ["y_velocity"], feature_vector["cart"]["z_velocity"]]
 
+        p = self._p
+        _, _, _, _, _, ori, _, _ = p.getLinkState(self.cartpole, 1, 1)
+        eulers = p.getEulerFromQuaternion(ori)
+        pole_x = abs(eulers[0])
+        pole_y = abs(eulers[1])
+        pole_z = abs(eulers[2])
 
-            p = self._p
-            _, _, _, _, _, ori, _, _ = p.getLinkState(self.cartpole, 1, 1)
-            eulers = p.getEulerFromQuaternion(ori)
-            pole_x =  abs(eulers[0])
-            pole_y =  abs(eulers[1])
-            pole_z =  abs(eulers[2])        
+        #  we weight the larger of the two errors more, but still consider the other
+        maxangle = max(abs(pole_x), abs(pole_y))
+        minangle = min(abs(pole_x), abs(pole_y))
+        # this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**4 as a penlty so we big if we get close
+        slack = (self.angle_limit-maxangle)/self.angle_limit
+        if (slack < .0000001):
+            slackcost = 1e8
+        else:
+            slackcost = 100/(slack**4)
 
-            #  we weight the larger of the two errors more, but still consider the other
-            maxangle = max(abs(pole_x), abs(pole_y))
-            minangle = min(abs(pole_x), abs(pole_y))
-            slack = (self.angle_limit-maxangle)/self.angle_limit  #this term is 1 when balance and gets smaller as we get close to failure.  We take 1/slack**4 as a penlty so we big if we get close
-            if(slack < .0000001): slackcost = 1e8
-            else:
-                slackcost = 100/(slack**4)
+        cost = 0
 
-            cost =0
+        # have to honor slack constraints and don't use react if we have no slack
+        collision_penalty = 0
+        mindist = 999
+        cartspeed = 0
+        ldist = 999
+        mangle = -999
 
+        # If we don't hav a lot of slack, then ignore collision as we are more likely to die from pole angle
+        if (slack < .4):
+            # not enough slack.. if doing reactions.. stop it
+            self.reactstep = len(self.avoid_list[0])+1
+        else:
 
-            collision_penalty  =0  # have to honor slack constraints and don't use react if we have no slack
-            mindist=999
-            cartspeed=0
-            ldist = 999 
-            mangle = -999
+            # if we have enough slack we consider potential colisions and attack vectors.
+            # TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
 
+            # start with min distance to walls which are at +- 5
+            mindist = 10
 
-            #If we don't hav a lot of slack, then ignore collision as we are more likely to die from pole angle
-            if(slack < .4):
-                # not enough slack.. if doing reactions.. stop it
-                self.reactstep = len(self.avoid_list[0])+1
-            else:
-
-                #if we have enough slack we consider potential colisions and attack vectors.
-                #TB let's use collision engine to get closes distances to account for geometry and keep away from moving blocks
-
-                # start with min distance to walls which are at +- 5
-                mindist = 10
-
-                for ablock in self.blocks:
-                    nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
-                    for c in nearpoints:           
-                        contactdist = c[8]
-                        if(contactdist <0):
-                            self.char += "CP"                         
+            for ablock in self.blocks:
+                nearpoints = p.getClosestPoints(self.cartpole, ablock, 100)
+                for c in nearpoints:
+                    contactdist = c[8]
+                    if (contactdist < 0):
+                        self.char += "CP"
     #                        print("Watchout ", self.char)
-                        mindist = min(mindist,contactdist)
+                    mindist = min(mindist, contactdist)
 
-
-                #see if  "distance" from  trajectory of  blocks would be an impact.. 
-                for block in feature_vector["blocks"]:
-                    bpos = [block["x_position"], block["y_position"],block["z_position"]]
-                    bvel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
-                    pdiff = np.subtract(cartpos ,bpos)
-                    nval = np.linalg.norm(bvel)
-                    if(nval >.1) :  # effectively ignore this for Phase 2+ testing.. 
-                        dist =  (np.linalg.norm(np.cross(bvel,pdiff))/ nval)
-                        if(dist <1):
-                            if( self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
-                                self.reactstep=0
-                                # get angle so we can decide how to run.. 
-                                mangle = 180*math.atan2(pdiff[1],pdiff[0])/3.14159
-                                if((mangle >-45 and 45 <= mangle)
-                                   or  mangle <-135 or  mangle > 135  ):
-                                    if(pole_y > 0):
-                                        self.avoid_actions= self.avoid_list[3]
-                                    else:
-                                        self.avoid_actions= self.avoid_list[2]                                    
+            # see if  "distance" from  trajectory of  blocks would be an impact..
+            for block in feature_vector["blocks"]:
+                bpos = [block["x_position"],
+                        block["y_position"], block["z_position"]]
+                bvel = [block["x_velocity"],
+                        block["y_velocity"], block["z_velocity"]]
+                pdiff = np.subtract(cartpos, bpos)
+                nval = np.linalg.norm(bvel)
+                # effectively ignore this for Phase 2+ testing..
+                if (nval > .1):
+                    dist = (np.linalg.norm(np.cross(bvel, pdiff)) / nval)
+                    if (dist < 1):
+                        if (self.use_avoid_reaction and (self.reactstep == 0 or self.reactstep >= len(self.avoid_list[0]))):
+                            self.reactstep = 0
+                            # get angle so we can decide how to run..
+                            mangle = 180*math.atan2(pdiff[1], pdiff[0])/3.14159
+                            if ((mangle > -45 and 45 <= mangle)
+                               or mangle < -135 or mangle > 135):
+                                if (pole_y > 0):
+                                    self.avoid_actions = self.avoid_list[3]
                                 else:
-                                    if(pole_x >0):                                
-                                        self.avoid_actions= self.avoid_list[1]
-                                    else:
-                                        self.avoid_actions= self.avoid_list[0]
- #                               print("Mangle x y ", mangle, pdiff[0], pdiff[1], " Avoid with ",self.avoid_actions);
-                                if(self.tbdebuglevel>1): 
-                                    self.char += "HA"                                
+                                    self.avoid_actions = self.avoid_list[2]
                             else:
-                                if(self.tbdebuglevel>1):
-                                    self.char += "SA"
-                                cost += 100+1/(.001+dist)
-#                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
+                                if (pole_x > 0):
+                                    self.avoid_actions = self.avoid_list[1]
+                                else:
+                                    self.avoid_actions = self.avoid_list[0]
+ #                               print("Mangle x y ", mangle, pdiff[0], pdiff[1], " Avoid with ",self.avoid_actions);
+                            if (self.tbdebuglevel > 1):
+                                self.char += "HA"
+                        else:
+                            if (self.tbdebuglevel > 1):
+                                self.char += "SA"
+                            cost += 100+1/(.001+dist)
+#                        print("Block ldist reactstep", dist, self.char, self.reactstep)
 
+                else:
+                    dist = ldist
+                ldist = min(dist, ldist)
 
-                    else: dist = ldist
-                    ldist = min(dist,ldist)
+            # #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
+            #cartspeed = np.linalg.norm(cartvel)
+            # if(cartspeed < ldist):
+            mindist = min(ldist, mindist)
 
+            tdist = mindist-2  # try to keep the two unit away
+            if (tdist > 8):
+                tdist = 8
+            if (tdist > .1):
+                # a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
+                mindist = 1/(tdist)
+            elif (tdist <= .1 and mindist > .01):
+                # a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
+                mindist = 10+1/(mindist*mindist)
+            elif (mindist < .01):
+                # if  colliding  makit it very large
+                mindist = 1000+(mindist*mindist)
 
+            # a  penalty minimal menalty if we step in direction that is close to collisoin region
+            collision_penalty = (3-mindist) + 1/(ldist+.01)
 
-                # #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
-                #cartspeed = np.linalg.norm(cartvel) 
-                #if(cartspeed < ldist): 
-                mindist = min(ldist,mindist)
+        cost += slackcost + (maxangle)**2 + 10 * \
+            (minangle)**2 + collision_penalty
 
-                tdist = mindist-2    #try to keep the two unit away
-                if(tdist > 8): tdist = 8
-                if(tdist > .1):
-                    mindist = 1/( tdist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position        
-                elif(tdist <= .1 and mindist >.01):
-                    mindist = 10+1/(mindist*mindist)         #a  penalty that get's get very large as we get close , but also enough power far away to keep a god position
-                elif(mindist <.01): 
-                    mindist = 1000+(mindist*mindist)    # if  colliding  makit it very large
-                
-            
-            
-                collision_penalty = (3-mindist) + 1/(ldist+.01)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
-            
+        if (False and cost > 1000):
+            #            if(self.tbdebuglevel>2):
+            print(" cost,  slack, slackcost  ", round(cost, 8), round(slack, 3), round(slackcost, 3), "pole xyz", round(abs(pole_x), 3), round(abs(pole_y), 3), round(abs(pole_z), 3),
+                  "  dists ", round(collision_penalty, 3), round(mindist, 3),   "angle limit", round(self.angle_limit, 3), "  At", self.tick, "score=", round(cost, 2), "at", round(cartpos[0], 2), round(cartpos[1], 2))
 
-            cost  += slackcost    + ( maxangle)**2 + 10*(minangle)**2 +   collision_penalty                
+        return cost
 
+        # get best action.. if our prediciton probablities (arg)  are good, use one step, else use two
+        # this is where we should try to adapt physics parmeters if things are going badly..
 
-            if(False and cost > 1000):
-#            if(self.tbdebuglevel>2): 
-                print(" cost,  slack, slackcost  ", round(cost,8), round(slack,3),round(slackcost,3), "pole xyz", round(abs(pole_x),3), round(abs(pole_y),3),round(abs(pole_z),3),
-                      "  dists ", round(collision_penalty,3),round(mindist,3),   "angle limit", round(self.angle_limit,3), "  At", self.tick,"score=", round(cost,2),"at",round(cartpos[0],2), round(cartpos[1],2))
-
-            return cost
-
-
-            # get best action.. if our prediciton probablities (arg)  are good, use one step, else use two
-        #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
 
-        if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
+        if (self.use_avoid_reaction and self.reactstep >= 0 and self.reactstep < len(self.avoid_actions)):
             react = self.avoid_actions[self.reactstep]
-            self.char += "AV"+str(self.reactstep)                                            
+            self.char += "AV"+str(self.reactstep)
             print("Avoiding @reactstep", self.reactstep, " with ", react)
-            score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
-            state = [react,"nothing",nstate]
+            score, nstate = self.one_step_env(
+                feature_vector, [react, 'nothing'])
+            state = [react, "nothing", nstate]
             self.reactstep += 1
             self.lastscore = -1.0
 
         else:
 
-    #       if we have colission potential for any action (char != "") so do two-step action search
-    #       if we have low score  we can go faser uding one-setp
-           if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 50 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
-                state= self.get_best_onestep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
-           else:
-                state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Two score", self.lastscore)
-           #we do tick here to update one timestep..
+            #       if we have colission potential for any action (char != "") so do two-step action search
+            #       if we have low score  we can go faser uding one-setp
+            # make it mroe often just one making it faster
+            if (self.lastscore < 500 or self.wcprob > .5 or self.episode > 50 or (prob < .49 and self.lastscore < 1000)):
+                state = self.get_best_onestep_action(feature_vector)
+                if (self.tbdebuglevel > 2):
+                    print("Best one score", self.lastscore)
+            else:
+                state = self.get_best_twostep_action(feature_vector)
+                if (self.tbdebuglevel > 2):
+                    print("Two score", self.lastscore)
+            # we do tick here to update one timestep..
         self.tick = self.tick + 1
-        if(self.tbdebuglevel>2):
-            print("Expected state", state)           
+        if (self.tbdebuglevel > 2):
+            print("Expected state", state)
         return state
-#####  end domain depenent  adapter (its built into scoring)
+# end domain depenent  adapter (its built into scoring)
