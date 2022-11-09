@@ -452,7 +452,7 @@ class CartPoleBulletEnv(gym.Env):
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
                 self.characterization['change']='increase';                
-                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity increase "+ +str(numblocks)
+                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity increase "+ str(numblocks)
                 self.wcprob=1               
             elif( numblocks < 2 ):
                 self.characterization['level']=int(2);
