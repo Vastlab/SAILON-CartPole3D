@@ -1,5 +1,7 @@
 import numpy as np
 import formatter as formatter
+import basic_operation as basic_op
+import probability_difference as prob_dif
 
 
 def block_pos(self, istate, blocknum):
@@ -63,14 +65,12 @@ def process_instance(self, oactual_state):
 #            self.uccscart.lastscore = 0.001111; #  if we had a lot fo collision potential, ignore the score.
     self.scorelist.append(self.uccscart.lastscore)
     self.uccscart.char = ""  # reset any information about collisions
-    action, expected_state = self.takeOneStep(oactual_state,
-                                              self.uccscart,
-                                              pertub)
+    action, expected_state = basic_op.takeOneStep(oactual_state, self.uccscart, pertub)
 
     # we can now fill in previous history's actual
     if (self.uccscart.force_action >= 0 and self.uccscart.force_action < 5):
-        self.uccscart.action_history[self.uccscart.force_action][1] = self.uccscart.format_data(
-            oactual_state)
+        #self.uccscart.action_history[self.uccscart.force_action][1] = self.uccscart.format_data(oactual_state)
+        self.uccscart.action_history[self.uccscart.force_action][1] = formatter.format_data(oactual_state)
 
     # we don't reset in first few steps because random start may be a bad position yielding large score
     # might be were we search for better world parmaters if we get time for that
@@ -88,7 +88,7 @@ def process_instance(self, oactual_state):
             self.debugstring = 'Testing initial state for obvious world changes: actual_state={}, next={}, dataval={}, '.format(oactual_state,
                                                                                                                                 expected_state,
                                                                                                                                 data_val)
-        initprob = self.istate_diff_EVT_prob(oactual_state)
+        initprob = prob_dif.istate_diff_EVT_prob(oactual_state)
 
         # update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
         self.maxprob = max(initprob, self.maxprob)
@@ -142,7 +142,7 @@ def process_instance(self, oactual_state):
             current = difference_from_expected
 
             diffprobability = self.dynam_prob_scale * \
-                self.cstate_diff_EVT_prob(current, actual_state)
+                prob_dif.cstate_diff_EVT_prob(current, actual_state)
             # blocks are less noisy so we always add them in
             probability += self.dynblocksprob
 

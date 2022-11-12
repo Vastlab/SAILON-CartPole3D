@@ -31,6 +31,7 @@ import math
 
 from datetime import datetime, timedelta
 import data_loader as DATA
+import distance_calculator as dist_cal
 
 
 try:
@@ -182,13 +183,13 @@ class UCCSTA2():
 
         if (False):
             # self.uccscart.reset(actual_state)
-            ldist = self.line_to_line_dist(np.array([0, 0, 1]), np.array(
+            ldist = dist_cal.line_to_line_dist(np.array([0, 0, 1]), np.array(
                 [0, 0, -1]), np.array([0, 1, 0]), np.array([0, -1, 0]))
-            ldist2 = self.line_to_line_dist(np.array([0, 0, 1]), np.array(
+            ldist2 = dist_cal.line_to_line_dist(np.array([0, 0, 1]), np.array(
                 [0, 0, -1]), np.array([0, 1, 0]), np.array([0, -1, .001]))
-            pdist = self.point_to_line_dist(
+            pdist = dist_cal.point_to_line_dist(
                 np.array([0, 0, 1]), np.array([0, 0, 0]), np.array([0, 1, 0]))
-            pdist2 = self.point_to_line_dist(
+            pdist2 = dist_cal.point_to_line_dist(
                 np.array([0, 0, 0]), np.array([0, 2, 0]), np.array([0, 1, 0]))
             print("line distances", ldist, ldist2, "Pointdist", pdist, pdist2)
 

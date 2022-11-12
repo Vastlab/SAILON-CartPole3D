@@ -37,6 +37,8 @@ import uuid
 import csv
 
 from datetime import datetime, timedelta
+import probability as prob
+import spatial_details as sp_details
 
 
 #import tracemalloc
@@ -148,7 +150,7 @@ class TA2Agent(TA2Logic):
         #        self.log.debug('Training Instance: feature_vector={}  feature_label={}.format(
         #            feature_vector, feature_label))
 
-        action = self.UCCS.process_instance(feature_vector)
+        action = sp_details.process_instance(feature_vector)
         #        if(self.UCCS.episode == 0 and  self.UCCS.cnt <20):
         #            self.log.debug(self.UCCS.debugstring)
         self.totalSteps += 1
@@ -191,7 +193,7 @@ class TA2Agent(TA2Logic):
         """
 #        novelty_probability = self.UCCS.world_change_prob(True)   # learn prob from train
         # one bad start will break it so we use pretrained data insteadb
-        novelty_probability = self.UCCS.world_change_prob(False)
+        novelty_probability = prob.world_change_prob(False)
         novelty_threshold = 0.5
         novelty = 0
         novelty_characterization = dict()
@@ -320,7 +322,7 @@ class TA2Agent(TA2Logic):
                 self.UCCS.given = False
                 self.UCCS.uccscart.givendetection = False
 
-        action = self.UCCS.process_instance(feature_vector)
+        action = sp_details.process_instance(feature_vector)
 
         #        if(self.UCCS.episode == 0 and  self.UCCS.cnt > 101 and  self.UCCS.cnt <106):#
         #           self.log.debug(self.UCCS.debugstring)
@@ -370,7 +372,7 @@ class TA2Agent(TA2Logic):
         if (self.UCCS.episode < 1):
             TA2_previous_worldchange = 0
 
-        novelty_probability = self.UCCS.world_change_prob(False)
+        novelty_probability = prob.world_change_prob(False)
         if (novelty_probability < TA2_previous_worldchange):
             self.log.info("??? Unknown Error WorldChange whent down at episode {} from {} to {}.  Resetting".format(
                 self.UCCS.episode, TA2_previous_worldchange, novelty_probability))

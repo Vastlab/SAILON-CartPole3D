@@ -2,6 +2,8 @@ import data_loader as DATA
 import numpy as np
 import distance_calculator as dist_cal
 import formatter as formatter
+import probability as prob
+import spatial_details as sp_details
 
 # get probability differene froom initial state
 
@@ -45,7 +47,7 @@ def istate_diff_EVT_prob(self, actual_state):
     # do base state for cart(6)  and pole (7)   looking at position and velocity.
     for j in range(13):
         if (abs(istate[j]) > imax[j]):
-            probv = self.awcdf(istate[j], imax[j], iscale[j], ishape[j])
+            probv = prob.awcdf(istate[j], imax[j], iscale[j], ishape[j])
             initprob += probv
             if (probv > charactermin and len(self.logstr) < self.maxcarlen):
                 self.logstr += "& P2+ LL1 " + "Step " + str(self.tick) + str(dimname[j]) + " init increase  " + str(round(
@@ -55,7 +57,7 @@ def istate_diff_EVT_prob(self, actual_state):
                         "state = " + str(self.current_state)
 
         if (abs(istate[j]) < imin[j]):
-            probv = self.awcdf(
+            probv = prob.awcdf(
                 abs(istate[j]), imin[j], iscale[j], ishape[j])
             if (probv > charactermin and len(self.logstr) < self.maxcarlen):
                 initprob += probv
@@ -92,7 +94,7 @@ def istate_diff_EVT_prob(self, actual_state):
     for j in range(13, wallstart, 1):
         probv = 0
         if (abs(istate[j]) > imax[k]):
-            probv = self.awcdf(
+            probv = prob.awcdf(
                 abs(istate[j]), imax[k], iscale[k], ishape[k])
             if ((abs(istate[j]) - imax[k]) > 1):
                 self.logstr += "& P2+ LL2  " + "Step " + str(self.tick) + str(dimname[k]) + " init increase " + " " + str(round(istate[j], 3)) + " " + str(
@@ -110,7 +112,7 @@ def istate_diff_EVT_prob(self, actual_state):
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)
                 initprob += max(.24, probv)
             else:
-                probv = self.awcdf(
+                probv = prob.awcdf(
                     abs(istate[j]), imin[k], iscale[k], ishape[k])
                 initprob += probv
                 if (probv > charactermin and len(self.logstr) < self.maxcarlen):
@@ -131,10 +133,10 @@ def istate_diff_EVT_prob(self, actual_state):
     for nb in range(self.num_blocks):
         #  cart in position 0,   blocks are  position and then velocity 3d vectors starting at location k
         #            dist = self.point_to_line_dist(istate[0:3],istate[k+nb*6:k+nb*6+2],istate[k+nb*6+3:k+nb*6+5])
-        dist = dist_cal.point_to_line_dist(self.cart_pos(istate),
-                                           self.block_pos(
+        dist = dist_cal.point_to_line_dist(sp_details.cart_pos(istate),
+                                           sp_details.block_pos(
             istate, nb),
-            self.block_vel(istate, nb))
+            sp_details.block_vel(istate, nb))
         probv = 0
         if (dist < 1e-3):  # should do wlb fit on this.. but for now just a hack
             probv = .5  # we should fix that
@@ -154,10 +156,10 @@ def istate_diff_EVT_prob(self, actual_state):
         for nb2 in range(nb+1, self.num_blocks):
             #  cart in position 0,   blocks are  position and then velocity 3d vectors starting at location k
             #                dist = self.point_to_line_dist(istate[k+nb2*6:k+nb2*6+2],istate[k+nb*6:k+nb*6+2],istate[k+nb*6+3:k+nb*6+5])
-            dist = dist_cal.point_to_line_dist(self.block_pos(istate, nb2),
-                                               self.block_pos(
+            dist = dist_cal.point_to_line_dist(sp_details.block_pos(istate, nb2),
+                                               sp_details.block_pos(
                 istate, nb),
-                self.block_vel(istate, nb))
+                sp_details.block_vel(istate, nb))
             probv = 0
 
             if (dist < 1e-3):  # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty.  Loose in test since they move before we see it
@@ -177,14 +179,14 @@ def istate_diff_EVT_prob(self, actual_state):
     for nb in range(self.num_blocks):
         for nb2 in range(nb+1, self.num_blocks):
             #  Use only block direction (velocity) for angle test  But if either vector norm is 0 then cannot compute angle, but in normal world block are never stationary so still abnormal
-            angle = self.vector_angle(self.block_vel(
-                istate, nb), self.block_vel(istate, nb2))
+            angle = sp_details.vector_angle(sp_details.block_vel(
+                istate, nb), sp_details.block_vel(istate, nb2))
             # get weibul probabilities for the angles..  cannot be both small and large and weibul go to zero fast enough we
             probv = 0
             if (angle < .1):
-                probv = self.wcdf(angle, 0.00, .512, .1218)
+                probv = prob.wcdf(angle, 0.00, .512, .1218)
             if (angle > 3.1):
-                probv = self.rwcdf(angle, 3.14, .512, .1218)
+                probv = prob.rwcdf(angle, 3.14, .512, .1218)
             # since this can happon randomly we never let it take longer
             if (probv > .5):
                 probv = .5
@@ -201,12 +203,12 @@ def istate_diff_EVT_prob(self, actual_state):
     k = 13  # where block data begins
     for nb in range(self.num_blocks):
         for nb2 in range(nb+1, self.num_blocks):
-            dist = dist_cal.line_to_line_dist(self.block_pos(istate, nb), self.block_vel(
-                istate, nb), self.block_pos(istate, nb2), self.block_vel(istate, nb2))
+            dist = dist_cal.line_to_line_dist(sp_details.block_pos(istate, nb), sp_details.block_vel(
+                istate, nb), sp_details.block_pos(istate, nb2), sp_details.block_vel(istate, nb2))
             # get weibul probabilities for the line-to-line-distance
             probv = 0
             if (dist < .025):
-                probw = self.wcdf(angle, 0.013, .474, .136)
+                probw = prob.wcdf(angle, 0.013, .474, .136)
                 # this can occur randomly so limit its impact
                 probv = min(.2, probw)
                 initprob += probv
@@ -272,8 +274,8 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
             print("Step " + str(self.tick) + dimname[j] + " ignored diff increase with state/max " + str(
                 round(istate[j], 5)) + " " + str(round(imax[j], 5)))
         if (istate[j] > imax[j] and (istate[j] - imax[j]) < 1.0):
-            #                probv =  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
-            probv = self.awcdf(
+            #                probv =  prob.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
+            probv = prob.awcdf(
                 abs(istate[j]), imax[j], iscale[j], ishape[j])
             # hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
             if (abs(abs(istate[j])-.1974) < self.maxclampedprob/2 and len(self.logstr) < self.maxcarlen):
@@ -289,7 +291,7 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
             if (self.uccscart.tbdebuglevel > 0 and (imin[j] - istate[j]) >= 1):
                 print("Step " + str(self.tick) + dimname[j] + " ignored diff too small with state/min " + str(
                     round(istate[j], 5)) + " " + str(round(imin[j], 5)))
-            probv = self.awcdf(abs(istate[j]), abs(
+            probv = prob.awcdf(abs(istate[j]), abs(
                 imin[j]), iscale[j], ishape[j])
             # hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
             if (abs(abs(istate[j])-.1974) < self.maxclampedprob/2 and len(self.logstr) < self.maxcarlen):
@@ -324,14 +326,14 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
         # the random error (from block collisons I think) sometimes cause large errors, so have to treat this a s very noisey and limit impact and only apply when resonable
         if (abs(istate[j]) > abs(imax[k]) and (abs(istate[j]) - (abs(imax[k]))) < .5):
             # some randome error stll creap in so limit is impact below
-            probb += self.awcdf(abs(istate[j]),
+            probb += prob.awcdf(abs(istate[j]),
                                 abs(imax[k]), iscale[k], ishape[k])
             if (probb > .001 and len(self.logstr) < self.maxcarlen):
                 self.logstr += "&P2+ Block Motion Prediction Error" + "Step " + str(self.tick) + " " + str(
                     dimname[k]) + " diff increase, prob " + " " + str(round(probb, 5)) + "  s/l " + str(round(istate[j], 5)) + " " + str(round(imax[k], 5))
         elif (abs(istate[j]) > (abs(imax[k]))):
             # some randome error stll creap in so limit is impact
-            probb = self.awcdf(abs(istate[j]), abs(
+            probb = prob.awcdf(abs(istate[j]), abs(
                 imax[k]), iscale[k], ishape[k])
             if (self.uccscart.tbdebuglevel > 0 and len(self.logstr) < self.maxcarlen):
                 self.logstr += "&P2+ Block Motion Prediction Error " + "Step " + str(self.tick) + " " + str(
@@ -350,11 +352,11 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
         for nb2 in range(nb+1, self.num_blocks):
             #  cart in position 0,   blocks are  position and then velocity 3d vectors starting at location k
             probv = 0
-            if (len(self.block_pos(astate, nb2)) == len(self.block_pos(astate, nb))):
-                dist = dist_cal.point_to_line_dist(self.block_pos(astate, nb2),
-                                                   self.block_pos(
+            if (len(sp_details.block_pos(astate, nb2)) == len(sp_details.block_pos(astate, nb))):
+                dist = dist_cal.point_to_line_dist(sp_details.block_pos(astate, nb2),
+                                                   sp_details.block_pos(
                     astate, nb),
-                    self.block_vel(astate, nb))
+                    sp_details.block_vel(astate, nb))
 
                 if (dist < 1e-3):  # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty
                     probv = self.maxdynamicprob
@@ -373,17 +375,17 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
     for nb in range(self.num_blocks):
         for nb2 in range(nb+1, self.num_blocks):
             #  Use only block direction (velocity) for angle test  But if either vector norm is 0 then cannot compute angle, but in normal world block are never stationary so still abnormal
-            if (len(self.block_pos(astate, nb2)) == len(self.block_pos(astate, nb))):
-                angle = self.vector_angle(self.block_vel(
-                    astate, nb), self.block_vel(astate, nb2))
+            if (len(sp_details.block_pos(astate, nb2)) == len(sp_details.block_pos(astate, nb))):
+                angle = sp_details.vector_angle(sp_details.block_vel(
+                    astate, nb), sp_details.block_vel(astate, nb2))
                 # get weibul probabilities for the angles..  cannot be both small and large and weibul go to zero fast enough we
                 deltav = 0
                 if (angle < .02):
                     deltav = .01 + \
-                        self.wcdf(angle, 0.00, .512, .1218)
+                        prob.wcdf(angle, 0.00, .512, .1218)
                 if (angle > 3.12):
                     deltav = .01 + \
-                        self.rwcdf(angle, 3.14, .512, .1218)
+                        prob.rwcdf(angle, 3.14, .512, .1218)
                 if (deltav > 0 and len(self.logstr) < self.maxcarlen):
                     self.logstr += "& P2+ LL3 or LL5" + "Step " + str(self.tick) + " Char Block motion " + str(nb) + " dyn Block-Toward-Block " + str(
                         nb2) + " with probs " + str(deltav) + " " + str(probv) + " for angle " + str(round(angle, 3))
@@ -398,13 +400,13 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
     k = 13  # where block data begins
     for nb in range(self.num_blocks):
         for nb2 in range(nb+1, self.num_blocks):
-            if (len(self.block_pos(astate, nb2)) == len(self.block_pos(astate, nb))):
-                dist = dist_cal.line_to_line_dist(self.block_pos(astate, nb), self.block_vel(
-                    astate, nb), self.block_pos(astate, nb2), self.block_vel(astate, nb2))
+            if (len(sp_details.block_pos(astate, nb2)) == len(sp_details.block_pos(astate, nb))):
+                dist = dist_cal.line_to_line_dist(sp_details.block_pos(astate, nb), sp_details.block_vel(
+                    astate, nb), sp_details.block_pos(astate, nb2), sp_details.block_vel(astate, nb2))
                 # get weibul probabilities for the line-to-line-distance
                 probv = 0
                 if (dist < .025):
-                    probw = .01+self.wcdf(angle, 0.013, .474, .136)
+                    probw = .01+prob.wcdf(angle, 0.013, .474, .136)
                     probv += probw  # this can occur randomly so limit its impact
                     if (probw > charactermin and len(self.logstr) < self.maxcarlen):
                         self.logstr += "& P2+ LL3 or LL5" + "Step " + str(self.tick) + " P2+ Char Block  " + str(nb) + " dyn likely intersects with block" + str(
@@ -422,7 +424,7 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
 
     # get probability differene froom initial state
 
-
+#Finding no use case
 def istate_diff_G_prob(self, actual_state):
     dimname = DATA.dimansion_name
 

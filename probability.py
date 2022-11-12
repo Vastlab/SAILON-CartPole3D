@@ -1,3 +1,6 @@
+import numpy as np
+import math
+import data_loader as DATA
 
 #####!!!!!##### Start INDEPNDENT CODE for EVT-
 def kullback_leibler(self, mu, sigma, m, s):
@@ -47,19 +50,14 @@ def world_change_prob(self,settrain=False):
             self.previous_wc = 0                       
             return self.worldchangedacc            
 
-            
-
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1193"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc
 
         self.summary ="" #reset summary to blank
-            
-        
 
-        
         mlength = len(self.problist)
         mlength = min(self.scoreforKL,mlength)
         # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
@@ -74,7 +72,7 @@ def world_change_prob(self,settrain=False):
             pmu = np.mean(smoothed[:-self.scoreforKL])  # we skip first/iniiprob... it is used elsehwere. 
             psigma = np.std(smoothed[:-self.scoreforKL])
             
-#            if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
+            #if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
             if(pmu >  self.mean_perf ):     #if we want only  KL for those what have worse performance or much better
                 PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf, self.stdev_perf)
                 self.debugstring = '   PerfKL {} {} {} {} ={} ,'.format(pmu, psigma, self.mean_perf, self.stdev_perf, round(PerfKL,3))
@@ -85,14 +83,11 @@ def world_change_prob(self,settrain=False):
         else:
             PerfKL = 0
 
-        
         if( self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1222"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc
-
-        
 
         if(mlength > 1) :
             mu = np.mean(self.problist[0:mlength-1])
@@ -103,11 +98,9 @@ def world_change_prob(self,settrain=False):
                 round(self.worldchangedacc,5),[round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3) ,round(self.KL_val,3), round(self.KL_threshold,3), "\n", [round(num,2) for num in self.scorelist])
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring
-            
             self.worldchanged = self.worldchangedacc
             return max(self.worldchangedacc,self.previous_wc);
         
-       
         if(settrain):
            self.mean_train = mu;
            self.stdev_train = sigma;
@@ -131,14 +124,13 @@ def world_change_prob(self,settrain=False):
         if (self.debug):
             print(self.debugstring)
            
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1260"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc
 
-
-        dprob = perfprob = 0                # don't allow on short runs.. dynamics and performance are off            
+        dprob = perfprob = 0 # don't allow on short runs.. dynamics and performance are off            
 
         if (len(self.problist) < 198):   #for real work but short list
             self.consecutivesuccess=0            
@@ -156,13 +148,12 @@ def world_change_prob(self,settrain=False):
                 self.KL_val = self.kullback_leibler(mu, sigma, self.mean_train, self.stdev_train)
             else:
                 self.KL_val=0                
-                
+    
             self.debugstring = '   ***Short World Change Acc={}, Failcnt= {} Prob ={},mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}        scores{}'.format(
                 round(self.worldchangedacc,3),self.failcnt, [round(num,2) for num in self.problist],round(mu,3), round(sigma,3), round(self.mean_train,3),
                 round(self.stdev_train,3) ,round(self.KL_val,5), round(self.KL_threshold,5), "\n", [round(num,2) for num in self.scorelist])
             if (self.debug):
                 print(self.debugstring)
-
 
         else:
             self.consecutivefail=0
@@ -170,10 +161,6 @@ def world_change_prob(self,settrain=False):
             if(self.consecutivesuccess > self.maxconsecutivesuccess):
                 self.maxconsecutivesuccess = self.consecutivesuccess
 
-            
-                
-        
-            
             if (sigma == 0):
                 if (mu == self.mean_train):
                     self.debugstring = '      BadSigma World Change Acc={}, Prob ={},mu={}, sigmas {}, mean {} stdev{} KLval {} thresh {} {}         scores{}'.format(
@@ -182,7 +169,6 @@ def world_change_prob(self,settrain=False):
                     print(self.debugstring)
                     self.logstr +=  "&" + self.debugstring
                     return max(self.worldchangedacc,self.previous_wc);
-
             else:
                 sigma = self.stdev_train
 
@@ -202,13 +188,12 @@ def world_change_prob(self,settrain=False):
         #if we had  collisons and not consecuretive faliures, we don't use this episode for dynamic probability .. collisions are not well predicted
         #tlen = min(self.scoreforKL,len(self.uccscart.char))
                    
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1325"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc
             
-
         #random collisions can occur and they destroy probability computation so ignore them
         if( self.logstr.count("CP") > 4)  and ( "attack" not in self.logstr) and (self.consecutivefail < 4):
             prob = 0
@@ -220,7 +205,7 @@ def world_change_prob(self,settrain=False):
             print("Debug did not find many CP ", self.logstr.count("CP"), " in string. Prob=",str(prob))            
 
 
-        #     # infrequent checkto outputting cnts for setinng up wbls for actual cnts to use to see if we whould update world change
+        # infrequent checkto outputting cnts for setinng up wbls for actual cnts to use to see if we whould update world change
         if(((self.episode-10)  ==  self.scoreforKL) or ((self.episode-10)  ==  2*self.scoreforKL)):
             cntval= np.zeros(15)
             cntprob= np.zeros(21)            
@@ -250,8 +235,8 @@ def world_change_prob(self,settrain=False):
             i+= 1; levelcnt[i] =L7block= scale*self.trialchar.count("LL7")
             i+= 1; levelcnt[i] =L8block= scale*self.trialchar.count("LL8")
 
-
-            '''  New String matching for json output 
+            '''
+            New String matching for json output 
             ncval = np.zeros("30")
             i+= 1; cntval[i]= self.trialchar.count("Block-Toward-Block")
 
@@ -264,16 +249,13 @@ def world_change_prob(self,settrain=False):
             Block
             Block Vel
             Wall
-            
             '''
 
             cntwbl = DATA.cntwbl
-
             cntmax=0
             for i in range(12):
                 cntprob[i] = self.wcdf(-cntval[i],cntwbl[i,1],cntwbl[i,0],cntwbl[i,2])
                 cntmax = max (cntmax,cntprob[i])
-
 
             if(cntmax > .1): cntmax=.1;  #limit impact this this is really a cumulative test on things we have already seen
             
@@ -285,18 +267,14 @@ def world_change_prob(self,settrain=False):
                 self.logstr += 'Using detect as prob. detectcnts: {} dectprob {} '.format(cntval,cntprob)
                 prob = max(prob,cntmax)
             else: self.logstr += 'detectcnts: {} dectprob {} '.format(cntval,cntprob)
-                
-
-                        
+                         
         if (len(self.problist) < self.scoreforKL):
             self.worldchanged = prob * len(self.problist)/(self.scoreforKL)
         elif (len(self.problist) < 2* self.scoreforKL):
             self.worldchanged = prob            
         else: # if very long list, KL beceomes too long, its more likely to be higher from random agent crashing into pole so we the impact
             self.worldchanged = prob * (2*self.scoreforKL)/len(self.problist)
-            
-
-            
+             
         #only do blockmin/max if we did a long enough  note this does not need any blending or scoreforKL since its an absolute novelty to have this happen
         # if the blockmax/min (in general from past episode) from past are not normal add them to the worldchange acce.  Again should be EVT based but not enough training yet.
         if (self.episode > (self.scoreforKL) and self.tick >170 and self.blockvelmax > 5):   # if we have been through enough episodes and enough steps and blocks moved enough
@@ -314,12 +292,11 @@ def world_change_prob(self,settrain=False):
                 self.logstr +=  "&" + self.debugstring                
 
 
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1314"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc                              
-
 
         outputstats=False
             
@@ -330,7 +307,6 @@ def world_change_prob(self,settrain=False):
         failinc = 0
         #if we are beyond KL window all we do is watch for failures to decide if we world is changed
 
-            
         if(self.episode > self.scoreforKL+1 and self.episode < 3* self.scoreforKL):
             faildiff = self.failcnt/(self.episode+1)-self.failfrac            
             if(faildiff > 0):
@@ -348,7 +324,6 @@ def world_change_prob(self,settrain=False):
             else:
                 #worldchange acc once its above .5 it cannot not go down.. it includes max of old value..
                 self.worldchangeblend = min(1, (        self.blenduprate *self.worldchanged + (1-self.blenduprate) * self.worldchangeblend ))
-
                 self.debugstring = "Blendup using rate " + str(self.blenduprate) + "wc/wcb="+ str(self.worldchanged) + " " + str(self.worldchangeblend)                                
                 # we add in an impusle each step if the first step had initial world change.. so that accumulates over time
 
@@ -361,7 +336,7 @@ def world_change_prob(self,settrain=False):
                 print(self.debugstring)
 
 
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged when down, line 1358"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)            
             self.worldchangedacc=self.previous_wc          
@@ -383,8 +358,6 @@ def world_change_prob(self,settrain=False):
                 
             self.consecutivewc += 1
         else:  self.consecutivewc = 0
-
-        
 #####!!!!!#####  End Domain Independent code tor consecurtiv efailures
 
 
@@ -392,10 +365,9 @@ def world_change_prob(self,settrain=False):
         self.logstr += 'World Change Acc={} {} {} {}, CW={},CD={} D/KL Probs={},{}'.format(round(self.worldchangedacc,3), round(self.worldchangeblend,3),round(self.previous_wc,3),round(failinc,3), self.consecutivewc,self.dynamiccount,round(dprob,3), round(perfprob,3))
 
 
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1389"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)            
-
 
         print("EPi previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
         if(self.previous_wc < .5 and self.worldchangedacc        >= .5):
@@ -416,7 +388,7 @@ def world_change_prob(self,settrain=False):
         #        if(self.worldchangedacc        >= .6 and (100*self.perf/self.totalcnt) < 65) :
         #                self.uccscart.use_avoid_reaction=True            
 
-        if(        self.previous_wc > self.worldchangedacc):
+        if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1403"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
             print(self.debugstring)            
             self.worldchangedacc=self.previous_wc          
@@ -595,10 +567,6 @@ def world_change_prob(self,settrain=False):
                 self.summary += " Uncontrollable dynamics for unknown reasons, but clearly novel as failure frequencey too high compared to training"
             if(not outputstats):                
                 self.summary += "#####"
-
-                
-
-
 
         if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1458"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
