@@ -11,7 +11,7 @@ services:
   # The SOTA cartpole service that connects to the aiq.ailab.wsu.edu/ vhost.
   # We use a custom service name for each service variant so we can have multiple versions
   # running at the same time, just with slightly modified docker-compose files.
-  uccs-ta2:
+  uccs-ta2-cartpole:
     # We define an image name because we use the same image for all variants, they just get a
     # different volume source directory for the configs.
     # image: aiq-sail-on/sota-cartpole
@@ -21,5 +21,5 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile-TA2-cartpole
-    command: python -u TA2.py --config=config/evaluation.config --printout --logfile=config/log.txt
+    command: python -u ta2.py --config=config/evaluation.config --printout --logfile=config/log.txt
 

@@ -26,8 +26,8 @@ from datetime import datetime
 
 import probability as prob
 import spatial_details as sp_details
-from UCCS_TA2 import UCCSTA2
 from objects.TA2_logic import TA2Logic
+from uccs_ta2 import UCCSTA2
 
 
 # import tracemalloc
