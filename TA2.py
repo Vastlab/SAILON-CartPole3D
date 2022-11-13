@@ -19,33 +19,22 @@
 # **  Contact: Larry Holder (holder@wsu.edu)                                                    ** #
 # **  Contact: Diane J. Cook (djcook@wsu.edu)                                                   ** #
 # ************************************************************************************************ #
-import copy
 import optparse
 import queue
-import random
 import threading
-import time
+from datetime import datetime
 
-from objects.TA2_logic import TA2Logic
-
-import pdb
-import torch
-import numpy as np
-import UCCS_TA2
-from UCCS_TA2 import UCCSTA2
-import uuid
-import csv
-
-from datetime import datetime, timedelta
 import probability as prob
 import spatial_details as sp_details
+from UCCS_TA2 import UCCSTA2
+from objects.TA2_logic import TA2Logic
 
 
-#import tracemalloc
+# import tracemalloc
 
 # tracemalloc.start(10)
-#snapshot1 = snapshot2 = tracemalloc.take_snapshot()
-#top_stats = snapshot1.statistics('lineno')
+# snapshot1 = snapshot2 = tracemalloc.take_snapshot()
+# top_stats = snapshot1.statistics('lineno')
 
 
 class ThreadedProcessingExample(threading.Thread):
@@ -96,8 +85,8 @@ class TA2Agent(TA2Logic):
         self.totalSteps = 0
         self.lasttime = 0
         self.UCCS = UCCSTA2()
-        self.UCCS.debug = options.debug
-        self.UCCS.debug = False
+        self.UCCS.cur_conf.debug = options.debug
+        self.UCCS.cur_conf.debug = False
         # Self states, always previous 4 steps
 
         return
@@ -191,7 +180,7 @@ class TA2Agent(TA2Logic):
             Integer representing the predicted novelty level.
             A JSON-valid dict characterizing the novelty.
         """
-#        novelty_probability = self.UCCS.world_change_prob(True)   # learn prob from train
+        #        novelty_probability = self.UCCS.world_change_prob(True)   # learn prob from train
         # one bad start will break it so we use pretrained data insteadb
         novelty_probability = prob.world_change_prob(False)
         novelty_threshold = 0.5
@@ -201,7 +190,7 @@ class TA2Agent(TA2Logic):
         #        print("Novelty Probability:", novelty_probability)
         #        print("Total Steps:", self.totalSteps)
         self.log.debug('Training Episode End: performance={}, NovelProb={}, steps={}, WC={}, '.format(performance,
-                                                                                                      self.UCCS.problist,
+                                                                                                      self.UCCS.cur_conf.problist,
                                                                                                       self.totalSteps,
                                                                                                       novelty_probability))
         self.log.info('Training Episode End: steps={}, WC={}, '.format(
@@ -254,7 +243,7 @@ class TA2Agent(TA2Logic):
         """
         self.log.info('Trial Start: #{}  novelty_desc: {}'.format(trial_number,
                                                                   str(novelty_description)))
-        self.UCCS.trial = trial_number
+        self.UCCS.cur_conf.trial = trial_number
         '''if len(self.possible_answers) == 0:
             self.possible_answers.append(dict({'action': 'left'}))'''
         return
@@ -279,7 +268,7 @@ class TA2Agent(TA2Logic):
         # if(True or self.UCCS.debug):
         #     snapshot1 = tracemalloc.take_snapshot()
 
-        self.UCCS.starttime = datetime.now()
+        self.UCCS.cur_conf.starttime = datetime.now()
         return
 
         # One step predictions here
@@ -304,30 +293,30 @@ class TA2Agent(TA2Logic):
                 strictly enforced and the incorrect format will result in an exception being thrown.
         """
 
-        self.UCCS.noveltyindicator = novelty_indicator
-        self.UCCS.debugstring = ""
-#        self.log.debug('Testing Instance: feature_vector={}'.format(feature_vector))
+        self.UCCS.cur_conf.noveltyindicator = novelty_indicator
+        self.UCCS.cur_conf.debugstring = ""
+        #        self.log.debug('Testing Instance: feature_vector={}'.format(feature_vector))
 
-        if (self.UCCS.cnt < 1):
+        if self.UCCS.cur_conf.cnt < 1:
             #            self.UCCS.hint=str(feature_vector['hint'])
-            self.UCCS.hint = ""
-#            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
+            self.UCCS.cur_conf.hint = ""
+            #            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
 
-            if (novelty_indicator == True):
-                self.UCCS.given = True
-                self.UCCS.uccscart.givendetection = True
+            if novelty_indicator == True:
+                self.UCCS.cur_conf.given = True
+                self.UCCS.cur_conf.uccscart.givendetection = True
             else:
-                self.UCCS.given = False
-                self.UCCS.uccscart.givendetection = False
+                self.UCCS.cur_conf.given = False
+                self.UCCS.cur_conf.uccscart.givendetection = False
 
         action = sp_details.process_instance(feature_vector)
 
         #        if(self.UCCS.episode == 0 and  self.UCCS.cnt > 101 and  self.UCCS.cnt <106):#
         #           self.log.debug(self.UCCS.debugstring)
         #        if(self.UCCS.episode == 0 and  self.UCCS.cnt <120):
-        self.log.debug(self.UCCS.debugstring)
+        self.log.debug(self.UCCS.cur_conf.debugstring)
         self.totalSteps += 1
 
         # format the return of novelty and actions
@@ -368,67 +357,72 @@ class TA2Agent(TA2Logic):
             A JSON-valid dict characterizing the novelty.
         """
 
-        global TA2_previous_worldchange   # global so it retains info between trials
-        if (self.UCCS.episode < 1):
+        global TA2_previous_worldchange  # global so it retains info between trials
+        if self.UCCS.cur_conf.episode < 1:
             TA2_previous_worldchange = 0
 
         novelty_probability = prob.world_change_prob(False)
-        if (novelty_probability < TA2_previous_worldchange):
+        if novelty_probability < TA2_previous_worldchange:
             self.log.info("??? Unknown Error WorldChange whent down at episode {} from {} to {}.  Resetting".format(
-                self.UCCS.episode, TA2_previous_worldchange, novelty_probability))
+                self.UCCS.cur_conf.episode, TA2_previous_worldchange, novelty_probability))
             novelty_probability = TA2_previous_worldchange
-            self.UCCS.worldchangeacc = TA2_previous_worldchange
+            self.UCCS.cur_conf.worldchangeacc = TA2_previous_worldchange
         else:
             TA2_previous_worldchange = novelty_probability
 
         novelty_threshold = 0.5
         novelty = 0
-        novelty_characterization = self.UCCS.uccscart.characterization
-        novelty_characterization['summary'] = self.UCCS.summary
-#        novelty_characterization['stringdump'] = self.UCCS.logstr
+        novelty_characterization = self.UCCS.cur_conf.uccscart.characterization
+        novelty_characterization['summary'] = self.UCCS.cur_conf.summary
+        #        novelty_characterization['stringdump'] = self.UCCS.logstr
 
         end = datetime.now()
-        self.UCCS.cumtime += end - self.UCCS.starttime
+        self.UCCS.cur_conf.cumtime += end - self.UCCS.cur_conf.starttime
 
-        self.UCCS.totalcnt += 1
-        self.UCCS.perf += performance
-        self.UCCS.perflist.append(performance)
+        self.UCCS.cur_conf.totalcnt += 1
+        self.UCCS.cur_conf.perf += performance
+        self.UCCS.cur_conf.perflist.append(performance)
 
         rcorrect = pcorrect = 0
-        if (performance > .99):
+        if performance > .99:
             rcorrect = 1.0
         iscorrect = 0
-        if ((self.UCCS.noveltyindicator == True) and (novelty_probability >= .5)):
+        if (self.UCCS.cur_conf.noveltyindicator == True) and (novelty_probability >= .5):
             iscorrect = 1
-        if ((self.UCCS.noveltyindicator == False) and (novelty_probability < .5)):
+        if (self.UCCS.cur_conf.noveltyindicator == False) and (novelty_probability < .5):
             iscorrect = 1
-        self.UCCS.correctcnt = self.UCCS.correctcnt + iscorrect
-        self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + \
-            max(iscorrect, rcorrect)
-        pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
-        rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)
-        self.log.info('Testing End#={}: WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
-            self.UCCS.episode,
-            round(novelty_probability, 5),
-            self.UCCS.hint,
-            self.totalSteps,
-            round(rperf, 1),
-            round((end - self.UCCS.starttime).total_seconds(),
-                  1), round((self.UCCS.cumtime/self.UCCS.totalcnt).total_seconds(), 1),
-            self.UCCS.noveltyindicator,     iscorrect, rcorrect, round(
-                pcorrect, 2),
-            self.UCCS.correctcnt, self.UCCS.rcorrectcnt, self.UCCS.totalcnt,
-            str(novelty_characterization)
-        ))
+        self.UCCS.cur_conf.correctcnt = self.UCCS.cur_conf.correctcnt + iscorrect
+        self.UCCS.cur_conf.rcorrectcnt = self.UCCS.cur_conf.rcorrectcnt + \
+                                         max(iscorrect, rcorrect)
+        pcorrect = 100 * self.UCCS.cur_conf.correctcnt / (self.UCCS.cur_conf.totalcnt)
+        rperf = 100 * self.UCCS.cur_conf.perf / (self.UCCS.cur_conf.totalcnt)
+        self.log.info(
+            'Testing End#={}: WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
+                self.UCCS.cur_conf.episode,
+                round(novelty_probability, 5),
+                self.UCCS.cur_conf.hint,
+                self.totalSteps,
+                round(rperf, 1),
+                round((end - self.UCCS.cur_conf.starttime).total_seconds(),
+                      1), round((self.UCCS.cur_conf.cumtime / self.UCCS.cur_conf.totalcnt).total_seconds(), 1),
+                self.UCCS.cur_conf.noveltyindicator, iscorrect, rcorrect, round(
+                    pcorrect, 2),
+                self.UCCS.cur_conf.correctcnt, self.UCCS.cur_conf.rcorrectcnt, self.UCCS.cur_conf.totalcnt,
+                str(novelty_characterization)
+            ))
 
-        self.log.debug('DTend# {}  Logstr={} {} Prob={} {} Scores= {}   '.format(self.UCCS.episode,  self.UCCS.logstr,
+        self.log.debug('DTend# {}  Logstr={} {} Prob={} {} Scores= {}   '.format(self.UCCS.cur_conf.episode,
+                                                                                 self.UCCS.cur_conf.logstr,
                                                                                  "\n", [
-                                                                                     round(num, 2) for num in self.UCCS.problist[:40]],
-                                                                                 "\n", [round(num, 2) for num in self.UCCS.scorelist[:40]]))
+                                                                                     round(num, 2) for num in
+                                                                                     self.UCCS.cur_conf.problist[:40]],
+                                                                                 "\n", [round(num, 2) for num in
+                                                                                        self.UCCS.cur_conf.scorelist[
+                                                                                        :40]]))
 
         self.totalSteps = 0
 
-        self.UCCS.starttime = datetime.now()
+        self.UCCS.cur_conf.starttime = datetime.now()
         # if(self.UCCS.debug):
         #     snapshot2 = tracemalloc.take_snapshot()
 

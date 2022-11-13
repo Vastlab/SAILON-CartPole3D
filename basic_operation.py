@@ -1,9 +1,12 @@
-def takeOneStep(self, state_given, env, pertub=False):
+from current_config import CurrentConfig
+
+
+def take_one_step(self, state_given, env, pertub=False):
+    cur_config = CurrentConfig()
     observation = state_given
-    action, next_action, expected_state = self.uccscart.get_best_action(
-        observation, self.meanprob)
+    action, next_action, expected_state = cur_config.uccscart.get_best_action(observation, cur_config.meanprob)
     # if doing well pertub it so we can better chance of detecting novelties
-    '''
+    """
         ra = int(state_given[0] * 10000) % 4
         if (pertub and
                 (ra == 0) and
@@ -14,8 +17,9 @@ def takeOneStep(self, state_given, env, pertub=False):
             if (action == 1):
                 action = 0
             else:
-                action = 1'''
+                action = 1
+    """
     # print("Flipped Action, state=",state_given)
-    self.tick = self.uccscart.tick
+    cur_config.tick = cur_config.uccscart.tick
 
     return action, expected_state
