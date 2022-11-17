@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def point_to_line_dist(self, cpos, bpos, bvel):
+def point_to_line_dist(cpos, bpos, bvel):
     pdiff = np.subtract(cpos, bpos)
     nval = np.linalg.norm(bvel)
     if nval > 0:
@@ -15,7 +15,7 @@ def point_to_line_dist(self, cpos, bpos, bvel):
 # line to line give position and direction (velocity) representation -- if velocity is 0 return 9999 as distance (its not well defined  but this will make it look novel)
 
 
-def line_to_line_dist(self, apos, avel, bpos, bvel):
+def line_to_line_dist(apos, avel, bpos, bvel):
     magA = np.linalg.norm(avel)
     magB = np.linalg.norm(bvel)
     if magA == 0 or magB == 0:

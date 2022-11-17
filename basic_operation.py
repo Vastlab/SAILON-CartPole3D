@@ -1,7 +1,7 @@
 from current_config import CurrentConfig
 
 
-def take_one_step(self, state_given, env, pertub=False):
+def take_one_step(state_given, env, pertub=False):
     cur_conf = CurrentConfig()
     observation = state_given
     action, next_action, expected_state = cur_conf.uccscart.get_best_action(observation, cur_conf.meanprob)

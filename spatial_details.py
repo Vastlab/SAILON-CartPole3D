@@ -6,38 +6,38 @@ import probability_difference as prob_dif
 from current_config import CurrentConfig
 
 
-def block_pos(self, istate, blocknum):
+def block_pos(istate, blocknum):
     return istate[13 + blocknum * 6:13 + blocknum * 6 + 3]
 
 
-def block_vel(self, istate, blocknum):
+def block_vel(istate, blocknum):
     return istate[13 + blocknum * 6 + 3:13 + blocknum * 6 + 6]
 
 
-def cart_pos(self, istate):
+def cart_pos(istate):
     return istate[0:3]
 
 
-def cart_vel(self, istate):
+def cart_vel(istate):
     return istate[3:6]
 
 
-def pole_pos(self, istate):
+def pole_pos(istate):
     return istate[6:9]
 
 
-def pole_vel(self, istate):
+def pole_vel(istate):
     return istate[9:12]
 
 
-def unit_vector(self, vector):
+def unit_vector(vector):
     """
         Returns the unit vector of the vector  and if norm is too small  limit divsiion to avoid numeric instability
     """
     return vector / max(np.linalg.norm(vector), 1e-16)
 
 
-def vector_angle(self, v1, v2):
+def vector_angle(v1, v2):
     cur_config = CurrentConfig()
     """
         Returns the angle in radians between vectors 'v1' and 'v2'::
@@ -53,7 +53,7 @@ def vector_angle(self, v1, v2):
     return np.arccos(np.clip(np.dot(v1, v2), -1.0, 1.0))
 
 
-def process_instance(self, oactual_state):
+def process_instance(oactual_state):
     cur_config = CurrentConfig()
     #        pertub = (self.cnt > 100) and (self.maxprob < .5)
     pertub = False

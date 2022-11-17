@@ -11,7 +11,7 @@ from current_config import CurrentConfig
 # get probability differene froom initial state
 
 
-def istate_diff_EVT_prob(self, actual_state):
+def istate_diff_EVT_prob(actual_state):
     # TODO: duplicate declaration, they are same. Move to a common place
     cur_conf = CurrentConfig()
     dimname = data.dimansion_name
@@ -254,7 +254,7 @@ def istate_diff_EVT_prob(self, actual_state):
 # get probability differene from checking state difference from prediction
 
 
-def cstate_diff_EVT_prob(self, cdiff, astate):
+def cstate_diff_EVT_prob(cdiff, astate):
     # TODO: duplicate declaration, they are same. Move to a common place
     cur_conf = CurrentConfig()
     dimname = data.dimansion_name
@@ -451,7 +451,7 @@ def cstate_diff_EVT_prob(self, cdiff, astate):
 
 
 # Finding no use case
-def istate_diff_G_prob(self, actual_state):
+def istate_diff_G_prob(actual_state):
     dimname = data.dimansion_name
 
     # load mean/std from training..
@@ -521,7 +521,7 @@ def istate_diff_G_prob(self, actual_state):
 # get probability differene froom continuing state difference
 
 
-def cstate_diff_G_prob(self, cdiff):
+def cstate_diff_G_prob(cdiff):
     dimname = data.dimansion_name
 
     cur_conf = CurrentConfig()

@@ -7,7 +7,7 @@ from current_config import CurrentConfig
 
 
 #####!!!!!##### Start INDEPNDENT CODE for EVT-
-def kullback_leibler(self, mu, sigma, m, s):
+def kullback_leibler(mu, sigma, m, s):
     """
         Compute Kullback Leibler with Gaussian assumption of training data
         mu: mean of test batch
@@ -24,7 +24,7 @@ def kullback_leibler(self, mu, sigma, m, s):
 
 
 # reversed wbl for maxim fitting
-def rwcdf(self, x, iloc, ishape, iscale):
+def rwcdf(x, iloc, ishape, iscale):
     if x - iloc < 0:
         prob = 0
     else:
@@ -35,14 +35,14 @@ def rwcdf(self, x, iloc, ishape, iscale):
     # abs wbl for unsided fitting
 
 
-def awcdf(self, x, iloc, ishape, iscale):
+def awcdf(x, iloc, ishape, iscale):
     prob = 1 - math.pow(math.exp(-abs(x - iloc) / iscale), ishape)
     # if(prob > 1e-4): print("in awcdf",round(prob,6),x,iloc,ishape,iscale)
     return prob
 
 
 # regualr wbl for minimum fits
-def wcdf(self, x, iloc, ishape, iscale):
+def wcdf(x, iloc, ishape, iscale):
     if iloc - x < 0:
         prob = 0
     else:
@@ -54,7 +54,7 @@ def wcdf(self, x, iloc, ishape, iscale):
 #####!!!!!##### End Doimain Independent CODE for EVT-
 
 
-def world_change_prob(self, settrain=False):
+def world_change_prob(settrain=False):
     cur_conf = CurrentConfig()
     # don't let first episodes  impact world change.. need stabilsied scores/probabilites.. skipping work here also
     # makes it faster
@@ -395,7 +395,7 @@ def world_change_prob(self, settrain=False):
 
         # world change blend  can go up or down depending on how probablites vary.. goes does allows us to ignore
         # spikes from uncommon events. as the bump i tup but eventually go down.
-        if prob < .5 and self.worldchangedacc < .5:  # blend wo  i.e. decrease world change accumulator to limit
+        if prob < .5 and cur_conf.worldchangedacc < .5:  # blend wo  i.e. decrease world change accumulator to limit
             # impact of randome events self.worldchangeblend = min(self.worldchangedacc * cur_conf.blenddownrate,
             # (self.blenddownrate *self.worldchanged + (1-self.blenddownrate) * self.worldchangeblend ))
             cur_conf.worldchangedacc = min(1, cur_conf.worldchangedacc * cur_conf.worldchangeblend)

@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def format_istate_data(self, feature_vector):
+def format_istate_data(feature_vector):
     # Format data for use with evm
     # print(feature_vector)
     cur_state = []
@@ -27,7 +27,7 @@ def format_istate_data(self, feature_vector):
     return np.asarray(cur_state)
 
 
-def format_data_without_blocks(self, feature_vector):
+def format_data_without_blocks(feature_vector):
     # Format data for use with evm
     state = []
     for i in feature_vector.keys():
@@ -46,7 +46,7 @@ def format_data_without_blocks(self, feature_vector):
     return np.asarray(state)
 
 
-def format_data(self, feature_vector):
+def format_data(feature_vector):
     # Format data for use with evm
     state = []
     for i in feature_vector.keys():
