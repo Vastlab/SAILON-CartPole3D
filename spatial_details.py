@@ -48,8 +48,8 @@ def vector_angle(v1, v2):
         >>> vector_angle((1, 0, 0), (1, 0, 0))
         0.0
     """
-    v1 = cur_config.unit_vector(v1)
-    v2 = cur_config.unit_vector(v2)
+    v1 = unit_vector(v1)
+    v2 = unit_vector(v2)
     return np.arccos(np.clip(np.dot(v1, v2), -1.0, 1.0))
 
 
