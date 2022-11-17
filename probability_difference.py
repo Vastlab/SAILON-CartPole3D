@@ -3,7 +3,7 @@ import numpy as np
 import data_loader as data
 import distance_calculator as dist_cal
 import formatter as formatter
-import probability as prob
+import probability as probability
 import spatial_details as sp_details
 from current_config import CurrentConfig
 
@@ -50,7 +50,7 @@ def istate_diff_EVT_prob(actual_state):
     # do base state for cart(6)  and pole (7)   looking at position and velocity.
     for j in range(13):
         if abs(istate[j]) > imax[j]:
-            probv = prob.awcdf(istate[j], imax[j], iscale[j], ishape[j])
+            probv = probability.awcdf(istate[j], imax[j], iscale[j], ishape[j])
             initprob += probv
             if probv > charactermin and len(cur_conf.logstr) < cur_conf.maxcarlen:
                 cur_conf.logstr += "& P2+ LL1 " + "Step " + str(cur_conf.tick) + str(
@@ -61,7 +61,7 @@ def istate_diff_EVT_prob(actual_state):
                     cur_conf.logstr += "j=", str(j) + "state = " + str(cur_conf.current_state)
 
         if abs(istate[j]) < imin[j]:
-            probv = prob.awcdf(
+            probv = probability.awcdf(
                 abs(istate[j]), imin[j], iscale[j], ishape[j])
             if probv > charactermin and len(cur_conf.logstr) < cur_conf.maxcarlen:
                 initprob += probv
@@ -99,7 +99,7 @@ def istate_diff_EVT_prob(actual_state):
     for j in range(13, wallstart, 1):
         probv = 0
         if abs(istate[j]) > imax[k]:
-            probv = prob.awcdf(
+            probv = probability.awcdf(
                 abs(istate[j]), imax[k], iscale[k], ishape[k])
             if (abs(istate[j]) - imax[k]) > 1:
                 cur_conf.logstr += "& P2+ LL2  " + "Step " + str(cur_conf.tick) + str(
@@ -123,7 +123,7 @@ def istate_diff_EVT_prob(actual_state):
                 #                    self.logstr += "j="+ str(j)+ str(self.current_state)
                 initprob += max(.24, probv)
             else:
-                probv = prob.awcdf(
+                probv = probability.awcdf(
                     abs(istate[j]), imin[k], iscale[k], ishape[k])
                 initprob += probv
                 if probv > charactermin and len(cur_conf.logstr) < cur_conf.maxcarlen:
@@ -197,9 +197,9 @@ def istate_diff_EVT_prob(actual_state):
             # get weibul probabilities for the angles..  cannot be both small and large and weibul go to zero fast enough we
             probv = 0
             if angle < .1:
-                probv = prob.wcdf(angle, 0.00, .512, .1218)
+                probv = probability.wcdf(angle, 0.00, .512, .1218)
             if angle > 3.1:
-                probv = prob.rwcdf(angle, 3.14, .512, .1218)
+                probv = probability.rwcdf(angle, 3.14, .512, .1218)
             # since this can happon randomly we never let it take longer
             if probv > .5:
                 probv = .5
@@ -222,7 +222,7 @@ def istate_diff_EVT_prob(actual_state):
             # get weibul probabilities for the line-to-line-distance
             probv = 0
             if dist < .025:
-                probw = prob.wcdf(angle, 0.013, .474, .136)
+                probw = probability.wcdf(angle, 0.013, .474, .136)
                 # this can occur randomly so limit its impact
                 probv = min(.2, probw)
                 initprob += probv
@@ -290,8 +290,8 @@ def cstate_diff_EVT_prob(cdiff, astate):
             print("Step " + str(cur_conf.tick) + dimname[j] + " ignored diff increase with state/max " + str(
                 round(istate[j], 5)) + " " + str(round(imax[j], 5)))
         if istate[j] > imax[j] and (istate[j] - imax[j]) < 1.0:
-            #                probv =  prob.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
-            probv = prob.awcdf(
+            #                probv =  probability.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
+            probv = probability.awcdf(
                 abs(istate[j]), imax[j], iscale[j], ishape[j])
             # hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
             if abs(abs(istate[j]) - .1974) < cur_conf.maxclampedprob / 2 and len(cur_conf.logstr) < cur_conf.maxcarlen:
@@ -310,8 +310,7 @@ def cstate_diff_EVT_prob(cdiff, astate):
             if cur_conf.uccscart.tbdebuglevel > 0 and (imin[j] - istate[j]) >= 1:
                 print("Step " + str(cur_conf.tick) + dimname[j] + " ignored diff too small with state/min " + str(
                     round(istate[j], 5)) + " " + str(round(imin[j], 5)))
-            probv = prob.awcdf(abs(istate[j]), abs(
-                imin[j]), iscale[j], ishape[j])
+            probv = probability.awcdf(abs(istate[j]), abs(imin[j]), iscale[j], ishape[j])
             # hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
             if abs(abs(istate[j]) - .1974) < cur_conf.maxclampedprob / 2 and len(cur_conf.logstr) < cur_conf.maxcarlen:
                 if cur_conf.uccscart.tbdebuglevel > 0:
@@ -348,14 +347,14 @@ def cstate_diff_EVT_prob(cdiff, astate):
         # the random error (from block collisons I think) sometimes cause large errors, so have to treat this a s very noisey and limit impact and only apply when resonable
         if abs(istate[j]) > abs(imax[k]) and (abs(istate[j]) - (abs(imax[k]))) < .5:
             # some randome error stll creap in so limit is impact below
-            probb += prob.awcdf(abs(istate[j]), abs(imax[k]), iscale[k], ishape[k])
+            probb += probability.awcdf(abs(istate[j]), abs(imax[k]), iscale[k], ishape[k])
             if probb > .001 and len(cur_conf.logstr) < cur_conf.maxcarlen:
                 cur_conf.logstr += "&P2+ Block Motion Prediction Error" + "Step " + str(cur_conf.tick) + " " + str(
                     dimname[k]) + " diff increase, prob " + " " + str(round(probb, 5)) + "  s/l " + str(
                     round(istate[j], 5)) + " " + str(round(imax[k], 5))
         elif abs(istate[j]) > (abs(imax[k])):
             # some randome error stll creap in so limit is impact
-            probb = prob.awcdf(abs(istate[j]), abs(imax[k]), iscale[k], ishape[k])
+            probb = probability.awcdf(abs(istate[j]), abs(imax[k]), iscale[k], ishape[k])
             if cur_conf.uccscart.tbdebuglevel > 0 and len(cur_conf.logstr) < cur_conf.maxcarlen:
                 cur_conf.logstr += "&P2+ Block Motion Prediction Error " + "Step " + str(cur_conf.tick) + " " + str(
                     dimname[k]) + " diff way too large ignored prob " + " " + str(round(probb, 5)) + "  s/l " + str(
@@ -404,10 +403,10 @@ def cstate_diff_EVT_prob(cdiff, astate):
                 deltav = 0
                 if angle < .02:
                     deltav = .01 + \
-                             prob.wcdf(angle, 0.00, .512, .1218)
+                             probability.wcdf(angle, 0.00, .512, .1218)
                 if angle > 3.12:
                     deltav = .01 + \
-                             prob.rwcdf(angle, 3.14, .512, .1218)
+                             probability.rwcdf(angle, 3.14, .512, .1218)
                 if deltav > 0 and len(cur_conf.logstr) < cur_conf.maxcarlen:
                     cur_conf.logstr += "& P2+ LL3 or LL5" + "Step " + str(cur_conf.tick) + " Char Block motion " + str(
                         nb) + " dyn Block-Toward-Block " + str(
@@ -429,7 +428,7 @@ def cstate_diff_EVT_prob(cdiff, astate):
                 # get weibul probabilities for the line-to-line-distance
                 probv = 0
                 if dist < .025:
-                    probw = .01 + prob.wcdf(angle, 0.013, .474, .136)
+                    probw = .01 + probability.wcdf(angle, 0.013, .474, .136)
                     probv += probw  # this can occur randomly so limit its impact
                     if probw > charactermin and len(cur_conf.logstr) < cur_conf.maxcarlen:
                         cur_conf.logstr += "& P2+ LL3 or LL5" + "Step " + str(
