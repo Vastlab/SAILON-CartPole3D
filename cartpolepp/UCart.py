@@ -78,6 +78,9 @@ class CartPoleBulletEnv(gym.Env):
         self.tbdebuglevel=0
         self.episode=0
         self.force_action=-1
+
+        self.adapt_after_detect=True
+        
         self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
 
         self.use_avoid_reaction=False   #set by UCCS_TA2  when world change is high enough
@@ -1002,6 +1005,9 @@ class CartPoleBulletEnv(gym.Env):
 
             cost  += slackcost    + ( maxangle)**2 + 10*(minangle)**2 +   collision_penalty                
 
+            if(self.adapt_after_detect and self.wcprob < .5):
+                cost = slackcost  #reset to just standard cost  if waiting to adatp to detect until we declare novel. 
+            
 
             if(False and cost > 1000):
 #            if(self.tbdebuglevel>2): 
@@ -1016,26 +1022,30 @@ class CartPoleBulletEnv(gym.Env):
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
 
-        if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
-            react = self.avoid_actions[self.reactstep]
-            self.char += "AV"+str(self.reactstep)                                            
-            print("Avoiding @reactstep", self.reactstep, " with ", react)
-            score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
-            state = [react,"nothing",nstate]
-            self.reactstep += 1
-            self.lastscore = -1.0
-
-        else:
-
-    #       if we have colission potential for any action (char != "") so do two-step action search
-    #       if we have low score  we can go faser uding one-setp
-           if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 50 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
-                state= self.get_best_onestep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
-           else:
+        if(self.adapt_after_detect and self.wcprob < .5):
                 state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Two score", self.lastscore)
-           #we do tick here to update one timestep..
+                if(self.tbdebuglevel>2): print("Non-adapt-one score", self.lastscore)        
+        else:
+            if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
+                react = self.avoid_actions[self.reactstep]
+                self.char += "AV"+str(self.reactstep)                                            
+                print("Avoiding @reactstep", self.reactstep, " with ", react)
+                score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
+                state = [react,"nothing",nstate]
+                self.reactstep += 1
+                self.lastscore = -1.0
+                
+            else:
+            
+            #       if we have colission potential for any action (char != "") so do two-step action search
+            #       if we have low score  we can go faser uding one-setp
+                if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 50 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
+                    state= self.get_best_onestep_action(feature_vector)
+                    if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
+                else:
+                    state= self.get_best_twostep_action(feature_vector)
+                    if(self.tbdebuglevel>2): print("Two score", self.lastscore)
+                #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):
             print("Expected state", state)           
