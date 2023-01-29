@@ -80,6 +80,7 @@ class CartPoleBulletEnv(gym.Env):
         self.force_action=-1
 
         self.adapt_after_detect=True
+        self.never_adapt=True        
         
         self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
 
@@ -1005,7 +1006,7 @@ class CartPoleBulletEnv(gym.Env):
 
             cost  += slackcost    + ( maxangle)**2 + 10*(minangle)**2 +   collision_penalty                
 
-            if(self.adapt_after_detect and self.wcprob < .5):
+            if(self.never_adapt or self.adapt_after_detect and self.wcprob < .5):
                 cost = slackcost  #reset to just standard cost  if waiting to adatp to detect until we declare novel. 
             
 
@@ -1022,7 +1023,7 @@ class CartPoleBulletEnv(gym.Env):
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
 
-        if(self.adapt_after_detect and self.wcprob < .5):
+        if(self.never_adapt or self.adapt_after_detect and self.wcprob < .5):
                 state= self.get_best_twostep_action(feature_vector)
                 if(self.tbdebuglevel>2): print("Non-adapt-one score", self.lastscore)        
         else:
