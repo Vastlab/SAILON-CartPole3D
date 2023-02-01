@@ -1906,7 +1906,8 @@ class UCCSTA2():
 #####!!!!!#####  Start domain dependent adaption
 
             # if we have not had a lot successess in a row (sign index is right)   and declared world changed and  we ahve enough failures then try another index
-            if( False and self.maxconsecutivesuccess < 5 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 3 ):
+            if(self.uccscart.adapt_after_detect and self.uccscart.wcprob > .5 and
+              self.maxconsecutivesuccess < 2 and  self.maxconsecutivefail > self.maxconsecutivefailthresh and  self.consecutivefail > 1 ):
                 # try the next permuation.. see if we can reduce the fail rate
                 self.uccscart.actions_permutation_index += 1
                 if(self.uccscart.actions_permutation_index > (len(self.uccscart.actions_plist)-1)):
