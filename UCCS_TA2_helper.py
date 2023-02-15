@@ -1293,9 +1293,10 @@ class UCCSTA2():
             psigma = np.std(smoothed[:-self.scoreforKL])
             
 #            if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
-            if(pmu <  self.mean_perf ):     #if we want only  KL for those what have worse performance or much better
-                PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf, self.stdev_perf)
-                self.debugstring = '   PerfKL {} {} {} {} ={} perlist={}= ,'.format(pmu, psigma, self.mean_perf, self.stdev_perf, round(PerfKL,3),self.perflist)
+            if(pmu <  self.mean_perf ):     #if we want only  KL for those what have worse performance 
+                #use model stdev since KL will see 0 stdev as different even if its actually just a good thing                
+                PerfKL = self.kullback_leibler(pmu, self.stdev_perf, self.mean_perf, self.stdev_perf)  
+                self.debugstring = '   PerfKL {} {} {} {} PerfKL={} perlist={}= ,'.format(pmu, psigma, self.mean_perf, self.stdev_perf, round(PerfKL,3),self.perflist)
                 print(self.debugstring)
                 
             # If there is still too much variation (too many FP) in the variance in the small window so we use stdev and just new mean this allows smaller (faster) window for detection. 
