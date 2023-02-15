@@ -886,7 +886,7 @@ class UCCSTA2():
                                      1.9012000e-02, 7.1500000e-03,8.4417000e-02, 2.3041000e-02,  #pole quat
                                      2.8452940e+00, 3.3939100e+00, 1.3531405e+01, #pole vel
                                      4.4438300e-01, 4.3333600e-01, 4.1041900e-01, #block pos
-                                     5.22191570e-01, 5.26668060e-01, 5.25209520e-01]) #block vel Max  .. TB adjusted by had given how many errors in normal runs for phase 3 code..
+                                     4.22191570e-01, 4.26668060e-01, 4.25209520e-01]) #block vel Max  .. TB adjusted by had given how many errors in normal runs for phase 3 code..
 #                                     1.4438300e-02, 1.3333600e-01, 1.1041900e-01, #block pos            
 #                                     1.9191570e-01, 1.96668060e-01, 1.95209520e-01]) #block vel Max
 
@@ -1943,9 +1943,7 @@ class UCCSTA2():
         zerr = diffs[2] #last error is just z
         ratio = zerr / err  #get zerror a fraction of total eror
 
-        if(self.uccscart.tick  ==10 or self.uccscart.tick ==45):
-           print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), self.hint ))            
-
+        prob=0
         level=0  # setup default
         if(self.uccscart.tick  ==10 or self.uccscart.tick  ==45):
             if(self.uccscart.tick  ==10):
@@ -1957,15 +1955,17 @@ class UCCSTA2():
                     level=7
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error"  + "Step " + str(self.tick) +" " + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
             else:  #time 45
-                prob = self.rwcdf(zerr,9.00132, 1.33756, 1.24127)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,8.50132, 1.33756, 1.24127)  #parms by hand  computation based on normal data from prints below
                 if(prob >.05):            
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error"  + "Step " + str(self.tick) +" " + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
                     if(self.episode < self.scoreforKL*2 ):
                         self.worldchangedacc += min(prob,.3)  #45 is past the end of "KL" windows so we add it directly
+                        if(prob < self.worldchangedacc): prob = self.worldchangedacc  # if we increased probably of world return that so later filtering is consistent
 
-                
 
-            #sys.stdout.flush()
+        if(self.uccscart.tick  ==10 or self.uccscart.tick ==45):
+           print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), self.hint ))            
+           sys.stdout.flush()
         return prob
                
     
