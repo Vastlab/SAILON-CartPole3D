@@ -71,6 +71,7 @@ class CartPoleBulletEnv(gym.Env):
         self.setbase=False
         self.basepos=[0,0,0]
         self.lastscore=0
+        self.AdaptTwoStep=False        
         self.givendetection=0        
         self.wcprob=0
         self.char=""
@@ -78,9 +79,16 @@ class CartPoleBulletEnv(gym.Env):
         self.tbdebuglevel=0
         self.episode=0
         self.force_action=-1
+
+        self.numblocksteps=200
+
+        self.adapt_after_detect=True
+        self.never_adapt=False        
+        
         self.runandhide=0    # how much weight to we put on running and hiding.  If 1 we will hide in corner, if <.1  we ignore collistions and  < .5  we increase weight collisions up to 1 and above that we increase weight in to hiding in corner 
 
         self.use_avoid_reaction=False   #set by UCCS_TA2  when world change is high enough
+        self.adapt_level=0        
         self.reactstep=0
         self.avoid_list = [
 #            ['left','left','left','left','nothing','nothing','nothing','nothing','right','right','right'],
@@ -88,10 +96,10 @@ class CartPoleBulletEnv(gym.Env):
 #            ['right','right','right','nothing','nothing','nothing','left','left',],
 #            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
 #            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
-            ['left','left','left','nothing','nothing','nothing'],            
-            ['right','right','right','nothing','nothing','nothing'],
-            ['forward','forward','forward','nothing','nothing','nothing'],
-            ['backward','backward','backward','nothing','nothing','nothing']                                                    
+            ['left','left','left','nothing','nothing','right'],            
+            ['right','right','right','nothing','nothing','left'],
+            ['forward','forward','forward','nothing','nothing','backward'],
+            ['backward','backward','backward','nothing','nothing','forward']                                                    
         ]
         self.avoid_actions= self.avoid_list[0]
 
@@ -106,29 +114,60 @@ class CartPoleBulletEnv(gym.Env):
                              (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
                              (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
                              (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor                            
+                             (0, 4, 3, 2, 1),  #swap  major and minor
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                             
                              #rest are just remaining pertubations in  standard pertubation order. 
                              (0, 1, 2, 4, 3), (0, 1, 3, 2, 4), (0, 1, 3, 4, 2), (0, 1, 4, 2, 3), (0, 1, 4, 3, 2),
                              (0, 2, 3, 1, 4), (0, 2, 3, 4, 1), (0, 2, 4, 1, 3), (0, 2, 4, 3, 1), (0, 3, 1, 2, 4),
                              (0, 3, 1, 4, 2), (0, 3, 2, 1, 4), (0, 3, 2, 4, 1),  (0, 3, 4, 2, 1),  (0, 4, 1, 2, 3),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                          
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (0, 4, 1, 3, 2), (0, 4, 2, 1, 3), (0, 4, 2, 3, 1), (0, 4, 3, 1, 2),
                              (1, 0, 2, 3, 4), (1, 0, 2, 4, 3), (1, 0, 3, 2, 4), (1, 0, 3, 4, 2), (1, 0, 4, 2, 3),
                              (1, 0, 4, 3, 2), (1, 2, 0, 3, 4), (1, 2, 0, 4, 3), (1, 2, 3, 0, 4), (1, 2, 3, 4, 0),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (1, 2, 4, 0, 3), (1, 2, 4, 3, 0), (1, 3, 0, 2, 4), (1, 3, 0, 4, 2), (1, 3, 2, 0, 4),
                              (1, 3, 2, 4, 0), (1, 3, 4, 0, 2), (1, 3, 4, 2, 0), (1, 4, 0, 2, 3), (1, 4, 0, 3, 2),
                              (1, 4, 2, 0, 3), (1, 4, 2, 3, 0), (1, 4, 3, 0, 2), (1, 4, 3, 2, 0),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (2, 0, 1, 3, 4), (2, 0, 1, 4, 3), (2, 0, 3, 1, 4), (2, 0, 3, 4, 1), (2, 0, 4, 1, 3),
                              (2, 0, 4, 3, 1), (2, 1, 0, 3, 4), (2, 1, 0, 4, 3), (2, 1, 3, 0, 4), (2, 1, 3, 4, 0),
                              (2, 1, 4, 0, 3), (2, 1, 4, 3, 0), (2, 3, 0, 1, 4), (2, 3, 0, 4, 1), (2, 3, 1, 0, 4),
                              (2, 3, 1, 4, 0), (2, 3, 4, 0, 1), (2, 3, 4, 1, 0), (2, 4, 0, 1, 3), (2, 4, 0, 3, 1),
                              (2, 4, 1, 0, 3), (2, 4, 1, 3, 0), (2, 4, 3, 0, 1), (2, 4, 3, 1, 0),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (3, 0, 1, 2, 4), (3, 0, 1, 4, 2), (3, 0, 2, 1, 4), (3, 0, 2, 4, 1), (3, 0, 4, 1, 2),
                              (3, 0, 4, 2, 1), (3, 1, 0, 2, 4), (3, 1, 0, 4, 2), (3, 1, 2, 0, 4), (3, 1, 2, 4, 0),
                              (3, 1, 4, 0, 2), (3, 1, 4, 2, 0), (3, 2, 0, 1, 4), (3, 2, 0, 4, 1), (3, 2, 1, 0, 4),
                              (3, 2, 1, 4, 0), (3, 2, 4, 0, 1), (3, 2, 4, 1, 0), (3, 4, 0, 1, 2), (3, 4, 0, 2, 1),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (3, 4, 1, 0, 2), (3, 4, 1, 2, 0), (3, 4, 2, 0, 1), (3, 4, 2, 1, 0), (4, 0, 1, 2, 3),
                              (4, 0, 1, 3, 2), (4, 0, 2, 1, 3), (4, 0, 2, 3, 1), (4, 0, 3, 1, 2), (4, 0, 3, 2, 1),
                              (4, 1, 0, 2, 3), (4, 1, 0, 3, 2), (4, 1, 2, 0, 3), (4, 1, 2, 3, 0), (4, 1, 3, 0, 2),
+                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
+                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
+                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
+                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
+                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (4, 1, 3, 2, 0), (4, 2, 0, 1, 3), (4, 2, 0, 3, 1), (4, 2, 1, 0, 3), (4, 2, 1, 3, 0),
                              (4, 2, 3, 0, 1), (4, 2, 3, 1, 0), (4, 3, 0, 1, 2), (4, 3, 0, 2, 1), (4, 3, 1, 0, 2),
                              (4, 3, 1, 2, 0), (4, 3, 2, 0, 1), (4, 3, 2, 1, 0)]
@@ -137,6 +176,15 @@ class CartPoleBulletEnv(gym.Env):
         
 
         return
+
+    def point_to_line_dist(self,cpos, bpos, bvel):
+        pdiff = np.subtract(cpos ,bpos)
+        nval = np.linalg.norm(bvel)
+        if(nval >0) :
+            dist =  np.linalg.norm(np.cross(pdiff,bvel))/ nval
+        else: dist = np.linalg.norm(pdiff)  # if vector direction (velocity) is 0 then distance is distance between the two points
+        return dist
+    
 
     def seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -281,6 +329,7 @@ class CartPoleBulletEnv(gym.Env):
             self.reactstep=0            
             self.force_action=-1
             self.reset_world()
+            self.adapt_level=0                        
         else:
             self.set_world(feature_vector)
 
@@ -434,14 +483,16 @@ class CartPoleBulletEnv(gym.Env):
                 p.removeBody(i)
 
             if(self.tick>0 and numblocks > self.nb_blocks ):
-                if(len(self.char)<256): self.char += " & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                if(len(self.char)<256): self.char += " & Level LL8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                print(" & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks))                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
                 self.characterization['change']='increasing';                
                 self.wcprob=1               
             elif(self.tick>0 and numblocks < self.nb_blocks ):
-                if(len(self.char)<256):                self.char += " & Level L8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                if(len(self.char)<256):                self.char += " & Level LL8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
+                print(" & Level L8: Blocks quantity decrease from "+ str(self.nb_blocks) + " to" +str(numblocks))                                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
@@ -452,14 +503,14 @@ class CartPoleBulletEnv(gym.Env):
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
                 self.characterization['change']='increase';                
-                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity increase "+ +str(numblocks)
+                if(len(self.char)<256):                self.char += " & Level LL2: Blocks quantity increase "+ str(numblocks)
                 self.wcprob=1               
             elif( numblocks < 2 ):
                 self.characterization['level']=int(2);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
                 self.characterization['change']='decrease';                
-                if(len(self.char)<256):                self.char += " & Level L2: Blocks quantity decrease "+ +str(numblocks)
+                if(len(self.char)<256):                self.char += " & Level LL2: Blocks quantity decrease "+ str(numblocks)
                 self.wcprob=1                               
 
 
@@ -764,7 +815,7 @@ class CartPoleBulletEnv(gym.Env):
                         best_score = best_action[i][j][0]
                         action = i
                         next_action = j
-                        expected_state = best_action[i][j][1]
+                        expected_state = best_action[i][0][1]
             self.lastscore=best_score
             # if(best_score > 1):
 
@@ -811,6 +862,37 @@ class CartPoleBulletEnv(gym.Env):
 #            return [self.get_score(self.get_state()), nextstate]
             return [self.get_score(self.get_state()), self.get_state()]        
 
+
+
+
+    def get_expected_ball_states(self, feature_vector):
+            '''
+            Get expecte state for balls for the first few states 
+            :param env:
+            :param feature_vector:
+            :return: 
+                                       '''
+            
+            expectedblocks = np.zeros((self.numblocksteps, 30,6))
+            if(self.tbdebuglevel>2): print("twentystep balls ", feature_vector) 
+            self.reset(feature_vector)
+            for i in range(self.numblocksteps):
+                self.step('nothing')
+                nextstate = self.get_state()
+                blocks = nextstate['blocks']
+                j=0
+                for block in blocks:
+                    k=0
+                    for key in block.keys():
+                        if key != 'id':
+                            expectedblocks[i][j][k]=block[key]
+                            k = k+1
+                    j = j+1
+
+            self.reset(feature_vector)
+            return expectedblocks
+
+        
 
         #structured like the two-step but that was expensive so teting one steo to see gain vs cost
     def get_best_onestep_action(self, feature_vector):
@@ -881,9 +963,19 @@ class CartPoleBulletEnv(gym.Env):
 
 
 
+    def distance_time_from_motionplane(self,p,v, bp, bv):
+         bv2 = np.array(bv)-np.array([0,0,1])  #get motion if gravty take effect
+         normal = np.cross(np.array(bv), bv2)
+         if(np.linalg.norm(normal) == 0): normal = [0,0,1]
+         d = (np.dot(normal, np.array(p)) - np.dot(normal, np.array(bp))) / np.linalg.norm(normal)
+         itime =  (np.dot(normal, np.array(p)) + np.dot(normal, np.array(bp)))/np.dot(np.array(v),normal)   # get time using sign sitance and ray dot product
+         return abs(d),itime  #return abs distance
+     
+
 
 
 #####  Start domain depenent  adapter (its built into scoring)
+
 
     def get_score(self, feature_vector):
             '''
@@ -915,8 +1007,6 @@ class CartPoleBulletEnv(gym.Env):
 
             collision_penalty  =0  # have to honor slack constraints and don't use react if we have no slack
             mindist=999
-            cartspeed=0
-            ldist = 999 
             mangle = -999
 
 
@@ -936,21 +1026,21 @@ class CartPoleBulletEnv(gym.Env):
                     nearpoints =  p.getClosestPoints(self.cartpole, ablock,100)
                     for c in nearpoints:           
                         contactdist = c[8]
-                        if(contactdist <0):
+                        if(contactdist <0 and self.tick < 25):
                             self.char += "CP"                         
     #                        print("Watchout ", self.char)
                         mindist = min(mindist,contactdist)
 
 
-                #see if  "distance" from  trajectory of  blocks would be an impact.. 
+                #see if  "distance" from  trajectory of  blocks would be an impact..  if so it adds to cost
                 for block in feature_vector["blocks"]:
                     bpos = [block["x_position"], block["y_position"],block["z_position"]]
                     bvel = [block["x_velocity"], block["y_velocity"],block["z_velocity"]]
+                    dist = self.point_to_line_dist(cartpos, bpos,bvel)
                     pdiff = np.subtract(cartpos ,bpos)
-                    nval = np.linalg.norm(bvel)
-                    if(nval >.1) :  # effectively ignore this for Phase 2+ testing.. 
-                        dist =  (np.linalg.norm(np.cross(bvel,pdiff))/ nval)
-                        if(dist <1):
+                    if(dist <.1) :  # if close to on line
+                        self.AdaptTwoStep=True        
+                        if(dist <.01):
                             if( self.use_avoid_reaction and (self.reactstep==0 or self.reactstep >= len(self.avoid_list[0]))):
                                 self.reactstep=0
                                 # get angle so we can decide how to run.. 
@@ -966,25 +1056,42 @@ class CartPoleBulletEnv(gym.Env):
                                         self.avoid_actions= self.avoid_list[1]
                                     else:
                                         self.avoid_actions= self.avoid_list[0]
- #                               print("Mangle x y ", mangle, pdiff[0], pdiff[1], " Avoid with ",self.avoid_actions);
                                 if(self.tbdebuglevel>1): 
+                                    print("Dist mangle pdiff ", dist,mangle, pdiff[0],pdiff[1], " Avoid with ",self.avoid_actions);
                                     self.char += "HA"                                
+                        else:
+                            if(self.tbdebuglevel>1):
+                                self.char += "SA"
+                        cost += 100+5/(.0001+dist*dist)
+                    #consider distance from plane incase for gravity forces effect.   Want to be >1 units away (1/2 ball +1/2 cart), ideally 1.5
+                    plane_dist,itime = self.distance_time_from_motionplane(cartpos,cartvel, bpos, bvel)
+                    if(plane_dist < 1.5):  #if withing glancing blow distance
+                        if(plane_dist > 1):
+                            if(self.tbdebuglevel>1): self.char += "PD"
+                            dist = plane_dist-1
+                            #if we are moving away, penalty is inverse of time
+                            if(itime > 0):
+                                cost += 1/itime
                             else:
-                                if(self.tbdebuglevel>1):
-                                    self.char += "SA"
-                                cost += 100+1/(.001+dist)
-#                        print("Block ldist reactstep", dist, self.char, self.reactstep)                                
+                                cost += (1.5-plane_dist)*(50+1/(.0001+dist*dist))
+                        else: #inside absolute colision region
+                            if(self.tbdebuglevel>1): self.char += "PCD!!"                                
+                            dist = 1.0 - plane_dist
+                            #if we are moving away, penalty is inverse of time + how far inside collision region (or more
+                            if(itime > 0):
+                                cost += 1/itime + (1.5-plane_dist)*(50)
+                            else:
+                                cost += (1.5-plane_dist)*(50+1/(.0001+dist*dist))
 
-
-                    else: dist = ldist
-                    ldist = min(dist,ldist)
-
+                                
+                                
+                
 
 
                 # #if cart is moving enough we don't worry about as much line-based collision, only contact collision.. if we push to hard pole will fall
                 #cartspeed = np.linalg.norm(cartvel) 
                 #if(cartspeed < ldist): 
-                mindist = min(ldist,mindist)
+                #mindist = min(ldist,mindist)
 
                 tdist = mindist-2    #try to keep the two unit away
                 if(tdist > 8): tdist = 8
@@ -997,11 +1104,14 @@ class CartPoleBulletEnv(gym.Env):
                 
             
             
-                collision_penalty = (3-mindist) + 1/(ldist+.01)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
+                collision_penalty = (3-mindist)         #a  penalty minimal menalty if we step in direction that is close to collisoin region
             
 
             cost  += slackcost    + ( maxangle)**2 + 10*(minangle)**2 +   collision_penalty                
 
+            if(self.never_adapt or (self.adapt_after_detect and self.wcprob < .5)):
+                cost = slackcost  #reset to just standard cost  if waiting to adatp to detect until we declare novel. 
+            
 
             if(False and cost > 1000):
 #            if(self.tbdebuglevel>2): 
@@ -1016,26 +1126,32 @@ class CartPoleBulletEnv(gym.Env):
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
 
-        if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
-            react = self.avoid_actions[self.reactstep]
-            self.char += "AV"+str(self.reactstep)                                            
-            print("Avoiding @reactstep", self.reactstep, " with ", react)
-            score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
-            state = [react,"nothing",nstate]
-            self.reactstep += 1
-            self.lastscore = -1.0
-
+        if(self.never_adapt or (self.adapt_after_detect and self.wcprob < .5)):
+                #state= self.get_best_onestep_action(feature_vector)
+                state= self.get_best_twostep_action(feature_vector)                
+                if(self.tbdebuglevel>2): print("Non-adapt-one score", self.lastscore)        
         else:
-
-    #       if we have colission potential for any action (char != "") so do two-step action search
-    #       if we have low score  we can go faser uding one-setp
-           if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 50 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
-                state= self.get_best_onestep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
-           else:
-                state= self.get_best_twostep_action(feature_vector)
-                if(self.tbdebuglevel>2): print("Two score", self.lastscore)
-           #we do tick here to update one timestep..
+            if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
+                react = self.avoid_actions[self.reactstep]
+                self.char += "AV"+str(self.reactstep)                                            
+                print("Avoiding @reactstep", self.reactstep, " with ", react)
+                score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
+                state = [react,"nothing",nstate]
+                self.reactstep += 1
+                self.lastscore = -1.0
+                
+            else:
+            
+            #       if we have colission potential for any action (char != "") so do two-step action search
+            #       if we have low score  we can go faser uding one-setp
+                if( self.lastscore < 500 or self.wcprob>.5 or   self.episode > 40 or (prob < .49  and self.lastscore < 1000)):            # make it mroe often just one making it faster
+                    state= self.get_best_onestep_action(feature_vector)
+                    if(self.tbdebuglevel>2): print("Best one score", self.lastscore)
+                else:
+                    #state= self.get_best_twostep_action(feature_vector)
+                    state= self.get_best_onestep_action(feature_vector)                    
+                    #if(self.tbdebuglevel>2): print("Two score", self.lastscore)
+                #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):
             print("Expected state", state)           

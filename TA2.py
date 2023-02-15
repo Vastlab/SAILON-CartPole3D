@@ -25,6 +25,7 @@ import queue
 import random
 import threading
 import time
+import sys
 
 from objects.TA2_logic import TA2Logic
 
@@ -305,13 +306,15 @@ class TA2Agent(TA2Logic):
                 strictly enforced and the incorrect format will result in an exception being thrown.
         """
 
+        sys.stdout.flush()
+
         self.UCCS.noveltyindicator = novelty_indicator
         self.UCCS.debugstring = ""
 #        self.log.debug('Testing Instance: feature_vector={}'.format(feature_vector))
         
         if(self.UCCS.cnt < 1):
-#            self.UCCS.hint=str(feature_vector['hint'])
-            self.UCCS.hint=""
+            self.UCCS.hint=str(feature_vector.get('hint'))
+#            self.UCCS.hint=""
 #            self.log.debug( 'Epi {}, Hint={}, nno={}'.format(self.UCCS.uccscart.episode,feature_vector['hint'], novelty_indicator))
             self.log.debug(
                 'Testing Instance: feature_vector={}, novelty_indicator={}'.format(feature_vector, novelty_indicator))
@@ -408,7 +411,7 @@ class TA2Agent(TA2Logic):
         self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect, rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
         rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-        self.log.info('Testing End#={}: WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
+        self.log.info('Testing End##={}##:         WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
             self.UCCS.episode,
             round(novelty_probability, 5),
             self.UCCS.hint,
