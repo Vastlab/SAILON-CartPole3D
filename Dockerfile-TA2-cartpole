@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /code
 WORKDIR /code
 COPY ./requirements.txt .
+RUN apt-get update && apt-get install -y python3-opencv
+RUN /usr/local/bin/python -m pip install --upgrade pip
 RUN pip install -r requirements.txt
 COPY ./bullet3/. ./bullet3
 COPY ./cartpolepp/. ./cartpolepp
