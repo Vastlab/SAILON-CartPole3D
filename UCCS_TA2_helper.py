@@ -79,8 +79,8 @@ class UCCSTA2():
         self.skipfirstNscores=1
         self.maxinitprob=4  # both max for per episode individual prob as well as prob scale.  
         self.current_state=None
-#        self.statelist=np.empty(200, dtype=object)
-        self.probvector= np.zeros(200)
+#        self.statelist=np.empty(300, dtype=object)
+        self.probvector= np.zeros(500)
         self.nextprob=15
 
         self.blockmin=999
@@ -174,7 +174,6 @@ class UCCSTA2():
         self.episode = 0
         self.trial = 0
         self.given = False
-#        self.statelist=np.empty(200, dtype=object)
         self.debug = False
         self.debug = True        
         self.debugstring = ""
@@ -238,7 +237,7 @@ class UCCSTA2():
     def reset(self, episode):
         self.problist = []
         self.scorelist=[]
-#        self.statelist=np.empty(200, dtype=object)
+#        self.statelist=np.empty(300, dtype=object)
         self.given = False
         self.maxprob = 0
         self.meanprob = 0
@@ -252,7 +251,7 @@ class UCCSTA2():
         self.uccscart.episode=episode
         self.dynblocksprob = 0                   
         self.dynamiccount=0            
-        self.probvector= np.zeros(80)
+        self.probvector= np.zeros(500)
         self.nextprob=15
 
 
@@ -1964,8 +1963,9 @@ class UCCSTA2():
 
 
         if(self.uccscart.tick  ==10 or self.uccscart.tick ==45):
-           print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), self.hint ))            
-           sys.stdout.flush()
+            if(len(str(self.hint))!=0):
+                print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), str(self.hint)[9:15] ))            
+                sys.stdout.flush()
         return prob
                
     
@@ -1976,7 +1976,7 @@ class UCCSTA2():
         pertub = False
         self.current_state=oactual_state # mostly for debugging
         #self.statelist[self.cnt] = oactual_state  # save all states, used in testing to see if trajectory is dynamic or balistic,. also useful for debugging u
-        self.probvector= np.zeros(200)
+        self.probvector= np.zeros(500)
         self.nextprob=15
             
         if(self.saveframes):        
