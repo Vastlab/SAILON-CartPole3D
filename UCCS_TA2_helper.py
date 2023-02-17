@@ -1917,14 +1917,13 @@ class UCCSTA2():
 
 
     def ball_location_error(self, statevector):  # if step 10 or 45, get long term ball position error computed from initial state vs current
-#        if(not (self.uccscart.tick  ==10 or self.uccscart.tick  ==45)):
-#            return 0
+        if(not (self.uccscart.tick  ==10 or ((self.uccscart.tick%45) ==0))):
+            return 0
         err = 0
         zerr=0
         numblocks = int((len(statevector)-13)/6)
         prob=0
         diffs = np.zeros(3)
-        if(self.uccscart.tick >50): return 0;
         nb=0
         for block in range(numblocks):
             for i in range(3):
@@ -1962,10 +1961,9 @@ class UCCSTA2():
                         if(prob < self.worldchangedacc): prob = self.worldchangedacc  # if we increased probably of world return that so later filtering is consistent
 
 
-        if(self.uccscart.tick  ==10 or self.uccscart.tick ==45):
-            if(len(str(self.hint))!=0):
-                print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), str(self.hint)[9:15] ))            
-                sys.stdout.flush()
+        if(len(str(self.hint))!=0):
+            print('Step {}, E {} ball_loc {} p={} {} {} {} hint=|{}|'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), str(self.hint)[9:15] ))            
+            sys.stdout.flush()
         return prob
                
     
