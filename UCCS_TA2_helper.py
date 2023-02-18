@@ -1917,7 +1917,8 @@ class UCCSTA2():
 
 
     def ball_location_error(self, statevector):  # if step 10 or 45, get long term ball position error computed from initial state vs current
-        if(not (self.uccscart.tick  ==10 or ((self.uccscart.tick%45) ==0))):
+#        if(not (self.uccscart.tick  ==10 or ((self.uccscart.tick%45) ==0))):
+        if(not (self.uccscart.tick  ==10 or (self.uccscart.tick == 45))):            
             return 0
         err = 0
         zerr=0
@@ -1935,9 +1936,13 @@ class UCCSTA2():
                 diffs[i]  += diff*diff
                 err  += diff*diff
         #get average error
-        err = err / nb
-        diffs = diffs/nb
-        
+        if(nb >0):
+            err = err / nb
+            diffs = diffs/nb
+        else 
+            err = 0
+            diffs = 0
+            
         zerr = diffs[2] #last error is just z
         ratio = zerr / err  #get zerror a fraction of total eror
 

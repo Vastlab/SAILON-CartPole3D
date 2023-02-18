@@ -80,7 +80,7 @@ class CartPoleBulletEnv(gym.Env):
         self.episode=0
         self.force_action=-1
 
-        self.numblocksteps=200
+        self.long_ball_numsteps=200
 
         self.adapt_after_detect=True
         self.never_adapt=False        
@@ -873,10 +873,10 @@ class CartPoleBulletEnv(gym.Env):
             :return: 
                                        '''
             
-            expectedblocks = np.zeros((self.numblocksteps, 30,6))
+            expectedblocks = np.zeros((self.long_ball_numsteps, 120,6))
             if(self.tbdebuglevel>2): print("twentystep balls ", feature_vector) 
             self.reset(feature_vector)
-            for i in range(self.numblocksteps):
+            for i in range(self.long_ball_numsteps):
                 self.step('nothing')
                 nextstate = self.get_state()
                 blocks = nextstate['blocks']
