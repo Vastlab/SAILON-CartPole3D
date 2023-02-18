@@ -1939,7 +1939,7 @@ class UCCSTA2():
         if(nb >0):
             err = err / nb
             diffs = diffs/nb
-        else 
+        else:
             err = 0
             diffs = 0
             
