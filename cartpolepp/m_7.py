@@ -5,14 +5,15 @@ import os.path
 from .cartpoleplusplus import CartPoleBulletEnv
 
 
-class CartPolePPMock1(CartPoleBulletEnv):
+class CartPolePPMock7(CartPoleBulletEnv):
 
     def __init__(self, difficulty, params: dict = None):
         super().__init__(params=params)
 
         self.difficulty = difficulty
+
+        # Generate a random point for the pole to be attracted to
         self.target_pos = self.np_random.uniform(low=-4.0, high=4.0, size=(3,))
-        return None
 
     def step(self, action):
         p = self._p
@@ -59,22 +60,21 @@ class CartPolePPMock1(CartPoleBulletEnv):
         # Apply corrected forces
         p.applyExternalForce(self.cartpole, 0, (fx, fy, 0.0), (0, 0, 0), p.LINK_FRAME)
 
-        # Attract blocks to the target point
-        for block in self.blocks:
-            block_pos, _ = self._p.getBasePositionAndOrientation(block)
-            force = (self.target_pos - np.array(block_pos)) * 10.0
-            self._p.applyExternalForce(block, -1, force, (0, 0, 0), self._p.LINK_FRAME)
+        # Attract pole to the target point
+        pole_pos, _ = self._p.getBasePositionAndOrientation(self.pole)
+        force = (self.target_pos - np.array(pole_pos)) * 10.0
+        self._p.applyExternalForce(self.pole, -1, force, (0, 0, 0), self._p.LINK_FRAME)
 
+        # Run simulation step
+        p.stepSimulation()
 
-		for i in self.blocks:
-            p.applyExternalForce(i, -1, (0, 0, 9.8), (0, 0, 0), p.LINK_FRAME)
-			
-			
-		p.stepSimulation()
+        # Get state
+        state = self.get_state()
 
-        done = self.is_done()
-        reward = self.get_reward()
+        # Check if done
+        done = self.done(state)
 
-        self.tick = self.tick + 1
+        # Get reward
+        reward = self.reward(state, action)
 
-        return self.get_state(), reward, done, {}
+        return state, reward, done, {}

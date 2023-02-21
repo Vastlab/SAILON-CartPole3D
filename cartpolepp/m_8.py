@@ -5,27 +5,11 @@ import os.path
 from .cartpoleplusplus import CartPoleBulletEnv
 
 
-class CartPolePPMock5(CartPoleBulletEnv):
-
+class CartPolePPMock8(CartPoleBulletEnv):
     def __init__(self, difficulty, params: dict = None):
         super().__init__(params=params)
-
         self.difficulty = difficulty
-
-    def block_attraction_forces(self, positions):
-        # Calculate the net force on each block due to attraction to other blocks
-        forces = []
-        for i, pos_i in enumerate(positions):
-            force = [0, 0, 0]
-            for j, pos_j in enumerate(positions):
-                if i == j:
-                    continue
-                dist = np.linalg.norm(np.asarray(pos_i) - np.asarray(pos_j))
-                if dist > 0:
-                    direction = (np.asarray(pos_j) - np.asarray(pos_i)) / dist
-                    force += direction * (self.block_attraction / dist)
-            forces.append(force)
-        return forces
+        self.block_attraction = 20.0  # strength of block attraction to pole
 
     def step(self, action):
         # Run one step of simulation
@@ -38,8 +22,21 @@ class CartPolePPMock5(CartPoleBulletEnv):
         # Calculate forces on blocks due to gravity
         grav_forces = [self.block_mass * np.array((0, 0, -self._g))] * len(self.blocks)
 
+        # Calculate forces on blocks due to attraction to pole
+        pole_pos, _ = p.getBasePositionAndOrientation(self.cartpole)
+        pole_forces = []
+        for block in self.blocks:
+            block_pos, _ = p.getBasePositionAndOrientation(block)
+            direction = np.array(pole_pos) - np.array(block_pos)
+            distance = np.linalg.norm(direction)
+            if distance > 0:
+                force = direction / distance * self.block_attraction
+                pole_forces.append(force)
+            else:
+                pole_forces.append(np.zeros(3))
+
         # Calculate total forces on blocks
-        total_forces = [bf + gf for bf, gf in zip(block_forces, grav_forces)]
+        total_forces = [bf + gf + pf for bf, gf, pf in zip(block_forces, grav_forces, pole_forces)]
 
         # Apply forces to blocks
         for b, f in zip(self.blocks, total_forces):

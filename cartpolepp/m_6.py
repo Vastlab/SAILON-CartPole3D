@@ -5,15 +5,15 @@ import os.path
 from .cartpoleplusplus import CartPoleBulletEnv
 
 
-class CartPolePPMock5(CartPoleBulletEnv):
+class CartPolePPMock6(CartPoleBulletEnv):
 
     def __init__(self, difficulty, params: dict = None):
         super().__init__(params=params)
 
         self.difficulty = difficulty
 
-    def block_attraction_forces(self, positions):
-        # Calculate the net force on each block due to attraction to other blocks
+    def block_repulsion_forces(self, positions):
+        # Calculate the net force on each block due to repulsion from other blocks
         forces = []
         for i, pos_i in enumerate(positions):
             force = [0, 0, 0]
@@ -23,7 +23,7 @@ class CartPolePPMock5(CartPoleBulletEnv):
                 dist = np.linalg.norm(np.asarray(pos_i) - np.asarray(pos_j))
                 if dist > 0:
                     direction = (np.asarray(pos_j) - np.asarray(pos_i)) / dist
-                    force += direction * (self.block_attraction / dist)
+                    force -= direction * (self.block_attraction / dist)
             forces.append(force)
         return forces
 
@@ -31,9 +31,9 @@ class CartPolePPMock5(CartPoleBulletEnv):
         # Run one step of simulation
         p = self._p
 
-        # Calculate forces on blocks due to attraction to other blocks
+        # Calculate forces on blocks due to repulsion from other blocks
         block_positions = [p.getBasePositionAndOrientation(b)[0] for b in self.blocks]
-        block_forces = self.block_attraction_forces(block_positions)
+        block_forces = self.block_repulsion_forces(block_positions)
 
         # Calculate forces on blocks due to gravity
         grav_forces = [self.block_mass * np.array((0, 0, -self._g))] * len(self.blocks)
