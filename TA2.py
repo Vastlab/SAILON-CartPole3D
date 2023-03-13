@@ -99,7 +99,7 @@ class TA2Agent(TA2Logic):
         self.lasttime = 0
         self.UCCS = UCCSTA2()
         self.UCCS.debug = options.debug
-        self.UCCS.debug = False
+        self.UCCS.debug = True
         # Self states, always previous 4 steps
 
         return
