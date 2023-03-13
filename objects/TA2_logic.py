@@ -394,6 +394,7 @@ class TA2Logic(object):
                 # self.log.info(str(my_state))
 
         # We have received an objects.TrialEnd.
+        self.log.info("this is _run_sail_on_trial() log.....")
         self.trial_end()
         return
 
