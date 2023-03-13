@@ -1020,8 +1020,8 @@ class CartPoleBulletEnv(gym.Env):
             react = self.avoid_actions[self.reactstep]
             self.char += "AV"+str(self.reactstep)                                            
             print("Avoiding @reactstep", self.reactstep, " with ", react)
-            score,nstate = self.one_step_env(feature_vector, [react , 'nothing'])
-            state = [react,"nothing",nstate]
+            score,nstate = self.one_step_env(feature_vector, [react , 'left'])
+            state = [react,"left",nstate]
             self.reactstep += 1
             self.lastscore = -1.0
 
