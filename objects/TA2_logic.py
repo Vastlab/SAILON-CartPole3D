@@ -490,7 +490,7 @@ class TA2Logic(object):
 
             # Expect to get objects.TrainingModelEnd here.
             my_state = self._amqp.get_state()
-
+        self.log.info("this is _run_sail_on_trial() log.....")
         self._run_sail_on_testing()
         return
 
@@ -543,7 +543,7 @@ class TA2Logic(object):
             my_state = self._amqp.get_state()
             self.log.info(str(my_state))
         self.experiment_end()
-
+        self.log.info("this is _run_sail_on_testing() log.....")
         self._amqp.process_data_events(time_limit=1)
         return
 

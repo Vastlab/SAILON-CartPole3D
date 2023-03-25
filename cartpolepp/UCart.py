@@ -836,9 +836,9 @@ class CartPoleBulletEnv(gym.Env):
                 best_action[action][0] = self.one_step_env(feature_vector, [action, 'nothing'])
                 
 
-            best_score = best_action['left'][0][0]
-            expected_state = best_action['left'][0][1]
-            action = 'left'
+            best_score = best_action['forward'][0][0]
+            expected_state = best_action['forward'][0][1]
+            action = 'forward'
             # return the best scoring action
             for i in best_action.keys():
                 for j in range(len(best_action[i])):
@@ -860,7 +860,7 @@ class CartPoleBulletEnv(gym.Env):
             self.lastscore=best_score
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state        
 
-            return action, "nothing", expected_state
+            return action, "left", expected_state
 
     def one_step_env(self, feature_vector, steps):
             '''
@@ -1015,13 +1015,14 @@ class CartPoleBulletEnv(gym.Env):
         #this is where we should try to adapt physics parmeters if things are going badly.. 
     def get_best_action(self, feature_vector, prob=0):
         # if world has changed and we need to use avoida ction, do it
-
+        
         if(self.use_avoid_reaction and self.reactstep >= 0  and self.reactstep < len(self.avoid_actions)):
             react = self.avoid_actions[self.reactstep]
             self.char += "AV"+str(self.reactstep)                                            
             print("Avoiding @reactstep", self.reactstep, " with ", react)
-            score,nstate = self.one_step_env(feature_vector, [react , 'left'])
-            state = [react,"left",nstate]
+            score,nstate = self.one_step_env(feature_vector, [react , 'right'])
+            state = [react,"right",nstate]
+            
             self.reactstep += 1
             self.lastscore = -1.0
 
@@ -1038,6 +1039,8 @@ class CartPoleBulletEnv(gym.Env):
            #we do tick here to update one timestep..
         self.tick = self.tick + 1
         if(self.tbdebuglevel>2):
-            print("Expected state", state)           
+            print("Expected state", state)
+
+        print(state)           
         return state
 #####  end domain depenent  adapter (its built into scoring)
