@@ -30,7 +30,7 @@ import sys
 from objects.TA2_logic import TA2Logic
 
 import pdb
-import torch
+#import torch
 import numpy as np
 import UCCS_TA2_helper
 from UCCS_TA2_helper import UCCSTA2
@@ -410,10 +410,13 @@ class TA2Agent(TA2Logic):
         self.UCCS.correctcnt = self.UCCS.correctcnt + iscorrect
         self.UCCS.rcorrectcnt = self.UCCS.rcorrectcnt + max(iscorrect, rcorrect)
         pcorrect = 100*self.UCCS.correctcnt/(self.UCCS.totalcnt)
-        rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)        
-        self.log.info('Testing End##={}##:         WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
+        rperf = 100*self.UCCS.perf/(self.UCCS.totalcnt)
+        if(novelty_probability>.5):detect="DDD"
+        else:detect="DND"
+        self.log.info('Testing End##={}#{}:      WC={} Hint={} steps={}, CPerf={} times={} {}  NovI={}  Cor={}, Rcor={}, pco={}, CCnt={}, RCCnt={} TCN={}, Char={}  '.format(
             self.UCCS.episode,
-            round(novelty_probability, 5),
+            detect,
+            round(novelty_probability, 4),
             self.UCCS.hint,
             self.totalSteps,            
             round(rperf, 1),            
@@ -425,8 +428,8 @@ class TA2Agent(TA2Logic):
 
 
         self.log.debug('DTend# {}  Logstr={} {} Prob={} {} Scores= {}   '.format( self.UCCS.episode,  self.UCCS.logstr,
-            "\n", [round(num, 2) for num in self.UCCS.problist[:40]], 
-            "\n", [round(num, 2) for num in self.UCCS.scorelist[:40]]))            
+            "\n", [round(num, 2) for num in self.UCCS.problist[:50]], 
+            "\n", [round(num, 2) for num in self.UCCS.scorelist[:50]]))            
 
         self.totalSteps = 0
         
