@@ -1970,7 +1970,7 @@ class UCCSTA2():
         level=0  # setup default
         if(self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45):
             if(self.uccscart.tick  ==10):
-                prob = self.rwcdf(zerr,0.24754, 1.123764, 1.2201)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,0.23754, 1.123764, 1.2201)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01 and zerr >.32 and ratio > .7 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " + dirstr  + " Step " + str(self.tick) +" " \
@@ -1982,11 +1982,11 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
             elif (self.uccscart.tick  ==25):  #  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,2.3132, 1.6435, .85227)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,2.1132, 1.6435, .85227)  #parms by hand  computation based on normal data from prints below
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     self.problist[2] = self.problist[2] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well
-                    if(len(str(self.hint))!=0):
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
                         print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), \
                                                                                                           round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,\
                                                                                                           str(self.hint)[9:15],str(self.problist[2:5])))            
@@ -2009,7 +2009,7 @@ class UCCSTA2():
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     self.problist[3] = self.problist[3] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(len(str(self.hint))!=0):
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
                         print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
                 if(prob >.01 and ratio > .94 ):
                     level=6
@@ -2026,11 +2026,11 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==45):  #time 45,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,5.250132, 1.33756, .7412)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,5.65032, 1.33756, .7412)  #parms by hand  computation based on normal data from prints below
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     self.problist[4] = self.problist[4]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(len(str(self.hint))!=0):
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
                         print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
                 if(prob >.01 and ratio > .95 ):
                     level=6
@@ -2049,7 +2049,7 @@ class UCCSTA2():
                         
                         
 
-        if(len(str(self.hint))!=0):
+        if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
             print('Step {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
             sys.stdout.flush()
         return prob
