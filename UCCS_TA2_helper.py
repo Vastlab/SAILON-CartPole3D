@@ -1957,9 +1957,11 @@ class UCCSTA2():
             adiffs = adiffs/nb
             diffs = diffs/nb            
         else:
+            adiffs = np.zeros(3)
+            diffs = np.zeros(3)        
             err = 0
-            diffs = 0
-            adiffs = 0            
+            self.logstr +=  "&M42 LL8 Block Long-term Location Prediction Error Failure Block Decrease to 0 at  Step " + str(self.tick) +" No blocks cannot compute location error " 
+            self.worldchangedacc =  1
             
         zerr = adiffs[2] #last error is just z
         ratio = zerr / err  #get zerror a fraction of total eror
