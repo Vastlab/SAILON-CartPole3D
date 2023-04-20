@@ -69,7 +69,7 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
-        self.scoreforKL=17        # we only use the first sets of scores for KL because novels worlds close when balanced .  Was 20, moved to 17 for M42 to allow faster detections.. 
+        self.scoreforKL=19        # we only use the first sets of scores for KL because novels worlds close when balanced .  
         self.num_epochs = 200
         self.num_dims = 4
         self.num_blocks = None
@@ -119,7 +119,8 @@ class UCCSTA2():
         self.consecutivesuccess=0
         self.consecutivefail=0
         self.maxconsecutivefail=0
-        self.maxconsecutivesuccess=0       
+        self.maxconsecutivesuccess=0
+        self.consecutivehighball=0
         self.minprob_consecutive = .1
         self.mindynprob = .01
         self.dynblocksprob = 0                   
@@ -149,8 +150,8 @@ class UCCSTA2():
         self.worldchangedacc = 0
         self.previous_wc = 0        
         self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time
-        self.blenddownrate = .75        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
-        self.minblenddownrate = .125        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max        
+        self.blenddownrate = .85        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
+        self.minblenddownrate = .25        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max        
         
         self.failcnt = 0        
         self.worldchangeblend = 0
@@ -1932,7 +1933,7 @@ class UCCSTA2():
 
     def ball_location_error(self, statevector):  # if step 10 or 45, get long term ball position error computed from initial state vs current
 #        if(not (self.uccscart.tick  ==10 or ((self.uccscart.tick%45) ==0))):
-        if(not (self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45)):
+        if(not (self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45 or self.uccscart.tick  ==55 or self.uccscart.tick  ==65 or self.uccscart.tick  ==75)):
             return 0
         err = 0
         zerr=0
@@ -1941,6 +1942,9 @@ class UCCSTA2():
         adiffs = np.zeros(3)
         diffs = np.zeros(3)        
         nb=0
+        if(self.uccscart.tick == 10):
+            self.consecutivehighball=0            
+            
         for block in range(numblocks):
             for i in range(3):
                 if((i < 2 and abs(statevector[i+block*6+13]) < 4)
@@ -1970,9 +1974,10 @@ class UCCSTA2():
         if(diffs[2] >0): dirstr = "DECREASE"
         prob=0
         level=0  # setup default
-        if(self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45):
+        if((self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45 or self.uccscart.tick  ==55 or self.uccscart.tick  ==65 or self.uccscart.tick  ==75)):
             if(self.uccscart.tick  ==10):
                 prob = self.rwcdf(zerr,0.23754, 1.123764, 1.2201)  #parms by hand  computation based on normal data from prints below
+                if(prob > .01):             self.consecutivehighball += 1            
                 if(prob > .01 and zerr >.32 and ratio > .7 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " + dirstr  + " Step " + str(self.tick) +" " \
@@ -1985,7 +1990,11 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
             elif (self.uccscart.tick  ==25):  #  gives us much longer to observed deviations.. 
                 prob = self.rwcdf(zerr,2.1132, 1.6435, .85227)  #parms by hand  computation based on normal data from prints below
-                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0
+                
+                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*3 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[2] = self.problist[2] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well
                     if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
@@ -2008,7 +2017,10 @@ class UCCSTA2():
                                     + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==35): 
                 prob = self.rwcdf(zerr,4.03137, 1.4216, .6342)  #parms by hand  computation based on normal data from prints below
-                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0
+                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*3 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[3] = self.problist[3] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                     if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
@@ -2029,7 +2041,10 @@ class UCCSTA2():
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==45):  #time 45,  gives us much longer to observed deviations.. 
                 prob = self.rwcdf(zerr,5.65032, 1.33756, .7412)  #parms by hand  computation based on normal data from prints below
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[4] = self.problist[4]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                     if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
@@ -2048,11 +2063,86 @@ class UCCSTA2():
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
-                        
-                        
+            elif (self.uccscart.tick  ==55 and self.consecutivehighball>0):  #time 55,  gives us much longer to observed deviations.. 
+                prob = self.rwcdf(zerr,10.5218, 1.8256, .7926)  #parms by hand  computation based on normal data from prints below
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0 
+                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    self.problist[5] = self.problist[5]+ prob #stick it in problist in location 4  so it can impact KL
+                    #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
+                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
+                if(prob >.01 and ratio > .95 ):
+                    level=6
+                    self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.01 and ratio < .49 ):
+                    level=7
+                    self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.02):            
+                    self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
+                                    + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
+            elif (self.uccscart.tick  ==65 and self.consecutivehighball>0):  #time 65,  gives us much longer to observed deviations.. 
+                prob = self.rwcdf(zerr,14.1812, 1.5718, .8421)  #parms by hand  computation based on normal data from prints below
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0 
+                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    self.problist[6] = self.problist[6]+ prob #stick it in problist in location 4  so it can impact KL
+                    #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
+                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
+                if(prob >.01 and ratio > .95 ):
+                    level=6
+                    self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.01 and ratio < .49 ):
+                    level=7
+                    self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.02):            
+                    self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
+                                    + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
+            elif (self.uccscart.tick  ==75 and self.consecutivehighball>0 and zerr < 16):  #time 75,  gives us much longer to observed deviations.. 
+                prob = self.rwcdf(zerr,8.65032, 1.1417, .9372)  #parms by hand  computation based on normal data from prints below
+                if(prob > .01):             self.consecutivehighball += 1
+                else: self.consecutivehighball =0 
+                if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
+                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    self.problist[7] = self.problist[7]+ prob #stick it in problist in location 4  so it can impact KL
+                    #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
+                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
+                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
+                if(prob >.01 and ratio > .95 ):
+                    level=6
+                    self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.01 and ratio < .49 ):
+                    level=7
+                    self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
+                                    +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
+                elif(prob >.02):            
+                    self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
+                                    + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
+                                    + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
+            elif (len(str(self.hint))!=0):
+                print('Unhandled Step {}, E {} ball_loc {} p={} {} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:5])))                            
+                sys.stdout.flush()                
 
-        if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-            print('Step {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
+
+                        
+        if(self.uccscart.tbdebuglevel>-1 and len(str(self.hint))!=0):
+            print('Step {}, E {} ball_loc {} p={} {} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
             sys.stdout.flush()
         return prob
                
