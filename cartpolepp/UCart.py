@@ -487,7 +487,7 @@ class CartPoleBulletEnv(gym.Env):
 
             if(self.tick>0 and numblocks > self.nb_blocks ):
                 if(len(self.char)<256): self.char += " & Level LL8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                print(" & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks))                
+                if(self.uccscart.tbdebuglevel>1): print(" & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks))                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
@@ -495,7 +495,7 @@ class CartPoleBulletEnv(gym.Env):
                 self.wcprob=1               
             elif(self.tick>0 and numblocks < self.nb_blocks ):
                 if(len(self.char)<256):                self.char += " & Level LL8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                print(" & Level L8: Blocks quantity decrease from "+ str(self.nb_blocks) + " to" +str(numblocks))                                
+                if(self.uccscart.tbdebuglevel>1): print(" & Level L8: Blocks quantity decrease from "+ str(self.nb_blocks) + " to" +str(numblocks))                                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
