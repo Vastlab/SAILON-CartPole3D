@@ -69,7 +69,7 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
-        self.scoreforKL=19        # we only use the first sets of scores for KL because novels worlds close when balanced .  
+        self.scoreforKL=20        # we only use the first sets of scores for KL because novels worlds close when balanced .  
         self.num_epochs = 200
         self.num_dims = 4
         self.num_blocks = None
@@ -1430,10 +1430,10 @@ class UCCSTA2():
         if( (self.logstr.count("CP") > 1)  and mlength < (self.scoreforKL+2) and ( "attack" not in self.logstr) and (self.consecutivefail < 2)):
             dprob=.0009990
             prob = min(1,max(dprob,perfprob)) # use max of dynamic and long-term performance probabilities.
-            print("Debug found ", self.logstr.count("CP"), "CPs in string")
+            if(self.uccscart.tbdebuglevel>1): print("Debug found ", self.logstr.count("CP"), "CPs in string")
         else:
             prob = min(1,max(dprob,perfprob)) # use max of dynamic and long-term performance probabilities.
-            print("Debug did not find many CP ", self.logstr.count("CP"), " in string. dprob,perfprob = ",
+            if(self.uccscart.tbdebuglevel>1): print("Debug did not find many CP ", self.logstr.count("CP"), " in string. dprob,perfprob = ",
                   str(dprob), " ", str(perfprob), " ", str(self.KL_val), "Prob=",str(prob))
 
             
@@ -1443,7 +1443,7 @@ class UCCSTA2():
                    
         if(        self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1325"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
-            print(self.debugstring)
+            if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc
             
@@ -1552,17 +1552,17 @@ class UCCSTA2():
                     self.logstr += '&& M42 LL4 BLock SHRINK Size decreased. minmaxupdate='+ str(minmaxupdate) 
                 elif(self.blockmin > self.normblockmin or self.blockmax< self.normblockmax):
                     self.logstr += '&& M42 LL4 BLock GROW Size increased ' + str(minmaxupdate)
-                print('  minmaxupdate {} min {} max {} normal {} {}  ,'.format(minmaxupdate,self.blockmin,self.blockmax,self.normblockmin,self.normblockmax)        )
+                if(self.uccscart.tbdebuglevel>1): print('  minmaxupdate {} min {} max {} normal {} {}  ,'.format(minmaxupdate,self.blockmin,self.blockmax,self.normblockmin,self.normblockmax)        )
                 prob = prob+ minmaxupdate/4  #dont add too much as it can be noisy
 #                self.worldchanged += .3              
                 self.debugstring = '   Prob {} after Level LL4 Size Change minmaxupdate {} min {} max {} normal {} {} VelMax {}  ,'.format(prob,minmaxupdate,self.blockmin,self.blockmax,self.normblockmin,self.normblockmax,self.blockvelmax)
-                print(self.debugstring)
+                if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
                 self.logstr +=  "&" + self.debugstring                
 
 
         if(        self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1314"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
-            print(self.debugstring)
+            if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
             self.logstr +=  "&" + self.debugstring                            
             self.worldchangedacc=self.previous_wc                              
 
@@ -1596,7 +1596,7 @@ class UCCSTA2():
                 self.worldchangeblend = self.worldchangedacc
                 self.worldchangedacc = min(1,(self.blenddownrate*self.worldchangedacc+prob))            
                 self.debugstring = "BlendDown prob world change wcp/p/wc "   + str(self.worldchangeblend) + " "+ str(prob)  + "-->"+ str(self.worldchangedacc) 
-                print(self.debugstring)
+                if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
             else:
                 #worldchange acc once its above .5 it cannot not go down.. it includes max of old value..
                 self.worldchangeblend = min(1, (        self.blenduprate *self.worldchanged + (1-self.blenduprate) * self.worldchangeblend ))
@@ -1610,12 +1610,12 @@ class UCCSTA2():
                     self.worldchangedacc = min(1,max(self.worldchangedacc+self.worldchanged,self.worldchangedacc*self.worldchangeblend+failinc))
                 self.debugstring += '    mu={}, sig {}, mean {} stdev{}  WCacc WBlend {} {} vals {} {} {} thresh {} '.format(
                     round(mu,3), round(sigma,3), round(self.mean_train,3), round(self.stdev_train,3), round(self.worldchangedacc,3), round(self.worldchangeblend,3) ,round(self.KL_val,3),round(PerfKL,3), dprob,  "\n")
-                print(self.debugstring)
+                if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
 
 
         if( self.previous_wc > self.worldchangedacc and self.previous_wc>.1 ):
             self.debugstring = "   worldchanged when down, line 1358 "+ str(self.previous_wc) + " " + str(self.worldchangedacc)
-            print(self.debugstring)            
+            if(self.uccscart.tbdebuglevel>1): print(self.debugstring)            
             #self.worldchangedacc=self.previous_wc          
 
         # Until we have enough data, reset and worldchange, don't start accumulating
@@ -1628,10 +1628,10 @@ class UCCSTA2():
         if((self.worldchangedacc - self.previous_wc) > self.minprob_consecutive and self.episode < 2* self.scoreforKL):
             if(self.consecutivewc >0):
                 wcconsecutivegrowth = (self.consecutivewc/20)*  (1-self.wcdf((self.worldchangedacc - self.previous_wc),.001,.502,.13))
-                print("wcconsecutivegrowth = ", wcconsecutivegrowth, self.worldchangedacc, self.previous_wc)
+                if(self.uccscart.tbdebuglevel>1): print("wcconsecutivegrowth = ", wcconsecutivegrowth, self.worldchangedacc, self.previous_wc)
                 self.logstr += 'World Change Consecutive {}, prev {} base {} increent {} '.format(self.consecutivewc,round(self.previous_wc,3), round(self.worldchangedacc,3),round(wcconsecutivegrowth,3))
                 self.worldchangedacc = min(1, self.worldchangedacc  + wcconsecutivegrowth)
-                print("EPi2 previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
+                if(self.uccscart.tbdebuglevel>1): print("EPi2 previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
                 
             self.consecutivewc += 1
         else:  self.consecutivewc = 0
@@ -1647,10 +1647,10 @@ class UCCSTA2():
 
         if(        self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1389"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
-            print(self.debugstring)            
+            if(self.uccscart.tbdebuglevel>1): print(self.debugstring)            
 
 
-        print("EPi previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
+        if(self.uccscart.tbdebuglevel>1): print("EPi previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
         if(self.previous_wc < .5 and self.worldchangedacc        >= .5):
             if(self.noveltyindicator == True):
                 self.logstr +=  self.hint                
@@ -1915,7 +1915,7 @@ class UCCSTA2():
 
         if(self.previous_wc > self.worldchangedacc):
             self.debugstring = "   worldchanged went down, line 1458"+ str(self.previous_wc) + " " + str(self.worldchangedacc)
-            print(self.debugstring)
+            if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
             self.worldchangedacc=self.previous_wc          
                 
         if(self.worldchangedacc > self.previous_wc):  self.previous_wc = self.worldchangedacc
@@ -1997,10 +1997,6 @@ class UCCSTA2():
                     prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[2] = self.problist[2] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well
-                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), \
-                                                                                                          round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,\
-                                                                                                          str(self.hint)[9:15],str(self.problist[2:5])))            
                 if(prob >.01 and ratio > .94 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
@@ -2016,15 +2012,13 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " \
                                     + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==35): 
-                prob = self.rwcdf(zerr,4.03137, 1.4216, .6342)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,4.03137, 1.4216, .8342)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*3 ):
                     prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[3] = self.problist[3] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
                 if(prob >.01 and ratio > .94 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
@@ -2040,15 +2034,13 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==45):  #time 45,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,5.65032, 1.33756, .7412)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,5.65032, 1.33756, .8412)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[4] = self.problist[4]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
                 if(prob >.01 and ratio > .95 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
@@ -2064,15 +2056,13 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==55 and self.consecutivehighball>0):  #time 55,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,10.5218, 1.8256, .7926)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,10.5218, 1.8256, .9926)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[5] = self.problist[5]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
                 if(prob >.01 and ratio > .95 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
@@ -2088,15 +2078,13 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==65 and self.consecutivehighball>0):  #time 65,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,14.1812, 1.5718, .8421)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,14.1812, 1.5718, .9421)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
                     prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
                     self.problist[6] = self.problist[6]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
-                    if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
-                        print('preStep {}, E {} ball_loc {} p={} {} {} {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2), ratio,str(self.hint)[9:15],str(self.problist[2:5])))
                 if(prob >.01 and ratio > .95 ):
                     level=6
                     self.logstr +=  "&M42 LL6 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
@@ -2112,7 +2100,7 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==75 and self.consecutivehighball>0 and zerr < 16):  #time 75,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,8.65032, 1.1417, .9372)  #parms by hand  computation based on normal data from prints below
+                prob = self.rwcdf(zerr,8.65032, 1.1417, .9772)  #parms by hand  computation based on normal data from prints below
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
@@ -2141,7 +2129,7 @@ class UCCSTA2():
 
 
                         
-        if(self.uccscart.tbdebuglevel>-1 and len(str(self.hint))!=0):
+        if(self.uccscart.tbdebuglevel>0 and len(str(self.hint))!=0):
             print('Step {}, E {} ball_loc {} p={} {} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
             sys.stdout.flush()
         return prob

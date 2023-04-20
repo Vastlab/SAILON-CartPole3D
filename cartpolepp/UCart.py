@@ -76,7 +76,7 @@ class CartPoleBulletEnv(gym.Env):
         self.wcprob=0
         self.char=""
         self.characterization={'level': None, 'entity': None, 'attribute': None, 'change': None}        
-        self.tbdebuglevel=0
+        self.tbdebuglevel=-1
         self.episode=0
         self.force_action=-1
 
