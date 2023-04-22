@@ -108,6 +108,7 @@ class UCCSTA2():
         self.ballprobscale=.5   # How much  do we scale ball location error probability  sum 0.5 would be average, larger increased mixed sensitivity
         self.ballprobscale=1.1   # How much  do we scale max ball location error probability
         self.maxballscaled = 1
+        self.levelcnt=np.zeros(10)
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
         # too large in hopes of  better ccotrol
@@ -115,9 +116,9 @@ class UCCSTA2():
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
-        self.mean_perf = 0.8763502538071065
-        self.stdev_perf = 0.0924239133691708
-        self.PerfScale = 0.15    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
+        self.mean_perf = 0.873502538071065
+        self.stdev_perf = 0.0824239133691708
+        self.PerfScale = 0.2    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
 
         self.consecutivesuccess=0
         self.consecutivefail=0
@@ -1289,7 +1290,9 @@ class UCCSTA2():
 
         window_width=7
         #look at list of performacne to see if its deviation from training is so that is.. skip more since it needs to be stable for window smoothing+ mean/variance computaiton
-        PerfKL =    0        
+        PerfKL =    0
+        pmu=0
+        psigma=0        
         if (len(self.perflist) >(self.scoreforKL+window_width) and len(self.perflist) < 3* self.scoreforKL ):  
             #get smoothed performance 
             cumsum_vec = np.cumsum(np.insert(self.perflist, 0, 0))
@@ -1300,10 +1303,19 @@ class UCCSTA2():
 #            if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
             if(pmu <  self.mean_perf ):     #if we want only  KL for those what have worse performance 
                 #use model stdev since KL will see 0 stdev as different even if its actually just a good thing                
-                PerfKL = self.kullback_leibler(pmu, self.stdev_perf, self.mean_perf, self.stdev_perf)  
+                PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf, self.stdev_perf)  
                 self.debugstring = '   PerfKL {} {} {} {} PerfKL={} perlist={}= ,'.format(pmu, psigma, self.mean_perf, self.stdev_perf, round(PerfKL,3),self.perflist)
                 if(self.uccscart.tbdebuglevel>1):             
                     print(self.debugstring)
+            elif(pmu >  (self.mean_perf+.05) and self.episode > self.scoreforKL and self.episode < 2* self.scoreforKL  and (self.levelcnt[6] + self.levelcnt[7]) >  3 * (self.episode-self.scoreforKL)):     #if we we are really much better and we are seeing potential novelty,  report it
+                #use model stdev since KL will see 0 stdev as different even if its actually just a good thing                
+                PerfKL = self.kullback_leibler(pmu, psigma, self.mean_perf+.05, self.stdev_perf)  # if really much better
+                self.debugstring = '   E{} {} BetterPerfKL {} {} {} {} PerfKL={} perlist={}'.format(self.episode, (self.levelcnt[6]+self.levelcnt[7])/(self.episode-20),  pmu, psigma, self.mean_perf, self.stdev_perf, round(PerfKL,3),self.perflist)
+                if(len(str(self.hint))>15): self.debugstring +=  self.hint[9:15]
+                if(self.uccscart.tbdebuglevel>-1):             
+                    print(self.debugstring)
+                
+
                 
             # If there is still too much variation (too many FP) in the variance in the small window so we use stdev and just new mean this allows smaller (faster) window for detection. 
             # PerfKL = self.kullback_leibler(pmu, self.stdev_perf, self.mean_perf, self.stdev_perf)
@@ -1440,28 +1452,27 @@ class UCCSTA2():
                   str(dprob), " ", str(perfprob), " ", str(self.KL_val), "Prob=",str(prob))
 
 
-        levelcnt=np.zeros(10)
+        self.levelcnt=np.zeros(10)
         i=0
         lsum=0                        
-        i+= 1; levelcnt[i] =L1= self.trialchar.count("LL1"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L2block= self.trialchar.count("LL2"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L3block= self.trialchar.count("LL3"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L4block= self.trialchar.count("LL4"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L5block= self.trialchar.count("LL5"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L6block= self.trialchar.count("LL6"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L7block= self.trialchar.count("LL7"); lsum += levelcnt[i] 
-        i+= 1; levelcnt[i] =L8block= self.trialchar.count("LL8")*10; lsum += levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L1= self.trialchar.count("LL1"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L2block= self.trialchar.count("LL2"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L3block= self.trialchar.count("LL3"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L4block= self.trialchar.count("LL4"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L5block= self.trialchar.count("LL5"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L6block= self.trialchar.count("LL6"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L7block= self.trialchar.count("LL7"); lsum += self.levelcnt[i] 
+        i+= 1; self.levelcnt[i] =L8block= self.trialchar.count("LL8")*10; lsum += self.levelcnt[i] 
         
         scale = (self.episode-self.scoreforKL)
-        if(scale <=0): scale = 1
-        else: scale = 1/scale
-        
-        lprob=0
-        psum =  .04 * self.rwcdf(lsum*scale,2.74285, 1.123764, .25801)             #weibul probabiliy based on scaled sum, but its often true for non-novel and is done on every episode so weight it small so this alone cannot get to .5
-        lprob =  min(1,prob+psum);
-        if(self.uccscart.tbdebuglevel>-1 and scale < 1  and len(str(self.hint))>16):
-            print('dEp {}.{} detsum= {} ssum= {} psum {} WC {} lprob {} , hint=|{}|'.format(self.episode,self.tick,lsum, lsum*scale,  psum, self.worldchangedacc,lprob,str(self.hint)[9:15]))
-        if(self.episode > self. scoreforKL and self.episode < self. scoreforKL+10): prob = lprob
+        if(scale >0 ):
+            lprob=0
+            psum =  .05 * self.rwcdf(lsum*scale,2.24285, 1.123764, .58301)             #weibul probabiliy based on scaled sum, but its often true for non-novel and is done on every episode so weight it small so this alone cannot get to .5
+            lprob =  min(1,prob+psum);
+            if(self.uccscart.tbdebuglevel>-1 and scale < 1  and len(str(self.hint))>16):
+                print('dEp {}.{} detsum= {} ssum= {} psum {} WC {} lprob {} , hint=|{}|'.format(self.episode,self.tick,lsum, lsum*scale,  psum, self.worldchangedacc,lprob,str(self.hint)[9:15]))
+            if(self.episode > self. scoreforKL and self.episode < 2*self. scoreforKL): prob = lprob
+                
 
 
             
@@ -1653,39 +1664,39 @@ class UCCSTA2():
             if(L5block > 50 and self.episode < 2*self.scoreforKL):
                 self.worldchangedacc = min(1,.25+self.worldchangedacc);
                 
-            maxi = np.argmax(levelcnt)
+            maxi = np.argmax(self.levelcnt)
             
             # level 1 very noisy.. if its the max
-            if(maxi == 1 and levelcnt[1] < 1000):
-                levelcnt[1] = levelcnt[1] / 100
-            maxi = np.argmax(levelcnt)                
+            if(maxi == 1 and self.levelcnt[1] < 1000):
+                self.levelcnt[1] = self.levelcnt[1] / 100
+            maxi = np.argmax(self.levelcnt)                
 
 
 
             
-            if(maxi == 6 or maxi == 7  and  abs(levelcnt[6]-levelcnt[7]) < 5):  #6 and 7 often confused  if nearly equal then  do another test
+            if(maxi == 6 or maxi == 7  and  abs(self.levelcnt[6]-self.levelcnt[7]) < 5):  #6 and 7 often confused  if nearly equal then  do another test
                 incdec_ratio =  min(inccnt,deccnt)/(1+max(inccnt,deccnt))
                 #level 6 tends to be more biased so ratio is < .3 (generally < .2)  while 7 is > .4 
                 if(incdec_ratio < .3):
-                    levelcnt[6] += 10
+                    self.levelcnt[6] += 10
                 else:
-                    levelcnt[7] += 10                    
-                maxi = np.argmax(levelcnt)                
+                    self.levelcnt[7] += 10                    
+                maxi = np.argmax(self.levelcnt)                
 
             if(self.uccscart.characterization['level'] == int(8)):
                 maxi=8
-                levelcnt[8] += 10000                                    
+                self.levelcnt[8] += 10000                                    
 
 
             #fil in M42    Characterization with proabiltiies based on level counts
             levelprobs = np.zeros(9)
-            levelcnt[0] = 0
-            rescale = 1.0/(np.sum(levelcnt)+(1-self.worldchangedacc)*100)
+            self.levelcnt[0] = 0
+            rescale = 1.0/(np.sum(self.levelcnt)+(1-self.worldchangedacc)*100)
             # before we are computing scores its very noisy so just ingore so it does not impact accumated data            
             if(self.episode < self.scoreforKL):
                 rescale = 0
                 #self.trialchar=""                
-            levelprobs = rescale * levelcnt
+            levelprobs = rescale * self.levelcnt
             levelprobs[0] = 1-np.sum(levelprobs)
             #m42 update after seeing we got too many errors on level 0 (no novelty)
             if(self.worldchangedacc < .5):
@@ -1721,7 +1732,7 @@ class UCCSTA2():
                 self.uccscart.characterization['attribute']=None
                 self.uccscart.characterization['change']=None           
                 
-                if(maxi == 1 and levelcnt[1] > 1000):
+                if(maxi == 1 and self.levelcnt[1] > 1000):
                     if(cartcnt > polecnt):
                         self.uccscart.characterization['entity']="Cart";
                     else:
@@ -1733,9 +1744,9 @@ class UCCSTA2():
                         self.uccscart.characterization['change']='decrease';                    
                 else:
 
-                    levelcnt[1] = levelcnt[1]/1000 # reduce  level  as its noisy and often large but when really there its 1000s ao if here even if its the max something else is goign one. 
-                    maxi = np.argmax(levelcnt)
-                    if(levelcnt[maxi]==0):
+                    self.levelcnt[1] = self.levelcnt[1]/1000 # reduce  level  as its noisy and often large but when really there its 1000s ao if here even if its the max something else is goign one. 
+                    maxi = np.argmax(self.levelcnt)
+                    if(self.levelcnt[maxi]==0):
                         maxi=-1
                     else:
                         self.uccscart.characterization['entity']="Block";
@@ -1840,7 +1851,7 @@ class UCCSTA2():
             self.summary += "; Coordinated block motion " + str(parallelblock)
             self.summary += "; Agent Total Violations " + str(blockcnt + parallelblock + attcart + blockvelcnt)
             for i in range(0,9):
-                self.summary += "; L" + str(i) + ":=" + str(levelcnt[i])
+                self.summary += "; L" + str(i) + ":=" + str(self.levelcnt[i])
             self.summary += ";  Violations means that aspect of model had high accumulated EVT model probability of exceeding normal training  "
             if(failcnt > 10):
                 self.summary += " Uncontrollable dynamics for unknown reasons, but clearly novel as failure frequencey too high compared to training"
@@ -1870,7 +1881,7 @@ class UCCSTA2():
 
 
     def ball_location_error(self, statevector):  # if step 10 or 45, get long term ball position error computed from initial state vs current
-#        if(not (self.uccscart.tick  ==10 or ((self.uccscart.tick%45) ==0))):
+        if(self.episode < self.scoreforKL): return 0;  # no need until we start testing for novelty via KL 
         if(not (self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45 or self.uccscart.tick  ==55 or self.uccscart.tick  ==65 or self.uccscart.tick  ==75)):
             return 0
         err = 0
