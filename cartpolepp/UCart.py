@@ -76,7 +76,7 @@ class CartPoleBulletEnv(gym.Env):
         self.wcprob=0
         self.char=""
         self.characterization={'level': None, 'entity': None, 'attribute': None, 'change': None}        
-        self.tbdebuglevel=-1
+        self.tbdebuglevel=2
         self.episode=0
         self.force_action=-1
 
@@ -487,7 +487,7 @@ class CartPoleBulletEnv(gym.Env):
 
             if(self.tick>0 and numblocks > self.nb_blocks ):
                 if(len(self.char)<256): self.char += " & Level LL8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                if(self.uccscart.tbdebuglevel>1): print(" & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks))                
+                if(self.tbdebuglevel>2): print(" & Level L8: Blocks quantity increaseing from "+ str(self.nb_blocks) + " to" +str(numblocks))                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
@@ -495,7 +495,7 @@ class CartPoleBulletEnv(gym.Env):
                 self.wcprob=1               
             elif(self.tick>0 and numblocks < self.nb_blocks ):
                 if(len(self.char)<256):                self.char += " & Level LL8: Blocks quantity decreaseing from "+ str(self.nb_blocks) + " to" +str(numblocks)
-                if(self.uccscart.tbdebuglevel>1): print(" & Level L8: Blocks quantity decrease from "+ str(self.nb_blocks) + " to" +str(numblocks))                                
+                if(self.tbdebuglevel>2): print(" & Level L8: Blocks quantity decrease from "+ str(self.nb_blocks) + " to" +str(numblocks))                                
                 self.characterization['level']=int(8);
                 self.characterization['entity']="Block"; 
                 self.characterization['attribute']="quantity";
@@ -949,7 +949,7 @@ class CartPoleBulletEnv(gym.Env):
 
             self.lastscore=best_score
             self.reset(feature_vector)# put us back in the state we started.. stepping messed with our state        
-            if(self.tbdebuglevel>1): print("Best one step action ", action, " score ", best_score)            
+            if(self.tbdebuglevel>2): print("Best one step action ", action, " score ", best_score)            
             return action, "nothing", expected_state
 
     def one_step_env(self, feature_vector, steps):
@@ -1089,11 +1089,11 @@ class CartPoleBulletEnv(gym.Env):
                                         self.avoid_actions= self.avoid_list[1]
                                     else:
                                         self.avoid_actions= self.avoid_list[0]
-                                if(self.tbdebuglevel>1): 
+                                if(self.tbdebuglevel>2): 
                                     print("Dist mangle pdiff ", dist,mangle, pdiff[0],pdiff[1], " Avoid with ",self.avoid_actions);
                                     self.char += "HA"                                
                         else:
-                            if(self.tbdebuglevel>1):
+                            if(self.tbdebuglevel>2):
                                 self.char += "SA"
                         cost += 100+5/(.01+dist*dist)
                     #consider distance from plane incase for gravity forces effect.   Want to be >1 units away (1/2 ball +1/2 cart), ideally 1.5
@@ -1101,7 +1101,7 @@ class CartPoleBulletEnv(gym.Env):
                     dscale = .5
                     if(plane_dist < 1.5):  #if withing glancing blow distance
                         if(plane_dist > 1):
-                            #if(self.tbdebuglevel>1): self.char += "pd"
+                            #if(self.tbdebuglevel>2): self.char += "pd"
                             dist = plane_dist-1
                             #if we are toward plane, penalty is inverse of time 
                             if(itime > .01):
@@ -1113,7 +1113,7 @@ class CartPoleBulletEnv(gym.Env):
                                 cost += dcost
                                 if(self.tbdebuglevel>3): print("pcd pd<1.5 c+=",str(round( dcost,2)))
                         else: #inside absolute colision region
-                            #if(self.tbdebuglevel>1): self.char += "pcd" 
+                            #if(self.tbdebuglevel>2): self.char += "pcd" 
                             dist = 1.01 - plane_dist
                             if(itime > 0):
                                 dcost = (dscale*(itime + (1.5-plane_dist)*(10)))
@@ -1147,7 +1147,7 @@ class CartPoleBulletEnv(gym.Env):
             cost  += slackcost    + ( maxangle)**2 + (minangle)**2 +   collision_penalty                
 
 
-            if(cost > 200 and self.tbdebuglevel>1): 
+            if(cost > 200 and self.tbdebuglevel>2): 
                 print(" cost,  slack, slackcost  ", round(cost,8), round(slack,3),round(slackcost,3), "pole xyz", round(abs(pole_x),3), round(abs(pole_y),3),round(abs(pole_z),3),
                       "  dists ", round(collision_penalty,3),round(mindist,3),   "angle limit", round(self.angle_limit,3), "  At", self.tick,"score=", round(cost,2),"at",round(cartpos[0],2), round(cartpos[1],2))
 

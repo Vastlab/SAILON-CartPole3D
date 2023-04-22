@@ -69,7 +69,7 @@ class UCCSTA2():
         # calibrated values for KL for cartpole wth one-step lookahead
         self.KL_threshold = 1
         self.KL_val = 0
-        self.scoreforKL=20        # we only use the first sets of scores for KL because novels worlds close when balanced .  
+        self.scoreforKL=19        # we only use the first sets of scores for KL because novels worlds close when balanced .  
         self.num_epochs = 200
         self.num_dims = 4
         self.num_blocks = None
@@ -104,7 +104,10 @@ class UCCSTA2():
         self.initprobscale=.1 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.dynamiccount=0   # if get consecutitve dynamic failures we keep increasing scale
-        self.consecutivewc=0   # if get consecutitve world change overall we keep increasing scale                
+        self.consecutivewc=0   # if get consecutitve world change overall we keep increasing scale
+        self.ballprobscale=.5   # How much  do we scale ball location error probability  sum 0.5 would be average, larger increased mixed sensitivity
+        self.ballprobscale=1.1   # How much  do we scale max ball location error probability
+        self.maxballscaled = 1
 
         # Large "control scores" often mean things are off, since we never know the exact model we reset when scores get
         # too large in hopes of  better ccotrol
@@ -112,9 +115,9 @@ class UCCSTA2():
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
-        self.mean_perf = 0.8383502538071065
+        self.mean_perf = 0.8773502538071065
         self.stdev_perf = 0.0824239133691708
-        self.PerfScale = 0.2    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
+        self.PerfScale = 0.15    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
 
         self.consecutivesuccess=0
         self.consecutivefail=0
@@ -1073,7 +1076,7 @@ class UCCSTA2():
                     deltav=0
                     if(angle < .02): deltav = .01 + self.wcdf(angle,0.00,.512,.1218)
                     if(angle >3.12): deltav = .01 + self.rwcdf(angle,3.14,.512,.1218)
-                    if(deltav>.1 and len(self.logstr) < self.maxcarlen):
+                    if(deltav>.01 and len(self.logstr) < self.maxcarlen):
                         self.logstr +=  "& M42 LL3 or LL5" + "Step " + str(self.tick) +  " Char Block motion " + str(nb) + " dyn Block-Toward-Block " + str(nb2) +  " with probs " + str(deltav)  +" " + str(probv) + " for angle " +str(round(angle,3))
                     probv += deltav
         if(probv > self.maxdynamicprob): probv= self.maxdynamicprob             #since this can happon randomly we never let it take longer                
@@ -1436,6 +1439,31 @@ class UCCSTA2():
             if(self.uccscart.tbdebuglevel>1): print("Debug did not find many CP ", self.logstr.count("CP"), " in string. dprob,perfprob = ",
                   str(dprob), " ", str(perfprob), " ", str(self.KL_val), "Prob=",str(prob))
 
+
+        levelcnt=np.zeros(10)
+        i=0
+        lsum=0                        
+        i+= 1; levelcnt[i] =L1= self.trialchar.count("LL1"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L2block= self.trialchar.count("LL2"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L3block= self.trialchar.count("LL3"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L4block= self.trialchar.count("LL4"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L5block= self.trialchar.count("LL5"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L6block= self.trialchar.count("LL6"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L7block= self.trialchar.count("LL7"); lsum += levelcnt[i] 
+        i+= 1; levelcnt[i] =L8block= self.trialchar.count("LL8")*10; lsum += levelcnt[i] 
+        
+        scale = (self.episode-self.scoreforKL)
+        if(scale <=0): scale = 1
+        else: scale = 1/scale
+        
+        lprob=0
+        psum =  .03 * self.rwcdf(lsum*scale,2.74285, 1.123764, .125801)             #weibul probabiliy based on scaled sum, but its often true for non-novel and is done on every episode so weight it small so this alone cannot get to .5
+        lprob =  min(1,prob+psum);
+        if(self.uccscart.tbdebuglevel>-1 and scale < 1  and len(str(self.hint))>16):
+            print('dEp {}.{} detsum= {} ssum= {} psum {} WC {} lprob {} , hint=|{}|'.format(self.episode,self.tick,lsum, lsum*scale,  psum, self.worldchangedacc,lprob,str(self.hint)[9:15]))
+        if(self.episode > self. scoreforKL and self.episode < self. scoreforKL+12): prob = lprob
+
+
             
 
         #if we had  collisons and not consecuretive faliures, we don't use this episode for dynamic probability .. collisions are not well predicted
@@ -1448,98 +1476,18 @@ class UCCSTA2():
             self.worldchangedacc=self.previous_wc
             
 
-
-        #     # infrequent checkto outputting cnts for setinng up wbls for actual cnts to use to see if we whould update world change
-        if(((self.episode-10)  ==  self.scoreforKL) or ((self.episode-10)  ==  2*self.scoreforKL)):
-            cntval= np.zeros(15)
-            cntprob= np.zeros(21)            
-            i=0
-            scale= 1./int((self.episode) )
-            cntval[i] = initcnt = scale*self.trialchar.count("init")
-            i+= 1; cntval[i] = blockcnt = scale*self.trialchar.count("Block")
-            i+= 1; cntval[i] =blockvelcnt = scale*self.trialchar.count("Block Vel")                
-            i+= 1; cntval[i] =polecnt = scale*self.trialchar.count("Pole")
-            i+= 1; cntval[i] =cartcnt = scale*self.trialchar.count("Cart")
-            i+= 1; cntval[i] =smallcnt = scale*self.trialchar.count("Cart")
-            i+= 1; cntval[i] =largecnt = scale*self.trialchar.count("Cart")                                
-            i+= 1; cntval[i] =diffcnt = scale*self.trialchar.count("diff")
-            i+= 1; cntval[i] =velcnt = scale*self.trialchar.count("Vel")                                
-            i+= 1; cntval[i] =failcnt = scale*self.trialchar.count("High")
-            i+= 1; cntval[i] =attcart = scale*self.trialchar.count("attacking")
-            i+= 1; cntval[i] =aimblock = scale*self.trialchar.count("aiming")
-            i+= 1; cntval[i] =parallelblock= scale*self.trialchar.count("parallel")
-            levelcnt=np.zeros(9)
-            i=0
-            i+= 1; levelcnt[i] =L1= scale*self.trialchar.count("LL1")
-            i+= 1; levelcnt[i] =L2block= scale*self.trialchar.count("LL2")
-            i+= 1; levelcnt[i] =L3block= scale*self.trialchar.count("LL3")
-            i+= 1; levelcnt[i] =L4block= scale*self.trialchar.count("LL4")
-            i+= 1; levelcnt[i] =L5block= scale*self.trialchar.count("LL5")
-            i+= 1; levelcnt[i] =L6block= scale*self.trialchar.count("LL6")
-            i+= 1; levelcnt[i] =L7block= scale*self.trialchar.count("LL7")
-            i+= 1; levelcnt[i] =L8block= scale*self.trialchar.count("LL8")*10
-
-
-            '''  New String matching for json output 
-            ncval = np.zeros("30")
-            i+= 1; cntval[i]= self.trialchar.count("Block-Toward-Block")
-
-            Block-quantity-increase
-            Block-quantity-decrease
-            Cart
-            Cart Vel
-            Pole
-            Pole Vel
-            Block
-            Block Vel
-            Wall
-            
-            '''
-
-            cntwbl = np.array([ [ 1.44423424, -0.19000001,  0.14582359],
-                                [ 0.77655005, -0.13000001,  0.07412372],
-                                [ 1.4183835 , -0.08000001,  0.06339877],
-
-                                [ 1.3369761 , -0.36100001,  0.04456476],
-                                [ 0.84213063, -0.37600001,  0.03392788],
-                                [ 0.84213063, -0.36500001,  0.03392788],
-                                [ 1.60734717, -0.35000001,  0.07514313],
-                                [ 1.37548511, -0.26000001,  0.11283754],
-                                [ 1.18602747, -0.21000001,  0.0627653 ],
-                                [ 1.70217044, -0.06000001,  0.05617951],
-                                [ 1.50681693, -0.06000001,  0.05125134],
-                                [ 1.50681693, -0.06000001,  0.05125134],
-                                [ 0.60246664, -0.08000001,  0.0598179 ]
-                              ] )
-
-            cntmax=0
-            for i in range(12):
-                cntprob[i] = self.wcdf(-cntval[i],cntwbl[i,1],cntwbl[i,0],cntwbl[i,2])
-                cntmax = max (cntmax,cntprob[i])
-
-
-            if(cntmax > .1): cntmax=.1;  #limit impact this this is really a cumulative test on things we have already seen
-            
-            #approximate wibul for  count of SA
-            cntprob[13] = self.wcdf(152.73 - cntval[13],0.1843,2.01214,36.5311)
-            cntmax += cntprob[13]
-            
-            if(prob < cntmax):
-                self.logstr += 'Using detect as prob. detectcnts: {} dectprob {} '.format(cntval,cntprob)
-                prob = max(prob,cntmax)
-            else: self.logstr += 'detectcnts: {} dectprob {} '.format(cntval,cntprob)
-                
-
-                        
         if (len(self.problist) < self.scoreforKL):
             if(prob < .9):    
                 self.worldchanged = prob * len(self.problist)/(self.scoreforKL)
+                if(self.uccscart.tbdebuglevel>1):                print("worldchange from problist <.9",self.worldchanged)
             else:
                 self.worldchanged = prob   #Phase3   addition  to let it be faster with detection when it has really high probability
+                if(self.uccscart.tbdebuglevel>1):                print("worldchange from problist >9",self.worldchanged)                
         elif (len(self.problist) < 2* self.scoreforKL):
             self.worldchanged = prob            
         else: # if very long list, KL beceomes too long, its more likely to be higher from random agent crashing into pole so we the impact
             self.worldchanged = prob * (2*self.scoreforKL)/len(self.problist)
+            if(self.uccscart.tbdebuglevel>1):                print("worldchange from long problist",self.worldchanged)                            
             
 
             
@@ -1572,7 +1520,8 @@ class UCCSTA2():
 
 #####!!!!!##### end GLue CODE for EVT
 
-#####!!!!!#####  Domain Independent code tor consecurtiv efailures
+#####!!!!!#####  Domain Independent code
+
         failinc = 0
         #if we are beyond KL window all we do is watch for failures to decide if we world is changed
 
@@ -1581,6 +1530,7 @@ class UCCSTA2():
             #pdb.set_trace()
             if(self.failcnt/(self.episode+1) > self.maxfailfrac):
                 self.worldchanged = 1
+                if(self.uccscart.tbdebuglevel>1):                print("worldchange from  failcnt",self.worldchanged)                                
                 self.logstr +=  "&" + "Step " + str(self.tick) + "World Change detected by Very High FailFrac=" + str(self.failcnt/(self.episode+1))           
                 faildiff=0                
             else: 
@@ -1692,19 +1642,7 @@ class UCCSTA2():
             attcart = self.trialchar.count("Relational Attacking cart")
             aimblock = self.trialchar.count("Relational aiming")
             parallelblock = self.trialchar.count("Relational parallel")
-            levelcnt=np.zeros(10)
-            i=0
-            i+= 1; levelcnt[i] =L1= self.trialchar.count("LL1")
-            i+= 1; levelcnt[i] =L2block= self.trialchar.count("LL2")
-            i+= 1; levelcnt[i] =L3block= self.trialchar.count("LL3")
-            i+= 1; levelcnt[i] =L4block= self.trialchar.count("LL4")
-            i+= 1; levelcnt[i] =L5block= self.trialchar.count("LL5")
-            i+= 1; levelcnt[i] =L6block= self.trialchar.count("LL6")
-            i+= 1; levelcnt[i] =L7block= self.trialchar.count("LL7")
-            i+= 1; levelcnt[i] =L8block= self.trialchar.count("LL8")*10  #8s are less commone but very distinctive so scale them up
-
-
-
+            
             #initalize characterization
             self.uccscart.characterization['entity']=None
             self.uccscart.characterization['attribute']=None
@@ -1973,10 +1911,15 @@ class UCCSTA2():
         dirstr = "INCREASE"   # default is Z decreases  which means gravity or direction is an INCREASE
         if(diffs[2] >0): dirstr = "DECREASE"
         prob=0
+        zprob=-1
+        eprob=-1
         level=0  # setup default
         if((self.uccscart.tick  ==10 or self.uccscart.tick  ==25 or self.uccscart.tick  ==35 or self.uccscart.tick  ==45 or self.uccscart.tick  ==55 or self.uccscart.tick  ==65 or self.uccscart.tick  ==75)):
             if(self.uccscart.tick  ==10):
-                prob = self.rwcdf(zerr,0.23754, 1.123764, 1.2201)  #parms by hand  computation based on normal data from prints below
+                zprob = self.rwcdf(zerr,0.23754, 1.123764, 1.2201)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,.46212, 1.0128, .52377)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
+                
                 if(prob > .01):             self.consecutivehighball += 1            
                 if(prob > .01 and zerr >.32 and ratio > .7 ):
                     level=6
@@ -1989,12 +1932,15 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
             elif (self.uccscart.tick  ==25):  #  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,2.1132, 1.6435, .85227)  #parms by hand  computation based on normal data from prints below
+                zprob = self.rwcdf(zerr,2.1132, 1.6435, .85227)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,4.376, 1.4333, .82227)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0
                 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*3 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    prob = min(self.maxballscaled,prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive
+                    #prob = (prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive                     
                     self.problist[2] = self.problist[2] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well
                 if(prob >.01 and ratio > .94 ):
@@ -2004,6 +1950,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .57 ):
                     level=7
+                    ##prob += .1   #this ratio does not occur for random errors often                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2012,11 +1959,15 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " \
                                     + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==35): 
-                prob = self.rwcdf(zerr,4.03137, 1.4216, .8342)  #parms by hand  computation based on normal data from prints below
+                zprob = self.rwcdf(zerr,4.03137, 1.4216, .8342)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,10.6324, 1.8217, .6728)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
+
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*3 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    #prob = min(max(prob,self.maxdynamicprob),prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive
+                    prob = (prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive                                         
                     self.problist[3] = self.problist[3] + prob #stick it in problist in location  5 so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                 if(prob >.01 and ratio > .94 ):
@@ -2026,6 +1977,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .49 ):
                     level=7
+                    ##prob += .1   #this ratio does not occur for random errors often                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2034,11 +1986,15 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tick  ==45):  #time 45,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,5.65032, 1.33756, .8412)  #parms by hand  computation based on normal data from prints below
+                zprob = self.rwcdf(zerr,5.65032, 1.33756, .8412)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,16.3461, 1.2178, .67227)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
+
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    prob = min(self.maxballscaled,prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive 
+                    #prob = (prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive                                         
                     self.problist[4] = self.problist[4]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                 if(prob >.01 and ratio > .95 ):
@@ -2048,6 +2004,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .49 ):
                     level=7
+                    ##prob += .1   #this ratio does not occur for random errors often                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2055,12 +2012,16 @@ class UCCSTA2():
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
-            elif (self.uccscart.tick  ==55 and self.consecutivehighball>0):  #time 55,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,10.5218, 1.8256, .9926)  #parms by hand  computation based on normal data from prints below
+            elif (self.uccscart.tick  ==55 and (self.consecutivehighball>0 or err >28)):  #time 55,  gives us much longer to observed deviations.. 
+                zprob = self.rwcdf(zerr,8.5218, 1.8256, .9926)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,28.0121, 1.8213, .9627)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
+                
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    prob = min(self.maxballscaled,prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive
+                    #prob = (prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive                                         
                     self.problist[5] = self.problist[5]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                 if(prob >.01 and ratio > .95 ):
@@ -2070,6 +2031,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .49 ):
                     level=7
+                    #prob += .1                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2077,12 +2039,15 @@ class UCCSTA2():
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
-            elif (self.uccscart.tick  ==65 and self.consecutivehighball>0):  #time 65,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,14.1812, 1.5718, .9421)  #parms by hand  computation based on normal data from prints below
+            elif (self.uccscart.tick  ==65 and (self.consecutivehighball>0 or err >33.5)):  #time 55,  gives us much longer to observed deviations.. 
+                zprob = self.rwcdf(zerr,8.6812, 1.5718, .9421)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,31.512, 1.0133, .87227)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
+
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    prob = min(self.maxballscaled,prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive 
                     self.problist[6] = self.problist[6]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                 if(prob >.01 and ratio > .95 ):
@@ -2092,6 +2057,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .49 ):
                     level=7
+                    #prob += .1   #this ratio does not occur for random errors often                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2099,12 +2065,15 @@ class UCCSTA2():
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
-            elif (self.uccscart.tick  ==75 and self.consecutivehighball>0 and zerr < 16):  #time 75,  gives us much longer to observed deviations.. 
-                prob = self.rwcdf(zerr,8.65032, 1.1417, .9772)  #parms by hand  computation based on normal data from prints below
+            elif (self.uccscart.tick  ==75 and self.consecutivehighball>0 and zerr < 17):  #time 75,  gives us much longer to observed deviations.. 
+                zprob = self.rwcdf(zerr,8.75032, 1.1417, .9772)  #parms by hand  computation based on normal data from prints below
+                eprob = self.rwcdf(err,35.7641, 1.0122, .87227)  #parms by hand  computation based on normal data from prints below
+                prob = max(zprob,eprob)*self.ballprobscale
                 if(prob > .01):             self.consecutivehighball += 1
                 else: self.consecutivehighball =0 
                 if(self.episode > self.scoreforKL and self.episode < self.scoreforKL*2 ):
-                    prob = min(max(prob,self.maxdynamicprob),(self.consecutivehighball+1)*prob) # we scale up if they have been multiple consecutive 
+                    prob = min(self.maxballscaled,prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive
+                    #prob = (prob*(self.consecutivehighball+1)) # we scale up if they have been multiple consecutive                                         
                     self.problist[7] = self.problist[7]+ prob #stick it in problist in location 4  so it can impact KL
                     #self.worldchangedacc += min(prob,.05)  #we give small  direct bump as well                    
                     if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
@@ -2116,6 +2085,7 @@ class UCCSTA2():
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
                 elif(prob >.01 and ratio < .49 ):
                     level=7
+                    #prob += .1   #this ratio does not occur for random errors often                    
                     self.logstr +=  "&M42 LL7 Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) \
                                     +" " + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " 
@@ -2124,13 +2094,13 @@ class UCCSTA2():
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
             elif (self.uccscart.tbdebuglevel>0 and len(str(self.hint))!=0):
-                print('Unhandled Step {}, E {} ball_loc {} p={} {} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:5])))                            
+                print('Unhandled Step {}, E {} ball_loc {} p={} {} d={} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(zprob,2),round(eprob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:8])))                            
                 sys.stdout.flush()                
 
 
                         
-        if(self.uccscart.tbdebuglevel>0 and len(str(self.hint))!=0):
-            print('Step {}, E {} ball_loc {} p={} {} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(prob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:5])))            
+        if(self.uccscart.tbdebuglevel>-1 and len(str(self.hint))!=0):
+            print('Step {}, E {} ball_loc {} p={} {} d={} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(zprob,2),round(eprob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:8])))                            
             sys.stdout.flush()
         return prob
                
@@ -2245,10 +2215,12 @@ class UCCSTA2():
                 difference_from_expected = data_val - actual_state  # next 4 are the difference between expected and actual state after one step, i.e.
                 current = difference_from_expected
 
-
+                
                 diffprobability = self.dynam_prob_scale * self.cstate_diff_EVT_prob(current,actual_state)
                 probability += self.dynblocksprob  # blocks are less noisy so we always add them in
 
+                if(self.uccscart.tbdebuglevel>1 and probability>0):
+                    print("E/S " + str(self.episode)+"."+str(self.tick) +" ball dyncnt diff porb and overall prob ", bprob,self.dynamiccount, diffprobability, probability)                                    
                 self.probvector[self.nextprob] = probability
                 self.nextprob += 1                    
                 
@@ -2332,7 +2304,7 @@ class UCCSTA2():
             if (self.uccscart.tbdebuglevel>3):
                 self.debugstring = 'Instance: cnt={},actual_state={}, next={},  current/diff={},NovelProb={}'.format(
                     self.cnt, actual_state, expected_state, current, probability)
-                print("prob/probval", probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob)  
+                print("Step prob/probval",self.tick,probability, prob_values, "maxprob", self.maxprob, "meanprob", self.meanprob)  
             
         self.prev_action = action
 
@@ -2406,10 +2378,11 @@ class UCCSTA2():
                 if ((self.uccscart.tbdebuglevel>-1 )and self.framecnt < 3):
                     self.debugstring += '  Writing '+ fname + 'with overlay'+ wstring
                     print(self.debugstring)
-                if (self.uccscart.tbdebuglevel>1) :
-                    self.debugstring += '  Writing '+ fname + 'with prob'+ str(self.probvector)
+                #        if (self.uccscart.tbdebuglevel>1) :
+                #            print(' Episode (), step{} final probvector ={}'.format( self.episode, [round(num, 2) for num in self.probvector]))
+                
                     
-
+            
         sys.stdout.flush()                
         
         return action
