@@ -115,8 +115,8 @@ class UCCSTA2():
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
-        self.mean_perf = 0.8793502538071065
-        self.stdev_perf = 0.0824239133691708
+        self.mean_perf = 0.8763502538071065
+        self.stdev_perf = 0.0924239133691708
         self.PerfScale = 0.15    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
 
         self.consecutivesuccess=0
@@ -1294,8 +1294,8 @@ class UCCSTA2():
             #get smoothed performance 
             cumsum_vec = np.cumsum(np.insert(self.perflist, 0, 0))
             smoothed = (cumsum_vec[window_width:] - cumsum_vec[:-window_width]) / window_width
-            pmu = np.mean(smoothed[:-self.scoreforKL])  # we skip first/iniiprob... it is used elsehwere. 
-            psigma = np.std(smoothed[:-self.scoreforKL])
+            pmu = np.mean(smoothed[:-self.scoreforKL/2])  # we skip first/iniiprob... it is used elsehwere. 
+            psigma = np.std(smoothed[:-self.scoreforKL/2])
             
 #            if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
             if(pmu <  self.mean_perf ):     #if we want only  KL for those what have worse performance 
