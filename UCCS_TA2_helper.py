@@ -115,7 +115,7 @@ class UCCSTA2():
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
-        self.mean_perf = 0.8773502538071065
+        self.mean_perf = 0.8793502538071065
         self.stdev_perf = 0.0824239133691708
         self.PerfScale = 0.15    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
 
@@ -1457,11 +1457,11 @@ class UCCSTA2():
         else: scale = 1/scale
         
         lprob=0
-        psum =  .03 * self.rwcdf(lsum*scale,2.74285, 1.123764, .125801)             #weibul probabiliy based on scaled sum, but its often true for non-novel and is done on every episode so weight it small so this alone cannot get to .5
+        psum =  .04 * self.rwcdf(lsum*scale,2.74285, 1.123764, .25801)             #weibul probabiliy based on scaled sum, but its often true for non-novel and is done on every episode so weight it small so this alone cannot get to .5
         lprob =  min(1,prob+psum);
         if(self.uccscart.tbdebuglevel>-1 and scale < 1  and len(str(self.hint))>16):
             print('dEp {}.{} detsum= {} ssum= {} psum {} WC {} lprob {} , hint=|{}|'.format(self.episode,self.tick,lsum, lsum*scale,  psum, self.worldchangedacc,lprob,str(self.hint)[9:15]))
-        if(self.episode > self. scoreforKL and self.episode < self. scoreforKL+12): prob = lprob
+        if(self.episode > self. scoreforKL and self.episode < self. scoreforKL+10): prob = lprob
 
 
             
@@ -2219,7 +2219,7 @@ class UCCSTA2():
                 diffprobability = self.dynam_prob_scale * self.cstate_diff_EVT_prob(current,actual_state)
                 probability += self.dynblocksprob  # blocks are less noisy so we always add them in
 
-                if(self.uccscart.tbdebuglevel>1 and probability>0):
+                if(self.uccscart.tbdebuglevel>1 and probability>.05):
                     print("E/S " + str(self.episode)+"."+str(self.tick) +" ball dyncnt diff porb and overall prob ", bprob,self.dynamiccount, diffprobability, probability)                                    
                 self.probvector[self.nextprob] = probability
                 self.nextprob += 1                    
