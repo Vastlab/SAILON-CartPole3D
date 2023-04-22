@@ -2093,13 +2093,13 @@ class UCCSTA2():
                     self.logstr +=  "&M42 LL6 LL7 (unclear) Block Long-term Location Prediction Error " +dirstr + " Step " + str(self.tick) +" " \
                                     + str(round(zerr,2)) +" p" + str(round(prob,2)) +" " + str(round(ratio,2)) +" " + str(round(diffs[0],2)) +" " \
                                     + str(round(diffs[1],2)) +" " + str(round(diffs[2],2)) + " " +  str(self.hint)
-            elif (self.uccscart.tbdebuglevel>0 and len(str(self.hint))!=0):
+            elif (self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
                 print('Unhandled Step {}, E {} ball_loc {} p={} {} d={} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(zprob,2),round(eprob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:8])))                            
                 sys.stdout.flush()                
 
 
                         
-        if(self.uccscart.tbdebuglevel>-1 and len(str(self.hint))!=0):
+        if(self.uccscart.tbdebuglevel>1 and len(str(self.hint))!=0):
             print('Step {}, E {} ball_loc {} p={} {} d={} {} {} con {} R {} hint=|{}| plist={}'.format(self.uccscart.tick,self.episode,round(zerr,2), round(zprob,2),round(eprob,2), round(diffs[0],2),round(diffs[1],2),round(diffs[2],2),self.consecutivehighball, ratio,str(self.hint)[9:15],str(self.problist[2:8])))                            
             sys.stdout.flush()
         return prob
