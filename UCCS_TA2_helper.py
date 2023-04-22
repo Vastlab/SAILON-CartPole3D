@@ -1287,15 +1287,15 @@ class UCCSTA2():
         mlength = min(self.scoreforKL,mlength)
         # we look at the larger of the begging or end of list.. world changes most obvious at the ends. 
 
-        window_width=11
+        window_width=7
         #look at list of performacne to see if its deviation from training is so that is.. skip more since it needs to be stable for window smoothing+ mean/variance computaiton
         PerfKL =    0        
         if (len(self.perflist) >(self.scoreforKL+window_width) and len(self.perflist) < 3* self.scoreforKL ):  
             #get smoothed performance 
             cumsum_vec = np.cumsum(np.insert(self.perflist, 0, 0))
             smoothed = (cumsum_vec[window_width:] - cumsum_vec[:-window_width]) / window_width
-            pmu = np.mean(smoothed[:-self.scoreforKL/2])  # we skip first/iniiprob... it is used elsehwere. 
-            psigma = np.std(smoothed[:-self.scoreforKL/2])
+            pmu = np.mean(smoothed[:-window_width])  # we skip first/iniiprob... it is used elsehwere. 
+            psigma = np.std(smoothed[:-window_width])
             
 #            if(pmu <  self.mean_perf or pmu >  self.mean_perf +  self.stdev_perf):     #if we want only  KL for those what have worse performance or much better                
             if(pmu <  self.mean_perf ):     #if we want only  KL for those what have worse performance 
