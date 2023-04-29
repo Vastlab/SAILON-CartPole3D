@@ -97,12 +97,12 @@ class UCCSTA2():
         self.maxfailfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
         
         # because of noisy simulatn and  many many fields and its done each time step, we limit how much this can add per time step
-        self.maxdynamicprob = .15  # was .175 but too many false detects on non-novel trials so reduced it a bit. .  Added separate for cart/pole.. balls seem more stable so inreased to .5
+        self.maxdynamicprob = .175  # was .175 but too many false detects on non-novel trials so reduced it a bit. .  Added separate for cart/pole.. balls seem more stable so inreased to .5
         self.maxclampedprob = .005  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
         self.clampedprob =   self.maxclampedprob       
-        self.cartprobscale=.25 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
-#        self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
-        self.initprobscale=.5 #   Were getting too many detects on no-novel worlds.. so reduce
+        self.cartprobscale=.5 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
+        self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+#        self.initprobscale=.5. #   Were getting too many detects on no-novel worlds.. so reduce
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.dynamiccount=0   # if get consecutitve dynamic failures we keep increasing scale
         self.consecutivewc=0   # if get consecutitve world change overall we keep increasing scale
@@ -155,7 +155,7 @@ class UCCSTA2():
         self.worldchangedacc = 0
         self.previous_wc = 0        
         self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time
-        self.blenddownrate = .25        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
+        self.blenddownrate = .9        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
         self.minblenddownrate = .1        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max        
         
         self.failcnt = 0        
@@ -289,7 +289,7 @@ class UCCSTA2():
             self.blockmax=-999
             self.blockvelmax=-999
 #        elif(episode < 2*self.scoreforKL):  #long term the noisy/bad probabilities seem to grow so reduce the max they can impact  
-        elif(episode < 3*self.scoreforKL):  #Phase 3 is not as noisy.. could use hints to change or a develop a noise model
+        elif(episode < 2*self.scoreforKL):  #Phase 3 is not as noisy.. could use hints to change or a develop a noise model
             self.clampedprob = self.maxclampedprob  *  ((2*self.scoreforKL-episode)/(self.scoreforKL))**2  # we reduce max from noisy ones over the window size
             self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time            
             self.blockmin=999
@@ -298,8 +298,8 @@ class UCCSTA2():
         else:
             self.clampedprob = 0
             self.blenduprate = max(.1,(3*self.scoreforKL-episode)/(self.scoreforKL))          # fraction of new prob we use when blending up..  It adapts over time
-         #self.blenddownrate = max(self.minblenddownrate,min(.5,.5*(2*self.scoreforKL-episode)/(self.scoreforKL)))
-            self.blenddownrate = min(.5,self.blenddownrate + .05)            
+            #self.blenddownrate = max(self.minblenddownrate,min(.5,.5*(2*self.scoreforKL-episode)/(self.scoreforKL)))
+            self.blenddownrate = max(self.minblenddownrate,self.blenddownrate - .05)            
         
         if(episode > 3*self.scoreforKL):  #stop blending once we have stable KL values, and don't search since its expensive but cannot be useful after that many
             self.failcnt = 0                    
@@ -683,14 +683,14 @@ class UCCSTA2():
         # do base state for cart(6)  and pole (7)   looking at position and velocity. 
         for j in range (13):
             if(abs(istate[j]) > imax[j]):
-                probv =  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
+                probv=  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
                 initprob += probv
                 if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     self.logstr +=  "& M42 LL1 " + "Step " + str(self.tick) +str(dimname[j]) + " init INCREASE  " + str(round(istate[j],3)) +" " + str(round(imax[j],3)) +" " + str(round(probv,3))+" " + str(round(iscale[j],3))
                     if(self.noveltyindicator != True) : self.logstr += "j=", str(j)+ "state = " + str(self.current_state)                    
                
             if(abs(istate[j]) < imin[j]):
-                probv =  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
+                probv=  self.awcdf(abs(istate[j]),imin[j],iscale[j],ishape[j]);
                 if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     initprob += probv
                     self.logstr +=  "& M42 LL1" + "Step " + str(self.tick) +str(dimname[j]) + " init DECREASE  " + str(round(istate[j],3)) +" " + str(round(imin[j],3)) +" " + str(round(iscale[j],3)) 
@@ -702,12 +702,12 @@ class UCCSTA2():
 
         wallstart= len(istate) - 24
         if(wallstart < 19):  # whould have at least 2 blocks
-                probv =  1
+                probv=  1
                 initprob += probv
                 if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     self.logstr +=  "&M42 LL2  " + "Step " + str(self.tick) + "  BLOCK-QUANTITY-DECREASE (Level LL8 change) Len="+wallstart
         if(wallstart > 19+5*6):  # sould have at most 5 blocks
-                probv =  1
+                probv=  1
                 initprob += probv
                 if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     self.logstr +=  "&M42 LL2 " + "Step " + str(self.tick) + " BLOCK-QUANTITY-INCREASE (Level LL8 change) Len="+wallstart
@@ -733,7 +733,7 @@ class UCCSTA2():
 
             
             if(abs(istate[j]) > imax[k]):
-                probv =  self.awcdf(abs(istate[j]),imax[k],iscale[k],ishape[k]);
+                probv=  self.awcdf(abs(istate[j]),imax[k],iscale[k],ishape[k]);
                 if((abs(istate[j]) - imax[k]) > 1) :
                     self.logstr +=  "& M42 LL2  " + "Step " + str(self.tick) + str(dimname[k])+ " init INCREASE " +  " " + str(round(istate[j],3)) +" " + str(round(imax[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
                     initprob += max(.24,probv)
@@ -747,7 +747,7 @@ class UCCSTA2():
 #                    self.logstr += "j="+ str(j)+ str(self.current_state)                                        
                     initprob += max(.24,probv)
                 else:
-                    probv =  self.awcdf(abs(istate[j]),imin[k],iscale[k],ishape[k]);
+                    probv=  self.awcdf(abs(istate[j]),imin[k],iscale[k],ishape[k]);
                     initprob += probv
                     if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                         self.logstr +=  "&M42 LL2" + "Step " + str(self.tick) + " " + str(dimname[k]) + " init DECREASE " +  " " + str(round(istate[j],3)) +" " + str(round(imin[k],3)) +" " + str(round(probv,3)) +" " + str(round(iscale[j],3)) + " " + str(round(ishape[j],3))+" " + str(round(probv,3))
@@ -769,10 +769,10 @@ class UCCSTA2():
                                            self.block_vel(istate,nb))
             probv=0                            
             if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack as normal world data did not have enough data to fit
-                probv = .5
+                probv= .5
             elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                probv = (.01-dist)/(.01-1e-3)
-                probv = .5*probv*probv   # square it so its a bit more concentrated and smoother                        
+                probv= (.01-dist)/(.01-1e-3)
+                probv= .5*probv*probv   # square it so its a bit more concentrated and smoother                        
             initprob += probv
 
             if(probv>charactermin and len(self.logstr) < self.maxcarlen):
@@ -797,9 +797,9 @@ class UCCSTA2():
                 probv=0                                
                 
                 if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty.  Loose in test since they move before we see it
-                    probv = .4            
+                    probv= .4            
                 elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                    probv = .4*(.01-dist)/(.01)
+                    probv= .4*(.01-dist)/(.01)
                 initprob += probv
                 if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                     self.logstr +=  "& M42 LL5" + "Step " + str(self.tick) +  " M42 Char Block " + str(nb) + " on initial direction aiming at block" + str(nb2) +" with prob " + str(probv)
@@ -818,7 +818,7 @@ class UCCSTA2():
                 angle = self.vector_angle(self.block_vel(istate,nb),self.block_vel(istate,nb2))
                 # get weibul probabilities for the angles..  cannot be both small and large and weibul go to zero fast enough we
                 probv=0                                
-                if(angle < .1): probv = self.wcdf(angle,0.00,.512,.1218)
+                if(angle < .1): probv= self.wcdf(angle,0.00,.512,.1218)
                 if(angle >3.1): probv= self.rwcdf(angle,3.14,.512,.1218)
                 if(probv > .5): probv= .5 #since this can happon randomly we never let it take longer                
                 
@@ -961,7 +961,7 @@ class UCCSTA2():
             if(self.uccscart.tbdebuglevel>0 and (istate[j] - imax[j]) >= 1.0):
                 print( "Step " + str(self.tick) + dimname[j] + " ignored diff increase with state/max " + str(round(istate[j],5)) +  " " + str(round(imax[j],5))                )
             if(istate[j] > imax[j] and   (istate[j] - imax[j]) < 1.0):
-                probv =  self.cartprobscale*self.awcdf(abs(istate[j]),imax[j],iscale[j],ishape[j])
+                probv=  self.cartprobscale*self.awcdf(abs(istate[j]),imax[j],iscale[j],ishape[j])
                 #hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
                 if(abs(abs(istate[j])-.1974) < self.maxclampedprob/2 and len(self.logstr) < self.maxcarlen):
                     if(self.uccscart.tbdebuglevel>0):
@@ -973,7 +973,7 @@ class UCCSTA2():
             elif(istate[j] < imin[j] and  (imin[j] - istate[j] ) < 1 ):
                 if(self.uccscart.tbdebuglevel>0 and (imin[j] - istate[j] ) >= 1 ):
                     print( "Step " + str(self.tick) + dimname[j] + " ignored diff too small with state/min " + str(round(istate[j],5)) +  " " + str(round(imin[j],5))                )
-                probv =  self.cartprobscale*self.awcdf(abs(istate[j]),abs(imin[j]),iscale[j],ishape[j]);                
+                probv=  self.cartprobscale*self.awcdf(abs(istate[j]),abs(imin[j]),iscale[j],ishape[j]);                
                 #hack..    often the bug in system interface produces errors that have state around 1974.  Might skip a few real errors but should reduce false alarms a good bit
                 if(abs(abs(istate[j])-.1974) < self.maxclampedprob/2 and len(self.logstr) < self.maxcarlen):
                     if(self.uccscart.tbdebuglevel>0):                    
@@ -1017,7 +1017,7 @@ class UCCSTA2():
 
 
 
-            #probv=0
+            probv=0
             #block motion not as predicted (domain independent test) but can be caused by may things and applies to L3, L5 and L7 as directions are off and  L4 since the bounce early produces a unepxcted position/velocity)
             #maybe some domain dependent stuff could differentiate
             # the random error (from block collisons with anything) sometimes cause large errors, so have to treat this a s very noisey and limit impact and only apply when resonable
@@ -1038,8 +1038,8 @@ class UCCSTA2():
             self.nextprob += 1                    
                     
 
-        self.dynblocksprob += min(self.maxdynamicprob,probb)   # if we want to not impact of limit l3/l7 errors which can happen rnadomly and there are many block and many steps
-                    
+        self.dynblocksprob = min(self.maxdynamicprob,max(self.dynblocksprob,probv))   # if we want to not impact of limit l3/l7 errors which can happen rnadomly and there are many block and many steps
+        
 
 
        ## look for blocks motions that heading to  other blocks position
@@ -1055,9 +1055,9 @@ class UCCSTA2():
 
 
                     if(dist < 1e-3): # should do wlb fit on this.. but for now just a hack.  Note blocks frequently can randomly do this so don't consider it too much novelty
-                        probv = self.maxdynamicprob            
+                        probv= self.maxdynamicprob            
                     elif(dist < .01): # should do wlb fit on this.. but for now just a hack
-                        probv = self.maxdynamicprob * (.01-dist)/(.01)
+                        probv= self.maxdynamicprob * (.01-dist)/(.01)
                     prob += probv
                     if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                         self.logstr +=  "& M42 LL5" + "Step " + str(self.tick) +  " M42 Char Block " + str(nb) + " on diff  direction aiming at block" + str(nb2) +" with prob " + str(probv)
@@ -1169,7 +1169,7 @@ class UCCSTA2():
         istate = self.format_istate_data(actual_state)
         # do base state for cart(6)  and pole (7) 
         for j in range (13):
-            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            probv=  self.gcdf(istate[j],imean[j],istd[j]);
             if(probv>charactermin and len(self.logstr) < self.maxcarlen):
 #                initprob += probv
                 initprob = max(initprob,probv)                
@@ -1179,7 +1179,7 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,wallstart,1):
             if("Wall"  in str(dimname[j])): break
-            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            probv=  self.gcdf(istate[j],imean[j],istd[j]);
             if(probv>charactermin and len(self.logstr) < self.maxcarlen):
 #                initprob += probv
                 initprob = max(initprob,probv)                
@@ -1233,7 +1233,7 @@ class UCCSTA2():
         istate = cdiff
         # do base state for cart(6)  and pole (7) 
         for j in range (13):        
-            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            probv=  self.gcdf(istate[j],imean[j],istd[j]);
             if(probv>charactermin and len(self.logstr) < self.maxcarlen):
 #                prob += probv
                 prob = max(prob,probv)                
@@ -1246,7 +1246,7 @@ class UCCSTA2():
         k=13 # for name max/ame indixing where we have only one block
         for j in range (13,len(istate),1):
             if("Wall"  in str(dimname[j])): break
-            probv =  self.gcdf(istate[j],imean[j],istd[j]);
+            probv=  self.gcdf(istate[j],imean[j],istd[j]);
             if(probv>charactermin and len(self.logstr) < self.maxcarlen):
                 prob += probv
                 prob = max(prob,probv)                
@@ -1501,7 +1501,7 @@ class UCCSTA2():
             self.worldchanged = prob            
         else: # if very long list, KL beceomes too long, its more likely to be higher from random agent crashing into pole so we the impact
             self.worldchanged = prob * (2*self.scoreforKL)/len(self.problist)
-            if(self.uccscart.tbdebuglevel>1):                print("worldchange from long problist",self.worldchanged)                            
+            if(self.uccscart.tbdebuglevel>1):                print("worldchange from long problist",prob,self.worldchanged)                            
             
 
             
@@ -1540,7 +1540,7 @@ class UCCSTA2():
         #if we are beyond KL window all we do is watch for failures to decide if we world is changed
 
             
-        if(self.episode > self.scoreforKL+1 and self.episode < 2* self.scoreforKL):
+        if(self.episode > self.scoreforKL+1 and self.episode < 3* self.scoreforKL):
             #pdb.set_trace()
             if(self.failcnt/(self.episode+1) > self.maxfailfrac):
                 self.worldchanged = 1
@@ -1589,7 +1589,7 @@ class UCCSTA2():
 
             # normal world gets randome incremenets not bigger ones all in a row..  novel world can get many consecutitive one so we increase prob of that big an increment and expodentially based on sequence length and .
             # Parms weak as not much data in training as its too infrequently used.  Not used later in stage as random errors seem to grow with resets so consecurive random becomes more likely
-        if((self.worldchangedacc - self.previous_wc) > self.minprob_consecutive and self.episode < 2* self.scoreforKL):
+        if((self.worldchangedacc - self.previous_wc) > self.minprob_consecutive and self.episode < 3* self.scoreforKL):
             if(self.consecutivewc >0):
                 wcconsecutivegrowth = (self.consecutivewc/20)*  (1-self.wcdf((self.worldchangedacc - self.previous_wc),.001,.502,.13))
                 if(self.uccscart.tbdebuglevel>1): print("wcconsecutivegrowth = ", wcconsecutivegrowth, self.worldchangedacc, self.previous_wc)
@@ -1614,7 +1614,7 @@ class UCCSTA2():
             if(self.uccscart.tbdebuglevel>1): print(self.debugstring)            
 
 
-        if(self.uccscart.tbdebuglevel>1): print("EPi previs new world change", self.episode, self.previous_wc, self.worldchangedacc)
+        if(self.uccscart.tbdebuglevel>1): print("EPi previs new world change", self.episode, self.previous_wc, self.worldchangedacc,self.logstr)
         if(self.previous_wc < .5 and self.worldchangedacc        >= .5):
             if(self.noveltyindicator == True):
                 self.logstr +=  self.hint                
@@ -2241,7 +2241,7 @@ class UCCSTA2():
                 probability += self.dynblocksprob  # blocks are less noisy so we always add them in
 
                 if(self.uccscart.tbdebuglevel>1 and probability>.05):
-                    print("E/S " + str(self.episode)+"."+str(self.tick) +" ball dyncnt diff porb and overall prob ", bprob,self.dynamiccount, diffprobability, probability)                                    
+                    print("E/S " + str(self.episode)+"."+str(self.tick) +" ball dyncnt dynblocksprob diff porb and overall prob ", bprob,self.dynamiccount, self.dynblocksprob,diffprobability, probability)                                    
                 self.probvector[self.nextprob] = probability
                 self.nextprob += 1                    
                 
@@ -2308,6 +2308,7 @@ class UCCSTA2():
 
             probability = min(1,probability)
             self.problist.append(probability)
+            #if (self.uccscart.tbdebuglevel>1): print("Append probability:", probability            )
 
 
             self.maxprob = max(probability, self.maxprob)
