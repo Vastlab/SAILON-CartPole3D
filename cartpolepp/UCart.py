@@ -76,7 +76,7 @@ class CartPoleBulletEnv(gym.Env):
         self.wcprob=0
         self.char=""
         self.characterization={'level': None, 'entity': None, 'attribute': None, 'change': None}        
-        self.tbdebuglevel=0
+        self.tbdebuglevel=2
         self.episode=0
         self.force_action=-1
 
@@ -98,10 +98,10 @@ class CartPoleBulletEnv(gym.Env):
 #            ['right','right','right','nothing','nothing','nothing','left','left',],
 #            ['forward','forward','forward','nothing','nothing','nothing','backward','backward'],
 #            ['backward','backward','backward','nothing','nothing','nothing','forward','forward']                                                    
-            ['left','left','left','nothing','nothing','right'],            
-            ['right','right','right','nothing','nothing','left'],
-            ['forward','forward','forward','nothing','nothing','backward'],
-            ['backward','backward','backward','nothing','nothing','forward']                                                    
+            ['left','left','left','nothing','nothing','nothing'],            
+            ['right','right','right','nothing','nothing','nothing'],
+            ['forward','forward','forward','nothing','nothing','nothing'],
+            ['backward','backward','backward','nothing','nothing','nothing']                                                    
         ]
         self.avoid_actions= self.avoid_list[0]
 
@@ -116,60 +116,29 @@ class CartPoleBulletEnv(gym.Env):
                              (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
                              (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
                              (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                             
+                             (0, 4, 3, 2, 1),  #swap  major and minor                            
                              #rest are just remaining pertubations in  standard pertubation order. 
                              (0, 1, 2, 4, 3), (0, 1, 3, 2, 4), (0, 1, 3, 4, 2), (0, 1, 4, 2, 3), (0, 1, 4, 3, 2),
                              (0, 2, 3, 1, 4), (0, 2, 3, 4, 1), (0, 2, 4, 1, 3), (0, 2, 4, 3, 1), (0, 3, 1, 2, 4),
                              (0, 3, 1, 4, 2), (0, 3, 2, 1, 4), (0, 3, 2, 4, 1),  (0, 3, 4, 2, 1),  (0, 4, 1, 2, 3),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                          
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (0, 4, 1, 3, 2), (0, 4, 2, 1, 3), (0, 4, 2, 3, 1), (0, 4, 3, 1, 2),
                              (1, 0, 2, 3, 4), (1, 0, 2, 4, 3), (1, 0, 3, 2, 4), (1, 0, 3, 4, 2), (1, 0, 4, 2, 3),
                              (1, 0, 4, 3, 2), (1, 2, 0, 3, 4), (1, 2, 0, 4, 3), (1, 2, 3, 0, 4), (1, 2, 3, 4, 0),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (1, 2, 4, 0, 3), (1, 2, 4, 3, 0), (1, 3, 0, 2, 4), (1, 3, 0, 4, 2), (1, 3, 2, 0, 4),
                              (1, 3, 2, 4, 0), (1, 3, 4, 0, 2), (1, 3, 4, 2, 0), (1, 4, 0, 2, 3), (1, 4, 0, 3, 2),
                              (1, 4, 2, 0, 3), (1, 4, 2, 3, 0), (1, 4, 3, 0, 2), (1, 4, 3, 2, 0),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (2, 0, 1, 3, 4), (2, 0, 1, 4, 3), (2, 0, 3, 1, 4), (2, 0, 3, 4, 1), (2, 0, 4, 1, 3),
                              (2, 0, 4, 3, 1), (2, 1, 0, 3, 4), (2, 1, 0, 4, 3), (2, 1, 3, 0, 4), (2, 1, 3, 4, 0),
                              (2, 1, 4, 0, 3), (2, 1, 4, 3, 0), (2, 3, 0, 1, 4), (2, 3, 0, 4, 1), (2, 3, 1, 0, 4),
                              (2, 3, 1, 4, 0), (2, 3, 4, 0, 1), (2, 3, 4, 1, 0), (2, 4, 0, 1, 3), (2, 4, 0, 3, 1),
                              (2, 4, 1, 0, 3), (2, 4, 1, 3, 0), (2, 4, 3, 0, 1), (2, 4, 3, 1, 0),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (3, 0, 1, 2, 4), (3, 0, 1, 4, 2), (3, 0, 2, 1, 4), (3, 0, 2, 4, 1), (3, 0, 4, 1, 2),
                              (3, 0, 4, 2, 1), (3, 1, 0, 2, 4), (3, 1, 0, 4, 2), (3, 1, 2, 0, 4), (3, 1, 2, 4, 0),
                              (3, 1, 4, 0, 2), (3, 1, 4, 2, 0), (3, 2, 0, 1, 4), (3, 2, 0, 4, 1), (3, 2, 1, 0, 4),
                              (3, 2, 1, 4, 0), (3, 2, 4, 0, 1), (3, 2, 4, 1, 0), (3, 4, 0, 1, 2), (3, 4, 0, 2, 1),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (3, 4, 1, 0, 2), (3, 4, 1, 2, 0), (3, 4, 2, 0, 1), (3, 4, 2, 1, 0), (4, 0, 1, 2, 3),
                              (4, 0, 1, 3, 2), (4, 0, 2, 1, 3), (4, 0, 2, 3, 1), (4, 0, 3, 1, 2), (4, 0, 3, 2, 1),
                              (4, 1, 0, 2, 3), (4, 1, 0, 3, 2), (4, 1, 2, 0, 3), (4, 1, 2, 3, 0), (4, 1, 3, 0, 2),
-                             (0, 1, 2, 3, 4),  #normal again inscase  we got off by error                                                                                       
-                             (0, 2, 1, 3, 4), #swap left/right (lave front/back)      keep major dim order
-                             (0, 2, 1, 4, 3),  #swap  swap left right and  front/back  keep major dim order
-                             (0, 3, 4, 1, 2),  #swap keep major dim order front/back items with left right leaving minor dim ordering
-                             (0, 4, 3, 2, 1),  #swap  major and minor
                              (4, 1, 3, 2, 0), (4, 2, 0, 1, 3), (4, 2, 0, 3, 1), (4, 2, 1, 0, 3), (4, 2, 1, 3, 0),
                              (4, 2, 3, 0, 1), (4, 2, 3, 1, 0), (4, 3, 0, 1, 2), (4, 3, 0, 2, 1), (4, 3, 1, 0, 2),
                              (4, 3, 1, 2, 0), (4, 3, 2, 0, 1), (4, 3, 2, 1, 0)]
@@ -818,7 +787,7 @@ class CartPoleBulletEnv(gym.Env):
                         best_score = best_action[i][j][0]
                         action = i
                         next_action = j
-                        expected_state = best_action[i][0][1]
+                        expected_state = best_action[i][j][1]
             self.lastscore=best_score
             # if(best_score > 1):
 

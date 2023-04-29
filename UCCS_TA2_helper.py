@@ -93,15 +93,16 @@ class UCCSTA2():
         
         # we penalize for high failure rantes..  as  difference (faildiff*self.failscale) )
         self.failscale=8.0 #   How we scale failure fraction.. can be larger than one since its fractional differences and genaerally < .1 mostly < .05
-        self.failfrac=.23  #high fail fraction,  when above  this we start giving world-change probability for  failures
-        self.maxfailfrac=.3  #Max fail fraction,  when above  this we start giving world-change probability for  failures        
-
+        self.failfrac=.18  #Max fail fraction,  when above  this we start giving world-change probability for  failures
+        self.maxfailfrac=.25  #Max fail fraction,  when above  this we start giving world-change probability for  failures
+        
         # because of noisy simulatn and  many many fields and its done each time step, we limit how much this can add per time step
-        self.maxdynamicprob = .5  # was .175 but too many false detects on non-novel trials so reduced it a bit. .  Added separate for cart/pole.. balls seem more stable so inreased to .5
-        self.maxclampedprob = .001  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
+        self.maxdynamicprob = .15  # was .175 but too many false detects on non-novel trials so reduced it a bit. .  Added separate for cart/pole.. balls seem more stable so inreased to .5
+        self.maxclampedprob = .005  # because of broken simulator we get randome bad value in car/velocity. when we detect them we limit their impact to this ..
         self.clampedprob =   self.maxclampedprob       
-        self.cartprobscale=.1 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
-        self.initprobscale=.1 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        self.cartprobscale=.25 #   we scale prob from cart/pole because the environmental noise, if we fix it this will make it easire to adapt .
+#        self.initprobscale=1.0 #   we scale prob from initial state by this amount (scaled as consecuriteinit increases) and add world accumulator each time. No impacted by blend this balances risk from going of on non-novel worlds
+        self.initprobscale=.5 #   Were getting too many detects on no-novel worlds.. so reduce
         self.consecutiveinit=0   # if get consecutitve init failures we keep increasing scale
         self.dynamiccount=0   # if get consecutitve dynamic failures we keep increasing scale
         self.consecutivewc=0   # if get consecutitve world change overall we keep increasing scale
@@ -116,9 +117,9 @@ class UCCSTA2():
 
         #smoothed performance plot for dtection.. see perfscore.py for compuation.  Major changes in control mean these need updated
         self.perflist = []
-        self.mean_perf = 0.873502538071065
+        self.mean_perf = 0.8883502538071065
         self.stdev_perf = 0.0824239133691708
-        self.PerfScale = 0.2    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
+        self.PerfScale = 0.15    #How much do we weight Performacne KL prob.  make this small since it is slowly varying and added every episode. Small is  less sensitive (good for FP avoid, but yields slower detection). 
 
         self.consecutivesuccess=0
         self.consecutivefail=0
@@ -154,8 +155,8 @@ class UCCSTA2():
         self.worldchangedacc = 0
         self.previous_wc = 0        
         self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time
-        self.blenddownrate = .85        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
-        self.minblenddownrate = .25        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max        
+        self.blenddownrate = .25        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max
+        self.minblenddownrate = .1        # fraction of new prob we use when blending down..  should be less than beld up rate.  No use of max        
         
         self.failcnt = 0        
         self.worldchangeblend = 0
@@ -287,8 +288,9 @@ class UCCSTA2():
             self.blockmin=999
             self.blockmax=-999
             self.blockvelmax=-999
-        elif(episode < 2*self.scoreforKL): 
-            self.clampedprob = self.maxclampedprob  *  ((3*self.scoreforKL-episode)/(self.scoreforKL))**2  # we reduce max from noisy ones over the window size
+#        elif(episode < 2*self.scoreforKL):  #long term the noisy/bad probabilities seem to grow so reduce the max they can impact  
+        elif(episode < 3*self.scoreforKL):  #Phase 3 is not as noisy.. could use hints to change or a develop a noise model
+            self.clampedprob = self.maxclampedprob  *  ((2*self.scoreforKL-episode)/(self.scoreforKL))**2  # we reduce max from noisy ones over the window size
             self.blenduprate = 1           # fraction of new prob we use when blending up..  It adapts over time            
             self.blockmin=999
             self.blockvelmax=-999            
@@ -296,9 +298,10 @@ class UCCSTA2():
         else:
             self.clampedprob = 0
             self.blenduprate = max(.1,(3*self.scoreforKL-episode)/(self.scoreforKL))          # fraction of new prob we use when blending up..  It adapts over time
-            self.blenddownrate = max(self.minblenddownrate,min(.5,.5*(2*self.scoreforKL-episode)/(self.scoreforKL)))
+         #self.blenddownrate = max(self.minblenddownrate,min(.5,.5*(2*self.scoreforKL-episode)/(self.scoreforKL)))
+            self.blenddownrate = min(.5,self.blenddownrate + .05)            
         
-        if(episode > 2*self.scoreforKL):  #stop blending once we have stable KL values, and don't search since its expensive but cannot be useful after that many
+        if(episode > 3*self.scoreforKL):  #stop blending once we have stable KL values, and don't search since its expensive but cannot be useful after that many
             self.failcnt = 0                    
             self.worldchangeblend = 0
             self.failcnt = 0                                
@@ -679,7 +682,6 @@ class UCCSTA2():
         istate = self.format_istate_data(actual_state)
         # do base state for cart(6)  and pole (7)   looking at position and velocity. 
         for j in range (13):
-            probv=0        
             if(abs(istate[j]) > imax[j]):
                 probv =  self.awcdf(istate[j],imax[j],iscale[j],ishape[j]);
                 initprob += probv
@@ -723,11 +725,11 @@ class UCCSTA2():
             if(k==19):
                 self.num_blocks += 1
                 k=13;   #reset for next block
-            #if block too near wall then velocity seen at init might be a bounce so ignore it
-            if(k==16 and abs(istate[j-3]) >4): continue
-            if(k==17 and abs(istate[j-3]) >4): continue                
-            if(k==18 and abs(istate[j-3]) >9): continue
-            if(k==18 and abs(istate[j-3]) <1): continue            
+            # #if block too near wall then velocity seen at init might be a bounce so ignore it
+            # if(k==16 and abs(istate[j-3]) >4): continue
+            # if(k==17 and abs(istate[j-3]) >4): continue                
+            # if(k==18 and abs(istate[j-3]) >9): continue
+            # if(k==18 and abs(istate[j-3]) <1): continue            
 
             
             if(abs(istate[j]) > imax[k]):
@@ -891,7 +893,7 @@ class UCCSTA2():
                                      1.9012000e-02, 7.1500000e-03,8.4417000e-02, 2.3041000e-02,  #pole quat
                                      2.8452940e+00, 3.3939100e+00, 1.3531405e+01, #pole vel
                                      4.4438300e-01, 4.3333600e-01, 4.1041900e-01, #block pos
-                                     4.22191570e-01, 4.26668060e-01, 4.25209520e-01]) #block vel Max  .. TB adjusted by had given how many errors in normal runs for phase 3 code..
+                                     2.22191570e-01, 2.26668060e-01, 2.05209520e-01]) #block vel Max  .. TB adjusted by had given how many errors in normal runs for phase 3 code..
 #                                     1.4438300e-02, 1.3333600e-01, 1.1041900e-01, #block pos            
 #                                     1.9191570e-01, 1.96668060e-01, 1.95209520e-01]) #block vel Max
 
@@ -908,12 +910,12 @@ class UCCSTA2():
                                       [4.55443947e+00, 0.00000000e+00, 1.54452261e+00],
                                       [5.44053827e+00, 0.00000000e+00, 9.21315026e-01],
                                       [3.23239311e+00, 0.00000000e+00, 1.13444676e+00],
-                                      [4.68533570e+00, 0.00000000e+00, 1.45315737e-01],
-                                      [1.20077120e+00, 0.00000000e+00, 1.51368367e-01],
-                                      [2.31710759e+00, 0.00000000e+00, 2.05984072e-01],
-                                      [4.68573228e+00, 0.00000000e+00, 1.26578269e-01],
-                                      [1.20072688e+00, 0.00000000e+00, 1.56841161e-01],
-                                      [2.31709025e+00, 0.00000000e+00, 2.02992254e-01],
+                                      [4.68533570e+00, 0.00000000e+00, 1.45315737e-02],
+                                      [1.20077120e+00, 0.00000000e+00, 1.51368367e-02],
+                                      [2.31710759e+00, 0.00000000e+00, 2.05984072e-02],
+                                      [4.68573228e+00, 0.00000000e+00, 7.26578269e-01],
+                                      [1.20072688e+00, 0.00000000e+00, 7.56841161e-01],
+                                      [2.31709025e+00, 0.00000000e+00, 1.02992254e+00],
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00],
                                       [0.00000000e+00, 0.00000000e+00, 0.00000000e+00]],
                                      [[1.35507369e+01, 0.00000000e+00, 5.81425563e-02],
@@ -983,7 +985,8 @@ class UCCSTA2():
             self.probvector[self.nextprob] = probv
             self.nextprob += 1                    
 
-        prob += probv
+#        prob += probv
+        prob += .5*probv        #  too many funky errors causing detection on non-novel trials, so reduced this. 
 #        print("at Step ", self.tick, " Dyn state ",istate)
 
 #        if(self.episode > 20):        pdb.set_trace()
@@ -1003,18 +1006,18 @@ class UCCSTA2():
             if(k > 15 and k < 19):  # 16 17 and 18 are block velocity
                 self.blockvelmax = max(astate[j],self.blockvelmax)
             
-            #if block are near boundaries where they bound position and velocity estimate can be  way off
-            if(k==13 and ((abs(astate[j]) >4)  or (abs(astate[j+1]) >4) or (abs(astate[j+2]) >8)or  (abs(astate[j+2]) <1)  )): continue
-            if(k==14 and ((abs(astate[j]) >4)  or (abs(astate[j-1]) >4) or (abs(astate[j+1]) >8)or  (abs(astate[j+1]) <1)  )): continue
-            if(k==15 and ((abs(astate[j]) >8)  or (abs(astate[j]) <1) or (abs(astate[j-2]) >4) or (abs(astate[j-1]) >4)    )): continue              
-            if(k==16 and ((abs(astate[j-3]) >4)  or (abs(astate[j+1-3]) >4) or (abs(astate[j+2-3]) >8)or  (abs(astate[j+2-3]) <1) )): continue
-            if(k==17 and ((abs(astate[j-3]) >4)  or (abs(astate[j-1-3]) >4) or (abs(astate[j+1-3]) >8)or  (abs(astate[j+1-3]) <1) )): continue
-            if(k==18 and ((abs(astate[j-3]) >8)  or (abs(astate[j-3]) <1) or (abs(astate[j-2-3]) >4) or (abs(astate[j-1-3]) >4)   )): continue              
+            # #if block are near boundaries where they bound position and velocity estimate can be  way off
+            # if(k==13 and ((abs(astate[j]) >4)  or (abs(astate[j+1]) >4) or (abs(astate[j+2]) >8)or  (abs(astate[j+2]) <1)  )): continue
+            # if(k==14 and ((abs(astate[j]) >4)  or (abs(astate[j-1]) >4) or (abs(astate[j+1]) >8)or  (abs(astate[j+1]) <1)  )): continue
+            # if(k==15 and ((abs(astate[j]) >8)  or (abs(astate[j]) <1) or (abs(astate[j-2]) >4) or (abs(astate[j-1]) >4)    )): continue              
+            # if(k==16 and ((abs(astate[j-3]) >4)  or (abs(astate[j+1-3]) >4) or (abs(astate[j+2-3]) >8)or  (abs(astate[j+2-3]) <1) )): continue
+            # if(k==17 and ((abs(astate[j-3]) >4)  or (abs(astate[j-1-3]) >4) or (abs(astate[j+1-3]) >8)or  (abs(astate[j+1-3]) <1) )): continue
+            # if(k==18 and ((abs(astate[j-3]) >8)  or (abs(astate[j-3]) <1) or (abs(astate[j-2-3]) >4) or (abs(astate[j-1-3]) >4)   )): continue              
 
 
 
 
-            probv=0
+            #probv=0
             #block motion not as predicted (domain independent test) but can be caused by may things and applies to L3, L5 and L7 as directions are off and  L4 since the bounce early produces a unepxcted position/velocity)
             #maybe some domain dependent stuff could differentiate
             # the random error (from block collisons with anything) sometimes cause large errors, so have to treat this a s very noisey and limit impact and only apply when resonable
@@ -1553,11 +1556,11 @@ class UCCSTA2():
                 failinc = min(1,failinc)
 
             #world change blend  can go up or down depending on how probablites vary.. goes does allows us to ignore spikes from uncommon events. as the bump i tup but eventually go down. 
-            if(prob <  self.worldchangedacc and  self.worldchangedacc <.5) : # blend wo  i.e. decrease world change accumulator to limit impact of randome events
-                self.worldchangeblend = self.worldchangedacc
-                self.worldchangedacc = min(1,(self.blenddownrate*self.worldchangedacc+prob))            
-                self.debugstring = "BlendDown prob world change wcp/p/wc "   + str(self.worldchangeblend) + " "+ str(prob)  + "-->"+ str(self.worldchangedacc) 
-                if(self.uccscart.tbdebuglevel>1): print(self.debugstring)
+            if(prob < .5 and  self.worldchangedacc <.5) : # blend wo  i.e. decrease world change accumulator to limit impact of randome events
+                #self.worldchangeblend = min(self.worldchangedacc * self.blenddownrate, (self.blenddownrate *self.worldchanged + (1-self.blenddownrate) * self.worldchangeblend ))
+                self.worldchangedacc = min(1,self.worldchangedacc*self.worldchangeblend)            
+                self.debugstring = "BlendDown "                
+
             else:
                 #worldchange acc once its above .5 it cannot not go down.. it includes max of old value..
                 self.worldchangeblend = min(1, (        self.blenduprate *self.worldchanged + (1-self.blenduprate) * self.worldchangeblend ))
@@ -1566,7 +1569,7 @@ class UCCSTA2():
                 # we add in an impusle each step if the first step had initial world change.. so that accumulates over time
 
                 if(len(self.problist) > 0 ) :
-                    self.worldchangedacc = min(1,self.problist[0]*self.initprobscale+max(self.worldchangedacc+self.worldchanged,self.worldchangedacc*self.worldchangeblend+failinc))
+                    self.worldchangedacc = min(1,self.problist[0]*self.initprobscale + (self.worldchangedacc+self.worldchanged)*min(1,self.worldchangeblend+failinc))
                 else:
                     self.worldchangedacc = min(1,max(self.worldchangedacc+self.worldchanged,self.worldchangedacc*self.worldchangeblend+failinc))
                 self.debugstring += '    mu={}, sig {}, mean {} stdev{}  WCacc WBlend {} {} vals {} {} {} thresh {} '.format(
@@ -1876,8 +1879,14 @@ class UCCSTA2():
 
         
         if(self.worldchangedacc >.5 and self.uccscart.adapt_after_detect and self.uccscart.adapt_delay >=0):
-            self.uccscart.adapt_delay = self.uccscart.adapt_delay -1            
-        return self.worldchangedacc;
+            self.uccscart.adapt_delay = self.uccscart.adapt_delay -1
+
+        if(self.episode< self.scoreforKL):
+            self.worldchangedacc = 0
+            self.worldchangeblend = 0
+            self.previous_wc = 0                       
+            
+        return self.worldchangedacc
 
 
     def ball_location_error(self, statevector):  # if step 10 or 45, get long term ball position error computed from initial state vs current
@@ -2173,11 +2182,12 @@ class UCCSTA2():
             
             #update max and add if initprob >0 add list (if =0 itnore as these are very onesided tests and don't want to bias scores in list)
             self.maxprob = max(initprob, self.maxprob)
-            self.problist.append(self.maxprob)  # add a very big bump in prob space so KL will see it            
+
             if(initprob >0):
+                self.problist.append(initprob)  # add a very big bump in prob space so KL will see it                
                 #if worldis known to have changed and initprob see something, then start with avoid
-                if(self.worldchangedacc>.5):
-                    self.use_avoid_reaction=True
+                #if(self.worldchangedacc>.5):
+                #    self.use_avoid_reaction=True
                     
                 if(self.uccscart.tbdebuglevel>0):
                     print('Init probability checks set prob to 1 with actual_state={}, next={}, dataval={}, problist={}, '.format(oactual_state,
