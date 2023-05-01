@@ -1013,7 +1013,7 @@ class CartPoleBulletEnv(gym.Env):
 
             
             #If we don't hav a lot of slack, then ignore collision as we are more likely to die from pole angle
-            if(slack < .4):
+            if(slack < .01):
                 # not enough slack.. if doing reactions.. stop it
                 self.reactstep = len(self.avoid_list[0])+1
             else:
