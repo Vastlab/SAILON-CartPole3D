@@ -1510,13 +1510,13 @@ class UCCSTA2():
 
         if (len(self.problist) < self.scoreforKL):
             if(prob < .9):    
-                self.worldchanged = prob * len(self.problist)/(self.scoreforKL)
+                self.worldchanged += prob * len(self.problist)/(self.scoreforKL)
                 if(self.uccscart.tbdebuglevel>1):                print("worldchange from problist <.9",self.worldchanged)
             else:
-                self.worldchanged = prob   #Phase3   addition  to let it be faster with detection when it has really high probability
+                self.worldchanged += prob   #Phase3   addition  to let it be faster with detection when it has really high probability
                 if(self.uccscart.tbdebuglevel>1):                print("worldchange from problist >9",self.worldchanged)                
         elif (self.episode < 2* self.scoreforKL):   # if short, it
-            self.worldchanged = prob            
+            self.worldchanged += prob            
             if(self.uccscart.tbdebuglevel>1):                print("worldchange from  problist",prob,self.worldchanged)                            
             
 
@@ -1676,7 +1676,7 @@ class UCCSTA2():
             atprob = -1    
             if(self.episode > (self. scoreforKL+2) and self.tarcnt < 15):
                 atprob =  self.rwcdf(tar,2.2598, 2.123764, .58301)             #weibul probabiliy based on early atotal  ratio
-                if(self.episode > (self. scoreforKL+4)): atprob =  self.rwcdf(tar,2.5, 2.41710, .73172)             #weibul probabiliy based on late/large atotal ratio
+                if(self.episode > (self. scoreforKL+4)): atprob =  self.rwcdf(tar,2.81526, 2.41710, .73172)             #weibul probabiliy based on late/large atotal ratio
                 atprob = self.atblendrate*atprob   #limit max impact since we add it directly
                 self.tarcnt += 1
                 self.worldchangedacc = min(1,atprob+self.worldchangedacc)   #Only updatate worldchangeprob if in range
